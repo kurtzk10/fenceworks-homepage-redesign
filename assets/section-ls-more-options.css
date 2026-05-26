@@ -235,31 +235,58 @@ media-carousel-wrapper.lsmo__grid:not(.swiper-wrapper) {
 }
 
 /*
-  Same pattern as .lsmo__grid above: only apply grid layout when Swiper
-  has NOT taken over (i.e. desktop, where the carousel does not initialise).
-  On mobile, Swiper adds .swiper-wrapper and switches to flex.
+  Mobile: horizontal scroll with a card-peek so the next card hints itself
+  from the right edge. Desktop (≥768px): regular 2-up grid.
 */
-media-carousel-wrapper.lsmo__mg-grid:not(.swiper-wrapper) {
-  display: grid;
-  grid-template-columns: 1fr;
+.lsmo__mg-grid {
+  display: flex;
+  flex-wrap: nowrap;
   gap: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 18px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /*
+    Break out of the .container's horizontal padding (18px on mobile)
+    so cards reach the viewport edges. The calc gives a negative inline
+    margin equal to whatever inline padding the container carries.
+  */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  /* Re-inset so the first card aligns with the section's body text */
+  padding-left: 18px;
+  /* Peek hint on the right */
+  padding-right: 5%;
+}
+
+.lsmo__mg-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.lsmo__mg-grid > .lsmo__mg-card {
+  flex: 0 0 95%;
+  scroll-snap-align: start;
 }
 
 @media screen and (min-width: 768px) {
-  media-carousel-wrapper.lsmo__mg-grid:not(.swiper-wrapper) {
+  .lsmo__mg-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
+    overflow: visible;
+    /* Reset the mobile break-out */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    scroll-snap-type: none;
   }
-}
 
-.lsmo__mg-slide {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-}
-
-.lsmo__mg-slide > .lsmo__mg-card {
-  height: 100%;
+  .lsmo__mg-grid > .lsmo__mg-card {
+    flex: initial;
+    scroll-snap-align: none;
+  }
 }
 
 .lsmo__mg-card {
@@ -324,25 +351,29 @@ media-carousel-wrapper.lsmo__mg-grid:not(.swiper-wrapper) {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 12px;
-  font-size: 14px;
+  gap: clamp(8px, 2vw, 16px);
+  font-size: clamp(11px, calc(8.5px + 0.78vw), 14px);
   line-height: 1.4;
   letter-spacing: 0.03em;
 }
 
 .lsmo__mg-label {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
   margin: 0;
   font-weight: 400;
   color: var(--lsmo-mg-text-color, #526572);
+  overflow-wrap: anywhere;
 }
 
 .lsmo__mg-value {
+  flex: 0 1 auto;
+  min-width: 0;
   margin: 0;
   font-weight: 700;
   text-align: right;
   color: var(--lsmo-mg-value-color, #1c2d38);
+  overflow-wrap: anywhere;
 }
 
 .lsmo__mg-link {
@@ -369,17 +400,3 @@ media-carousel-wrapper.lsmo__mg-grid:not(.swiper-wrapper) {
   flex-shrink: 0;
 }
 
-/* Material guide carousel pagination (mobile only — Swiper active) */
-.section--ls-more-options .lsmo__mg-pagination {
-  position: relative;
-  margin-top: 24px;
-}
-
-.section--ls-more-options .lsmo__mg-pagination .swiper-pagination-bullet-active {
-  background: var(--lsmo-pagination-active);
-}
-
-.section--ls-more-options .lsmo__mg-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-  background: var(--lsmo-pagination-inactive);
-  opacity: 1;
-}

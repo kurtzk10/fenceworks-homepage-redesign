@@ -1,0 +1,242 @@
+/* ============================================================
+   Section: LS FAQ
+   ============================================================ */
+
+.section--ls-faq {
+  background-color: var(--lsfaq-section-bg);
+  padding-top: var(--space-top);
+  padding-bottom: var(--space-bottom);
+}
+
+.section--ls-faq--rounded-top {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+
+/* ── Layout grid ───────────────────────────────────────────── */
+
+.lsfaq__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .lsfaq__grid {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+/* ── Header column ─────────────────────────────────────────── */
+
+.lsfaq__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+}
+
+@media screen and (min-width: 768px) {
+  .lsfaq__header {
+    flex: 0 0 clamp(260px, 28%, 360px);
+    gap: 16px;
+    position: sticky;
+    top: 24px;
+    align-self: flex-start;
+  }
+}
+
+.lsfaq__eyebrow {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lsfaq-eyebrow-color, #f5811f);
+}
+
+.lsfaq__heading {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: clamp(32px, calc(23.2px + 2.35vw), 57px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--lsfaq-heading-color, #526572);
+}
+
+@media screen and (min-width: 768px) {
+  .lsfaq__heading {
+    line-height: 1;
+  }
+}
+
+.lsfaq__heading-line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* ── Header button (same pattern as more-options .lsmo__btn) ─ */
+
+.lsfaq__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--lsfaq-btn-border, #101a21);
+  background-color: transparent;
+  color: var(--lsfaq-btn-text, #1c2d38);
+  font-size: clamp(13px, 3.6vw, 16px);
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .lsfaq__btn {
+    padding: 8px 24px;
+  }
+}
+
+.lsfaq__btn:hover,
+.lsfaq__btn:focus-visible {
+  background-color: var(--lsfaq-btn-bg-hover, #fbcda5);
+  border-color: transparent;
+  opacity: 1;
+}
+
+/* ── Accordion list ────────────────────────────────────────── */
+
+.lsfaq__list {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.lsfaq__item {
+  border-bottom: 1px solid var(--lsfaq-divider-color, #e9eced);
+}
+
+.lsfaq__item:first-child {
+  border-top: 1px solid var(--lsfaq-divider-color, #e9eced);
+}
+
+@media screen and (min-width: 768px) {
+  .lsfaq__item {
+    padding: 8px 0;
+  }
+  .lsfaq__item:first-child {
+    border-top: 0;
+  }
+}
+
+/* Question (summary) */
+
+.lsfaq__q {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px;
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  list-style: none;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--lsfaq-question-color, #1c2d38);
+  font-size: clamp(22px, calc(18.8px + 1vw), 32px);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.lsfaq__q::-webkit-details-marker,
+.lsfaq__q::marker {
+  display: none;
+  content: "";
+}
+
+@media screen and (min-width: 768px) {
+  .lsfaq__q {
+    gap: 64px;
+  }
+}
+
+.lsfaq__q:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.lsfaq__q-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.lsfaq__q-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--lsfaq-question-color, #1c2d38);
+}
+
+.lsfaq__icon {
+  display: block;
+}
+
+.lsfaq__icon-minus {
+  display: none;
+}
+
+.lsfaq__item[open] .lsfaq__icon-plus {
+  display: none;
+}
+
+.lsfaq__item[open] .lsfaq__icon-minus {
+  display: block;
+}
+
+/* Answer (open content) */
+
+.lsfaq__a {
+  padding: 0 16px 16px;
+  font-family: "Host Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lsfaq-answer-color, #1c2d38);
+}
+
+@media screen and (min-width: 768px) {
+  .lsfaq__a {
+    font-size: 18px;
+  }
+}
+
+.lsfaq__a > *:first-child {
+  margin-top: 0;
+}
+
+.lsfaq__a > *:last-child {
+  margin-bottom: 0;
+}

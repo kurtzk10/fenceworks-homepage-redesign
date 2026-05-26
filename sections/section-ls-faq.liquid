@@ -1,0 +1,287 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-faq.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-faq.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-faq.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-faq
+    section--{{ section.id }}
+    {% if section.settings.rounded_top %}section--ls-faq--rounded-top{% endif %}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-faq"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --lsfaq-section-bg: {{ section.settings.section_bg }};
+    --lsfaq-eyebrow-color: {{ section.settings.eyebrow_color }};
+    --lsfaq-heading-color: {{ section.settings.heading_color }};
+    --lsfaq-question-color: {{ section.settings.question_color }};
+    --lsfaq-answer-color: {{ section.settings.answer_color }};
+    --lsfaq-divider-color: {{ section.settings.divider_color }};
+    --lsfaq-btn-border: {{ section.settings.button_border }};
+    --lsfaq-btn-text: {{ section.settings.button_text }};
+    --lsfaq-btn-bg-hover: {{ section.settings.button_bg_hover }};
+  "
+>
+  <div class="lsfaq__outer">
+    <div class="container container--{{ section.settings.section_width }}">
+      <div class="lsfaq__grid">
+
+        <aside class="lsfaq__header">
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="lsfaq__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          {%- endif -%}
+
+          {%- if section.settings.heading_line_1 != blank or section.settings.heading_line_2 != blank -%}
+            <h2 class="lsfaq__heading">
+              {%- if section.settings.heading_line_1 != blank -%}
+                <span class="lsfaq__heading-line">{{ section.settings.heading_line_1 | escape }}</span>
+              {%- endif -%}
+              {%- if section.settings.heading_line_2 != blank -%}
+                <span class="lsfaq__heading-line">{{ section.settings.heading_line_2 | escape }}</span>
+              {%- endif -%}
+            </h2>
+          {%- endif -%}
+
+          {%- if section.settings.button_label != blank -%}
+            {%- assign btn_href = section.settings.button_link | default: '#' -%}
+            <a href="{{ btn_href }}" class="lsfaq__btn">{{ section.settings.button_label | escape }}</a>
+          {%- endif -%}
+        </aside>
+
+        <div class="lsfaq__list">
+          {%- if section.blocks.size > 0 -%}
+            {%- for block in section.blocks -%}
+              <details
+                class="lsfaq__item block--{{ block.id }}"
+                name="faq-{{ section.id }}"
+                {{ block.shopify_attributes }}
+              >
+                <summary class="lsfaq__q">
+                  <span class="lsfaq__q-text">{{ block.settings.question | escape }}</span>
+                  <span class="lsfaq__q-icon" aria-hidden="true">
+                    <svg class="lsfaq__icon lsfaq__icon-plus" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="lsfaq__icon lsfaq__icon-minus" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </summary>
+                <div class="lsfaq__a">{{ block.settings.answer }}</div>
+              </details>
+            {%- endfor -%}
+          {%- else -%}
+            <div class="placeholder-noblocks">
+              {{ 'homepage.onboarding.no_content' | t }}
+            </div>
+          {%- endif -%}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS FAQ",
+  "class": "js-section__ls-faq",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "FAQs"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_1",
+      "label": "Heading (line 1)",
+      "default": "Questions?"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_2",
+      "label": "Heading (line 2)",
+      "default": "we got you"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Check All FAQ"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded_top",
+      "label": "Round top corners",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow color",
+      "default": "#f5811f"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#526572"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Question color",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Answer color",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#e9eced"
+    },
+    {
+      "type": "color",
+      "id": "button_border",
+      "label": "Button border",
+      "default": "#101a21"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button background hover",
+      "default": "#fbcda5"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 56
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Do you offer free estimates?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Yes. All fence estimates are free and done on-site to ensure accurate pricing and a custom solution.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS FAQ",
+      "blocks": [
+        { "type": "faq_item", "settings": { "question": "Do you offer free estimates?",                          "answer": "<p>Yes. All fence estimates are free and done on-site to ensure accurate pricing and a custom solution.</p>" } },
+        { "type": "faq_item", "settings": { "question": "What types of fences do you install?",                   "answer": "<p>We install wood, vinyl (PVC), composite, aluminum, and chain link fences for residential properties.</p>" } },
+        { "type": "faq_item", "settings": { "question": "How long does installation take?",                        "answer": "<p>Most fence installations are completed in one to two days, depending on size, material, and site conditions.</p>" } },
+        { "type": "faq_item", "settings": { "question": "Do you build fences on-site or use pre-made panels?",     "answer": "<p>Every fence is built board-by-board on-site for a stronger structure and a cleaner, custom fit.</p>" } },
+        { "type": "faq_item", "settings": { "question": "Are you licensed and insured?",                            "answer": "<p>Yes. Fenceworks is fully licensed and insured for your peace of mind.</p>" } },
+        { "type": "faq_item", "settings": { "question": "Do you offer warranties?",                                "answer": "<p>Yes. We provide a lifetime limited labor warranty and manufacturer warranties on materials.</p>" } },
+        { "type": "faq_item", "settings": { "question": "What areas do you serve?",                                "answer": "<p>We serve Chicagoland and surrounding suburbs. Contact us to confirm availability in your area.</p>" } },
+        { "type": "faq_item", "settings": { "question": "Can you help me choose the right fence?",                 "answer": "<p>Absolutely. Our team will guide you through materials, styles, and options based on your needs and budget.</p>" } }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

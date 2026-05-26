@@ -175,21 +175,9 @@
           {%- endif -%}
 
           {%- if material_blocks.size > 0 -%}
-            <media-carousel
-              class="lsmo__mg-carousel"
-              data-speed="500"
-              data-loop="true"
-              data-autoplay="4000"
-              data-pagination="true"
-              data-space-between="16"
-              data-navigation="false"
-              data-breakpoint-max="tab"
-            >
-              <media-carousel-slider>
-                <media-carousel-wrapper class="lsmo__mg-grid">
+            <div class="lsmo__mg-grid">
               {%- for block in material_blocks -%}
-                <media-carousel-slide class="lsmo__mg-slide block--{{ block.id }}" {{ block.shopify_attributes }}>
-                <article class="lsmo__mg-card">
+                <article class="lsmo__mg-card block--{{ block.id }}" {{ block.shopify_attributes }}>
                   {%- if block.settings.tag_label != blank -%}
                     {%- if block.settings.tag_show_pill -%}
                       <span
@@ -237,18 +225,8 @@
                     </a>
                   {%- endif -%}
                 </article>
-                </media-carousel-slide>
               {%- endfor -%}
-                </media-carousel-wrapper>
-              </media-carousel-slider>
-
-              {%- if material_blocks.size > 1 -%}
-                <media-carousel-pagination
-                  class="media-carousel__pagination swiper-pagination lsmo__mg-pagination"
-                  hidden
-                ></media-carousel-pagination>
-              {%- endif -%}
-            </media-carousel>
+            </div>
           {%- endif -%}
         </div>
       {%- endif -%}

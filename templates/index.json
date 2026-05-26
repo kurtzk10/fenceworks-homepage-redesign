@@ -850,7 +850,8 @@
             "title": "The only custom vinyl swingsets in Chicagoland.",
             "illustration": "shopify://shop_images/vinyl-illustration.webp",
             "accent_color": "#e86f1a",
-            "button_label": "Share link to Vinyl Design Center",
+            "button_label": "Go to 3D Vinyl Design Center",
+            "button_label_mobile": "Share Link to Vinyl Design Center",
             "button_link": ""
           }
         },
@@ -860,7 +861,8 @@
             "title": "The best custom wood playsets in Chicagoland.",
             "illustration": "shopify://shop_images/wood-illustration.webp",
             "accent_color": "#1e3a5f",
-            "button_label": "Share link to Wood Design Center",
+            "button_label": "Go to 3D Vinyl Design Center",
+            "button_label_mobile": "Share Link to Wood Design Center",
             "button_link": ""
           }
         },
