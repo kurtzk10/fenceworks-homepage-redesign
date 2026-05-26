@@ -36,16 +36,20 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-self: stretch;
+  align-self: flex-start;
 }
 
 @media screen and (min-width: 768px) {
   .lsfaq__header {
     flex: 0 0 clamp(260px, 28%, 360px);
     gap: 16px;
+    /*
+      Sticky only on desktop, offset by the site's sticky header.
+      --header-height = header's height; --header-is-sticky = 0 when the
+      site header isn't sticky (offset collapses to the breathing room).
+    */
     position: sticky;
-    top: 24px;
-    align-self: flex-start;
+    top: calc(var(--header-height, 0px) * var(--header-is-sticky, 0) + 24px);
   }
 }
 
@@ -189,34 +193,61 @@
   overflow-wrap: anywhere;
 }
 
+/*
+  + ↔ − icon: two pseudo-elements form a "+" by default (one horizontal,
+  one rotated 90deg). On [open], the vertical bar rotates back to 0deg,
+  overlapping the horizontal one to become "−".
+*/
 .lsfaq__q-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  display: inline-block;
   flex-shrink: 0;
   width: 24px;
   height: 24px;
   color: var(--lsfaq-question-color, #1c2d38);
 }
 
-.lsfaq__icon {
-  display: block;
+.lsfaq__q-icon::before,
+.lsfaq__q-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 1px;
+  transform: translate(-50%, -50%);
+  /* Match the height animation timing + easing in section-ls-faq.js so
+     the icon morph runs in lock-step with the reveal/tuck animation. */
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.lsfaq__icon-minus {
-  display: none;
+.lsfaq__q-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.lsfaq__item[open] .lsfaq__icon-plus {
-  display: none;
+.lsfaq__item[open] .lsfaq__q-icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.lsfaq__item[open] .lsfaq__icon-minus {
-  display: block;
+/*
+  While the close animation is in flight, [open] is still set (JS doesn't
+  flip it off until the height animation finishes), so the icon would
+  stay as a minus and snap back to plus only at the very end. The
+  .is-closing class is set at the start of shrink() so the icon morphs
+  back to plus over the same 350ms as the height collapse.
+*/
+.lsfaq__item[open].is-closing .lsfaq__q-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
-/* Answer (open content) */
-
+/*
+  Answer reveal is animated in JS (section-ls-faq.js) by animating the
+  <details> element's own height. The CSS here just styles the visible
+  content; the JS keeps `overflow: hidden` on the details during the
+  animation so this content gets clipped smoothly.
+*/
 .lsfaq__a {
   padding: 0 16px 16px;
   font-family: "Host Grotesk", sans-serif;
@@ -239,4 +270,12 @@
 
 .lsfaq__a > *:last-child {
   margin-bottom: 0;
+}
+
+/* Respect users who prefer no motion */
+@media (prefers-reduced-motion: reduce) {
+  .lsfaq__q-icon::before,
+  .lsfaq__q-icon::after {
+    transition: none;
+  }
 }

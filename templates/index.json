@@ -953,6 +953,99 @@
         "padding_bottom": 56,
         "section_bottom_margin": false
       }
+    },
+    "section_ls_faq_HYJmhW": {
+      "type": "section-ls-faq",
+      "blocks": {
+        "faq_item_afUnc6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer free estimates?",
+            "answer": "<p>Yes. All fence estimates are free and done on-site to ensure accurate pricing and a custom solution.</p>"
+          }
+        },
+        "faq_item_Mmj8mP": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What types of fences do you install?",
+            "answer": "<p>We install wood, vinyl (PVC), composite, aluminum, and chain link fences for residential properties.</p>"
+          }
+        },
+        "faq_item_iYgD47": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long does installation take?",
+            "answer": "<p>Most fence installations are completed in one to two days, depending on size, material, and site conditions.</p>"
+          }
+        },
+        "faq_item_XkNHNr": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you build fences on-site or use pre-made panels?",
+            "answer": "<p>Every fence is built board-by-board on-site for a stronger structure and a cleaner, custom fit.</p>"
+          }
+        },
+        "faq_item_ndfKiJ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are you licensed and insured?",
+            "answer": "<p>Yes. Fenceworks is fully licensed and insured for your peace of mind.</p>"
+          }
+        },
+        "faq_item_hkkTtT": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer warranties?",
+            "answer": "<p>Yes. We provide a lifetime limited labor warranty and manufacturer warranties on materials.</p>"
+          }
+        },
+        "faq_item_pFLxQB": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What areas do you serve?",
+            "answer": "<p>We serve Chicagoland and surrounding suburbs. Contact us to confirm availability in your area.</p>"
+          }
+        },
+        "faq_item_ekT3Pc": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can you help me choose the right fence?",
+            "answer": "<p>Absolutely. Our team will guide you through materials, styles, and options based on your needs and budget.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_afUnc6",
+        "faq_item_Mmj8mP",
+        "faq_item_iYgD47",
+        "faq_item_XkNHNr",
+        "faq_item_ndfKiJ",
+        "faq_item_hkkTtT",
+        "faq_item_pFLxQB",
+        "faq_item_ekT3Pc"
+      ],
+      "name": "LS FAQ",
+      "settings": {
+        "eyebrow": "FAQs",
+        "heading_line_1": "Questions?",
+        "heading_line_2": "we got you",
+        "button_label": "Check All FAQ",
+        "button_link": "",
+        "section_width": "large",
+        "rounded_top": false,
+        "section_bg": "#ffffff",
+        "eyebrow_color": "#f5811f",
+        "heading_color": "#526572",
+        "question_color": "#1c2d38",
+        "answer_color": "#1c2d38",
+        "divider_color": "#e9eced",
+        "button_border": "#101a21",
+        "button_text": "#1c2d38",
+        "button_bg_hover": "#fbcda5",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "section_bottom_margin": false
+      }
     }
   },
   "order": [
@@ -970,6 +1063,7 @@
     "section_ls_product_type_cards_FL4jEW",
     "section_ls_basketball_hoop_services_jTpdPr",
     "section_ls_vinyl_playsets_8JbgJq",
-    "section_ls_more_options_h72pLx"
+    "section_ls_more_options_h72pLx",
+    "section_ls_faq_HYJmhW"
   ]
 }
