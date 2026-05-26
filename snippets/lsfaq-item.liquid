@@ -1,0 +1,39 @@
+{%- comment -%}
+  FAQ accordion item — animated <details>/<summary> disclosure.
+
+  Renders one accordion entry styled by `section-ls-faq.css` and
+  animated by `section-ls-faq.js`. The parent section must load both
+  of those assets. Use this snippet from any section that needs an
+  FAQ-style accordion (homepage `section-ls-faq`, future
+  `section-faq-page`, etc.).
+
+  Parameters
+  ----------
+  question : string (required)
+    The clickable question text. Will be HTML-escaped.
+  answer : string (required, may contain HTML)
+    The expandable body. Pass a richtext setting directly — do NOT
+    escape — so embedded HTML renders.
+  group_name : string (optional)
+    Sets the `name=` attribute on <details>. Items sharing a name form
+    an exclusive group (only one open at a time). Typically pass
+    something like `'faq-' | append: section.id`.
+  block_id : string (optional)
+    Block id used to build a `block--{id}` selector class so the theme
+    editor can scroll-to-block on this item.
+  shopify_attributes : string (optional)
+    Raw output of `block.shopify_attributes` for theme editor block
+    selection / highlighting.
+{%- endcomment -%}
+
+<details
+  class="lsfaq__item{% if block_id != blank %} block--{{ block_id }}{% endif %}"
+  {% if group_name != blank %}name="{{ group_name }}"{% endif %}
+  {{ shopify_attributes }}
+>
+  <summary class="lsfaq__q">
+    <span class="lsfaq__q-text">{{ question | escape }}</span>
+    <span class="lsfaq__q-icon" aria-hidden="true"></span>
+  </summary>
+  <div class="lsfaq__a">{{ answer }}</div>
+</details>

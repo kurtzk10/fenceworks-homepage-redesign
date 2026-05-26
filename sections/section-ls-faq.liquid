@@ -66,18 +66,15 @@
 
         <div class="lsfaq__list">
           {%- if section.blocks.size > 0 -%}
+            {%- assign faq_group_name = 'faq-' | append: section.id -%}
             {%- for block in section.blocks -%}
-              <details
-                class="lsfaq__item block--{{ block.id }}"
-                name="faq-{{ section.id }}"
-                {{ block.shopify_attributes }}
-              >
-                <summary class="lsfaq__q">
-                  <span class="lsfaq__q-text">{{ block.settings.question | escape }}</span>
-                  <span class="lsfaq__q-icon" aria-hidden="true"></span>
-                </summary>
-                <div class="lsfaq__a">{{ block.settings.answer }}</div>
-              </details>
+              {% render 'lsfaq-item',
+                question: block.settings.question,
+                answer: block.settings.answer,
+                group_name: faq_group_name,
+                block_id: block.id,
+                shopify_attributes: block.shopify_attributes
+              %}
             {%- endfor -%}
           {%- else -%}
             <div class="placeholder-noblocks">
