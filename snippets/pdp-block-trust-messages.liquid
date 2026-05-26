@@ -1,0 +1,101 @@
+{%- comment -%}
+  Renders PDP Trust Messages Block
+
+  Accepts:
+  - block: {Object}
+  - heading: {String}
+  - heading_size: {String}
+  - show_payment_icons: {Boolean}
+  - bg_color: {String}
+  - heading_color: {String}
+  - text_color: {String}
+  - icon_color: {String}
+  - show_border: {Boolean}
+  - columns_desktop: {String}
+  - icon_size: {String}
+  - spacing: {String}
+  - text_bold: {Boolean}
+{%- endcomment -%}
+
+{%- liquid
+  assign bg_color_block = bg_color | upcase
+  assign bg_color_global = settings.color_bg | upcase
+  if show_border == false
+    if bg_color.alpha == 0 or bg_color_block == bg_color_global
+      assign section_bg = false
+    else
+      assign section_bg = true
+    endif
+  else
+    assign section_bg = true
+  endif
+  assign heading_size = heading_size | times: 0.15 | plus: 1 | append: 'rem'
+  assign icon_size = icon_size | times: 6 | plus: 12 | append: 'px'
+  assign spacing = spacing | times: 3 | plus: 9 | append: 'px'
+-%}
+
+<link rel="stylesheet" href="{{ 'component-trust-messages.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+  {{ 'component-trust-messages.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+<div
+  class="trust-messages section--{% if section_bg %}has{% else %}no{% endif %}-bg"
+  style="
+    --bg-color: {{ bg_color }};
+    --heading-color: {{ heading_color }};
+    --text-color: {{ text_color }};
+    --icon-color: {{ icon_color }};
+    {% if show_border %}
+      --border-color: {{ text_color | color_modify: 'alpha', 0.2 }};
+    {% endif %}
+    --columns-desktop: {{ columns_desktop }};
+    --spacing: {{ spacing }};
+    --icon-size: {{ icon_size }};
+    --heading-size: {{ heading_size }};
+  "
+>
+  {% if heading != blank %}
+    <h2 class="trust-messages__heading">
+      {{ heading }}
+    </h2>
+  {% endif %}
+
+  <ul class="trust-messages__list {% if text_bold %}trust-messages__list--bold{% endif %}">
+    {% for i in (1..6) %}
+      {%- assign text = 'text_' | append: i -%}
+      {%- assign icon = 'icon_' | append: i -%}
+      {%- assign icon_custom_svg = 'svg-code_' | append: i -%}
+
+      {% if block[text] != blank %}
+        <li class="trust-messages__item">
+          {% unless block[icon] == 'none' and block[icon_custom_svg] == blank %}
+            <div class="trust-messages__item-icon">
+              {%- liquid
+                assign custom_svg = null
+                if block[icon_custom_svg] != blank
+                  assign custom_svg = block[icon_custom_svg]
+                endif
+              -%}
+
+              {% render 'icons-selection', icon: block[icon], icon_size: icon_size, custom_svg: custom_svg %}
+            </div>
+          {% endunless %}
+          <div class="trust-messages__item-text">
+            {{ block[text] }}
+          </div>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {%- if show_payment_icons and shop.enabled_payment_types.size > 0 -%}
+    <ul class="trust-messages__payment-icons icons-list">
+      {%- for type in shop.enabled_payment_types -%}
+        <li class="icons-list__item">
+          {{- type | payment_type_svg_tag: class: 'payment-icon' -}}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>

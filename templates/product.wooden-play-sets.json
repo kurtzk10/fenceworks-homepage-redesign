@@ -1,0 +1,380 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+            "vendor_size": 2,
+            "vendor_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": 2,
+            "title_size_mobile": 3
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "emphasize": true,
+            "price_label_discount": true,
+            "price_label_discount_type": "currency",
+            "price_label_discount_color": "#c00000"
+          }
+        },
+        "db48bf56-e904-4604-9f21-89d04e9bf249": {
+          "type": "spacer",
+          "settings": {
+            "column": "primary",
+            "top": "small",
+            "bottom": "small",
+            "border": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "product_variant_style": "swatches-buttons",
+            "popup_enable": true,
+            "popup_trigger": "Size\nGröße\nTaille\nTaglia\nTalla",
+            "popup_label": "Size guide",
+            "popup_content": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "inventory_notice": {
+          "type": "inventory_notice",
+          "disabled": true,
+          "settings": {
+            "inventory_limit": 27,
+            "align": "left",
+            "show_qty": true
+          }
+        },
+        "infinite_options_app_block_UPYNra": {
+          "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_gift_card_recipient": true,
+            "enable_payment_button": true
+          }
+        },
+        "text_mQEFfq": {
+          "type": "text",
+          "settings": {
+            "column": "primary",
+            "title": "",
+            "style": "h3",
+            "text": "<p><strong>Prices listed are for in-store pickup. </strong></p><p><strong>Delivery and Installation fees will be calculated at checkout. Fees typically range between 15% and 40% of item price based on installation complexity, plus a charge for mileage.</strong></p>"
+          }
+        },
+        "callout_P6LWeH": {
+          "type": "callout",
+          "settings": {
+            "column": "primary",
+            "icon": "icon-send-email",
+            "svg-code": "",
+            "icon_size": 2,
+            "title": "Get a FREE Estimate Today!",
+            "title_bold": true,
+            "text": "<p>Let our seasoned experts help you bring your vision to life with a hassle-free estimate. <a href=\"/pages/free-estimate\" title=\"Free Estimate\"><strong>Free Estimate</strong></a></p>",
+            "color_bg": "#ffffff",
+            "color_text": "#131313",
+            "show_border": false
+          }
+        },
+        "trust": {
+          "type": "trust",
+          "settings": {
+            "column": "primary",
+            "heading": "Shop with confidence",
+            "heading_size": 2,
+            "show_payment_icons": true,
+            "color_bg": "#f2f2f2",
+            "color_text": "#131313",
+            "color_icon": "#131313",
+            "content_heading_color": false,
+            "show_border": false,
+            "columns_desktop": "2",
+            "icon_size": 1,
+            "spacing": 1,
+            "text_bold": false,
+            "text_1": "Flexible Installation",
+            "icon_1": "icon-shipment-package",
+            "svg-code_1": "",
+            "text_2": "",
+            "icon_2": "icon-keyboard-arrow-return",
+            "svg-code_2": "",
+            "text_3": "Trusted reviews",
+            "icon_3": "icon-shield-check",
+            "svg-code_3": "",
+            "text_4": "Eco materials",
+            "icon_4": "icon-ecology-leaf",
+            "svg-code_4": "",
+            "text_5": "Price guarantee",
+            "icon_5": "icon-award-ribbon-star-1",
+            "svg-code_5": "",
+            "text_6": "",
+            "icon_6": "icon-love-it",
+            "svg-code_6": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "column": "primary",
+            "align": "center"
+          }
+        },
+        "callout_PePaDb": {
+          "type": "callout",
+          "settings": {
+            "column": "primary",
+            "icon": "icon-pin",
+            "svg-code": "",
+            "icon_size": 2,
+            "title": "Visit Fenceworks in Northbrook!",
+            "title_bold": true,
+            "text": "<p>Looking for the perfect playset to keep your kids active and entertained? Stop by our Northbrook showroom to explore our top-quality playsets in person!</p>",
+            "color_bg": "#e5f7db",
+            "color_text": "#4a9f53",
+            "show_border": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "column": "secondary",
+            "title": "Description",
+            "display_collapsible_tab": false,
+            "open": false,
+            "icon": "none",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": ""
+          }
+        },
+        "c13717d6-5def-40f5-9684-68f8f103b0d4": {
+          "type": "tab",
+          "settings": {
+            "column": "secondary",
+            "title": "Shipping & Installation Information",
+            "icon": "icon-check-circle-1",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "text": "<p>At Fenceworks, we do things a little differently — no surprise boxes dumped on your driveway. We offer white-glove installation to ensure your playset is expertly assembled and ready for play.</p><ul><li><strong>White-Glove Installation:</strong> If you’re within 60 miles of our Northbrook office, our team will handle delivery and installation with care. With 58+ years of experience and in-depth knowledge of city codes, we make sure everything is set up safely and correctly.</li><li><strong>Outside Our Service Area?</strong> If you’re beyond 60 miles, additional fees may apply. Please call us at <a href=\"tel:847-432-0900\" title=\"tel:847-432-0900\">847-432-0900</a> or email <a href=\"mailto:contact@theguyon41.com\" title=\"mailto:contact@theguyon41.com\">contact@theguyon41.com</a> to get a custom installation quote.</li><li><strong>DIY Installation:</strong> Prefer to handle the setup yourself? No problem — give us a call to coordinate a pickup from our Northbrook location.<br/><br/></li></ul><p><strong>Questions?</strong> Reach out anytime. We’re here to help every step of the way.</p>",
+            "image_width": 1000,
+            "align": "center",
+            "link": "",
+            "tab_content": "",
+            "open": false
+          }
+        },
+        "663a3435-b014-41e0-916d-1ed9505f5691": {
+          "type": "tab",
+          "settings": {
+            "column": "secondary",
+            "title": "Warranty & Fenceworks Guarantee",
+            "icon": "icon-check-circle-1",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "text": "<p><em>We stand behind our playsets with a limited lifetime warranty — no fine print, no gimmicks. From natural wear and tear to unexpected surprises, we’ve got you covered. The only exceptions are acts of nature (like a tree falling) or intentional damage (like taking a baseball bat to the playground). Play hard with confidence — we’re here for the long haul. Contact </em><a href=\"mailto:contact@theguyon41.com\" title=\"mailto:contact@theguyon41.com\">contact@theguyon41.com</a> for support.</p>",
+            "image_width": 1000,
+            "align": "center",
+            "link": "",
+            "tab_content": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "db48bf56-e904-4604-9f21-89d04e9bf249",
+        "variant_picker",
+        "quantity_selector",
+        "inventory_notice",
+        "infinite_options_app_block_UPYNra",
+        "buy_buttons",
+        "text_mQEFfq",
+        "callout_P6LWeH",
+        "trust",
+        "share",
+        "callout_PePaDb",
+        "description",
+        "c13717d6-5def-40f5-9684-68f8f103b0d4",
+        "663a3435-b014-41e0-916d-1ed9505f5691"
+      ],
+      "settings": {
+        "style": "clean",
+        "style_clean_mobile": true,
+        "layout-order": "media-left",
+        "enable_sticky_content": true,
+        "container": "large",
+        "show_breadcrumbs": true,
+        "breadcrumbs_align": "left",
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "product_image_ratio": "1:1",
+        "enable_gallery_arrows": true,
+        "thumbnails_position": "bottom",
+        "thumbnails_ratio": "1:1",
+        "thumbnails_show_border": true
+      }
+    },
+    "section_image_with_text_fRKDhz": {
+      "type": "section-image-with-text",
+      "settings": {
+        "image_ratio": "3:4",
+        "block_align": "right",
+        "vertical_align": "middle",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "af1e6c23-5338-467c-bee9-b9d9b3d9c22a": {
+      "type": "section-image-grid",
+      "blocks": {
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/playground_one.jpg",
+            "text_border_color": false,
+            "title": "",
+            "text": "",
+            "link": "",
+            "text_alignment": "middle"
+          }
+        }
+      },
+      "block_order": [
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-0"
+      ],
+      "settings": {
+        "featured": true,
+        "section_height": 450,
+        "section_height_mobile": 350,
+        "width": "large",
+        "overlay_color": "#000000",
+        "overlay_strength": 0,
+        "button_style": "c-btn c-btn--hollow",
+        "padding_top": 15,
+        "padding_bottom": 12,
+        "section-bottom-margin": false
+      }
+    },
+    "9904a28f-6381-41fe-96eb-d4a73d60f0a0": {
+      "type": "section-testimonials",
+      "blocks": {
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-0": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>My old swing set broke just weeks before my son’s birthday party. I called Jake and within two weeks. I had a new swingset in my backyard. He made the entire process as easy as it could be.</p>",
+            "name": "Rockne",
+            "source": "Google Reviews"
+          }
+        },
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-1": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>About 15 years ago, we purchased a swing set for our yard. Our kids and the neighborhood kids spent hours playing outside on it. Now that we are selling our home, we are leaving behind the set, and I have to believe that its presence in the yard helped the sale price. Truly a great long-term investment, that brought countless memories to our family.</p>",
+            "name": "David",
+            "source": "Google Reviews"
+          }
+        },
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-2": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Fenceworks does amazing work!  Communication is transparent and respectful, and can see why they are a multigenerational family business and have been around for decades! No one does it better!</p>",
+            "name": "Joey R.",
+            "source": "Google"
+          }
+        }
+      },
+      "block_order": [
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-0",
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-1",
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-2"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "grid",
+        "desktop_carousel": false,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-recommendations": {
+      "type": "section-product-recommendations",
+      "settings": {
+        "title": "More Playsets",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 10,
+        "grid": 3,
+        "grid_mobile": "1",
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_image_with_text_fRKDhz",
+    "af1e6c23-5338-467c-bee9-b9d9b3d9c22a",
+    "9904a28f-6381-41fe-96eb-d4a73d60f0a0",
+    "product-recommendations"
+  ]
+}

@@ -1,0 +1,181 @@
+{% if section.blocks.size > 0 %}
+  {% if section.index > 2 and section.location != 'header' %}
+    <link
+      rel="stylesheet"
+      href="{{ 'section-stats.css' | asset_url }}"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      {{ 'section-stats.css' | asset_url | stylesheet_tag }}
+    </noscript>
+  {% else %}
+    {{ 'section-stats.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
+  <section
+    class="
+      section
+      section--{{ section.id }}
+      section--stats
+      {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+    "
+    data-section-id="{{ section.id }}"
+    data-section-type="stats"
+    style="
+      --space-top: {{ section.settings.padding_top }}px;
+      --space-bottom: {{ section.settings.padding_bottom }}px;
+      --stats-bg: {{ section.settings.color_bg }};
+      --stats-number-color: {{ section.settings.color_number }};
+      --stats-label-color: {{ section.settings.color_label }};
+      --stats-scroll-duration: {{ section.settings.scroll_speed }}s;
+    "
+  >
+    <div class="stats">
+      <div class="stats__track" aria-hidden="true">
+        {% for i in (1..2) %}
+          {% for block in section.blocks %}
+            <div class="stats__item" {% if forloop.parentloop.first %}{{ block.shopify_attributes }}{% endif %}>
+              <span class="stats__number">{{ block.settings.number | escape }}</span>
+              <div class="stats__label">{{ block.settings.label }}</div>
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Stats (auto scroll)",
+  "class": "js-section__stats",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Scroll"
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "label": "Scroll speed",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "default": 45,
+      "unit": "s"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background",
+      "default": "#f5f2ee"
+    },
+    {
+      "type": "color",
+      "id": "color_number",
+      "label": "Number color",
+      "default": "#c45c2a"
+    },
+    {
+      "type": "color",
+      "id": "color_label",
+      "label": "Label color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "1,340"
+        },
+        {
+          "type": "richtext",
+          "id": "label",
+          "label": "Label",
+          "default": "<p>Number of in-ground Trampolines Installed</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stats (auto scroll)",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "number": "1,340",
+            "label": "<p>Number of in-ground Trampolines Installed</p>"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "1,043",
+            "label": "<p>Number of on-ground Trampolines Installed</p>"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "942",
+            "label": "<p>Properties intervened in Chicagoland</p>"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "59+",
+            "label": "<p>Years in Business</p>"
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

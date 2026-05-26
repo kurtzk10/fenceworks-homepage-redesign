@@ -1,0 +1,121 @@
+{% if section.settings.iframe_url != blank %}
+  {% if section.index > 2 or section.location == 'footer' %}
+    <link
+      rel="stylesheet"
+      href="{{ 'section-adventure-world-iframe.css' | asset_url }}"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      {{ 'section-adventure-world-iframe.css' | asset_url | stylesheet_tag }}
+    </noscript>
+  {% else %}
+    {{ 'section-adventure-world-iframe.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
+  <section
+    class="section section--padded section--{{ section.id }} adventure-world-iframe"
+    data-section-id="{{ section.id }}"
+    data-section-type="adventure-world-iframe"
+    style="
+      --space-top: {{ section.settings.padding_top }}px;
+      --space-bottom: {{ section.settings.padding_bottom }}px;
+    "
+  >
+    
+      {%- comment -%} Desktop: iframe {%- endcomment -%}
+      <div class="adventure-world-iframe__desktop">
+        <iframe
+          src="{{ section.settings.iframe_url }}"
+          width="100%"
+          height="900"
+          style="border:0;"
+          loading="lazy"
+          allowfullscreen
+          title="Adventure World Design Center"
+        ></iframe>
+      </div>
+
+      {%- comment -%} Mobile: switch to desktop card + share link {%- endcomment -%}
+      <div class="adventure-world-iframe__mobile">
+        <div class="adventure-world-iframe__card">
+          <div class="adventure-world-iframe__icon" aria-hidden="true">
+           
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 0C5.83203 0 0 5.83203 0 13C0 20.168 5.83203 26 13 26C20.168 26 26 20.168 26 13C26 5.83203 20.168 0 13 0ZM13 2C19.0859 2 24 6.91406 24 13C24 19.0859 19.0859 24 13 24C6.91406 24 2 19.0859 2 13C2 6.91406 6.91406 2 13 2ZM12 7V9H14V7H12ZM12 11V19H14V11H12Z" fill="#F5811F"/>
+</svg>
+
+          </div>
+          <h2 class="adventure-world-iframe__heading">SWITCH TO A<br>DESKTOP OR LAPTOP</h2>
+          <p class="adventure-world-iframe__text">to explore all design and customization options.</p>
+          <a
+            href="{{ section.settings.iframe_url }}"
+            class="adventure-world-iframe__share-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="adventure-world-iframe__share-icon" aria-hidden="true">
+             
+<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.3125 0C12.0586 0 10.8691 0.495117 9.98438 1.38281L8.88281 2.48438C7.99512 3.37207 7.5 4.55859 7.5 5.8125C7.5 6.40723 7.61426 6.9873 7.82812 7.52344L9.04688 6.30469C8.89453 5.33203 9.19043 4.28613 9.9375 3.53906L11.0391 2.4375C11.6426 1.83398 12.46 1.5 13.3125 1.5C14.165 1.5 14.959 1.83398 15.5625 2.4375C16.8076 3.68262 16.8076 5.71582 15.5625 6.96094L14.4609 8.0625C13.8574 8.66602 13.04 9 12.1875 9C12.0205 9 11.8564 8.98242 11.6953 8.95312L10.4766 10.1719C11.0127 10.3857 11.5928 10.5 12.1875 10.5C13.4414 10.5 14.6309 10.0049 15.5156 9.11719L16.6172 8.01562C17.5049 7.12793 18 5.94141 18 4.6875C18 3.43359 17.5049 2.27051 16.6172 1.38281C15.7324 0.495117 14.5664 0 13.3125 0ZM11.4609 5.46094L5.46094 11.4609L6.53906 12.5391L12.5391 6.53906L11.4609 5.46094ZM5.8125 7.5C4.55859 7.5 3.36914 7.99512 2.48438 8.88281L1.38281 9.98438C0.495117 10.8721 0 12.0586 0 13.3125C0 14.5664 0.495117 15.7295 1.38281 16.6172C2.26758 17.5049 3.43359 18 4.6875 18C5.94141 18 7.13086 17.5049 8.01562 16.6172L9.11719 15.5156C10.0049 14.6279 10.5 13.4414 10.5 12.1875C10.5 11.5928 10.3857 11.0127 10.1719 10.4766L8.95312 11.6953C9.10547 12.668 8.80957 13.7139 8.0625 14.4609L6.96094 15.5625C6.35742 16.166 5.54004 16.5 4.6875 16.5C3.83496 16.5 3.04102 16.166 2.4375 15.5625C1.19238 14.3174 1.19238 12.2842 2.4375 11.0391L3.53906 9.9375C4.14258 9.33398 4.95996 9 5.8125 9C5.97949 9 6.14355 9.01758 6.30469 9.04688L7.52344 7.82812C6.9873 7.61426 6.40723 7.5 5.8125 7.5Z" fill="#526572"/>
+</svg>
+
+            </span>
+            <span>SHARE EDITOR LINK</span>
+          </a>
+        </div>
+      </div>
+    
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Adventure World iframe",
+  "class": "js-section__adventure-world-iframe",
+  "settings": [
+    {
+      "type": "text",
+      "id": "iframe_url",
+      "label": "Design center URL",
+      "info": "Full URL for the iframe (desktop) and Share Editor Link (mobile). Include any query parameters."
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Adventure World iframe",
+      "settings": {
+        "iframe_url": "https://designcenter.adventureworldplaysets.com/design-center?dealer-name=Fenceworks+aka+The+Guy+On+41Northbrook&dealer-email=jake%40fenceworks.info&dealer-city=Northbrook&referrer=grok.com"
+      }
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}

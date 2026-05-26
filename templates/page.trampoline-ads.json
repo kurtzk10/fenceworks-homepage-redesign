@@ -1,0 +1,562 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_rich_text_TJBdkD": {
+      "type": "section-rich-text",
+      "settings": {
+        "section_title": "$200 OFF - Free Ladder with any trampoline purchase",
+        "text": "<p>USE CODE <strong>'FALL FUN' </strong>TO GET THE FREE UPGRADES.</p>"
+      }
+    },
+    "172546664053cdf4cf": {
+      "type": "apps",
+      "blocks": {
+        "html_css_rich_content_embed_app_block_9jmX9G": {
+          "type": "shopify://apps/html-css-rich-content-embed/blocks/app-block/9219617d-b85d-43b5-991a-71aa7eb65965",
+          "settings": {
+            "content_embed_code": "<script charset=\"utf-8\" type=\"text/javascript\" src=\"//js.hsforms.net/forms/embed/v2.js\"></script>\n<script>\n  hbspt.forms.create({\n    region: \"na1\",\n    portalId: \"39829965\",\n    formId: \"2c7bf08f-4f09-4119-809f-5a5b8ffedc6a\"\n  });\n</script>",
+            "notes": ""
+          }
+        }
+      },
+      "block_order": [
+        "html_css_rich_content_embed_app_block_9jmX9G"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_image_with_text_overlap_6QAPXr": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_HCViWK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BTP-0663-med.jpg",
+            "title": "ALLEYOOP TRAMPOLINES",
+            "desc": "<p>Discover the ultimate in outdoor trampoline excellence with AlleyOOP. Elevating safety, performance, and durability, our trampolines redefine the outdoor bouncing experience for both you and your children.</p>",
+            "horizontal_align": "left",
+            "link_title": "Explore Trampolines",
+            "link": "shopify://collections/alleyoop-trampolines",
+            "bg_color_block": "#f2f2f2",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_HCViWK"
+      ],
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "right",
+        "container": "full",
+        "block_spacing": 0,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 4,
+        "link_style": "hollow"
+      }
+    },
+    "section_collection_list_8k4937": {
+      "type": "section-collection-list",
+      "blocks": {
+        "collection_fVnCmp": {
+          "type": "collection",
+          "settings": {
+            "collection": "alleyoop-trampolines",
+            "heading": "",
+            "description": "",
+            "button_label": "SHOP",
+            "link": "shopify://collections/alleyoop-trampolines"
+          }
+        },
+        "collection_qPDLzx": {
+          "type": "collection",
+          "settings": {
+            "collection": "trampoline-accessories",
+            "heading": "",
+            "description": "",
+            "button_label": "SHOP",
+            "link": "shopify://collections/trampoline-accessories"
+          }
+        }
+      },
+      "block_order": [
+        "collection_fVnCmp",
+        "collection_qPDLzx"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "image_ratio": "4:3",
+        "heading_alignment": "center",
+        "alignment": "middle-center",
+        "text_alignment": "center",
+        "visibility_heading": true,
+        "visibility_count": false,
+        "visibility_border": true,
+        "visibility_description": false,
+        "visibility_button": true,
+        "hover_options": "hover-button",
+        "section_width": "large",
+        "grid": 2,
+        "spacing": 3,
+        "enable_carousel_desktop": true,
+        "enable_carousel_mobile": true,
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "color_overlay_strength": 20,
+        "color_default_heading": false,
+        "color_default_border": true,
+        "title_size": 3,
+        "button_style": "c-btn c-btn--hollow",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "section_announcement_bar_V9G8XV": {
+      "type": "section-announcement-bar",
+      "blocks": {
+        "announcement_eHyVM8": {
+          "type": "announcement",
+          "settings": {
+            "icon": "icon-megaphone",
+            "svg-code": "",
+            "text": "Trampolines Ship Free Nationwide!",
+            "text_link": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_eHyVM8"
+      ],
+      "settings": {
+        "auto_carousel": false,
+        "carousel_speed": 8,
+        "message_color_bg": "#f5811f",
+        "message_color_text": "#ffffff",
+        "text_size_desktop": 3,
+        "text_size_mobile": 2,
+        "text_style": "body"
+      }
+    },
+    "section_rich_text_c8dg8d": {
+      "type": "section-rich-text",
+      "settings": {
+        "section_title": "",
+        "text": ""
+      }
+    },
+    "section_product_HRrdVk": {
+      "type": "section-product",
+      "blocks": {
+        "vendor_k9xAKa": {
+          "type": "vendor",
+          "settings": {
+            "vendor_size": 2,
+            "vendor_style": "body"
+          }
+        },
+        "title_azqYMT": {
+          "type": "title",
+          "settings": {
+            "title_size": 3,
+            "title_size_mobile": 3
+          }
+        },
+        "price_eUjbk7": {
+          "type": "price",
+          "settings": {
+            "price_label_discount": true,
+            "price_label_discount_type": "text",
+            "price_label_discount_color": "#c00000"
+          }
+        },
+        "spacer_tfM4jc": {
+          "type": "spacer",
+          "settings": {
+            "top": "small",
+            "bottom": "small",
+            "border": true
+          }
+        },
+        "description_LhwAML": {
+          "type": "description",
+          "settings": {
+            "desc_text": ""
+          }
+        },
+        "variant_picker_AjBLLj": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "product_variant_style": "swatches-buttons",
+            "popup_enable": false,
+            "popup_trigger": "Size\nGröße\nTaille\nTaglia\nTalla",
+            "popup_label": "Size guide",
+            "popup_content": ""
+          }
+        },
+        "quantity_selector_LUAPfG": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_UqgDM3": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": false
+          }
+        },
+        "link_CEBhxB": {
+          "type": "link",
+          "settings": {
+            "title": "Learn more",
+            "link": "shopify://products/alleyoop-14-doublebounce-trampoline",
+            "style": "arrow",
+            "align": "center",
+            "new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "vendor_k9xAKa",
+        "title_azqYMT",
+        "price_eUjbk7",
+        "spacer_tfM4jc",
+        "description_LhwAML",
+        "variant_picker_AjBLLj",
+        "quantity_selector_LUAPfG",
+        "buy_buttons_UqgDM3",
+        "link_CEBhxB"
+      ],
+      "settings": {
+        "featured_product": "alleyoop-14-doublebounce-trampoline",
+        "enable_video_looping": false,
+        "product_image_ratio": "1:1",
+        "thumbnails_ratio": "1:1",
+        "content_align": "default",
+        "thumbnails_position": "bottom",
+        "thumbnails_show_border": false
+      }
+    },
+    "section_product_dn4a3c": {
+      "type": "section-product",
+      "blocks": {
+        "vendor_4eDLXe": {
+          "type": "vendor",
+          "settings": {
+            "vendor_size": 2,
+            "vendor_style": "body"
+          }
+        },
+        "title_DxFxgf": {
+          "type": "title",
+          "settings": {
+            "title_size": 3,
+            "title_size_mobile": 3
+          }
+        },
+        "price_qqwUQV": {
+          "type": "price",
+          "settings": {
+            "price_label_discount": true,
+            "price_label_discount_type": "text",
+            "price_label_discount_color": "#c00000"
+          }
+        },
+        "spacer_AxMf4k": {
+          "type": "spacer",
+          "settings": {
+            "top": "small",
+            "bottom": "small",
+            "border": true
+          }
+        },
+        "description_wJrjtm": {
+          "type": "description",
+          "settings": {
+            "desc_text": ""
+          }
+        },
+        "variant_picker_FYwCJp": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "product_variant_style": "swatches-buttons",
+            "popup_enable": false,
+            "popup_trigger": "Size\nGröße\nTaille\nTaglia\nTalla",
+            "popup_label": "Size guide",
+            "popup_content": ""
+          }
+        },
+        "quantity_selector_K6UUet": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_WWjknm": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": false
+          }
+        },
+        "spacer_bGhKri": {
+          "type": "spacer",
+          "settings": {
+            "top": "small",
+            "bottom": "small",
+            "border": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor_4eDLXe",
+        "title_DxFxgf",
+        "price_qqwUQV",
+        "spacer_AxMf4k",
+        "description_wJrjtm",
+        "variant_picker_FYwCJp",
+        "quantity_selector_K6UUet",
+        "buy_buttons_WWjknm",
+        "spacer_bGhKri"
+      ],
+      "settings": {
+        "featured_product": "alleyoop-sports®-variablebounce",
+        "enable_video_looping": false,
+        "product_image_ratio": "1:1",
+        "thumbnails_ratio": "1:1",
+        "content_align": "reverse",
+        "thumbnails_position": "bottom",
+        "thumbnails_show_border": false
+      }
+    },
+    "section_product_eRWHEE": {
+      "type": "section-product",
+      "blocks": {
+        "vendor_bEkQXx": {
+          "type": "vendor",
+          "settings": {
+            "vendor_size": 2,
+            "vendor_style": "body"
+          }
+        },
+        "title_GKmhji": {
+          "type": "title",
+          "settings": {
+            "title_size": 3,
+            "title_size_mobile": 3
+          }
+        },
+        "price_in3KUX": {
+          "type": "price",
+          "settings": {
+            "price_label_discount": true,
+            "price_label_discount_type": "text",
+            "price_label_discount_color": "#c00000"
+          }
+        },
+        "spacer_6hPN49": {
+          "type": "spacer",
+          "settings": {
+            "top": "small",
+            "bottom": "small",
+            "border": true
+          }
+        },
+        "description_6Y76xz": {
+          "type": "description",
+          "settings": {
+            "desc_text": ""
+          }
+        },
+        "variant_picker_ffLBjN": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "product_variant_style": "swatches-buttons",
+            "popup_enable": false,
+            "popup_trigger": "Size\nGröße\nTaille\nTaglia\nTalla",
+            "popup_label": "Size guide",
+            "popup_content": ""
+          }
+        },
+        "quantity_selector_RndJAr": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_6LtKVf": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": false
+          }
+        },
+        "spacer_pxnq4d": {
+          "type": "spacer",
+          "settings": {
+            "top": "small",
+            "bottom": "small",
+            "border": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor_bEkQXx",
+        "title_GKmhji",
+        "price_in3KUX",
+        "spacer_6hPN49",
+        "description_6Y76xz",
+        "variant_picker_ffLBjN",
+        "quantity_selector_RndJAr",
+        "buy_buttons_6LtKVf",
+        "spacer_pxnq4d"
+      ],
+      "settings": {
+        "featured_product": "alleyoop-sports-rectangular-trampoline",
+        "enable_video_looping": false,
+        "product_image_ratio": "1:1",
+        "thumbnails_ratio": "1:1",
+        "content_align": "default",
+        "thumbnails_position": "bottom",
+        "thumbnails_show_border": false
+      }
+    },
+    "section_multi_column_icons_ed4EMz": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "text_GHnfLe": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-lock-2",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Triple-Fail-Safe™ Safety Enclosure",
+            "sub_title": "",
+            "desc": "<p>Our patented Triple-Fail-Safe safety enclosure keeps millions of kids around the world safe every day—and has for over 20 years.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_6UAjhe": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-send-email",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "The Ultimate Bounce",
+            "sub_title": "",
+            "desc": "<p>AlleyOOP and JumpSport springs are formulated to stretch longer than any competitor's springs, giving you the most efficient bounce.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_D4dCNn": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-shield-check",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "SafeSprings™ Protection",
+            "sub_title": "",
+            "desc": "<p>Simply put, there’s no safer outdoor trampoline system available anywhere. Period.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_UQihVk": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-laundry-retro-iron",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Robust, Heavy-Duty Frame",
+            "sub_title": "",
+            "desc": "<p>Describe the main features of your brand or products using a few lines of text and an icon.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_GHnfLe",
+        "text_6UAjhe",
+        "text_D4dCNn",
+        "text_UQihVk"
+      ],
+      "settings": {
+        "title": "",
+        "alignment": "center",
+        "container": "small",
+        "grid": 4,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "heading_size": 3,
+        "icon_size": 30,
+        "icon_padding": 0
+      }
+    },
+    "section_collection_Yxdmxf": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_jbn9gA": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "trampoline-accessories",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_jbn9gA"
+      ],
+      "settings": {
+        "title": "Trampoline accessories",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 3,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true
+      }
+    }
+  },
+  "order": [
+    "section_rich_text_TJBdkD",
+    "172546664053cdf4cf",
+    "main",
+    "section_image_with_text_overlap_6QAPXr",
+    "section_collection_list_8k4937",
+    "section_announcement_bar_V9G8XV",
+    "section_rich_text_c8dg8d",
+    "section_product_HRrdVk",
+    "section_product_dn4a3c",
+    "section_product_eRWHEE",
+    "section_multi_column_icons_ed4EMz",
+    "section_collection_Yxdmxf"
+  ]
+}

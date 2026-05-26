@@ -1,0 +1,198 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 40
+      }
+    },
+    "section_rich_text_f4zxAR": {
+      "type": "section-rich-text",
+      "settings": {
+        "section_title": "FALL FUN STARTS AT FENCEWORKS",
+        "text": "<p>Exclusive savings on all swing sets, we beat manufacturer pricing!</p>"
+      }
+    },
+    "1725465494faae96bb": {
+      "type": "apps",
+      "blocks": {
+        "html_css_rich_content_embed_app_block_DV3LC4": {
+          "type": "shopify://apps/html-css-rich-content-embed/blocks/app-block/9219617d-b85d-43b5-991a-71aa7eb65965",
+          "settings": {
+            "content_embed_code": "<script charset=\"utf-8\" type=\"text/javascript\" src=\"//js.hsforms.net/forms/embed/v2.js\"></script>\n<script>\n  hbspt.forms.create({\n    region: \"na1\",\n    portalId: \"39829965\",\n    formId: \"fe4b3d44-9a17-40ac-a82a-ed7172d056f0\"\n  });\n</script>",
+            "notes": ""
+          }
+        }
+      },
+      "block_order": [
+        "html_css_rich_content_embed_app_block_DV3LC4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "e2a36c41-6c4c-4c06-9488-e06703fa2a0b": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21397192835379__e2a36c41-6c4c-4c06-9488-e06703fa2a0b-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Fenceworks Vinyl and Wooden Swing Sets",
+            "text": "",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "template--21397192835379__e2a36c41-6c4c-4c06-9488-e06703fa2a0b-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "width": "1/2"
+          }
+        },
+        "391a1e21-7984-4512-8139-74ad19d239d7": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download swing set catalog",
+            "link": "shopify://pages/product-catalogs",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21397192835379__e2a36c41-6c4c-4c06-9488-e06703fa2a0b-text-1",
+        "template--21397192835379__e2a36c41-6c4c-4c06-9488-e06703fa2a0b-button-1",
+        "391a1e21-7984-4512-8139-74ad19d239d7"
+      ],
+      "settings": {
+        "section-bottom-margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "sort_enable": true,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "9e8a1397-7dd9-4952-8678-020424645b7e": {
+      "type": "section-collection-list",
+      "blocks": {
+        "template--21397192835379__9e8a1397-7dd9-4952-8678-020424645b7e-collection-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "gorilla-playsets",
+            "heading": "Wood - Swing Sets",
+            "description": "",
+            "button_label": "",
+            "link": "shopify://collections/playground-one",
+            "image": "shopify://shop_images/ss-SunPalaceII-2021-RearShot1-72dpi-RGB-Lifestyle-SQ_b398d588-0405-4730-a940-929dd6ccdc03.jpg"
+          }
+        },
+        "template--21397192835379__9e8a1397-7dd9-4952-8678-020424645b7e-collection-6": {
+          "type": "collection",
+          "settings": {
+            "collection": "swing-kingdom",
+            "heading": "PVC / Vinyl - Swing Sets",
+            "description": "",
+            "button_label": "",
+            "link": "shopify://collections/swing-kingdom",
+            "image": "shopify://shop_images/2017-08-11-11.03.51-1-scaled_6674e225-4ba7-453d-a98c-a58bdbf0380c.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--21397192835379__9e8a1397-7dd9-4952-8678-020424645b7e-collection-5",
+        "template--21397192835379__9e8a1397-7dd9-4952-8678-020424645b7e-collection-6"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "image_ratio": "4:3",
+        "heading_alignment": "center",
+        "alignment": "middle-center",
+        "text_alignment": "center",
+        "visibility_heading": true,
+        "visibility_count": false,
+        "visibility_border": true,
+        "visibility_description": false,
+        "visibility_button": true,
+        "hover_options": "hover-button",
+        "section_width": "large",
+        "grid": 2,
+        "spacing": 2,
+        "enable_carousel_desktop": true,
+        "enable_carousel_mobile": true,
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "color_overlay_strength": 20,
+        "color_default_heading": false,
+        "color_default_border": true,
+        "title_size": 3,
+        "button_style": "c-btn c-btn--primary",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "1699355729037c1f4c": {
+      "type": "apps",
+      "blocks": {
+        "e96af0f7-e678-4346-8b19-5a1cc9a8faea": {
+          "type": "shopify://apps/easy-zipcode-check-validate/blocks/app-block/0aee76b4-6928-4f3f-aff6-81beaca5418d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "e96af0f7-e678-4346-8b19-5a1cc9a8faea"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {}
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "section_rich_text_f4zxAR",
+    "1725465494faae96bb",
+    "e2a36c41-6c4c-4c06-9488-e06703fa2a0b",
+    "product-grid",
+    "9e8a1397-7dd9-4952-8678-020424645b7e",
+    "1699355729037c1f4c"
+  ]
+}

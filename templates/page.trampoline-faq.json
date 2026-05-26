@@ -1,0 +1,286 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_custom_3QJCaR": {
+      "type": "section-custom",
+      "blocks": {
+        "spacer_hBX4pC": {
+          "type": "spacer",
+          "settings": {
+            "space": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_hBX4pC"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "section_faq_HQknCD": {
+      "type": "section-faq",
+      "blocks": {
+        "category_HTyKAt": {
+          "type": "category",
+          "settings": {
+            "title": "General Questions"
+          }
+        },
+        "article_UP3xzn": {
+          "type": "article",
+          "settings": {
+            "title": "What makes Fenceworks trampolines safer than other brands?",
+            "text": "<p>At Fenceworks, safety is more than just a feature — it’s a commitment rooted in over 50 years of serving local families. That’s why we exclusively carry <strong>ACON trampolines</strong>, the gold standard in premium safety and engineering. </p><p>As a <strong>third-generation family business</strong>, Fenceworks goes beyond just selling a trampoline — we provide <strong>expert consultation, professional installation, and long-term support</strong> to make sure your family’s trampoline is safe from day one and remains that way for years.</p><p>When you choose Fenceworks and ACON, you're not just getting a trampoline — you're getting <strong>peace of mind, local service, and a product built to last.</strong></p>"
+          }
+        },
+        "article_CyRX4q": {
+          "type": "article",
+          "settings": {
+            "title": "How are Fenceworks trampolines designed for safety and durability?",
+            "text": "<p>At Fenceworks, we proudly offer <strong>ACON trampolines</strong>, engineered for unmatched safety and long-term durability — ideal for active families in the Chicago area who want the best for their kids.</p><p>Unlike traditional trampolines that cut corners with lightweight frames or thin padding, <strong>ACON trampolines are built from the ground up for performance and protection</strong></p>"
+          }
+        },
+        "article_BPbqJi": {
+          "type": "article",
+          "settings": {
+            "title": "Do Fenceworks trampolines require professional installation?",
+            "text": "<p>Yes, we provide <a href=\"https://theguyon41.com/pages/trampoline-installation/\">professional installation services</a> to ensure that your trampoline is set up safely and correctly, adhering to all local safety standards.</p>"
+          }
+        },
+        "category_HUe8Nt": {
+          "type": "category",
+          "settings": {
+            "title": "Safety Features"
+          }
+        },
+        "article_Bpwt3W": {
+          "type": "article",
+          "settings": {
+            "title": "What specific safety features do Fenceworks trampolines have?",
+            "text": "<p><strong>Heavy-duty galvanized steel frame</strong> – Rust-resistant and engineered to handle years of use in all seasons.<br/><strong>No single-user weight limit</strong> – Perfect for kids, teens, and adults. Jump with confidence, not limitations.<br/><strong>High-tension, pre-galvanized springs</strong> – Deliver consistent, responsive bounce without losing elasticity over time.</p><p><strong>Thick spring and edge padding</strong> – Fully covers springs and frame to prevent injuries.<br/><strong>Reinforced safety enclosure</strong> – Tightly woven, UV-resistant net with padded poles and secure entry zipper.<br/><strong>Low injury risk bounce surface</strong> – Designed to reduce impact stress on joints for safer landings.</p><p><strong>UV-treated, cross-sewn polypropylene jump mat</strong> – Won’t fade, stretch, or tear under sun and rain.<br/><strong>Designed for year-round use</strong> – No need to disassemble in winter (though winter covers are available).</p><p><strong>Modular design: </strong>allows for easy add-ons as your family’s needs grow.</p>"
+          }
+        },
+        "article_efPWAA": {
+          "type": "article",
+          "settings": {
+            "title": "Can Fenceworks trampolines withstand harsh weather?",
+            "text": "<p>Absolutely. Our trampolines are built to resist rain and UV damage, maintaining their integrity and safety through all seasons.</p>"
+          }
+        },
+        "article_aDxJ8J": {
+          "type": "article",
+          "settings": {
+            "title": "What is the weight limit for a Fenceworks trampoline?",
+            "text": "<p>Our trampolines can support up to 295 lbs for single users, with robust construction that accommodates more weight for multiple users safely.</p>"
+          }
+        },
+        "category_JTbnBY": {
+          "type": "category",
+          "settings": {
+            "title": "Purchase & Installation"
+          }
+        },
+        "article_ytYkHD": {
+          "type": "article",
+          "settings": {
+            "title": "How can I ensure the trampoline fits in my yard?",
+            "text": "<p>We recommend at least 3-5 feet of clearance around the trampoline. Our team can help assess your space to ensure a perfect fit.</p>"
+          }
+        },
+        "article_gRPz8E": {
+          "type": "article",
+          "settings": {
+            "title": "What makes the ACON trampolines line special?",
+            "text": "<p>ACON trampolines stand out as one of the <strong>most premium, performance-driven trampolines in the world</strong> — and at Fenceworks, we’re proud to bring their full line directly to families across Chicagoland.<br/><br/>Designed in <strong>Finland</strong>, ACON trampolines are the result of <strong>decades of engineering focused on quality, safety, and bounce performance</strong>.<br/>Every model is built with precision, from frame to spring, ensuring a <strong>consistent and smooth jumping experience</strong> for all ages.</p><p><strong>Heavy-duty galvanized steel frames</strong>, <strong>UV-resistant materials</strong>, and <strong>high-performance polypropylene mats</strong> mean your trampoline will <strong>endure Chicago’s extreme seasons</strong> without rusting, fading, or stretching.</p>"
+          }
+        },
+        "category_bMJVKK": {
+          "type": "category",
+          "settings": {
+            "title": "Customer Experience"
+          }
+        },
+        "article_tr6iiD": {
+          "type": "article",
+          "settings": {
+            "title": "How do I choose the right Fenceworks trampoline for my family?",
+            "text": "<p>Our expert staff will guide you through selecting the perfect trampoline that fits your family's needs and ensures maximum safety and enjoyment.</p>"
+          }
+        },
+        "article_W9yn36": {
+          "type": "article",
+          "settings": {
+            "title": "What if I need help or have questions after purchasing?",
+            "text": "<p>When you need assistance, you’re connecting directly with our dedicated team—not a call center. We’re here to provide real-time support and ensure your complete satisfaction.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_HTyKAt",
+        "article_UP3xzn",
+        "article_CyRX4q",
+        "article_BPbqJi",
+        "category_HUe8Nt",
+        "article_Bpwt3W",
+        "article_efPWAA",
+        "article_aDxJ8J",
+        "category_JTbnBY",
+        "article_ytYkHD",
+        "article_gRPz8E",
+        "category_bMJVKK",
+        "article_tr6iiD",
+        "article_W9yn36"
+      ],
+      "settings": {
+        "title": "Fenceworks Trampoline FAQ’s",
+        "desc": "",
+        "heading_alignment": "center",
+        "enable_sidebar": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_testimonials_7V7gik": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_NeKWbB": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>My Alleyoop trampoline was installed about 8 years ago and has held up great! Fenceworks came out to replace a bent upright- installers always have been on time and do a great job - highly recommend!<br/><br/></p>",
+            "name": "Linda B.",
+            "source": "Google Reviews"
+          }
+        },
+        "text_hkpWYh": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Jake was outstanding. Walked through everything, even came to our place & measured our space for trampoline sizing. Wonderful experience.</p>",
+            "name": "Phil K.",
+            "source": "Google"
+          }
+        }
+      },
+      "block_order": [
+        "text_NeKWbB",
+        "text_hkpWYh"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": false,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "60ec9da9-bd17-41d3-82c2-0972b96e3692": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2502.jpg",
+            "link": "",
+            "width": "1/2"
+          }
+        },
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Chicagoland's top provider for fences, playgrounds, basketball hoops, and trampolines",
+            "text": "<p>Fenceworks is the leading company in the Chicagoland area for all your fence, playground, basketball, and trampoline needs. All the products in our <a href=\"/collections/play-sets\" title=\"Play Sets\">Playground</a>, <a href=\"/collections/basketball-hoops\" title=\"Basketball Hoops\">Basketball</a>, and <a href=\"https://theguyon41.com/pages/trampolines\" title=\"Trampoline\">Trampoline</a> departments were carefully selected with your child’s safety in mind, as well as offer the best products in the industry. We welcome you to visit our indoor showroom! We pride ourselves in giving you, the customer, all our knowledge and professionalism that you have come to expect.</p>",
+            "align": "left",
+            "width": "1/2"
+          }
+        },
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Contact Us",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-image-1",
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-text-1",
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-button-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "6cd5d025-ee6a-4c0a-9dad-505c3d04def1": {
+      "type": "section-logo-list",
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "full",
+        "content_width": "large",
+        "grid": 4,
+        "logo_width": 80,
+        "grid_mobile": "2",
+        "logo_width_mobile": 80,
+        "enable_carousel_mobile": true,
+        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "opacity": 100,
+        "link_title": "Shop now",
+        "link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "section_custom_3QJCaR",
+    "section_faq_HQknCD",
+    "main",
+    "section_testimonials_7V7gik",
+    "60ec9da9-bd17-41d3-82c2-0972b96e3692",
+    "6cd5d025-ee6a-4c0a-9dad-505c3d04def1"
+  ]
+}

@@ -1,0 +1,209 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Footer group",
+  "type": "footer",
+  "sections": {
+    "section_logo_list_Dnknka": {
+      "type": "section-logo-list",
+      "disabled": true,
+      "custom_css": [
+        "{padding: 10;}"
+      ],
+      "settings": {
+        "title": "Fences and Outdoor Playsets in Chicagoland Reviews",
+        "desc": "<p>We hope you visit us to experience the difference provided by a family-owned and operated business with thousands of satisfied customers.</p>",
+        "heading_alignment": "center",
+        "section_width": "full",
+        "content_width": "large",
+        "grid": 4,
+        "logo_width": 80,
+        "grid_mobile": "2",
+        "logo_width_mobile": 80,
+        "enable_carousel_mobile": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "opacity": 100,
+        "link_title": "Shop now",
+        "link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "fec5e6a7-0d76-4727-9ecf-e247f0ac26a6": {
+      "type": "section-newsletter",
+      "settings": {
+        "section_newsletter_title": "Fenceworks Newsletter",
+        "section_newsletter_desc": "<p>Subscribe to Fenceworks' exclusive newsletter to stay up to date on the latest deals, offers and trends! </p>",
+        "section_width": "contained",
+        "newsletter_bg": "#f2f2f2",
+        "newsletter_text": "#131313",
+        "default_title_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_custom_c4wQK8": {
+      "type": "section-custom",
+      "blocks": {
+        "text_7naa4h": {
+          "type": "text",
+          "settings": {
+            "title": "Fenceworks Financing with Hearth",
+            "text": "<p>Fenceworks has partnered with Hearth to make it easy to find monthly payment options for your project! As the leader in Fence Design and Installation in the Northshore Suburbs and Chicago area; we want to provide our customers with various resources to get the fence of their dreams! <br/><br/></p>",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "image_w6JDrH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/310x310_darkblue.png",
+            "link": "https://app.gethearth.com/partners/fenceworks/jake/apply",
+            "width": "2/3"
+          }
+        },
+        "spacer_qGcxiy": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "button_dhcfg8": {
+          "type": "button",
+          "settings": {
+            "title": "Monthly Payment Options",
+            "link": "https://app.gethearth.com/partners/fenceworks/jake/apply",
+            "link_style": "primary",
+            "width": "1/3"
+          }
+        }
+      },
+      "block_order": [
+        "text_7naa4h",
+        "image_w6JDrH",
+        "spacer_qGcxiy",
+        "button_dhcfg8"
+      ],
+      "name": "Custom content",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "21685c5d-1645-42ed-8707-fda9ee36e414": {
+      "type": "section-custom",
+      "blocks": {
+        "sections--21388694552883__21685c5d-1645-42ed-8707-fda9ee36e414-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/3"
+          }
+        }
+      },
+      "block_order": [
+        "sections--21388694552883__21685c5d-1645-42ed-8707-fda9ee36e414-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "4471e50e-c157-46b7-ba5e-464266db8052": {
+          "type": "contact",
+          "settings": {
+            "title": "Get in touch",
+            "show_email": true,
+            "show_number": true,
+            "show_address": true,
+            "show_social": true,
+            "show_follow_on_shop": false
+          }
+        },
+        "0d728555-98b6-4f94-a11b-099fcd6f15fb": {
+          "type": "linklist",
+          "settings": {
+            "title": "Information",
+            "linklist": "footer"
+          }
+        },
+        "text_JqQire": {
+          "type": "text",
+          "settings": {
+            "title": "Fenceworks Showroom Hours",
+            "text": "<p>Winter Hours: </p><p>Monday-Friday: 9:00am-4:00pm</p><p>Saturday: Appointment Only</p><p>Sunday: Appointment Only</p>"
+          }
+        },
+        "image_rxGAGx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/slack-imgs.com.png",
+            "image_width": 110,
+            "link": "https://www.homeadvisor.com/rated.Fenceworks.140246310.html"
+          }
+        }
+      },
+      "block_order": [
+        "4471e50e-c157-46b7-ba5e-464266db8052",
+        "0d728555-98b6-4f94-a11b-099fcd6f15fb",
+        "text_JqQire",
+        "image_rxGAGx"
+      ],
+      "settings": {
+        "footer_bg": "{{ shop.brand.colors.primary[0].background }}",
+        "footer_style": "light",
+        "footer_heading_color": false,
+        "show_payment_icons": false,
+        "divider": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "section_rich_text_w9pqrL": {
+      "type": "section-rich-text",
+      "disabled": true,
+      "settings": {
+        "section_title": "",
+        "text": "<p>Website SEO managed by <a href=\"https://iamyourvirtualprofessional.com/\" target=\"_blank\" title=\"https://iamyourvirtualprofessional.com/\">I Am Your Virtual Professional</a></p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "section_logo_list_Dnknka",
+    "fec5e6a7-0d76-4727-9ecf-e247f0ac26a6",
+    "section_custom_c4wQK8",
+    "21685c5d-1645-42ed-8707-fda9ee36e414",
+    "footer",
+    "section_rich_text_w9pqrL"
+  ]
+}

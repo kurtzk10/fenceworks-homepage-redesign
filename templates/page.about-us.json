@@ -1,0 +1,134 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "30b529eb-e3e1-413e-a768-8be7ca308560": {
+      "type": "section-custom",
+      "blocks": {
+        "text_4AEaFi": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<h1>About Us</h1>",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "template--21562356990259__30b529eb-e3e1-413e-a768-8be7ca308560-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/About-us-header_1.jpg",
+            "link": "",
+            "width": "1/1"
+          }
+        },
+        "template--21562356990259__30b529eb-e3e1-413e-a768-8be7ca308560-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Contact Us",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/3"
+          }
+        }
+      },
+      "block_order": [
+        "text_4AEaFi",
+        "template--21562356990259__30b529eb-e3e1-413e-a768-8be7ca308560-image-1",
+        "template--21562356990259__30b529eb-e3e1-413e-a768-8be7ca308560-button-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "440eb91c-6313-4391-865d-a80249fa9690": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21562356990259__440eb91c-6313-4391-865d-a80249fa9690-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Meet The Fenceworks Family (A.k.a \"the guy on 41\"",
+            "text": "<p>Welcome to <a href=\"https://theguyon41.com/\">Fenceworks</a>, your premier destination in the Chicagoland area for all your fencing, playground, basketball, and trampoline needs. Established in 1967 by Stan Ascher, affectionately known as \"The Guy On 41,\" we take pride in our legacy of providing quality service, unmatched selection, and exceptional value to our valued customers.</p><p>As a small, family boutique business, we've undergone some changes over the years to better serve you, including the tough decision to move away from our iconic Highway 41 location in Highland Park, IL and now into our beautiful indoor Northbrook, IL showroom. </p><p>Stan Ascher remains at the helm as the owner and continues to embody the spirit of Fenceworks.”This isn’t a job for me… I’ve never looked at it (owning Fenceworks) as a job…what is it you ask? It’s fun.” This is exactly the mentality the rest of the family has adopted and bought into. Stan’s ethical, creative, and innovative approach to building and running Fenceworks has made an ever-lasting impact on the business. There’s no “Fenceworks” without “The Guy on 41”.   </p><p>_______________</p>",
+            "align": "left",
+            "width": "1/2"
+          }
+        },
+        "image_UacBKH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2502.jpg",
+            "link": "",
+            "width": "1/2"
+          }
+        },
+        "e37e209b-367a-40a1-ab48-6f783bde46ba": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Our President, Sandy, and 2nd generation; leads the charge in our Fence department, ensuring that every yard we touch is adorned with beauty, privacy, and security. Sandy notes “The reason why people buy from us (Fenceworks) is that we use the finest materials and we have the best installers around… we treat every customer like family and can ensure you are treated with transparency and respect, and ensure you as the customer are making the most informed decision for the company. Sandy has been at Fenceworks for over 30+ years and continues to ensure our customers are taken the utmost care of each and every day. </p><p>Jake, our Vice President, and 3rd generation, stands at the forefront of innovation here at Fenceworks. He is pioneering innovative solutions to meet evolving customer demands Beyond leading our basketball, <a href=\"https://theguyon41.com/pages/trampolines\">trampoline</a>, and playground departments, Jake is the architect of transformative change in the Marketing/Digital space for us here at Fenceworks. While leveraging cutting-edge technology, he's revolutionizing and streamlining operations, paired with a constant pursuit to improve customer experience. </p><p>Jake's vision extends beyond the present, aiming to propel Fenceworks into a nationally recognized brand .His commitment to accessibility, information, and innovation ensures that our customers experience seamless interactions and stay well-informed. As the driving force behind our growth, Jake is not just reshaping our business; he's shaping a community, one fence, <a href=\"https://theguyon41.com/pages/basketball-hoop-installation\">basketball hoop</a>, trampoline, and playset at a time.</p>",
+            "align": "left",
+            "width": "1/1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21562356990259__440eb91c-6313-4391-865d-a80249fa9690-text-1",
+        "image_UacBKH",
+        "e37e209b-367a-40a1-ab48-6f783bde46ba"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "49f01198-ad95-4757-b677-1425d205e8d9": {
+      "type": "section-logo-list",
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "full",
+        "content_width": "large",
+        "grid": 4,
+        "logo_width": 80,
+        "grid_mobile": "2",
+        "logo_width_mobile": 80,
+        "enable_carousel_mobile": true,
+        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "opacity": 100,
+        "link_title": "Shop now",
+        "link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "30b529eb-e3e1-413e-a768-8be7ca308560",
+    "440eb91c-6313-4391-865d-a80249fa9690",
+    "49f01198-ad95-4757-b677-1425d205e8d9"
+  ]
+}

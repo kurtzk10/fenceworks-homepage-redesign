@@ -1,0 +1,1019 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_image_with_text_overlap_ewfVTL": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_9AADTT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Swing_Kingdom_Premium_Playset_Backyard_Playground_for_Kids.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "subheading": "",
+            "subheading_color": "rgba(0,0,0,0)",
+            "title": "Vinyl Play Sets Built for Backyard Memories",
+            "desc": "<h3>PREMIUM QUALITY VINYL SWING SETS, PLAYSETS AND PLAYHOUSES.</h3><p>As your local backyard ally, Fenceworks by The Guy on 41 proudly Offers Adventure World Playsets — premium, maintenance-free vinyl play sets designed for years of safe, worry-free fun.</p>",
+            "underline_below_text": false,
+            "horizontal_align": "left",
+            "link_title": "Request Estimate",
+            "link": "#estimate-anchor",
+            "button_type": "primary",
+            "link_title_2": "Design your own playset",
+            "link_2": "#adventure-world-designer",
+            "button_type_2": "secondary",
+            "border_radius_block": 16,
+            "border_radius_image": 16,
+            "text_box_box_shadow": true,
+            "bg_color_block": "#f2f2f2",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_9AADTT"
+      ],
+      "custom_css": [
+        "a.image-with-text__btn.c-btn.c-btn--primary {background: var(--color--brand) !important; width: 100%;}",
+        "a.image-with-text__btn.c-btn.c-btn--hollow {width: 100%; margin-top: 10px;}",
+        "h2.section__title-text {font-size: 26px;}",
+        "@media screen and (max-width: 768px) {h2.section__title-text {font-size: 22px; } p {line-height: 1.7em; }}"
+      ],
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "right",
+        "container": "large",
+        "block_spacing": 5,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_tabbed_column_grid_egniHN": {
+      "type": "section-tabbed-column-grid",
+      "blocks": {
+        "grid_item_99ijfW": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "main",
+            "image": "shopify://shop_images/H68-2-hero-1440x660_jpg.jpg",
+            "title": "Swing Set Package #H68-2",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_4tynCC": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "main",
+            "image": "shopify://shop_images/H68-10.jpg",
+            "title": "Swing Set Package #H68-10",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_DrdUHC": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "main",
+            "image": "shopify://shop_images/B44-6-fixed.jpg",
+            "title": "Swing Set Package B44-6",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_AXKF9V": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "main",
+            "image": "shopify://shop_images/58484-PKG-D68-8-1440x660.jpg",
+            "title": "Swing Set Package #D68-8",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_HN449i": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_MA9TbP": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-1.jpg",
+            "title": "Swing Set Package",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_T4Qbfr": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-2.jpg",
+            "title": "Frolic Zone Backyard Playground FA33-2",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_bDPwVG": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-3.jpg",
+            "title": "Busy Basecamp Package #B55-1",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_GgrQRz": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_XKKM7d": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-1.jpg",
+            "title": "Swing Set Package",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_X48rwB": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-2.jpg",
+            "title": "Frolic Zone Backyard Playground FA33-2",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_7NiyNH": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-3.jpg",
+            "title": "Busy Basecamp Package #B55-1",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_nEAw6f": {
+          "type": "grid_item",
+          "name": "Grid item Medium",
+          "settings": {
+            "tab": "2",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_fJw6xm": {
+          "type": "grid_item",
+          "name": "Grid item Medium",
+          "settings": {
+            "tab": "2",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-1.jpg",
+            "title": "Swing Set Package",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_VPQtYX": {
+          "type": "grid_item",
+          "name": "Grid item Medium",
+          "settings": {
+            "tab": "2",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-2.jpg",
+            "title": "Frolic Zone Backyard Playground FA33-2",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_RRLMhV": {
+          "type": "grid_item",
+          "name": "Grid item Medium",
+          "settings": {
+            "tab": "2",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-3.jpg",
+            "title": "Busy Basecamp Package #B55-1",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_aVM9Mw": {
+          "type": "grid_item",
+          "name": "Grid item Large",
+          "settings": {
+            "tab": "3",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_pHkYgA": {
+          "type": "grid_item",
+          "name": "Grid item Large",
+          "settings": {
+            "tab": "3",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-1.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_FKjByc": {
+          "type": "grid_item",
+          "name": "Grid item Large",
+          "settings": {
+            "tab": "3",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-2.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_keAREF": {
+          "type": "grid_item",
+          "name": "Grid item Large",
+          "settings": {
+            "tab": "3",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-3.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        }
+      },
+      "block_order": [
+        "grid_item_99ijfW",
+        "grid_item_4tynCC",
+        "grid_item_DrdUHC",
+        "grid_item_AXKF9V",
+        "grid_item_HN449i",
+        "grid_item_MA9TbP",
+        "grid_item_T4Qbfr",
+        "grid_item_bDPwVG",
+        "grid_item_GgrQRz",
+        "grid_item_XKKM7d",
+        "grid_item_X48rwB",
+        "grid_item_7NiyNH",
+        "grid_item_nEAw6f",
+        "grid_item_fJw6xm",
+        "grid_item_VPQtYX",
+        "grid_item_RRLMhV",
+        "grid_item_aVM9Mw",
+        "grid_item_pHkYgA",
+        "grid_item_FKjByc",
+        "grid_item_keAREF"
+      ],
+      "name": "Tabbed column grid",
+      "settings": {
+        "title": "Find the right play set size",
+        "intro": "<p>Compare play set sizes to see which option works best for your space, usage, and age group.</p>",
+        "tab_main_label": "Popular",
+        "tab_main_subtitle": "Most Pupular",
+        "tab_main_title": "BEST SELLERS",
+        "tab_main_description": "<p>These are our most popular best sellers for durable play in any space!</p>",
+        "tab_main_load_more_text": "Load more playsets",
+        "tab_1_label": "Small",
+        "tab_1_subtitle": "For Schools & Compact Spaces",
+        "tab_1_title": "Small playsets",
+        "tab_1_description": "<p>Durable play sets designed for smaller outdoor areas and everyday school use.</p>",
+        "tab_1_load_more_text": "Load more small playsets",
+        "tab_2_label": "Medium",
+        "tab_2_subtitle": "For Schools & Compact Spaces",
+        "tab_2_title": "Medium playsets",
+        "tab_2_description": "<p>Durable play sets designed for smaller outdoor areas and everyday school use.</p>",
+        "tab_2_load_more_text": "Load more medium playsets",
+        "tab_3_label": "Large",
+        "tab_3_subtitle": "For Schools & Compact Spaces",
+        "tab_3_title": "Large playsets",
+        "tab_3_description": "<p>Durable play sets designed for smaller outdoor areas and everyday school use.</p>",
+        "tab_3_load_more_text": "Load more large playsets",
+        "show_contact_callout": true,
+        "contact_text": "<p>Contact Fenceworks (for Pricing, Delivery & Installation) <a href=\"mailto:contact@theguyon41.com\" title=\"mailto:contact@theguyon41.com\">contact@theguyon41.com</a></p>",
+        "section_width": "large",
+        "grid_columns_desktop": 4,
+        "grid_columns_mobile": "2",
+        "grid_spacing": 32,
+        "initial_items_per_tab": 4,
+        "show_load_more": true,
+        "section_bg": "#ffffff",
+        "content_bg": "#ecf2f5",
+        "content_border_radius": 12,
+        "tab_active_bg": "#f5811f",
+        "tab_inactive_bg": "#9ea6ac",
+        "tab_text_color": "#ffffff",
+        "heading_color": "#131313",
+        "text_color": "#131313",
+        "accent_color": "#f5811f",
+        "contact_bg": "#fef2e9",
+        "contact_border_color": "#f5811f",
+        "contact_text_color": "#131313",
+        "contact_link_color": "#f5811f",
+        "button_bg": "#f78b2a",
+        "button_text_color": "#ffffff",
+        "button_border_radius": 6,
+        "load_more_bg": "rgba(0,0,0,0)",
+        "load_more_text_color": "#131313",
+        "load_more_border_color": "#383838",
+        "load_more_border_radius": 16,
+        "heading_size": 32,
+        "tab_heading_size": 24,
+        "padding_top": 21,
+        "padding_bottom": 48,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_banner_DWrfyB": {
+      "type": "section-image-banner",
+      "custom_css": [
+        ".container {padding: 0;}",
+        "> section {margin: 0;}"
+      ],
+      "name": "Image banner",
+      "settings": {
+        "image_desktop": "shopify://shop_images/the_only_custom_vinyl_swingsets_in_chicagoland.jpg",
+        "image_mobile": "shopify://shop_images/the_only_custom_vinyl_swingsets_in_chicagoland_mobiel.jpg",
+        "section_width": "contained",
+        "border_radius": true,
+        "section_bottom_margin": true
+      }
+    },
+    "section_liquid_FYibJL": {
+      "type": "section-liquid",
+      "custom_css": [],
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"adventure-world-designer\"></div>"
+      }
+    },
+    "section_rich_text_rUf8BR": {
+      "type": "section-rich-text",
+      "custom_css": [
+        "> section {margin-bottom: 24px;}",
+        " {margin-top: 80px;}",
+        "@media screen and (max-width: 768px) {{margin-top: 30px; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "subheading": "Adventure World Playset Editor",
+        "section_title": "Design Your Dream Playset",
+        "text": "<p>Choose from a wide selection of Adventure World Playset components to create a setup that fits your backyard and your family’s needs.</p>",
+        "underline_below_text": true,
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_adventure_world_iframe_WDc7x3": {
+      "type": "section-adventure-world-iframe",
+      "custom_css": [
+        "> section {margin-bottom: 0px;}"
+      ],
+      "name": "Adventure World iframe",
+      "settings": {
+        "iframe_url": "https://designcenter.adventureworldplaysets.com/design-center?dealer-name=Fenceworks+aka+The+Guy+On+41Northbrook&dealer-email=jake%40fenceworks.info&dealer-city=Northbrook&referrer=theguyon41.com",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_usp_icons_gFg3wq": {
+      "type": "section-usp-icons",
+      "blocks": {
+        "usp_item_AXiVYV": {
+          "type": "usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/certified.png",
+            "label": "<p>HIGH-QUALITY <br/>SWING SETS</p>",
+            "bg_color_desktop": "#f5f7f9",
+            "border_radius": 16
+          }
+        },
+        "usp_item_hewzDq": {
+          "type": "usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/tools-solid.png",
+            "label": "<p>DELIVERED & INSTALLED ACROSS CHICAGOLAND</p>",
+            "bg_color_desktop": "#f5f7f9",
+            "border_radius": 16
+          }
+        },
+        "usp_item_BAzHLh": {
+          "type": "usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/shield-alt-solid.png",
+            "label": "<p>INDUSTRY-LEADING WARRANTY</p>",
+            "bg_color_desktop": "#f5f7f9",
+            "border_radius": 16
+          }
+        },
+        "usp_item_xLPmiV": {
+          "type": "usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/cog-solid.png",
+            "label": "<p>MAINTENANCE-FREE VINYL CONSTRUCTION</p>",
+            "bg_color_desktop": "#f5f7f9",
+            "border_radius": 16
+          }
+        },
+        "usp_item_eLNn68": {
+          "type": "usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/paint-brush-solid.png",
+            "label": "<p>CUSTOM-BUILT, AMISH-MADE CRAFTSMANSHIP</p>",
+            "bg_color_desktop": "#f5f7f9",
+            "border_radius": 16
+          }
+        }
+      },
+      "block_order": [
+        "usp_item_AXiVYV",
+        "usp_item_hewzDq",
+        "usp_item_BAzHLh",
+        "usp_item_xLPmiV",
+        "usp_item_eLNn68"
+      ],
+      "name": "USP Icons",
+      "settings": {
+        "orange_text_box": "<p>After finishing the design save it and send it to <a href=\"mailto:contact@theguyon41.com\" title=\"mailto:contact@theguyon41.com\">contact@theguyon41.com</a> or upload it in the quote form bellow.</p>",
+        "heading": "<h2>PREMIUM PLAY SETS, BUILT THE RIGHT WAY</h2>",
+        "text": "<p>Adventure World Playsets are known for their quality, safety, and craftsmanship. Every play set is built to last, with thoughtful design and materials parents can trust.</p>",
+        "container_width": "large",
+        "padding_top": 24,
+        "padding_bottom": 48,
+        "section_bottom_margin": false
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "section_multi_column_images_VQkbKL": {
+      "type": "section-multi-column-images",
+      "blocks": {
+        "image_8UG9xt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Swing_Kingdom_A1_Climber_Playset_676ece51-5c23-48a3-96a3-f91277afc6a9.jpg",
+            "title": "A-1 Standard Climber Playset",
+            "sub_title": "",
+            "desc": "<h6>$4,499 + Tax<br/>Installation: $950</h6>",
+            "link_title": "Learn more",
+            "link": "shopify://products/a-1-standard-climber-playset"
+          }
+        },
+        "image_eAppNi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KC-3_Deluxe.png",
+            "title": "A-3 Deluxe Playset",
+            "sub_title": "",
+            "desc": "<h6>$5,045 + Tax<br/>Installation: $950</h6>",
+            "link_title": "Learn more",
+            "link": "shopify://products/a-3-deluxe"
+          }
+        },
+        "image_NfRrgA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/A-4-Special-Almond-Red-Yellow_GUI-550x367.png",
+            "title": "A-4 Special Playset",
+            "sub_title": "",
+            "desc": "<h6>$6,399 + Tax<br/>Installation: $950</h6>",
+            "link_title": "Learn more",
+            "link": "shopify://products/a-4-special"
+          }
+        },
+        "image_xzRYpa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/A-5-Special-Almond-Red-Yellow_GUI-550x367_1.png",
+            "title": "A-5 Deluxe Playset",
+            "sub_title": "",
+            "desc": "<h6>$7,595 + Tax<br/>Installation: $950</h6>",
+            "link_title": "Learn more",
+            "link": "shopify://products/a-5-deluxe"
+          }
+        },
+        "image_LQVr8B": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KC-1_Clubhouse.png",
+            "title": "KC-1 Clubhouse",
+            "sub_title": "",
+            "desc": "<h6>$7,830 + Tax<br/>Installation: $1,320</h6>",
+            "link_title": "Learn more",
+            "link": "shopify://products/kc-1-clubhouse"
+          }
+        },
+        "image_dfnw9n": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KC-10_Economy_Turbo_Playset.png",
+            "title": "KC-10 Economy Turbo",
+            "sub_title": "",
+            "desc": "<h6>$8,855 + Tax<br/>Installation: $1,550</h6>",
+            "link_title": "Learn more",
+            "link": "shopify://products/kc-10-economy-turbo"
+          }
+        },
+        "image_XTb6bR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KC-3_Deluxe.png",
+            "title": "KC-3 Deluxe Playset",
+            "sub_title": "",
+            "desc": "<h6>$5,559 + Tax<br/>Installation: $1,320</h6>",
+            "link_title": "Learn more",
+            "link": "shopify://products/kc-3-deluxe"
+          }
+        },
+        "image_nmXxxA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KC-7-Deluxe-White-Green_GUI-768x512_1.png",
+            "title": "KC-7 Deluxe Playset",
+            "sub_title": "",
+            "desc": "<h6>$9,450 + Tax<br/>Installation: $1,540</h6>",
+            "link_title": "Learn more",
+            "link": "shopify://products/kc-7-deluxe"
+          }
+        }
+      },
+      "block_order": [
+        "image_8UG9xt",
+        "image_eAppNi",
+        "image_NfRrgA",
+        "image_xzRYpa",
+        "image_LQVr8B",
+        "image_dfnw9n",
+        "image_XTb6bR",
+        "image_nmXxxA"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Swing Kingdom Playsets",
+        "desc": "",
+        "image_toggle": true,
+        "image_ratio": "4:3",
+        "image_fit": false,
+        "image_size": 100,
+        "image_padding": 0,
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "large",
+        "grid": 3,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_image": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_testimonials_A3hj4Y": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_i3nBG8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Jake at Fenceworks was fantastic to deal with. He worked with me on building the perfect swingset. Jake was responsive and always took the time to answer my questions and make sure the final product was exactly what I wanted. Couldn’t be happier with fenceworks or my fantastic Swing Kingdom swing set. Highly recommend them both<br/></p>",
+            "name": "Rachel Feit",
+            "source": "Google Reviews"
+          }
+        },
+        "text_MmqDMN": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Jake was honest and super helpful in choosing the right swing set for our son. Installation by their team was a breeze. I would highly recommend Jake!</p>",
+            "name": "Parth Mangrola",
+            "source": "Google Reviews"
+          }
+        },
+        "text_Edy8Xi": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>They did an amazing job designing and installing my new playground swingset for my grandchildren, and met my deadline. Easy to work with, professional. Highly recommended!</p>",
+            "name": "Debbie Eisenstein",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_i3nBG8",
+        "text_MmqDMN",
+        "text_Edy8Xi"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "accb8ebb-4533-4c2b-9a45-9620541233d1": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "template--21394266226995__accb8ebb-4533-4c2b-9a45-9620541233d1-image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/vinyl-series2.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Premium Quality Vinyl Swing Sets, Playsets and Playhouses.",
+            "desc": "<p>Fenceworks is thrilled to introduce Swing Kingdom, an Amish-operated manufacturer based in the USA, renowned for its exceptional craftsmanship and commitment to producing top-quality Premium Vinyl Swing Sets. Since their establishment in 2000, Swing Kingdom has consistently demonstrated leadership in the playground industry, setting the bar for innovation, safety, and durability.</p><p></p>",
+            "horizontal_align": "left",
+            "link_title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "template--21394266226995__accb8ebb-4533-4c2b-9a45-9620541233d1-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fenceworks-store.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "From Design to Installation We Handle It All",
+            "desc": "<p>Select or customize your play set, request a quote, and let our experienced local team handle the installation. Simple, seamless, and stress-free.</p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "9035506d-8dd2-499c-9a8f-8c18b187e8ff": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Swing_Kingdom_Playsets_Diagram_Playground.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Installed Like It’s for Our Own Kids",
+            "desc": "<p>Every play set is installed with care, precision, and attention to detail. From sturdy construction to safe materials, we build every backyard playground the same way we would for our own families.</p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "ef803dbf-4484-4ea2-8b56-cac71615863f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Swing_Kingdom_Playsets_Diagram_Playground_1.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Proudly Serving Chicagoland Backyards",
+            "desc": "<p>We install Adventure World Playsets throughout Chicagoland and surrounding suburbs — bringing safe, premium backyard fun to the communities we live and work in.</p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "image_UHWaXY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Swing_Kingdom_Playsets_Diagram_Playground_2.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Make Backyard Fun Happen Now",
+            "desc": "<p><strong>MONTHLY PAYMENT OPTIONS</strong><br/>✓ 60-second pre-qualification.<br/>✓ Does not affect credit score.</p>",
+            "horizontal_align": "left",
+            "link_title": "Check if you qualify",
+            "link": "https://app.gethearth.com/financing/54354/95901?utm_campaign=54354&utm_content=general&utm_medium=custom-lp&utm_source=contractor&utm_term=95901",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "template--21394266226995__accb8ebb-4533-4c2b-9a45-9620541233d1-image-1",
+        "template--21394266226995__accb8ebb-4533-4c2b-9a45-9620541233d1-image-2",
+        "9035506d-8dd2-499c-9a8f-8c18b187e8ff",
+        "ef803dbf-4484-4ea2-8b56-cac71615863f",
+        "image_UHWaXY"
+      ],
+      "custom_css": [
+        ".image-with-text__box {max-width: 610px; margin: auto;}",
+        ".image-with-text__box--underline-below-text .image-with-text__title {max-width: 480px;}",
+        ".image-with-text__title {max-width: 100%;}",
+        ".image-with-text__text {line-height: 1.5em; letter-spacing: 0.7px;}",
+        ".image-with-text__item .section__title-text {padding: 0 !important;}",
+        "h2:after {display: none;}",
+        "@media screen and (max-width: 768px) {img {border-radius: 24px; } .image-with-text__box {text-align: center; } .image-with-text__text-wrap:after {margin: 1em auto 0; } .c-btn {width: 100%; }}"
+      ],
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "left",
+        "vertical_align": "middle",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "primary",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_collection_KVL8xc": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_hgMRK4": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "swing-kingdom",
+            "link": "shopify://collections/swing-kingdom"
+          }
+        }
+      },
+      "block_order": [
+        "collection_hgMRK4"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Our collections",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 3,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_liquid_UQHfgL": {
+      "type": "section-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"estimate-anchor\"></div>"
+      }
+    },
+    "section_rich_text_anNTDK": {
+      "type": "section-rich-text",
+      "custom_css": [
+        "> section {margin: 0;}",
+        "div {max-width: 100%;}",
+        " {background: #fef2e9; padding: 48px 24px 24px;}",
+        "p {color: #212121; text-align: center; font-family: \"Nunito Sans\"; font-size: 14px; font-style: normal; font-weight: 400; line-height: 140%; /* 19.6px */ letter-spacing: 0.42px;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "subheading": "",
+        "section_title": "Let’s Plan Your Backyard Play Set",
+        "text": "<p>Tell us a bit about your space and what you’re looking for. Our team will help you choose the right play set and provide a clear, honest quote.</p>",
+        "underline_below_text": false,
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_liquid_Ka6Ye3": {
+      "type": "section-liquid",
+      "custom_css": [
+        "{background: #fef2e9; padding-bottom: 40px;}",
+        "iframe#hs-form-iframe-0 {max-width: 750px; margin-left: auto; margin-right: auto; padding-left: 10px;}"
+      ],
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"container container--large\">\n<script charset=\"utf-8\" type=\"text/javascript\" src=\"//js.hsforms.net/forms/embed/v2.js\"></script>\n<script>\n  hbspt.forms.create({\n    portalId: \"39829965\",\n    formId: \"8729ad3e-b6b1-47a8-9d6d-8dfb3fd85644\"\n  });\n</script>\n</div>"
+      }
+    },
+    "section_newsletter_YALiBJ": {
+      "type": "section-newsletter",
+      "custom_css": [
+        ".newsletter {padding-bottom: 0;}"
+      ],
+      "name": "Newsletter",
+      "settings": {
+        "section_newsletter_title": "Fenceworks Newsletter",
+        "section_newsletter_desc": "<p>Subscribe to Fenceworks' exclusive newsletter to stay up to date on the latest deals, offers and trends!</p>",
+        "section_width": "contained",
+        "newsletter_bg": "#ffffff",
+        "newsletter_text": "#131313",
+        "default_title_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_liquid_aYBDjB": {
+      "type": "section-liquid",
+      "name": "Custom CSS and JS",
+      "settings": {
+        "custom_liquid": "<style>\n.shopify-section-group-footer-group.js-section__newsletter, .shopify-section-group-footer-group.js-section__custom-content {\n    display: none;\n}\ndiv#main{\nmargin-top: 0;\n}\n\n\nh2 {\n    letter-spacing: 1.9px;\n}\n\n.usp-icons__header {\n    max-width: 570px!important;\n}\n\n.usp-icons__desc {\n    letter-spacing: 0.4px;\n}\n</style>\n<script>\ndocument.addEventListener('DOMContentLoaded', function () {\n\n\n  const OFFSET = 100; // adjust to your header height\nconst OFFSET_MOBILE = 65; // adjust to your header height\n  const anchorLinks = document.querySelectorAll('a[href*=\"#\"]:not([href=\"#\"])');\n\n  anchorLinks.forEach(link => {\n    link.addEventListener('click', function (e) {\n      const targetId = this.getAttribute('href');\n      const targetEl = document.querySelector(targetId);\n\n      if (!targetEl) return;\n\n      e.preventDefault();\n\n      const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;\n      \nif(window.innerWidth < 768){\nvar offsetPosition = elementPosition - OFFSET_MOBILE;\n}\nelse{\nvar offsetPosition = elementPosition - OFFSET;\n}\n\n      window.scrollTo({\n        top: offsetPosition,\n        behavior: 'smooth'\n      });\n    });\n  });\n});\n</script>"
+      }
+    }
+  },
+  "order": [
+    "section_image_with_text_overlap_ewfVTL",
+    "section_tabbed_column_grid_egniHN",
+    "section_image_banner_DWrfyB",
+    "section_liquid_FYibJL",
+    "section_rich_text_rUf8BR",
+    "section_adventure_world_iframe_WDc7x3",
+    "section_usp_icons_gFg3wq",
+    "subcollections",
+    "banner",
+    "product-grid",
+    "section_multi_column_images_VQkbKL",
+    "section_testimonials_A3hj4Y",
+    "accb8ebb-4533-4c2b-9a45-9620541233d1",
+    "section_collection_KVL8xc",
+    "section_liquid_UQHfgL",
+    "section_rich_text_anNTDK",
+    "section_liquid_Ka6Ye3",
+    "section_newsletter_YALiBJ",
+    "section_liquid_aYBDjB"
+  ]
+}

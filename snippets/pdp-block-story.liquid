@@ -1,0 +1,93 @@
+{% comment %}
+  Renders product page story block
+
+  Accepts:
+  - block: {Object}
+{% endcomment %}
+
+{%- liquid
+  if block.settings.column == 'primary'
+    assign sizes_column_width = '40vw'
+  else
+    assign sizes_column_width = '60vw'
+  endif
+-%}
+
+{%- capture image_sizes_desk -%}
+  {%- if block.settings.layout_desktop == 'desk-col-1' -%}
+    (min-width: 981px) calc({{ sizes_column_width }} - 30px), (min-width: 768px) 660px
+  {%- else -%}
+    (min-width: 981px) calc(0.2 * ({{ sizes_column_width }} - 30px)), (min-width: 768px) calc(0.2 * 660px)
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture image_sizes_mob -%}
+  {%- if block.settings.layout_mobile == 'mob-col-1' -%}
+    calc(100vw - 36px)
+  {%- else -%}
+    calc(20vw - 36px)
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- liquid
+  assign additional_classes = 'product-featured__media-img'
+
+  if block.settings.image_fit
+    assign additional_classes = additional_classes | append: ' product-featured__media-img--fit'
+  else
+    assign additional_classes = additional_classes | append: ' product-featured__media-img--crop'
+  endif
+
+  assign sizes = image_sizes_desk | append: ', ' | append: image_sizes_mob
+-%}
+
+<div class="product-single__profile-container{% if block.settings.divider == true %} product-single__profile-container--divider{% endif %}{% if block.settings.image_toggle == true %} {{ block.settings.layout_desktop }} {{ block.settings.layout_mobile }}{% endif %}">
+  {% unless block.settings.image_toggle == false %}
+    <div class="product-single__profile-image">
+      <div
+        class="o-ratio o-ratio--{{ block.settings.image_ratio }}"
+        {% if block.settings.image_ratio == 'natural' %}
+          style="padding-bottom:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+        {% endif %}
+      >
+        <div class="o-ratio__content">
+          {% unless block.settings.image == blank %}
+            {% render 'image',
+              image: block.settings.image,
+              additional_classes: additional_classes,
+              alt_string: block.settings.image.alt,
+              image_ratio: 'natural',
+              image_srcset_widths: '180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2100, 2260',
+              image_sizes: sizes,
+              render_skeleton: true
+            %}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--light' }}
+          {% endunless %}
+        </div>
+      </div>
+    </div>
+  {% endunless %}
+
+  <div class="product-single__profile-text{% if block.settings.image_toggle == true %} product-single__profile-text--margin-top{% endif %}">
+    {%- if block.settings.title != blank -%}
+      <h5 class="product-single__box__heading {{ block.settings.style }}">{{ block.settings.title | escape }}</h5>
+    {%- endif -%}
+    {%- if block.settings.text != blank -%}
+      <div class="product-single__box__text rte">{{ block.settings.text }}</div>
+    {%- endif -%}
+    {% if block.settings.link != blank %}
+      <div class="product-single__box__link">
+        <a
+          href="{{ block.settings.link }}"
+          class="{% if block.settings.link_style == "body" %}link--underline{% endif %}{% if block.settings.link_style == "chevron" %}link link--arrow{% endif %}"
+        >
+          {{- block.settings.link_title -}}
+          {%- if block.settings.link_style == 'chevron' -%}
+            {% render 'icons-theme', icon: 'chevron' %}
+          {%- endif -%}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>

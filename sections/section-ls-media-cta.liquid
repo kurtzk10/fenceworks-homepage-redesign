@@ -1,0 +1,346 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-media-cta.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-media-cta.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-media-cta.css' | asset_url | stylesheet_tag }}
+{% endif %}
+<script src="{{ 'section-ls-media-cta.js' | asset_url }}" type="module" defer></script>
+
+{%- liquid
+  assign eyebrow        = section.settings.eyebrow
+  assign intro_content  = section.settings.intro_content
+  assign fence_content  = section.settings.fence_content
+  assign button_1_label = section.settings.button_1_label
+  assign button_1_link  = section.settings.button_1_link
+  assign extra_content  = section.settings.extra_content
+  assign button_2_label = section.settings.button_2_label
+  assign button_2_link  = section.settings.button_2_link
+  assign video_upload   = section.settings.video_upload
+  assign video_url      = section.settings.video_url
+  assign poster_image   = section.settings.poster_image
+-%}
+
+{%- liquid
+  if video_url != blank
+    if video_url.type == 'youtube'
+      assign video_embed_url = 'https://www.youtube.com/embed/' | append: video_url.id | append: '?autoplay=1&rel=0'
+    elsif video_url.type == 'vimeo'
+      assign video_embed_url = 'https://player.vimeo.com/video/' | append: video_url.id | append: '?autoplay=1'
+    endif
+  endif
+
+  if poster_image != blank
+    assign poster_src = poster_image
+  elsif video_upload != blank
+    assign poster_src = video_upload.preview_image
+  endif
+-%}
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-media-cta
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-media-cta"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="container container--{{ section.settings.container_width }}">
+    <div class="ls-mc">
+
+      {%- comment -%} Mobile-only: intro + eyebrow appear above the video {%- endcomment -%}
+      <div class="ls-mc__intro ls-mc__intro--mobile">
+        {%- unless eyebrow == blank -%}
+          <p class="ls-mc__eyebrow">{{ eyebrow | escape }}</p>
+        {%- endunless -%}
+        {%- unless intro_content == blank -%}
+          <div class="ls-mc__intro-content rte">{{ intro_content }}</div>
+        {%- endunless -%}
+      </div>
+
+      {%- comment -%} Left column: video / poster image {%- endcomment -%}
+      <div class="ls-mc__left">
+        <div class="ls-mc__media">
+
+          {%- if video_upload != blank -%}
+            {%- comment -%} Uploaded video file – click-to-play native <video> {%- endcomment -%}
+            <div class="ls-mc__video-wrapper" data-video-type="native">
+              {%- if poster_src != blank -%}
+                <div class="ls-mc__poster">
+                  {% render 'image',
+                    image: poster_src,
+                    additional_classes: 'ls-mc__poster-img',
+                    image_sizes: '(min-width: 768px) 50vw, 100vw',
+                    image_default_width: 800
+                  %}
+                </div>
+              {%- else -%}
+                <div class="ls-mc__poster ls-mc__poster--placeholder">
+                  {{ 'image' | placeholder_svg_tag: 'ls-mc__poster-img' }}
+                </div>
+              {%- endif -%}
+              <button class="ls-mc__play-btn" aria-label="Play video">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.55)"/>
+                  <polygon points="26,20 48,32 26,44" fill="white"/>
+                </svg>
+              </button>
+              <video class="ls-mc__native-video" playsinline controls style="display:none;">
+                {%- for source in video_upload.sources -%}
+                  <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                {%- endfor -%}
+              </video>
+            </div>
+
+          {%- elsif video_url != blank -%}
+            {%- comment -%} External URL (YouTube / Vimeo) – click-to-play iframe {%- endcomment -%}
+            <div
+              class="ls-mc__video-wrapper"
+              data-video-type="embed"
+              data-video-embed-url="{{ video_embed_url }}"
+            >
+              {%- if poster_src != blank -%}
+                <div class="ls-mc__poster">
+                  {% render 'image',
+                    image: poster_src,
+                    additional_classes: 'ls-mc__poster-img',
+                    image_sizes: '(min-width: 768px) 50vw, 100vw',
+                    image_default_width: 800
+                  %}
+                </div>
+              {%- else -%}
+                <div class="ls-mc__poster ls-mc__poster--placeholder">
+                  {{ 'image' | placeholder_svg_tag: 'ls-mc__poster-img' }}
+                </div>
+              {%- endif -%}
+              <button class="ls-mc__play-btn" aria-label="Play video">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.55)"/>
+                  <polygon points="26,20 48,32 26,44" fill="white"/>
+                </svg>
+              </button>
+            </div>
+
+          {%- elsif poster_src != blank -%}
+            <div class="ls-mc__poster">
+              {% render 'image',
+                image: poster_src,
+                additional_classes: 'ls-mc__poster-img',
+                image_sizes: '(min-width: 768px) 50vw, 100vw',
+                image_default_width: 800
+              %}
+            </div>
+
+          {%- else -%}
+            <div class="ls-mc__poster ls-mc__poster--placeholder">
+              {{ 'image' | placeholder_svg_tag: 'ls-mc__poster-img' }}
+            </div>
+          {%- endif -%}
+
+        </div>
+      </div>
+
+      {%- comment -%} Right column: desktop intro + all content blocks {%- endcomment -%}
+      <div class="ls-mc__right">
+
+        {%- comment -%} Desktop-only: intro sits inside right column {%- endcomment -%}
+        <div class="ls-mc__intro ls-mc__intro--desktop">
+          {%- unless eyebrow == blank -%}
+            <p class="ls-mc__eyebrow">{{ eyebrow | escape }}</p>
+          {%- endunless -%}
+          {%- unless intro_content == blank -%}
+            <div class="ls-mc__intro-content rte">{{ intro_content }}</div>
+          {%- endunless -%}
+        </div>
+
+        {%- unless fence_content == blank -%}
+          <div class="ls-mc__fence-content rte">{{ fence_content }}</div>
+        {%- endunless -%}
+
+        {%- if button_1_label != blank -%}
+          <div class="ls-mc__btn-wrap">
+            <a
+              href="{{ button_1_link | default: '#' }}"
+              class="ls-mc__btn c-btn c-btn--primary"
+            >
+              {{ button_1_label | escape }}
+            </a>
+          </div>
+        {%- endif -%}
+
+        {%- unless extra_content == blank -%}
+          <div class="ls-mc__extra-content rte">{{ extra_content }}</div>
+        {%- endunless -%}
+
+        {%- if button_2_label != blank -%}
+          <div class="ls-mc__btn-wrap">
+            <a
+              href="{{ button_2_link | default: '#' }}"
+              class="ls-mc__btn c-btn c-btn--primary"
+            >
+              {{ button_2_label | escape }}
+            </a>
+          </div>
+        {%- endif -%}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS Media CTA",
+  "class": "js-section__ls-media-cta",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Eyebrow & Intro"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "Explore the Details Up Close"
+    },
+    {
+      "type": "richtext",
+      "id": "intro_content",
+      "label": "Intro content",
+      "info": "Include your main heading and introductory paragraph. On mobile, this block (plus the eyebrow) appears above the video.",
+      "default": "<h2>LET'S START THE CONVERSATION</h2><p>Our showroom features fences, playsets, basketball hoops, and trampolines — but visits are by appointment so we can give you the attention your project deserves.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Fence CTA"
+    },
+    {
+      "type": "richtext",
+      "id": "fence_content",
+      "label": "Fence section content",
+      "default": "<h3>PLANNING A FENCE?</h3><p>Fence consultations require coordination and on-site planning.</p><p>Start with a quick call so we can understand your project and schedule the right next step.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_1_label",
+      "label": "Button 1 label",
+      "default": "Request a Fence Consultation"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "header",
+      "content": "Other Products CTA"
+    },
+    {
+      "type": "richtext",
+      "id": "extra_content",
+      "label": "Content below button 1",
+      "default": "<p><em>Online booking isn't available for fence projects — we'll coordinate everything personally by phone.</em></p><h3>LOOKING FOR PLAYSETS, HOOPS OR TRAMPOLINES?</h3><p>We're happy to connect by phone or schedule a showroom visit to walk through options together.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_2_label",
+      "label": "Button 2 label",
+      "default": "Book a Call or Showroom Visit"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Button 2 link"
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "video",
+      "id": "video_upload",
+      "label": "Video upload",
+      "info": "Upload a video file directly. Takes priority over the URL field below."
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "label": "Video URL (YouTube or Vimeo)",
+      "accept": ["youtube", "vimeo"],
+      "info": "Used only if no video file is uploaded above."
+    },
+    {
+      "type": "image_picker",
+      "id": "poster_image",
+      "label": "Poster / thumbnail image",
+      "info": "Shown before the video plays. Falls back to the video's own preview if left blank."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "container_width",
+      "label": "Section width",
+      "default": "small",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 48
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Media CTA"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

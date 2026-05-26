@@ -1,0 +1,389 @@
+{% if section.blocks.size > 0 %}
+  {% if section.index > 2 or section.location == 'footer' %}
+    <link
+      rel="stylesheet"
+      href="{{ 'section-ls-reviews.css' | asset_url }}"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      {{ 'section-ls-reviews.css' | asset_url | stylesheet_tag }}
+    </noscript>
+  {% else %}
+    {{ 'section-ls-reviews.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
+  {% if section.index > 2 %}
+    <link
+      rel="stylesheet"
+      href="{{ 'component-media-carousel.css' | asset_url }}"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+    </noscript>
+  {% else %}
+    {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+  <script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+
+  <section
+    class="
+      section
+      section--padded
+      section--ls-reviews
+      section--{{ section.id }}
+      {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+    "
+    data-section-id="{{ section.id }}"
+    data-section-type="ls-reviews"
+    style="
+      --space-top: {{ section.settings.padding_top }}px;
+      --space-bottom: {{ section.settings.padding_bottom }}px;
+      --ls-reviews-bg: {{ section.settings.background_color }};
+      --ls-reviews-heading-color: {{ section.settings.heading_color }};
+      --ls-reviews-accent-color: {{ section.settings.accent_color }};
+      --ls-reviews-card-bg: {{ section.settings.card_bg_color }};
+      --ls-reviews-text-color: {{ section.settings.text_color }};
+      --ls-reviews-stars-color: {{ section.settings.stars_color }};
+      --ls-reviews-quote-color: {{ section.settings.quote_color }};
+    "
+  >
+    <div class="ls-reviews">
+      <div class="container container--large">
+
+        {%- if section.settings.heading_line1 != blank or section.settings.heading_line2 != blank -%}
+          <div class="ls-reviews__heading">
+            <h2 class="ls-reviews__heading-text">
+              {%- if section.settings.heading_line1 != blank -%}
+                {{ section.settings.heading_line1 | escape }}<br>
+              {%- endif -%}
+              {%- if section.settings.heading_line2 != blank -%}
+                <span class="ls-reviews__heading-accent">{{ section.settings.heading_line2 | escape }}</span>
+              {%- endif -%}
+            </h2>
+          </div>
+        {%- endif -%}
+
+        <media-carousel
+          data-speed="500"
+          data-loop="true"
+          data-pagination="true"
+          data-space-between="16"
+          data-navigation="false"
+          data-breakpoint-max="tab"
+          {% if section.settings.autoplay %}
+            data-autoplay="{{ section.settings.autoplay_speed }}000"
+          {% endif %}
+        >
+          <media-carousel-slider>
+            <media-carousel-wrapper class="ls-reviews__grid">
+              {% for block in section.blocks %}
+                <media-carousel-slide class="ls-reviews__slide" {{ block.shopify_attributes }}>
+                  <div class="ls-reviews__card">
+                    <div class="ls-reviews__card-body">
+                      {%- unless block.settings.text == blank -%}
+                        <p class="ls-reviews__card-text">{{ block.settings.text | escape }}</p>
+                      {%- endunless -%}
+
+                      <div class="ls-reviews__card-stars" aria-label="{{ block.settings.rating }} out of 5 stars">
+                        {%- for i in (1..5) -%}
+                          <span class="ls-reviews__star{% if i <= block.settings.rating %} ls-reviews__star--filled{% endif %}" aria-hidden="true">&#9733;</span>
+                        {%- endfor -%}
+                      </div>
+
+                      {%- unless block.settings.name == blank -%}
+                        <p class="ls-reviews__card-name">{{ block.settings.name | escape }}</p>
+                      {%- endunless -%}
+
+                      {%- unless block.settings.source == blank -%}
+                        {%- if block.settings.source_url != blank -%}
+                          <a
+                            href="{{ block.settings.source_url }}"
+                            class="ls-reviews__card-source"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >{{ block.settings.source | escape }}</a>
+                        {%- else -%}
+                          <p class="ls-reviews__card-source">{{ block.settings.source | escape }}</p>
+                        {%- endif -%}
+                      {%- endunless -%}
+                    </div>
+
+                    <div class="ls-reviews__card-quote" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="102" height="87" viewBox="0 0 102 87" fill="none">
+                        <g filter="url(#filter0_dd_15463_55868)">
+                          <path d="M16.0279 77.6291C14.2485 77.8903 12.551 76.8383 11.9025 75.1608L7.52199 63.8278C6.54117 61.2903 8.3327 58.5702 11.0253 58.1821C18.3319 57.1292 23.4 54.3265 23.4 46.0732C23.4 44.1469 21.8385 42.5854 19.9122 42.5854H9C6.79086 42.5854 5 40.7945 5 38.5854V5C5 2.79086 6.79086 1 9 1H41.5333C43.7425 1 45.5333 2.79086 45.5333 5V43.6585C45.5333 63.5838 35.6215 74.753 16.0279 77.6291ZM67.4946 77.6291C65.7151 77.8903 64.0176 76.8383 63.3692 75.1608L58.9887 63.8278C58.0078 61.2903 59.7994 58.5702 62.492 58.1821C69.7986 57.1292 74.8667 54.3265 74.8667 46.0732C74.8667 44.1469 73.3051 42.5854 71.3789 42.5854H60.4667C58.2575 42.5854 56.4667 40.7945 56.4667 38.5854V5C56.4667 2.79086 58.2575 1 60.4667 1H93C95.2091 1 97 2.79086 97 5V43.6585C97 63.5838 87.0881 74.753 67.4946 77.6291Z" fill="#F5811F"/>
+                        </g>
+                        <defs>
+                          <filter id="filter0_dd_15463_55868" x="0" y="0" width="102" height="86.6689" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="effect1_dropShadow_15463_55868"/>
+                            <feOffset dy="2"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_15463_55868"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect2_dropShadow_15463_55868"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="3"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                            <feBlend mode="normal" in2="effect1_dropShadow_15463_55868" result="effect2_dropShadow_15463_55868"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_15463_55868" result="shape"/>
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                </media-carousel-slide>
+              {% endfor %}
+            </media-carousel-wrapper>
+          </media-carousel-slider>
+
+          {%- if section.blocks.size > 1 -%}
+            <media-carousel-pagination
+              class="media-carousel__pagination swiper-pagination js-carousel-pagination"
+              hidden
+            ></media-carousel-pagination>
+          {%- endif -%}
+        </media-carousel>
+
+        {% render 'section-link',
+          title: section.settings.section_link_title,
+          link: section.settings.section_link_link,
+          style: section.settings.section_link_style
+        %}
+
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if section.blocks.size == 0 %}
+  <div class="placeholder-noblocks">
+    {{ 'homepage.onboarding.no_content' | t }}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "LS Reviews",
+  "class": "js-section__ls-reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Heading line 1",
+      "default": "WHAT PEOPLE SAY ABOUT"
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Heading line 2 (accent color)",
+      "default": "THE GUY ON 41"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#0F1E24"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color (heading line 2)",
+      "default": "#E86F1A"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card background",
+      "default": "#E9ECED"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Card text color",
+      "default": "#0F1E24"
+    },
+    {
+      "type": "color",
+      "id": "stars_color",
+      "label": "Stars color",
+      "default": "#E86F1A"
+    },
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "Quote mark color",
+      "default": "#E86F1A"
+    },
+    {
+      "type": "header",
+      "content": "Mobile carousel"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto-rotate on mobile",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Rotate every",
+      "unit": "sec",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Section button"
+    },
+    {
+      "type": "text",
+      "id": "section_link_title",
+      "label": "Label",
+      "default": "Read All Reviews"
+    },
+    {
+      "type": "url",
+      "id": "section_link_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "section_link_style",
+      "label": "Style",
+      "default": "c-btn c-btn--hollow",
+      "options": [
+        {
+          "value": "c-btn c-btn--primary",
+          "label": "Brand button"
+        },
+        {
+          "value": "c-btn c-btn--mono",
+          "label": "Mono button"
+        },
+        {
+          "value": "c-btn c-btn--hollow",
+          "label": "Outline button"
+        },
+        {
+          "value": "link link--arrow",
+          "label": "Chevron"
+        },
+        {
+          "value": "link--underline",
+          "label": "Body text"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 60
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "LS Review item",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review text",
+          "default": "Fenceworks (they offer playsets, too!) has been around a long time and really loves the community it serves. Their playset designs are carefully thought out, beautifully constructed, and safe. I've loved working with them and highly recommend."
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Star rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Reviewer name",
+          "default": "Leslie Levine"
+        },
+        {
+          "type": "text",
+          "id": "source",
+          "label": "Source label",
+          "default": "Google Reviews"
+        },
+        {
+          "type": "url",
+          "id": "source_url",
+          "label": "Source URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Reviews",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

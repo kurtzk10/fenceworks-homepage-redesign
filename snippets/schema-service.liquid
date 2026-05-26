@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ service_name | json }},
+  "serviceType": {{ service_type | json }},
+  "url": {{ canonical_url | json }},
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Fenceworks",
+    "url": {{ shop.url | json }},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3177 MacArthur Blvd",
+      "addressLocality": "Northbrook",
+      "addressRegion": "IL",
+      "postalCode": "60062",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Chicago, IL"
+  }
+}
+</script>

@@ -1,0 +1,326 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 40
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "ea744f54-4e9d-48c6-8fd8-22052dd01b55": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "template--21394251350323__ea744f54-4e9d-48c6-8fd8-22052dd01b55-text-1": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-accounting-coins-stack",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Affordability",
+            "sub_title": "",
+            "desc": "<p>Chainlink fences are among the most cost-effective fencing options available.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251350323__ea744f54-4e9d-48c6-8fd8-22052dd01b55-text-2": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-glasses-retro",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Visibility",
+            "sub_title": "",
+            "desc": "<p>While providing boundary and security, chainlink fences don't obstruct views.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251350323__ea744f54-4e9d-48c6-8fd8-22052dd01b55-text-3": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-flash",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Quick Installation",
+            "sub_title": "",
+            "desc": "<p>Chainlink fences can be installed more rapidly than many other types.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251350323__ea744f54-4e9d-48c6-8fd8-22052dd01b55-text-4": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-hammer-wrench",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Durability",
+            "sub_title": "",
+            "desc": "<p>Made from galvanized steel, chainlink fences can withstand most environmental conditions.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251350323__ea744f54-4e9d-48c6-8fd8-22052dd01b55-text-1",
+        "template--21394251350323__ea744f54-4e9d-48c6-8fd8-22052dd01b55-text-2",
+        "template--21394251350323__ea744f54-4e9d-48c6-8fd8-22052dd01b55-text-3",
+        "template--21394251350323__ea744f54-4e9d-48c6-8fd8-22052dd01b55-text-4"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "full",
+        "grid": 4,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "{{ shop.brand.colors.primary[0].foreground }}",
+        "color_text": "{{ shop.brand.colors.secondary[0].background }}",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "icon_size": 25,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "a693e3a5-5398-4a77-88ab-7bf75e9b934c": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21394251350323__a693e3a5-5398-4a77-88ab-7bf75e9b934c-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "6ae5914f-0e13-49a3-84f3-f5415a8f2985": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Fence Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2021-FenceCatalog.pdf",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251350323__a693e3a5-5398-4a77-88ab-7bf75e9b934c-button-1",
+        "6ae5914f-0e13-49a3-84f3-f5415a8f2985"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "3bdd59da-8a86-4de7-bd3f-cddb7b2dfc1a": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21394251350323__3bdd59da-8a86-4de7-bd3f-cddb7b2dfc1a-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Chainlink Fencing",
+            "text": "<p>Chain link fences are a practical and cost-effective choice for homeowners, businesses, and property owners seeking a durable and <a href=\"https://theguyon41.com/\">versatile fencing solution</a>. These fences are constructed using interwoven metal wires, typically made of galvanized steel, providing a range of benefits that make them a popular option for a wide variety of applications.</p><p>In addition to their durability, chain link fences are incredibly versatile. They come in various heights and can be customized to fit the specific needs of your property, whether you're looking for a low-profile boundary fence or a taller security barrier. You can also choose from different gauges of wire to balance security with visibility, making them suitable for both residential and <a href=\"https://theguyon41.com/collections/commercial-play-sets\" title=\"https://theguyon41.com/collections/commercial-play-sets\">commercial settings</a>.</p>",
+            "align": "left",
+            "width": "2/3"
+          }
+        },
+        "template--21394251350323__3bdd59da-8a86-4de7-bd3f-cddb7b2dfc1a-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/chain-link-fence.jpg",
+            "link": "",
+            "width": "1/3"
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251350323__3bdd59da-8a86-4de7-bd3f-cddb7b2dfc1a-text-1",
+        "template--21394251350323__3bdd59da-8a86-4de7-bd3f-cddb7b2dfc1a-image-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "16965117727a08d0db": {
+      "type": "apps",
+      "blocks": {
+        "5aeed6e0-5331-4fd2-8991-e84d9c833cdb": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 5,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "5aeed6e0-5331-4fd2-8991-e84d9c833cdb"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "section_testimonials_MbxMF6": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_WBmQ3w": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Amazing family owned company, only place I refer my clients for fences, playgrounds and basketball hoops. Highly recommend going local with Fenceworks “The Guy on 41”!<br/></p>",
+            "name": "Alec Mancheski",
+            "source": "Google Reviews"
+          }
+        },
+        "text_qT4Qwi": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>When it comes to a Fence instillation.. there is no better company in the north shore/chicago that I would recommend more than Fenceworks. They truly care about each customer like their family. I was informed every step of the way, true transparency throughout. Pricing was fair and competitive, and the craftsmanship was truly amazing. I look forward to buying a playground, trampoline, and basketball hoop this spring to wrap up all my home improvement projects in the future!</p>",
+            "name": "Adrish Saha",
+            "source": "Google Reviews"
+          }
+        },
+        "text_M837y8": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I really can't say enough great things about Fenceworks! They always treat you with respect, honesty, and transparency. Regarding your next Fence project, look no further than \"The Guy on 41\"! I will be back this spring for Basketball Hoops, Trampolines, and Playgrounds... excited to complete my backyard with Fenceworks running the show!</p>",
+            "name": "J Cov",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_WBmQ3w",
+        "text_qT4Qwi",
+        "text_M837y8"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "ea744f54-4e9d-48c6-8fd8-22052dd01b55",
+    "a693e3a5-5398-4a77-88ab-7bf75e9b934c",
+    "3bdd59da-8a86-4de7-bd3f-cddb7b2dfc1a",
+    "16965117727a08d0db",
+    "product-grid",
+    "section_testimonials_MbxMF6"
+  ]
+}

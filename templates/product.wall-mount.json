@@ -1,0 +1,561 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+            "vendor_size": 2,
+            "vendor_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": 2,
+            "title_size_mobile": 3
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "emphasize": false,
+            "price_label_discount": true,
+            "price_label_discount_type": "text",
+            "price_label_discount_color": "#c00000"
+          }
+        },
+        "db48bf56-e904-4604-9f21-89d04e9bf249": {
+          "type": "spacer",
+          "settings": {
+            "column": "primary",
+            "top": "small",
+            "bottom": "small",
+            "border": true
+          }
+        },
+        "description_UDUg9L": {
+          "type": "description",
+          "settings": {
+            "column": "secondary",
+            "title": "Description",
+            "display_collapsible_tab": false,
+            "open": false,
+            "icon": "none",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "product_variant_style": "swatches-buttons",
+            "popup_enable": true,
+            "popup_trigger": "Size\nGröße\nTaille\nTaglia\nTalla",
+            "popup_label": "Size guide",
+            "popup_content": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "inventory_notice": {
+          "type": "inventory_notice",
+          "disabled": true,
+          "settings": {
+            "inventory_limit": 27,
+            "align": "left",
+            "show_qty": true
+          }
+        },
+        "infinite_options_app_block_X3Nr88": {
+          "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_gift_card_recipient": true,
+            "enable_payment_button": true
+          }
+        },
+        "text_JwYMcB": {
+          "type": "text",
+          "settings": {
+            "column": "primary",
+            "title": "",
+            "style": "h3",
+            "text": "<p><strong>Prices listed are for in-store pickup. </strong></p><p><strong>Delivery and Installation fees will be calculated at checkout. Fees typically range between 15% and 40% of item price based on installation complexity, plus a charge for mileage.</strong></p>"
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "column": "primary",
+            "align": "center"
+          }
+        },
+        "c13717d6-5def-40f5-9684-68f8f103b0d4": {
+          "type": "tab",
+          "settings": {
+            "column": "secondary",
+            "title": "Basketball Hoop Installation",
+            "icon": "icon-delivery-truck-3",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "text": "<p>At Fenceworks, our expert installation team specializes in the <strong>assembly, installation, removal, and repair</strong> of <strong>in-ground and mounted basketball hoops</strong>. A well-installed hoop enhances safety, durability, and long-term enjoyment for your family. Our team takes pride in delivering <strong>professional, precision-driven installations</strong> to ensure your basketball system is securely set up for years of play.</p><p>As a <strong>family-owned business with over 58+ years of experience</strong>, we are recognized as <strong>Chicagoland’s trusted choice</strong> for basketball hoop installation and repair. We proudly serve <strong>Chicago, the North Shore, surrounding suburbs, Southeastern Wisconsin, and Northwest Indiana</strong>.</p>",
+            "image_width": 1000,
+            "align": "center",
+            "link": "",
+            "tab_content": "",
+            "open": false
+          }
+        },
+        "663a3435-b014-41e0-916d-1ed9505f5691": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "column": "secondary",
+            "title": "Collapsible tab",
+            "icon": "icon-check-circle-1",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "text": "",
+            "image_width": 1000,
+            "align": "center",
+            "link": "",
+            "tab_content": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "db48bf56-e904-4604-9f21-89d04e9bf249",
+        "description_UDUg9L",
+        "variant_picker",
+        "quantity_selector",
+        "inventory_notice",
+        "infinite_options_app_block_X3Nr88",
+        "buy_buttons",
+        "text_JwYMcB",
+        "share",
+        "c13717d6-5def-40f5-9684-68f8f103b0d4",
+        "663a3435-b014-41e0-916d-1ed9505f5691"
+      ],
+      "settings": {
+        "style": "clean",
+        "style_clean_mobile": true,
+        "layout-order": "media-left",
+        "enable_sticky_content": true,
+        "container": "large",
+        "show_breadcrumbs": true,
+        "breadcrumbs_align": "center",
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "product_image_ratio": "1:1",
+        "enable_gallery_arrows": true,
+        "thumbnails_position": "bottom",
+        "thumbnails_ratio": "1:1",
+        "thumbnails_show_border": false
+      }
+    },
+    "af1e6c23-5338-467c-bee9-b9d9b3d9c22a": {
+      "type": "section-image-grid",
+      "blocks": {
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-0": {
+          "type": "image",
+          "settings": {
+            "text_border_color": false,
+            "title": "Image block",
+            "text": "Use these image blocks to tell your story, promote your products or create a beautiful gallery.",
+            "link": "",
+            "text_alignment": "bottom"
+          }
+        },
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-1": {
+          "type": "text",
+          "settings": {
+            "title": "Text block",
+            "text": "<p>Use these text blocks to promote seasonal sales, store events or to tell your brand's story.</p>",
+            "link_text": "Learn more",
+            "link": "",
+            "bg_color": "#f0f0f0",
+            "text_color": "#131313",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-2": {
+          "type": "text",
+          "settings": {
+            "title": "Text block",
+            "text": "<p>Use these text blocks to promote seasonal sales, store events or to tell your brand's story.</p>",
+            "link_text": "Learn more",
+            "link": "",
+            "bg_color": "#f0f0f0",
+            "text_color": "#131313",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-3": {
+          "type": "image",
+          "settings": {
+            "text_border_color": false,
+            "title": "Image block",
+            "text": "Use these image blocks to tell your story, promote your products or create a beautiful gallery.",
+            "link": "",
+            "text_alignment": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-0",
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-1",
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-2",
+        "template--14778633322581__af1e6c23-5338-467c-bee9-b9d9b3d9c22a-1680270173f8db9315-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "featured": true,
+        "section_height": 450,
+        "section_height_mobile": 350,
+        "width": "full",
+        "overlay_color": "#000000",
+        "overlay_strength": 10,
+        "button_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "9904a28f-6381-41fe-96eb-d4a73d60f0a0": {
+      "type": "section-testimonials",
+      "blocks": {
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-0": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Use these testimonials to share what customers are saying about your products and your brand.</p>",
+            "name": "Customer name",
+            "source": "Source"
+          }
+        },
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-1": {
+          "type": "text",
+          "settings": {
+            "media": "instagram",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Use these testimonials to share what customers are saying about your products and your brand.</p>",
+            "name": "Customer name",
+            "source": "Source"
+          }
+        },
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-2": {
+          "type": "text",
+          "settings": {
+            "media": "twitter",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Use these testimonials to share what customers are saying about your products and your brand.</p>",
+            "name": "Customer name",
+            "source": "Source"
+          }
+        }
+      },
+      "block_order": [
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-0",
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-1",
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "grid",
+        "desktop_carousel": false,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "5a818a60-e694-4eac-a33f-5ce701e894b0": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "template--16580692508926__5a818a60-e694-4eac-a33f-5ce701e894b0-1666784018a0003e2f-0": {
+          "type": "image",
+          "settings": {
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Image with text",
+            "desc": "<p>Use these blocks to share your brand's story. You can focus on a particular collection, a product detail, or even embed a video.</p>",
+            "horizontal_align": "left",
+            "link_title": "Learn more",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "template--16580692508926__5a818a60-e694-4eac-a33f-5ce701e894b0-1666784018a0003e2f-1": {
+          "type": "image",
+          "settings": {
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Image with text",
+            "desc": "<p>Use these blocks to share your brand's story. You can focus on a particular collection, a product detail, or even embed a video.</p>",
+            "horizontal_align": "left",
+            "link_title": "Learn more",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16580692508926__5a818a60-e694-4eac-a33f-5ce701e894b0-1666784018a0003e2f-0",
+        "template--16580692508926__5a818a60-e694-4eac-a33f-5ce701e894b0-1666784018a0003e2f-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "2/3",
+        "heading_size": 2,
+        "link_style": "chevron",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_NxfVeB": {
+      "type": "section-rich-text",
+      "settings": {
+        "section_title": "WALL-MOUNTED SERIES HOOPS",
+        "text": "<p>PROformance has a range of wall-mounted basketball hoop systems to help you play, practice, get fit and build your basketball skills. All of our wall-mounted options are designed for indoor or outdoor use and are designed to be sturdy as well as easy to install. Made with the same high-quality products PROformance Hoops are known for, these systems are sure to last for years.<br/><br/></p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": true
+      }
+    },
+    "section_rich_text_TAnAWm": {
+      "type": "section-rich-text",
+      "settings": {
+        "section_title": "WHY GET A PROFORMANCE WALL-MOUNT BASKETBALL HOOP?",
+        "text": "<p>There are many benefits to an outdoor wall-mounted basketball hoop if you want to improve your game or get fit. By choosing a PROformance hoop, you also enjoy these additional benefits:</p><p>Constructed with Tempered Safety Glass: Every PROformance wall-mounted basketball hoop is made with Tempered Safety Glass. Tempered glass goes through a special heating and cooling process that makes the glass more durable, harder and shatter-resistant — it even has some of the same specifications that are used for NCAA and NBA backboards as well. Additionally, this glass is wrapped with a Full Perimeter Aluminum Trim for added protection. PROformance is the closest you can get to the pro deal.</p><p>Corrosion-resistant: Each PROformance pole and mount is made from corrosion-resistant and sturdy galvanized steel — 200% thicker than industry standards. This means your basketball hoop wall-mount can handle anything you throw at it. No matter how hard you dunk that ball, your adjustable basketball hoop wall-mount will be there for hours and years of play.</p><p>Designed to perform: The Bolt-to-Steel Rim Attachment on each of our rims ensures stress does not impact your glass backboard. Instead, force is absorbed down the pole, allowing our hoops to handle even the most aggressive plays. In addition, our Dual Spring Break-Away Rims bounce back to original position even with hard play, thanks to two high-tension steel springs. This protects your goal system and also protects you from injury. The Hide-Away Net makes it easy to replace your net and doesn’t leave any protruding pieces that can spell injury during a dunk.</p><p>Built with safety and quality in mind: Our hoops are made with input from engineers, athletes, field service representatives and others. Our engineers talk to athletes and find out how they really play on the field. Our team works to build basketball goal systems that work and that support you in playing your best game. On top of that, we meet or exceed all safety standards for our industry. And if you ever have questions or need help with our products, our responsive team is always willing to help.</p>",
+        "section_width": "large",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_mVKicj": {
+      "type": "section-rich-text",
+      "settings": {
+        "section_title": "WHY A WALL-MOUNT SYSTEM?",
+        "text": "<p>PROformance Hoops in-ground systems are a very popular option for customers, but so are our wall-mount solutions. Why might you want a wall-mount hoop? There are several reasons:</p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_multi_column_icons_UwgVwy": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "text_4YkWzT": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Indoor and outdoor use",
+            "sub_title": "",
+            "desc": "<p>Our in-ground systems are designed for outdoor use, but if you have an indoor gym or indoor area where you want to play all year long, wall-mounted solutions can be a great option. If you live in a place with harsh summers where outdoor play for hours may not be feasible or a place with harsh winters where you may not be able to get to an in-ground system during certain times of the year, an indoor basketball court to be a great option. For an indoor gym, a wall-mount system can be a great part of an entire fitness system or as part of an indoor basketball court.<br/><br/></p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_MWcrM4": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Space issues",
+            "sub_title": "",
+            "desc": "<p>Wall-mount systems take up less space than in-ground options. If you don't think you can have a basketball hoop because you don't have the yard space, a wall-mount system can be just the ticket. Whether you want to have more area for other activities or don't have the space for an in-ground hoop, wall-mount systems can be an option to consider</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_VcpYBh": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Terrain considerations",
+            "sub_title": "",
+            "desc": "<p>Some grounds just don't handle in-ground hoops very well. If you don't have the stability for breaking ground for an in-ground basketball hoop, wall-mounted systems still let you play and build your skills.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_geCxjm": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Mobility",
+            "sub_title": "",
+            "desc": "<p>If you ever move, it's easy to take your wall-mounted system with you. Just detach it and pack it up. With an in-ground system, you can take the hoop and the pole, but you'll need to buy a new ground mount at your new location. If you don't expect to be in your home forever, a wall system may make more sense.</p><p>If you're interested in buying a wall-mount basketball system that has the same high performance you expect from any PROformance solution, contact a dealer or browse our online catalog to find a range of wall-mount solutions with tempered glass for you to consider.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_4YkWzT",
+        "text_MWcrM4",
+        "text_VcpYBh",
+        "text_geCxjm"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "full",
+        "grid": 4,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": true,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "icon_size": 30,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "product-recommendations": {
+      "type": "section-product-recommendations",
+      "settings": {
+        "title": "You may also like",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 10,
+        "grid": 3,
+        "grid_mobile": "1",
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_overlap_RBnGwL": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_PAiyWC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PROformanceHoops_Catalog2023v1_Page_01.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "PROformance Hoops®",
+            "desc": "<p>We promote quality family playtime, fitness and fun by delivering your family the safest, most stable and most durable in-ground basketball hoop in the industry. Our team of athletes, engineers and field service representatives has been listening and responding to your needs for over 20 years. The passion that we have for basketball and outdoor entertainment can be found in the materials, construction, innovation and overall attention to detail that goes into every hoop that we deliver.<br/><br/></p>",
+            "horizontal_align": "left",
+            "link_title": "Request Quote",
+            "link": "shopify://pages/free-estimate",
+            "bg_color_block": "#f2f2f2",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_PAiyWC"
+      ],
+      "settings": {
+        "image_ratio": "natural",
+        "block_align": "left",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "af1e6c23-5338-467c-bee9-b9d9b3d9c22a",
+    "9904a28f-6381-41fe-96eb-d4a73d60f0a0",
+    "5a818a60-e694-4eac-a33f-5ce701e894b0",
+    "section_rich_text_NxfVeB",
+    "section_rich_text_TAnAWm",
+    "section_rich_text_mVKicj",
+    "section_multi_column_icons_UwgVwy",
+    "product-recommendations",
+    "section_image_with_text_overlap_RBnGwL"
+  ]
+}

@@ -1,0 +1,239 @@
+/* ==========================================================================
+   #LS IMAGE WITH TEXT
+   Flex layout: left container (image + caption + button on mobile), right container (content + button on desktop)
+   Mobile: right column first (content), then left column (image, caption, button)
+   ========================================================================== */
+
+.ls-iwt {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ls-iwt__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ls-iwt__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Mobile: content first, then image + caption + button */
+.ls-iwt__right {
+  order: 1;
+}
+
+.ls-iwt__left {
+  order: 2;
+}
+
+/* Button: in left column on mobile only, in right column on desktop only */
+.ls-iwt__button-wrap--mobile {
+  margin-top: 0.25rem;
+}
+
+.ls-iwt__button-wrap--desktop {
+  display: none;
+  margin-top: 0.25rem;
+}
+
+.ls-iwt__heading {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color--headings, #212121);
+}
+
+.ls-iwt__body {
+  margin: 0;
+  color: var(--color--text, #333);
+  line-height: 1.6;
+}
+
+.ls-iwt__body.rte p {
+  margin: 0 0 1em;
+}
+
+.ls-iwt__body.rte p:last-child {
+  margin-bottom: 0;
+}
+
+.ls-iwt__media {
+  line-height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ls-iwt__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.ls-iwt__caption {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color--text, #666);
+}
+
+.ls-iwt__caption.rte p {
+  margin: 0;
+}
+
+.ls-iwt__button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Desktop: flex row, left then right; button in right column only */
+@media screen and (min-width: 768px) {
+  .ls-iwt {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .ls-iwt__left,
+  .ls-iwt__right {
+    order: unset;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ls-iwt__button-wrap--mobile {
+    display: none;
+  }
+
+  .ls-iwt__button-wrap--desktop {
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
+
+
+h2.ls-iwt__heading {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/H2 */
+  font-family: "Cabinet Grotesk";
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 57px */
+  letter-spacing: -1.14px;
+  text-transform: uppercase;
+}
+
+.container.container--small {}
+
+section.section.section--padded.section--ls-image-with-text .container.container--small {
+  max-width: 1200px;
+}
+
+.ls-iwt {}
+
+
+h2.ls-iwt__heading {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/H2 */
+  font-family: "Cabinet Grotesk";
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 57px */
+  letter-spacing: -1.14px;
+  text-transform: uppercase;
+}
+
+.container.container--small {}
+
+section.section.section--padded.section--ls-image-with-text .container.container--small {
+  max-width: 1200px;
+}
+
+.ls-iwt {}
+
+.ls-iwt__body.rte p {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+a.ls-iwt__button.c-btn.c-btn--hollow {
+  display: flex;
+  height: 50px;
+  padding: 8px 80px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 99px;
+  /* border: 1px solid var(--bg-dark, #101A21); */
+  width: fit-content;
+  /* color: var(--txt-dark, #1C2D38); */
+  font-family: "Host Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: 0.5px;
+  text-transform: initial;
+}
+
+.ls-iwt__caption.rte p {
+  color: var(--txt-disclaim, #526572);
+
+/* Mobile/Disclaim */
+  font-family: "Host Grotesk";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.3px;
+}
+
+.ls-iwt__left {
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+  h2.ls-iwt__heading {
+    font-size: 32px;
+    line-height: 1.2em;
+  }
+  
+  .ls-iwt__body.rte p {
+    font-size: 16px;
+  }
+  
+  .ls-iwt__caption.rte p {
+    font-size: 12px;
+  }
+  
+  a.ls-iwt__button.c-btn.c-btn--hollow {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.ls-iwt {
+  align-items: center;
+}
+
+

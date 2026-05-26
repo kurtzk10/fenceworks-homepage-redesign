@@ -1,0 +1,205 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-image-banner.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-image-banner.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-image-banner.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<section
+  class="
+    section
+    section--{{ section.id }}
+    section--{{ section.settings.section_width }}
+    {% if section.settings.section_bottom_margin %}
+      {% if section.settings.section_width == 'contained' %} section--mb-m{% else %} section--mb-0{% endif %}
+    {% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-image-banner"
+>
+  {% if section.settings.section_width == 'contained' %}<div class="container container--large">{% endif %}
+
+  <div class="ls-image-banner ls-image-banner--{{ section.settings.section_width }}">
+    <div class="ls-image-banner__media">
+      {% if section.settings.image_desktop != blank %}
+        {%- liquid
+          assign loading = 'lazy'
+          if section.location == 'template' and section.index == 1
+            assign loading = 'eager'
+          endif
+          assign sizes = '100vw'
+          if section.settings.section_width == 'contained'
+            assign sizes = '(min-width: 1400px) 1320px, calc(100vw - 60px)'
+          endif
+          assign image_desktop = section.settings.image_desktop
+          assign image_mobile = section.settings.image_mobile
+          assign image_height_desktop = 600 | divided_by: image_desktop.aspect_ratio | round
+        -%}
+        <picture>
+          {% if image_mobile != blank %}
+            <source
+              srcset="{% render 'bgset', image: image_mobile %}"
+              media="(max-width: 980px)"
+            >
+          {% endif %}
+          <source
+            srcset="{% render 'bgset', image: image_desktop %}"
+            media="(min-width: 981px)"
+          >
+          {%- render 'image-skeleton',
+            alt: image_desktop.alt,
+            width: 600,
+            height: image_height_desktop
+          -%}
+          <img
+            class="ls-image-banner__img"
+            src="{{ image_desktop | image_url: width: 1200 }}"
+            width="1200"
+            height="{{ 1200 | divided_by: image_desktop.aspect_ratio | round }}"
+            alt="{{ image_desktop.alt | escape }}"
+            loading="{{ loading }}"
+            fetchpriority="{% if section.location == 'template' and section.index == 1 %}high{% else %}auto{% endif %}"
+            sizes="{{ sizes }}"
+            style="
+              --image-position: {{ image_desktop.presentation.focal_point }};
+              --image-position-mobile: {% if image_mobile != blank %}{{ image_mobile.presentation.focal_point }}{% else %}{{ image_desktop.presentation.focal_point }}{% endif %};
+            "
+          >
+        </picture>
+      {% else %}
+        <div class="ls-image-banner__placeholder">
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ls-image-banner__card">
+      {% unless section.settings.headline == blank %}
+        <h2 class="ls-image-banner__headline">{{ section.settings.headline | escape }}</h2>
+      {% endunless %}
+
+      {% unless section.settings.bullets == blank %}
+        <div class="ls-image-banner__bullets rte">{{ section.settings.bullets }}</div>
+      {% endunless %}
+
+      {% unless section.settings.body == blank %}
+        <div class="ls-image-banner__body rte">{{ section.settings.body }}</div>
+      {% endunless %}
+
+      {% if section.settings.cta_label != blank %}
+        <a href="{{ section.settings.cta_link | default: '#' }}" class="ls-image-banner__cta">
+          {{ section.settings.cta_label | escape }}
+          <span class="ls-image-banner__cta-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
+          <path d="M6.16406 0V15.0469L1.07812 9.96094L0 11.0391L6.375 17.4141L6.91406 17.9297L7.45312 17.4141L13.8281 11.0391L12.75 9.96094L7.66406 15.0469V0H6.16406Z" fill="#F4F7F8"/>
+        </svg></span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.section_width == 'contained' %}</div>{% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "LS Image banner",
+  "class": "js-section__ls-image-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Desktop image",
+      "info": "Recommended: 2200px width or wider for full-width."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile image",
+      "info": "Optional. Portrait ratio works well."
+    },
+    {
+      "type": "header",
+      "content": "Content card"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "A SMARTER WAY TO BUY & INSTALL"
+    },
+    {
+      "type": "richtext",
+      "id": "bullets",
+      "label": "Bullet points",
+      "default": "<ul><li>CONSULTATION</li><li>PRODUCT SELECTION</li><li>PROFESSIONAL INSTALLATION</li><li>ONGOING SUPPORT</li></ul>"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>No third parties. No confusion. Just one experienced team managing your project from start to finish.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "default": "Book Your Free Consultation"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "full",
+      "options": [
+        { "label": "Contained", "value": "contained" },
+        { "label": "Full", "value": "full" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Bottom margin",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Image banner",
+      "settings": {
+        "headline": "A SMARTER WAY TO BUY & INSTALL",
+        "bullets": "<ul><li>CONSULTATION</li><li>PRODUCT SELECTION</li><li>PROFESSIONAL INSTALLATION</li><li>ONGOING SUPPORT</li></ul>",
+        "body": "<p>No third parties. No confusion. Just one experienced team managing your project from start to finish.</p>",
+        "cta_label": "Book Your Free Consultation"
+      }
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}

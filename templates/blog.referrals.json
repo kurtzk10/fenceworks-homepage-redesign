@@ -1,0 +1,104 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_image_text_banner_UzKe7H": {
+      "type": "section-image-text-banner",
+      "blocks": {
+        "text_9TJpC6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ blog.title }}</p>",
+            "text_size": 6,
+            "text_width": 65,
+            "text_size_mobile": 3
+          }
+        },
+        "text_U7tLpH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Uniting top home improvement professionals to create lasting partnerships that connect complementary services and benefit our communities.</p>",
+            "text_size": 3,
+            "text_width": 40,
+            "text_size_mobile": 3
+          }
+        }
+      },
+      "block_order": [
+        "text_9TJpC6",
+        "text_U7tLpH"
+      ],
+      "settings": {
+        "bg_image": "shopify://shop_images/pexels-tima-miroshnichenko-6196679_1.png",
+        "content_alignment": "center",
+        "section_width": "full",
+        "bg_color": "rgba(0,0,0,0)",
+        "content_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_strength": 40,
+        "content_heading_color": false
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "blog_image_ratio": "1:1",
+        "show_rss": false,
+        "show_tags": true,
+        "show_blog_tags": true,
+        "show_blog_date": false,
+        "show_blog_read_more": true,
+        "page_width": "full",
+        "grid": 3
+      }
+    },
+    "section_custom_TKXEK6": {
+      "type": "section-custom",
+      "blocks": {
+        "text_H97wUe": {
+          "type": "text",
+          "settings": {
+            "title": "Join Fenceworks' Partnerships Program",
+            "text": "<p>We're excited to welcome you to the Fenceworks family! Complete the survey below to gain access to our network of trusted partners.</p>",
+            "align": "center",
+            "width": "1/2"
+          }
+        },
+        "spacer_km7YmT": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "button_amWwrg": {
+          "type": "button",
+          "settings": {
+            "title": "Take the Survey",
+            "link": "https://docs.google.com/forms/d/e/1FAIpQLSew589Jzb20O0GmQNjf9_iHTsschW42t4xcTlvvkfpsYZDPbg/viewform?usp=sf_link",
+            "width": "1/3"
+          }
+        }
+      },
+      "block_order": [
+        "text_H97wUe",
+        "spacer_km7YmT",
+        "button_amWwrg"
+      ],
+      "settings": {
+        "section-bottom-margin": false
+      }
+    }
+  },
+  "order": [
+    "section_image_text_banner_UzKe7H",
+    "main",
+    "section_custom_TKXEK6"
+  ]
+}

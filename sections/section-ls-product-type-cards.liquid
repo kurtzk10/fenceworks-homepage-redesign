@@ -1,0 +1,579 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-product-type-cards.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-product-type-cards.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-product-type-cards.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{% if section.index > 2 %}
+  <link
+    rel="stylesheet"
+    href="{{ 'component-media-carousel.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+{% endif %}
+<script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-product-type-cards
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-product-type-cards"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --lsptc-section-bg: {{ section.settings.section_bg }};
+    --lsptc-card-bg: {{ section.settings.card_bg }};
+    --lsptc-card-radius: {{ section.settings.card_radius }}px;
+    --lsptc-grid-gap: {{ section.settings.grid_gap }}px;
+    --lsptc-eyebrow-color: {{ section.settings.eyebrow_color }};
+    --lsptc-heading-color: {{ section.settings.heading_color }};
+    --lsptc-desc-color: {{ section.settings.desc_color }};
+    --lsptc-card-title-color: {{ section.settings.card_title_color }};
+    --lsptc-card-text-color: {{ section.settings.card_text_color }};
+    --lsptc-spec-icon-bg: {{ section.settings.spec_icon_bg }};
+    --lsptc-spec-label-color: {{ section.settings.spec_label_color }};
+    --lsptc-spec-value-color: {{ section.settings.spec_value_color }};
+    --lsptc-btn-bg: {{ section.settings.btn_bg }};
+    --lsptc-btn-text: {{ section.settings.btn_text_color }};
+    --lsptc-image-height: {{ section.settings.image_height }}px;
+  "
+>
+  <div class="lsptc__outer">
+    <div class="container container--{{ section.settings.section_width }}">
+
+      {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank -%}
+        <div class="lsptc__header">
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="lsptc__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="lsptc__heading">{{ section.settings.heading }}</h2>
+          {%- endif -%}
+          {%- if section.settings.description != blank -%}
+            <div class="lsptc__desc rte">{{ section.settings.description }}</div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <media-carousel
+          data-speed="500"
+          data-loop="false"
+          data-pagination="true"
+          data-space-between="16"
+          data-navigation="false"
+          data-breakpoint-max="tab"
+        >
+          <media-carousel-slider>
+            <media-carousel-wrapper class="lsptc__grid">
+              {%- for block in section.blocks -%}
+                <media-carousel-slide
+                  class="lsptc__card-wrap block--{{ block.id }}{% if forloop.last %} lsptc__card-wrap--last{% endif %}"
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="lsptc__card">
+
+                    {%- if block.settings.image != blank -%}
+                      <div class="lsptc__card-img-wrap">
+                        {% render 'image',
+                          image: block.settings.image,
+                          additional_classes: 'lsptc__card-img',
+                          image_ratio: 'natural',
+                          image_srcset_widths: '300, 480, 600',
+                          image_sizes: '(min-width: 990px) 33vw, 80vw',
+                          loading: 'lazy',
+                          alt_string: block.settings.title | escape
+                        %}
+                      </div>
+                    {%- else -%}
+                      <div class="lsptc__card-img-wrap lsptc__card-img-wrap--empty"></div>
+                    {%- endif -%}
+
+                    <div class="lsptc__card-body">
+
+                      {%- unless block.settings.title == blank -%}
+                        <h3 class="lsptc__card-title">{{ block.settings.title | escape }}</h3>
+                      {%- endunless -%}
+
+                      {%- unless block.settings.description == blank -%}
+                        <p class="lsptc__card-desc">{{ block.settings.description | escape }}</p>
+                      {%- endunless -%}
+
+                      {%- assign has_specs = false -%}
+                      {%- for i in (1..5) -%}
+                        {%- assign _spec_label_key = 'spec_' | append: i | append: '_label' -%}
+                        {%- if block.settings[_spec_label_key] != blank -%}
+                          {%- assign has_specs = true -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+
+                      {%- if has_specs -%}
+                        <div class="lsptc__specs">
+                          {%- for i in (1..5) -%}
+                            {%- assign _spec_label_key = 'spec_' | append: i | append: '_label' -%}
+                            {%- assign _spec_value_key = 'spec_' | append: i | append: '_value' -%}
+                            {%- assign _spec_icon_key  = 'spec_' | append: i | append: '_icon' -%}
+                            {%- assign _spec_label = block.settings[_spec_label_key] -%}
+                            {%- assign _spec_value = block.settings[_spec_value_key] -%}
+                            {%- assign _spec_icon  = block.settings[_spec_icon_key] -%}
+
+                            {%- if _spec_label != blank -%}
+                              <div class="lsptc__spec-item">
+                                <div class="lsptc__spec-icon-wrap">
+                                  {%- if _spec_icon != blank -%}
+                                    {% render 'image',
+                                      image: _spec_icon,
+                                      additional_classes: 'lsptc__spec-icon-img',
+                                      image_ratio: 'natural',
+                                      image_srcset_widths: '80, 120',
+                                      image_sizes: '40px',
+                                      loading: 'lazy',
+                                      alt_string: ''
+                                    %}
+                                  {%- else -%}
+                                    <span class="lsptc__spec-icon-placeholder" aria-hidden="true"></span>
+                                  {%- endif -%}
+                                </div>
+
+                                <div class="lsptc__spec-content">
+                                  <p class="lsptc__spec-label">{{ _spec_label | escape }}</p>
+                                  {%- if _spec_value != blank -%}
+                                    <div class="lsptc__spec-rte">{{ _spec_value }}</div>
+                                  {%- endif -%}
+                                </div>
+                              </div>
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </div>
+                      {%- endif -%}
+
+                      {%- unless block.settings.btn_label == blank -%}
+                        {%- assign _btn_link = block.settings.btn_link | default: '#' -%}
+                        <a href="{{ _btn_link }}" class="lsptc__card-btn">
+                          {{- block.settings.btn_label | escape -}}
+                        </a>
+                      {%- endunless -%}
+
+                    </div>
+                  </div>
+                </media-carousel-slide>
+              {%- endfor -%}
+            </media-carousel-wrapper>
+          </media-carousel-slider>
+
+          {%- if section.blocks.size > 1 -%}
+            <media-carousel-pagination
+              class="media-carousel__pagination swiper-pagination js-carousel-pagination"
+              hidden
+            ></media-carousel-pagination>
+          {%- endif -%}
+        </media-carousel>
+      {%- else -%}
+        <div class="placeholder-noblocks">
+          {{ 'homepage.onboarding.no_content' | t }}
+        </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS Product Type Cards",
+  "class": "js-section__ls-product-type-cards",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "One Stop, Everything for your Backyard"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Wrap text in <em> for accent color.",
+      "default": "<p>BASKETBALL HOOPS<br>FOR HOMES</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Professional-grade basketball hoops designed for safety, performance, and everyday play. Choose the perfect setup for your space.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap between cards",
+      "unit": "px",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Product image height",
+      "unit": "px",
+      "min": 120,
+      "max": 360,
+      "step": 10,
+      "default": 220
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#FBF0E8"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow text",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading text",
+      "default": "#1C2D38"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "Description text",
+      "default": "#3D4752"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title text",
+      "default": "#1C2D38"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card description text",
+      "default": "#3D4752"
+    },
+    {
+      "type": "color",
+      "id": "spec_icon_bg",
+      "label": "Spec icon background",
+      "default": "#3D2B1F"
+    },
+    {
+      "type": "color",
+      "id": "spec_label_color",
+      "label": "Spec label text",
+      "default": "#1C2D38"
+    },
+    {
+      "type": "color",
+      "id": "spec_value_color",
+      "label": "Spec value text",
+      "default": "#3D4752"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Button background",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product card",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Card content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "In-Ground Mount"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Perfect for driveways and tight spaces. Securely mounted to walls or roof structures for space-efficient, reliable performance."
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button label",
+          "default": "Shop In-Ground Hoops"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button link"
+        },
+        {
+          "type": "header",
+          "content": "Spec 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "spec_1_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "spec_1_label",
+          "label": "Label",
+          "default": "Adjustable Height"
+        },
+        {
+          "type": "richtext",
+          "id": "spec_1_value",
+          "label": "Value(s)",
+          "default": "<p>6\u2019 \u2013 10\u2019</p>"
+        },
+        {
+          "type": "header",
+          "content": "Spec 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "spec_2_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "spec_2_label",
+          "label": "Label",
+          "default": "Backboard Size"
+        },
+        {
+          "type": "richtext",
+          "id": "spec_2_value",
+          "label": "Value(s)",
+          "default": "<ul><li>54\"x36\"</li><li>60\"x38\"</li><li>72\"x42\"</li></ul>"
+        },
+        {
+          "type": "header",
+          "content": "Spec 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "spec_3_icon",
+          "label": "Icon"
+        },
+
+        {
+          "type": "text",
+          "id": "spec_3_label",
+          "label": "Label"
+        },
+        {
+          "type": "richtext",
+          "id": "spec_3_value",
+          "label": "Value(s)"
+        },
+        {
+          "type": "header",
+          "content": "Spec 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "spec_4_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "spec_4_label",
+          "label": "Label"
+        },
+        {
+          "type": "richtext",
+          "id": "spec_4_value",
+          "label": "Value(s)"
+        },
+        {
+          "type": "header",
+          "content": "Spec 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "spec_5_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "spec_5_label",
+          "label": "Label"
+        },
+        {
+          "type": "richtext",
+          "id": "spec_5_value",
+          "label": "Value(s)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Product Type Cards",
+      "blocks": [
+        {
+          "type": "product_card",
+          "settings": {
+            "title": "In-Ground Mount",
+            "description": "Perfect for driveways and tight spaces. Securely mounted to walls or roof structures for space-efficient, reliable performance.",
+            "btn_label": "Shop In-Ground Hoops",
+            "spec_1_label": "Adjustable Height",
+            "spec_1_value": "<p>6' \u2013 10'</p>",
+            "spec_2_label": "Backboard Size",
+            "spec_2_value": "<ul><li>54\"x36\"</li><li>60\"x38\"</li><li>72\"x42\"</li></ul>",
+            "spec_3_label": "Glass Thickness",
+            "spec_3_value": "<ul><li>1/2\"</li><li>3/8</li></ul>",
+            "spec_4_label": "Pole Base",
+            "spec_4_value": "<ul><li>5\"x5\"</li><li>6\"x6\"</li></ul>",
+            "spec_5_label": "Overhang",
+            "spec_5_value": "<p>3' From Pole to Backboard</p>"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "title": "Wall Mount",
+            "description": "The gold standard for stability and performance. Professionally installed in concrete for maximum durability and authentic play experience.",
+            "btn_label": "Shop Wall Mount Hoops",
+            "spec_1_label": "Adjustable Height",
+            "spec_1_value": "<p>7.5' \u2013 10'</p>",
+            "spec_2_label": "Backboard Size",
+            "spec_2_value": "<ul><li>54\"x36\"</li><li>60\"x38\"</li><li>72\"x42\"</li></ul>",
+            "spec_3_label": "Glass Thickness",
+            "spec_3_value": "<p>3/8\"</p>",
+            "spec_4_label": "Overhang",
+            "spec_4_value": "<p>3' From Wall to Backboard</p>"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "title": "Accessories",
+            "description": "Upgrade your setup with premium add-ons designed to improve safety, performance, and long-term durability. Built to complement your hoop and elevate every game.",
+            "btn_label": "Shop Accessories",
+            "spec_1_label": "Performance",
+            "spec_1_value": "<ul><li>Nets</li><li>Stencil kit</li></ul>",
+            "spec_2_label": "Safety",
+            "spec_2_value": "<ul><li>Edge padding</li><li>Gusset pads</li><li>Safety Nets</li></ul>",
+            "spec_3_label": "Spare Parts",
+            "spec_3_value": "<ul><li>Nets</li><li>Handles</li><li>Locks</li><li>Mounts</li></ul>"
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

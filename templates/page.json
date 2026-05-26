@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {font-size: 30px; padding-top: 20px; /* adjust the value as needed */}"
+      ],
+      "settings": {}
+    },
+    "section_liquid_qBprpw": {
+      "type": "section-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
+    "section_rich_text_fxrTG3": {
+      "type": "section-rich-text",
+      "disabled": true,
+      "settings": {
+        "section_title": "{{ page.title }}",
+        "text": "{{ page.content }}",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "17229818280cc87843": {
+      "type": "apps",
+      "blocks": {
+        "xo_gallery_xo_gallery_xtCqJn": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 31,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "xo_gallery_xo_gallery_xtCqJn"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_liquid_qBprpw",
+    "section_rich_text_fxrTG3",
+    "17229818280cc87843"
+  ]
+}

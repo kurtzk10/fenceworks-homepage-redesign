@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_image_text_banner_UzKe7H": {
+      "type": "section-image-text-banner",
+      "blocks": {
+        "text_9TJpC6": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>{{ blog.title }}</h2>",
+            "text_size": 7,
+            "text_width": 65,
+            "text_size_mobile": 3
+          }
+        },
+        "text_U7tLpH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Check out recent press coverage, blog features, and articles showcasing our work and expertise in fencing solutions.</p>",
+            "text_size": 3,
+            "text_width": 40,
+            "text_size_mobile": 3
+          }
+        }
+      },
+      "block_order": [
+        "text_9TJpC6",
+        "text_U7tLpH"
+      ],
+      "settings": {
+        "bg_image": "shopify://shop_images/picket-fence-flowers.jpg",
+        "content_alignment": "center",
+        "section_height": 360,
+        "section_height_mobile": 220,
+        "section_full_screen": false,
+        "section_width": "full",
+        "bg_color": "rgba(0,0,0,0)",
+        "content_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_strength": 40,
+        "content_heading_color": false,
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_bottom_margin": false
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "blog_image_ratio": "1:1",
+        "show_rss": false,
+        "show_tags": true,
+        "show_blog_tags": true,
+        "show_blog_date": false,
+        "show_blog_read_more": true,
+        "page_width": "full",
+        "grid": 3
+      }
+    },
+    "section_logo_list_4mCrJH": {
+      "type": "section-logo-list",
+      "blocks": {
+        "logo_NDH87d": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/bbb-logo.png",
+            "scale": 50,
+            "link": "https://www.bbb.org/us/il/northbrook/profile/fence-contractors/fenceworks-inc-0654-18000133"
+          }
+        },
+        "logo_PBymit": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/angi_s_List.jpg",
+            "scale": 50,
+            "link": "https://www.angi.com/companylist/us/il/northbrook/fenceworks-inc-reviews-81663.htm?page=4&featuredReviewsLimit=22&featuredReviewsOffset=75"
+          }
+        },
+        "logo_bUfFgN": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Google_Review.jpg",
+            "scale": 50,
+            "link": "https://www.google.com/search?q=fenceworks+northbrook&sca_esv=51d92fddc59c0275&sca_upv=1&sxsrf=ADLYWIJvsXb7O2Z9MxbBERW7V2rX4tumpg%3A1726388483792&ei=A5nmZtqGMOfXi-gPltyCiQU&oq=fenceworks+norhtr&gs_lp=Egxnd3Mtd2l6LXNlcnAiEWZlbmNld29ya3Mgbm9yaHRyKgIIADIHECMYsAIYJzIHECMYsAIYJzILEAAYgAQYhgMYigUyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBEjPOVDnDVjQKHABeACQAQCYAagBoAHoCqoBAzAuObgBA8gBAPgBAZgCB6AC2gfCAgsQABiABBiwAxiiBMICChAhGKABGMMEGArCAggQIRigARjDBMICBxAhGKABGAqYAwCIBgGQBgGSBwMxLjagB7oz&sclient=gws-wiz-serp#lrd=0x880fbf73ecc00015:0xa1928113552ff356,1,,,,"
+          }
+        },
+        "logo_CpQWeL": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/houzz-300x169.webp",
+            "scale": 50,
+            "link": "https://www.houzz.com/professionals/fencing-and-gate-sales-and-construction/fenceworks-the-guy-on-41-pfvwus-pf~508258960?"
+          }
+        },
+        "logo_TCNxCG": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/WS-logo-1000AM.png",
+            "scale": 50,
+            "link": "http://www.espn.com/chicago/radio/show?showId=ws"
+          }
+        }
+      },
+      "block_order": [
+        "logo_NDH87d",
+        "logo_PBymit",
+        "logo_bUfFgN",
+        "logo_CpQWeL",
+        "logo_TCNxCG"
+      ],
+      "settings": {
+        "title": "Press & Media",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "full",
+        "content_width": "large",
+        "grid": 5,
+        "logo_width": 80,
+        "grid_mobile": "2",
+        "logo_width_mobile": 80,
+        "enable_carousel_mobile": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "opacity": 100,
+        "link_title": "View all",
+        "link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "section_image_text_banner_UzKe7H",
+    "main",
+    "section_logo_list_4mCrJH"
+  ]
+}

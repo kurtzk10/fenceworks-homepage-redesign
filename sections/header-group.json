@@ -1,0 +1,103 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Header group",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "layout": "left",
+        "style": "sticky",
+        "link_style": "icon",
+        "enable_chevrons": true,
+        "header_divider": true,
+        "header_bg": "#383838",
+        "header_text": "#ffffff",
+        "logo": "shopify://shop_images/80096-_Fenceworks_Logo-White_taglines.png",
+        "header_transparent": false,
+        "header_transparent_collection": false,
+        "header_transparent_divider": false,
+        "header_transparent_text": "{{ shop.brand.colors.primary[0].foreground }}",
+        "special_link_triggers": "",
+        "special_link_color": "#c00000",
+        "special_link_disable_on_transparent_header": false,
+        "logo_size": 40,
+        "logo_spacing": 4,
+        "logo_size_mobile": 35,
+        "logo_spacing_mobile": 6,
+        "sidebar_main_menu": "",
+        "sidebar_secondary_menu": "footer",
+        "sidebar_show_borders": true,
+        "sidebar_show_collection_images_in_submenu": true,
+        "sidebar_show_view_all_in_submenu": true,
+        "sidebar_view_all_style": "solid-mono",
+        "sidebar_show_contact_number": true,
+        "sidebar_show_contact_email": true,
+        "sidebar_show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "section_announcement_bar_F97VJi": {
+      "type": "section-announcement-bar",
+      "blocks": {
+        "announcement_ptbd84": {
+          "type": "announcement",
+          "settings": {
+            "icon": "icon-megaphone",
+            "svg-code": "",
+            "text": "Only Family Owned/Operated, NOT FRANCHISED Company for Fence + Playground + Trampoline + Basketball Hoop in Chicagoland!",
+            "text_link": "",
+            "link": ""
+          }
+        },
+        "announcement_pLt8G3": {
+          "type": "announcement",
+          "settings": {
+            "icon": "icon-mobile-phone",
+            "svg-code": "",
+            "text": "GIVE US A CALL AT 847-432-0900",
+            "text_link": "",
+            "link": "tel:847-432-0900"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_ptbd84",
+        "announcement_pLt8G3"
+      ],
+      "settings": {
+        "close_icon": false,
+        "carousel_desktop": false,
+        "auto_carousel": true,
+        "carousel_speed": 8,
+        "message_color_bg": "#f5811f",
+        "message_color_text": "#ffffff",
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 2,
+        "text_size_mobile": 2,
+        "text_style": "body",
+        "text_bold": false,
+        "text_capitalize": false,
+        "text_letter_spacing": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": true
+      }
+    }
+  },
+  "order": [
+    "header",
+    "section_announcement_bar_F97VJi"
+  ]
+}

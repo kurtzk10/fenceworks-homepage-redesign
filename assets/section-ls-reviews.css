@@ -1,0 +1,293 @@
+/* ==========================================================================
+   #LS REVIEWS SECTION
+   ========================================================================== */
+
+.section--ls-reviews {
+  background: var(--ls-reviews-bg, #fff);
+}
+
+.ls-reviews {
+  color: var(--ls-reviews-text-color, #0f1e24);
+}
+
+/* --------------------------------------------------------------------------
+   Heading
+   -------------------------------------------------------------------------- */
+
+.ls-reviews__heading {
+  margin-bottom: 40px;
+}
+
+.ls-reviews__heading-text {
+  font-size: clamp(28px, 4.5vw, 52px);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--ls-reviews-heading-color, #0f1e24);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.ls-reviews__heading-accent {
+  color: var(--ls-reviews-accent-color, #e86f1a);
+}
+
+/* --------------------------------------------------------------------------
+   Desktop grid (carousel inactive)
+   -------------------------------------------------------------------------- */
+
+media-carousel-wrapper.ls-reviews__grid:not(.swiper-wrapper) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   Card
+   -------------------------------------------------------------------------- */
+
+.ls-reviews__slide {
+  display: flex;
+}
+
+.ls-reviews__card {
+  position: relative;
+  background: var(--ls-reviews-card-bg, #e9eced);
+  border-radius: 16px;
+  padding: 28px 28px 72px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ls-reviews__card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.ls-reviews__card-text {
+  font-style: italic;
+  line-height: 1.65;
+  margin: 0 0 20px;
+  color: var(--ls-reviews-text-color, #0f1e24);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   Stars
+   -------------------------------------------------------------------------- */
+
+.ls-reviews__card-stars {
+  display: flex;
+  gap: 1px;
+  margin-bottom: 10px;
+}
+
+.ls-reviews__star {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1;
+}
+
+.ls-reviews__star--filled {
+  color: var(--ls-reviews-stars-color, #e86f1a);
+}
+
+/* --------------------------------------------------------------------------
+   Reviewer meta
+   -------------------------------------------------------------------------- */
+
+.ls-reviews__card-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0 0 3px;
+  color: var(--ls-reviews-text-color, #0f1e24);
+}
+
+.ls-reviews__card-source,
+a.ls-reviews__card-source {
+  font-size: 0.75rem;
+  color: #5a6a6f;
+  text-decoration: underline;
+  margin: 0;
+  cursor: pointer;
+}
+
+a.ls-reviews__card-source:hover {
+  color: var(--ls-reviews-accent-color, #e86f1a);
+}
+
+/* --------------------------------------------------------------------------
+   Decorative quote mark
+   -------------------------------------------------------------------------- */
+
+.ls-reviews__card-quote {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  user-select: none;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.ls-reviews__card-quote svg {
+  width: 72px;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile: carousel overrides (breakpoint matches theme ~768px / "tab")
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 47.9375em) {
+  media-carousel-wrapper.ls-reviews__grid {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .ls-reviews__slide {
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .ls-reviews__card {
+    padding-bottom: 80px;
+  }
+
+  .ls-reviews__card-text {
+    font-size: 1rem;
+  }
+
+  .ls-reviews__card-quote svg {
+    width: 80px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Pagination dots (mobile)
+   -------------------------------------------------------------------------- */
+
+.section--ls-reviews .media-carousel__pagination {
+  margin-top: 20px;
+}
+
+
+h2.ls-reviews__heading-text {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/H2 */
+  font-family: "Cabinet Grotesk";
+  font-size: 57px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 57px */
+  letter-spacing: -1.14px;
+  text-transform: uppercase;
+}
+
+p.ls-reviews__card-text {
+  color: #383838;
+
+/* Mobile/body */
+  font-family: "Host Grotesk";
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: 0.48px;
+}
+
+p.ls-reviews__card-name {
+  color: #383838;
+  text-align: center;
+
+/* Desktop/Caption */
+  font-family: "Host Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 0.42px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+span.ls-reviews__star.ls-reviews__star--filled {
+}
+
+.ls-reviews__card {
+  border-radius: 24px;
+  border: 1px solid var(--bg-light-gray, #E9ECED);
+  background: var(--bg-light-gray, #E9ECED);
+
+/* shadow-3 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+  padding: 16px;
+  overflow: initial;
+}
+
+.ls-reviews__card-quote {
+  bottom: -30px;
+  /* width: 90px; */
+}
+
+.ls-reviews__card-quote svg {
+  width: 90px;
+}
+
+.ls-reviews__card-stars {
+  margin-bottom: 5px;
+}
+
+.ls-reviews__card {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+h2.ls-reviews__heading-text {
+  font-size: 32px;
+  line-height: 1.2em;
+}
+
+.ls-reviews__heading {
+  margin-bottom: 20px;
+}
+}
+
+
+
+media-carousel-slide.ls-reviews__slide.swiper-slide.swiper-slide-active.is-visible {} 
+
+@media screen and (max-width: 768px) {
+  media-carousel-slide.ls-reviews__slide.swiper-slide.swiper-slide-prev {
+    width: 100%!important;
+    margin-right: 0!Important;
+}
+
+media-carousel-wrapper.ls-reviews__grid {
+    gap: 16px!Important;
+}
+}
+
+a.section__link-link.c-btn.c-btn--hollow{
+  color: var(--txt-dark, #1C2D38);
+  font-family: "Host Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: 0.5px;
+  border-radius: 99px;
+  border: 1px solid var(--bg-dark, #101A21);
+  box-shadow: none;
+  padding: 15px 30px;
+  min-width: 270px;
+}
+
+@media screen and (max-width: 768px) {
+a.section__link-link.c-btn.c-btn--hollow{
+  width: 100%;
+}
+}

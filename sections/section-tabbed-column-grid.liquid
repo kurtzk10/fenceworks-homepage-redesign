@@ -1,0 +1,737 @@
+{%- assign grid_items = section.blocks | where: 'type', 'grid_item' -%}
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-tabbed-column-grid.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-tabbed-column-grid.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-tabbed-column-grid.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{%- liquid
+  assign columns_desktop = section.settings.grid_columns_desktop
+  assign columns_mobile = section.settings.grid_columns_mobile
+  assign initial_per_tab = section.settings.initial_items_per_tab
+  assign tab_keys = 'main,1,2,3' | split: ','
+-%}
+
+{% if grid_items.size > 0 %}
+<section
+  class="
+    section
+    section--padded
+    section--{{ section.id }}
+    section--tabbed-column-grid
+    {% if section.settings.section_bottom_margin %}
+      section--mb-0
+    {% else %}
+      section--mb-s
+    {% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="tabbed-column-grid"
+  data-initial-per-tab="{{ initial_per_tab }}"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --tcg-section-bg: {{ section.settings.section_bg }};
+    --tcg-content-bg: {{ section.settings.content_bg }};
+    --tcg-content-radius: {{ section.settings.content_border_radius }}px;
+    --tcg-tab-active-bg: {{ section.settings.tab_active_bg }};
+    --tcg-tab-inactive-bg: {{ section.settings.tab_inactive_bg }};
+    --tcg-tab-text: {{ section.settings.tab_text_color }};
+    --tcg-heading-color: {{ section.settings.heading_color }};
+    --tcg-text-color: {{ section.settings.text_color }};
+    --tcg-accent-color: {{ section.settings.accent_color }};
+    --tcg-contact-bg: {{ section.settings.contact_bg }};
+    --tcg-contact-border: {{ section.settings.contact_border_color }};
+    --tcg-contact-text: {{ section.settings.contact_text_color }};
+    --tcg-contact-link: {{ section.settings.contact_link_color }};
+    --tcg-grid-cols-desktop: {{ columns_desktop }};
+    --tcg-grid-cols-mobile: {{ columns_mobile }};
+    --tcg-grid-gap: {{ section.settings.grid_spacing }}px;
+    --tcg-btn-bg: {{ section.settings.button_bg }};
+    --tcg-btn-text: {{ section.settings.button_text_color }};
+    --tcg-btn-radius: {{ section.settings.button_border_radius }}px;
+    --tcg-loadmore-bg: {{ section.settings.load_more_bg }};
+    --tcg-loadmore-text: {{ section.settings.load_more_text_color }};
+    --tcg-loadmore-border: {{ section.settings.load_more_border_color }};
+    --tcg-loadmore-radius: {{ section.settings.load_more_border_radius }}px;
+    --tcg-heading-size: {{ section.settings.heading_size }}px;
+    --tcg-tab-heading-size: {{ section.settings.tab_heading_size }}px;
+  "
+>
+  <div class="tcg__outer">
+    <div class="container container--{{ section.settings.section_width }}">
+      {%- if section.settings.title != blank or section.settings.intro != blank -%}
+        <div class="tcg__header section__title section__title--center {% unless section.settings.intro == blank %} section__title--desc{% endunless %}">
+          {%- unless section.settings.title == blank -%}
+            <h2 class="tcg__main-title section__title-text">{{ section.settings.title | escape }}</h2>
+          {%- endunless -%}
+          {%- unless section.settings.intro == blank -%}
+            <div class="tcg__intro section__title-desc rte">{{ section.settings.intro }}</div>
+          {%- endunless -%}
+        </div>
+      {%- endif -%}
+
+      <div class="tcg__content-box">
+        <div class="tcg__tabs-wrapper" role="tablist" aria-label="Tabs">
+        <div class="tcg__tabs" role="tablist" aria-label="Tabs">
+          {%- assign first_visible_tab = true -%}
+          {% for i in tab_keys %}
+            {%- assign label_key = 'tab_' | append: i | append: '_label' -%}
+            {%- assign label = section.settings[label_key] -%}
+            {%- if label != blank -%}
+              <button
+                type="button"
+                class="tcg__tab {% if first_visible_tab %}tcg__tab--active{% endif %}"
+                role="tab"
+                aria-selected="{% if first_visible_tab %}true{% else %}false{% endif %}"
+                aria-controls="tcg-panel-{{ section.id }}-{{ i }}"
+                id="tcg-tab-{{ section.id }}-{{ i }}"
+                data-tab="{{ i }}"
+              >
+                {{ label | escape }}
+              </button>
+              {%- assign first_visible_tab = false -%}
+            {%- endif -%}
+          {% endfor %}
+          </div>
+        </div>
+     
+        {%- assign first_visible_panel = true -%}
+        {% for i in tab_keys %}
+          {%- assign label_key = 'tab_' | append: i | append: '_label' -%}
+          {%- assign subtitle_key = 'tab_' | append: i | append: '_subtitle' -%}
+          {%- assign title_key = 'tab_' | append: i | append: '_title' -%}
+          {%- assign desc_key = 'tab_' | append: i | append: '_description' -%}
+
+          {%- if section.settings[label_key] != blank -%}
+          <div
+            id="tcg-panel-{{ section.id }}-{{ i }}"
+            class="tcg__panel {% if first_visible_panel %}tcg__panel--active{% endif %}"
+            role="tabpanel"
+            aria-labelledby="tcg-tab-{{ section.id }}-{{ i }}"
+            data-tab="{{ i }}"
+            {% unless first_visible_panel %}hidden{% endunless %}
+          >
+            <div class="tcg__panel-inner">
+              {%- if section.settings[subtitle_key] != blank -%}
+                <p class="tcg__tab-subtitle">{{ section.settings[subtitle_key] | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings[title_key] != blank -%}
+                <h3 class="tcg__tab-title">{{ section.settings[title_key] | escape }}</h3>
+              {%- endif -%}
+              {%- if section.settings[desc_key] != blank -%}
+                <div class="tcg__tab-desc rte">{{ section.settings[desc_key] }}</div>
+              {%- endif -%}
+
+              {%- if section.settings.show_contact_callout -%}
+                {%- if section.settings.contact_text != blank -%}
+                <div class="tcg__contact">
+                   {{ section.settings.contact_text }}
+                </div>
+                {%- endif -%}
+              {%- endif -%}
+
+              <div class="tcg__grid" data-tab="{{ i }}">
+                {%- assign count = 0 -%}
+                {%- assign tab_id_str = i | append: '' -%}
+                {%- for block in grid_items -%}
+                  {%- if block.settings.tab == tab_id_str -%}
+                    {%- assign count = count | plus: 1 -%}
+                    <div
+                      class="tcg__grid-item {% if count > initial_per_tab %}tcg__grid-item--hidden{% endif %}"
+                      data-tab-index="{{ count }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      <div class="tcg__card">
+                        {%- if block.settings.image != blank -%}
+                          <div class="tcg__card-media">
+                            <a href="{{ block.settings.button_link | default: '#' }}" class="tcg__card-media-link">
+                              {% render 'image',
+                                image: block.settings.image,
+                                alt_string: block.settings.title | escape,
+                                additional_classes: 'tcg__card-img',
+                                image_ratio: 'natural',
+                                image_srcset_widths: '360, 540, 720, 900, 1080',
+                                image_sizes: '(min-width: 768px) 50vw, 100vw',
+                                render_skeleton: true,
+                                loading: 'lazy'
+                              %}
+                            </a>
+                          </div>
+                        {%- else -%}
+                          <div class="tcg__card-media">
+                            <span class="tcg__card-placeholder">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</span>
+                          </div>
+                        {%- endif -%}
+                        <div class="tcg__card-body">
+                          {%- unless block.settings.title == blank -%}
+                            <h4 class="tcg__card-title">{{ block.settings.title | escape }}</h4>
+                          {%- endunless -%}
+                          {%- unless block.settings.price == blank -%}
+                            <p class="tcg__card-price">{{ block.settings.price | escape }}</p>
+                          {%- endunless -%}
+                          {%- unless block.settings.button_text == blank -%}
+                            <a
+                              href="{{ block.settings.button_link | default: '#' }}"
+                              class="tcg__card-btn"
+                            >
+                              {{ block.settings.button_text | escape }}
+                            </a>
+                          {%- endunless -%}
+                        </div>
+                      </div>
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+
+              {%- assign tab_item_count = 0 -%}
+              {%- for block in grid_items -%}
+                {%- if block.settings.tab == tab_id_str -%}
+                  {%- assign tab_item_count = tab_item_count | plus: 1 -%}
+                {%- endif -%}
+              {%- endfor -%}
+
+              {%- if section.settings.show_load_more and tab_item_count > initial_per_tab -%}
+                {%- assign load_more_key = 'tab_' | append: i | append: '_load_more_text' -%}
+                {%- assign load_more_label = section.settings[load_more_key] -%}
+                {%- if load_more_label == blank -%}
+                  {%- assign tab_label = section.settings[label_key] -%}
+                  {%- assign load_more_label = 'Load more' | append: ' ' | append: tab_label -%}
+                {%- endif -%}
+                <div class="tcg__load-more-wrap">
+                  <button
+                    type="button"
+                    class="tcg__load-more"
+                    data-load-more-tab="{{ i }}"
+                  >
+                    {{ load_more_label }}
+                  </button>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+          {%- assign first_visible_panel = false -%}
+          {%- endif -%}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ 'section-tabbed-column-grid.js' | asset_url }}" type="module"></script>
+{% else %}
+  <div class="placeholder-noblocks">
+    {{ 'homepage.onboarding.no_content' | t }}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Tabbed column grid",
+  "class": "js-section__tabbed-column-grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Find the right play set size"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro text",
+      "default": "<p>Compare play set sizes to see which option works best for your space, usage, and age group.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Main Tab"
+    },
+    {
+      "type": "text",
+      "id": "tab_main_label",
+      "label": "Tab label",
+      "default": "All Sets"
+    },
+    {
+      "type": "text",
+      "id": "tab_main_subtitle",
+      "label": "Category subtitle",
+      "default": "View Entire Collection"
+    },
+    {
+      "type": "text",
+      "id": "tab_main_title",
+      "label": "Tab content title",
+      "default": "All playsets"
+    },
+    {
+      "type": "richtext",
+      "id": "tab_main_description",
+      "label": "Description",
+      "default": "<p>Browse our complete catalog of durable play sets for any space.</p>"
+    },
+    {
+      "type": "text",
+      "id": "tab_main_load_more_text",
+      "label": "Load more button text",
+      "default": "Load more playsets"
+    },
+    {
+      "type": "header",
+      "content": "Tab 1"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_label",
+      "label": "Tab label",
+      "default": "Small"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_subtitle",
+      "label": "Category subtitle",
+      "default": "For Schools & Compact Spaces"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_title",
+      "label": "Tab content title",
+      "default": "Small playsets"
+    },
+    {
+      "type": "richtext",
+      "id": "tab_1_description",
+      "label": "Description",
+      "default": "<p>Durable play sets designed for smaller outdoor areas and everyday school use.</p>"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_load_more_text",
+      "label": "Load more button text",
+      "default": "Load more small playsets"
+    },
+    {
+      "type": "header",
+      "content": "Tab 2"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_label",
+      "label": "Tab label",
+      "default": "Medium"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_subtitle",
+      "label": "Category subtitle"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_title",
+      "label": "Tab content title",
+      "default": "Medium playsets"
+    },
+    {
+      "type": "richtext",
+      "id": "tab_2_description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_load_more_text",
+      "label": "Load more button text",
+      "default": "Load more medium playsets"
+    },
+    {
+      "type": "header",
+      "content": "Tab 3"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_label",
+      "label": "Tab label",
+      "default": "Large"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_subtitle",
+      "label": "Category subtitle"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_title",
+      "label": "Tab content title",
+      "default": "Large playsets"
+    },
+    {
+      "type": "richtext",
+      "id": "tab_3_description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_load_more_text",
+      "label": "Load more button text",
+      "default": "Load more large playsets"
+    },
+    {
+      "type": "header",
+      "content": "Contact callout (same for all tabs)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact_callout",
+      "label": "Show contact callout",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "contact_text",
+      "label": "Contact Text",
+      "default": "<p>Contact Fenceworks (for Delivery & Installation)</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "grid_columns_desktop",
+      "label": "Columns (desktop)",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "grid_columns_mobile",
+      "label": "Columns (mobile)",
+      "default": "1",
+      "options": [
+        { "label": "1", "value": "1" },
+        { "label": "2", "value": "2" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "grid_spacing",
+      "label": "Grid spacing",
+      "unit": "px",
+      "min": 12,
+      "max": 48,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "initial_items_per_tab",
+      "label": "Initial items shown per tab",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_load_more",
+      "label": "Show Load more button",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors – Section"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "content_bg",
+      "label": "Content box background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "range",
+      "id": "content_border_radius",
+      "label": "Content box corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Colors – Tabs"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_bg",
+      "label": "Active tab background",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "color",
+      "id": "tab_inactive_bg",
+      "label": "Inactive tab background",
+      "default": "#9EA6AC"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "Tab text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Colors – Content"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Headings",
+      "default": "#131313"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Body text",
+      "default": "#131313"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent (subtitle, links)",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "header",
+      "content": "Colors – Contact callout"
+    },
+    {
+      "type": "color",
+      "id": "contact_bg",
+      "label": "Contact box background",
+      "default": "#FCE9D8"
+    },
+    {
+      "type": "color",
+      "id": "contact_border_color",
+      "label": "Contact box border",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "color",
+      "id": "contact_text_color",
+      "label": "Contact text",
+      "default": "#131313"
+    },
+    {
+      "type": "color",
+      "id": "contact_link_color",
+      "label": "Contact email link",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "header",
+      "content": "Colors – Grid item button"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button background",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Colors – Load more button"
+    },
+    {
+      "type": "color",
+      "id": "load_more_bg",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "load_more_text_color",
+      "label": "Text",
+      "default": "#131313"
+    },
+    {
+      "type": "color",
+      "id": "load_more_border_color",
+      "label": "Border",
+      "default": "#9EA6AC"
+    },
+    {
+      "type": "range",
+      "id": "load_more_border_radius",
+      "label": "Corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Main heading size",
+      "unit": "px",
+      "min": 24,
+      "max": 48,
+      "step": 2,
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "tab_heading_size",
+      "label": "Tab content heading size",
+      "unit": "px",
+      "min": 18,
+      "max": 32,
+      "step": 2,
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 48
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "grid_item",
+      "name": "Grid item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "tab",
+          "label": "Show in tab",
+          "default": "main",
+          "options": [
+            { "value": "main", "label": "Main Tab" },
+            { "value": "1", "label": "Tab 1" },
+            { "value": "2", "label": "Tab 2" },
+            { "value": "3", "label": "Tab 3" }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Product title"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$0.00"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Learn more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabbed column grid",
+      "blocks": [
+        { "type": "grid_item", "settings": { "tab": "main", "title": "Main Collection Example", "price": "$2,500.00" } },
+        { "type": "grid_item", "settings": { "tab": "1", "title": "Swing Set Package #A-3", "price": "$4,970.00" } },
+        { "type": "grid_item", "settings": { "tab": "1", "title": "Frolic Zone Backyard Playground FA33-2", "price": "$5,200.00" } },
+        { "type": "grid_item", "settings": { "tab": "2", "title": "Medium Set Example", "price": "$6,000.00" } },
+        { "type": "grid_item", "settings": { "tab": "3", "title": "Large Set Example", "price": "$8,500.00" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

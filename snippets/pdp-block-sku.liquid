@@ -1,0 +1,14 @@
+{% comment %}
+  Renders product page SKU block
+
+  Accepts:
+  - variant_sku: {String}
+  - label: {String}
+{% endcomment %}
+
+{%- if variant_sku != blank -%}
+  <div class="product-form__sku u-medium-small">
+    {%- if label != blank -%}{{ label }}&nbsp;{%- endif -%}
+    <span class="product-form__sku-text">{{ variant_sku }}</span>
+  </div>
+{%- endif -%}

@@ -1,0 +1,104 @@
+/**
+ * @license
+ *
+ * Font Family: Cabinet Grotesk
+ * Designed by: ITF
+ * URL: https://www.fontshare.com/fonts/cabinet-grotesk
+ * © 2026 Indian Type Foundry
+ *
+ *
+ */
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Thin.woff2?v=1773237440') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Thin.woff?v=1773237440') format('woff');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Light.woff2?v=1773237440') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Light.woff?v=1773237440') format('woff');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Regular.woff2?v=1773237440') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Regular.woff?v=1773237440') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Medium.woff2?v=1773237440') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Medium.woff?v=1773237440') format('woff');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Bold.woff2?v=1773237440') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Bold.woff?v=1773237440') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Extrabold.woff2?v=1773237440') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Extrabold.woff?v=1773237440') format('woff');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Black.woff2?v=1773237440') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/CabinetGrotesk-Black.woff?v=1773237440') format('woff');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+ * @license
+ *
+ * Font Family: Host Grotesk
+ *
+ *
+ */
+/**
+ * This is a variable font
+ * You can control variable axes as shown below:
+ * font-variation-settings: 'wght' 400;
+ *
+ * available axes:
+ * 'wght' (range from 100.0 to 900.0)
+ */
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/HostGrotesk-VariableFont_wght.ttf?v=1773237456') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+ * Variable font - Italic
+ * font-variation-settings: 'wght' 400;
+ */
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0838/4652/9331/files/HostGrotesk-Italic-VariableFont_wght.ttf?v=1773237456') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+.template-index .section {
+  font-family: "Host Grotesk";
+}

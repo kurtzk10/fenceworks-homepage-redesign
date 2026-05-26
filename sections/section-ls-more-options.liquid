@@ -1,0 +1,648 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-more-options.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-more-options.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-more-options.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{% if section.index > 2 %}
+  <link
+    rel="stylesheet"
+    href="{{ 'component-media-carousel.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+{% endif %}
+<script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-more-options
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-more-options"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --lsmo-section-bg: {{ section.settings.section_bg }};
+    --lsmo-heading-color: {{ section.settings.section_heading_color }};
+    --lsmo-card-bg: {{ section.settings.card_bg | default: '#fef2e9' }};
+    --lsmo-grid-gap: {{ section.settings.grid_gap }}px;
+    --lsmo-card-radius: {{ section.settings.card_radius }}px;
+    --lsmo-btn-bg-hover: {{ section.settings.button_bg_hover }};
+    --lsmo-btn-border: {{ section.settings.button_border }};
+    --lsmo-btn-text: {{ section.settings.button_text }};
+    --lsmo-note-color: {{ section.settings.note_color }};
+    --lsmo-pagination-active: {{ section.settings.pagination_active }};
+    --lsmo-pagination-inactive: {{ section.settings.pagination_inactive }};
+    --lsmo-mg-eyebrow-color: {{ section.settings.mg_eyebrow_color }};
+    --lsmo-mg-heading-color: {{ section.settings.mg_heading_color }};
+    --lsmo-mg-text-color: {{ section.settings.mg_text_color }};
+    --lsmo-mg-card-bg: {{ section.settings.mg_card_bg }};
+    --lsmo-mg-card-title-color: {{ section.settings.mg_card_title_color }};
+    --lsmo-mg-value-color: {{ section.settings.mg_value_color }};
+    --lsmo-mg-divider-color: {{ section.settings.mg_divider_color }};
+    --lsmo-mg-link-color: {{ section.settings.mg_link_color }};
+  "
+>
+  <div class="lsmo__outer">
+    <div class="container container--{{ section.settings.section_width }}">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="lsmo__section-heading">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
+
+      {%- assign design_blocks = section.blocks | where: 'type', 'design_center_card' -%}
+      {%- assign material_blocks = section.blocks | where: 'type', 'material_card' -%}
+
+      {%- if design_blocks.size > 0 -%}
+        <media-carousel
+          data-speed="450"
+          data-loop="false"
+          data-pagination="true"
+          data-space-between="16"
+          data-navigation="false"
+          data-breakpoint-max="tab"
+        >
+          <media-carousel-slider>
+            <media-carousel-wrapper class="lsmo__grid">
+              {%- for block in design_blocks -%}
+                {%- assign accent = block.settings.accent_color | default: '#e86f1a' -%}
+                <media-carousel-slide
+                  class="lsmo__slide block--{{ block.id }}"
+                  {{ block.shopify_attributes }}
+                >
+                  <article
+                    class="lsmo__card"
+                    style="--lsmo-accent: {{ accent }};"
+                  >
+                    {%- if block.settings.title != blank -%}
+                      <h3 class="lsmo__card-heading">{{ block.settings.title | escape }}</h3>
+                    {%- endif -%}
+
+                    <div class="lsmo__illus">
+                      {%- if block.settings.illustration != blank -%}
+                        {% render 'image',
+                          image: block.settings.illustration,
+                          additional_classes: 'lsmo__illus-img',
+                          image_ratio: 'natural',
+                          image_srcset_widths: '320, 480, 640',
+                          image_sizes: '(min-width: 768px) 360px, 85vw',
+                          loading: 'lazy',
+                          alt_string: block.settings.title | escape
+                        %}
+                      {%- endif -%}
+                    </div>
+
+                    {%- if block.settings.button_label != blank -%}
+                      {%- assign btn_href = block.settings.button_link | default: '#' -%}
+                      <a href="{{ btn_href }}" class="lsmo__btn">{{ block.settings.button_label | escape }}</a>
+                    {%- endif -%}
+
+                    {%- if section.settings.desktop_note != blank -%}
+                      <p class="lsmo__note">{{ section.settings.desktop_note | escape }}</p>
+                    {%- endif -%}
+                  </article>
+                </media-carousel-slide>
+              {%- endfor -%}
+            </media-carousel-wrapper>
+          </media-carousel-slider>
+
+          {%- if design_blocks.size > 1 -%}
+            <media-carousel-pagination
+              class="media-carousel__pagination swiper-pagination js-carousel-pagination"
+              hidden
+            ></media-carousel-pagination>
+          {%- endif -%}
+        </media-carousel>
+      {%- elsif material_blocks.size == 0 -%}
+        <div class="placeholder-noblocks">
+          {{ 'homepage.onboarding.no_content' | t }}
+        </div>
+      {%- endif -%}
+
+      {%- liquid
+        assign mg_eyebrow = section.settings.mg_eyebrow
+        assign mg_heading = section.settings.mg_heading
+        assign mg_subtitle = section.settings.mg_subtitle
+        assign mg_note = section.settings.mg_note
+        assign has_mg_header = false
+        if mg_eyebrow != blank or mg_heading != blank or mg_subtitle != blank or mg_note != blank
+          assign has_mg_header = true
+        endif
+      -%}
+
+      {%- if has_mg_header or material_blocks.size > 0 -%}
+        <div class="lsmo__material-guide">
+          {%- if has_mg_header -%}
+            <header class="lsmo__mg-header">
+              {%- if mg_eyebrow != blank -%}
+                <p class="lsmo__mg-eyebrow">{{ mg_eyebrow | escape }}</p>
+              {%- endif -%}
+              {%- if mg_heading != blank -%}
+                <h3 class="lsmo__mg-heading">{{ mg_heading | escape }}</h3>
+              {%- endif -%}
+              {%- if mg_subtitle != blank -%}
+                <p class="lsmo__mg-subtitle">{{ mg_subtitle | escape }}</p>
+              {%- endif -%}
+              {%- if mg_note != blank -%}
+                <p class="lsmo__mg-note">{{ mg_note | escape }}</p>
+              {%- endif -%}
+            </header>
+          {%- endif -%}
+
+          {%- if material_blocks.size > 0 -%}
+            <media-carousel
+              class="lsmo__mg-carousel"
+              data-speed="500"
+              data-loop="true"
+              data-autoplay="4000"
+              data-pagination="true"
+              data-space-between="16"
+              data-navigation="false"
+              data-breakpoint-max="tab"
+            >
+              <media-carousel-slider>
+                <media-carousel-wrapper class="lsmo__mg-grid">
+              {%- for block in material_blocks -%}
+                <media-carousel-slide class="lsmo__mg-slide block--{{ block.id }}" {{ block.shopify_attributes }}>
+                <article class="lsmo__mg-card">
+                  {%- if block.settings.tag_label != blank -%}
+                    {%- if block.settings.tag_show_pill -%}
+                      <span
+                        class="lsmo__mg-tag lsmo__mg-tag--pill"
+                        style="--lsmo-mg-tag-bg: {{ block.settings.tag_bg }}; --lsmo-mg-tag-color: {{ block.settings.tag_text_color }};"
+                      >{{ block.settings.tag_label | escape }}</span>
+                    {%- else -%}
+                      <span
+                        class="lsmo__mg-tag"
+                        style="--lsmo-mg-tag-color: {{ block.settings.tag_text_color }};"
+                      >{{ block.settings.tag_label | escape }}</span>
+                    {%- endif -%}
+                  {%- endif -%}
+
+                  {%- if block.settings.title != blank -%}
+                    <h4 class="lsmo__mg-card-title">{{ block.settings.title | escape }}</h4>
+                  {%- endif -%}
+
+                  <hr class="lsmo__mg-divider">
+
+                  <dl class="lsmo__mg-attrs">
+                    {%- for i in (1..6) -%}
+                      {%- assign label_key = 'attr_' | append: i | append: '_label' -%}
+                      {%- assign value_key = 'attr_' | append: i | append: '_value' -%}
+                      {%- assign attr_label = block.settings[label_key] -%}
+                      {%- assign attr_value = block.settings[value_key] -%}
+                      {%- if attr_label != blank or attr_value != blank -%}
+                        <div class="lsmo__mg-row">
+                          <dt class="lsmo__mg-label">{{ attr_label | escape }}</dt>
+                          <dd class="lsmo__mg-value">{{ attr_value | escape }}</dd>
+                        </div>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </dl>
+
+                  <hr class="lsmo__mg-divider">
+
+                  {%- if block.settings.link_label != blank -%}
+                    {%- assign link_href = block.settings.link_url | default: '#' -%}
+                    <a href="{{ link_href }}" class="lsmo__mg-link">
+                      <span>{{ block.settings.link_label | escape }}</span>
+                      <svg class="lsmo__mg-link-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M1.5 8h12M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  {%- endif -%}
+                </article>
+                </media-carousel-slide>
+              {%- endfor -%}
+                </media-carousel-wrapper>
+              </media-carousel-slider>
+
+              {%- if material_blocks.size > 1 -%}
+                <media-carousel-pagination
+                  class="media-carousel__pagination swiper-pagination lsmo__mg-pagination"
+                  hidden
+                ></media-carousel-pagination>
+              {%- endif -%}
+            </media-carousel>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS More Options",
+  "class": "js-section__ls-more-options",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Need more options?"
+    },
+    {
+      "type": "text",
+      "id": "desktop_note",
+      "label": "Disclaimer under buttons",
+      "default": "This tool is only available on desktop devices."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap between cards",
+      "unit": "px",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card corner radius",
+      "unit": "px",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_heading_color",
+      "label": "Section heading",
+      "default": "#9ca7ae"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#fef2e9"
+    },
+    {
+      "type": "color",
+      "id": "note_color",
+      "label": "Disclaimer text",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button background hover",
+      "default": "#fbcda5"
+    },
+    {
+      "type": "color",
+      "id": "button_border",
+      "label": "Button border",
+      "default": "#101a21"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "pagination_active",
+      "label": "Carousel dot (active)",
+      "default": "#e86f1a"
+    },
+    {
+      "type": "color",
+      "id": "pagination_inactive",
+      "label": "Carousel dot (inactive)",
+      "default": "#d1d5db"
+    },
+    {
+      "type": "header",
+      "content": "Material guide"
+    },
+    {
+      "type": "text",
+      "id": "mg_eyebrow",
+      "label": "Eyebrow",
+      "default": "Material Guide"
+    },
+    {
+      "type": "text",
+      "id": "mg_heading",
+      "label": "Heading",
+      "default": "Which material is right for your family?"
+    },
+    {
+      "type": "textarea",
+      "id": "mg_subtitle",
+      "label": "Subtitle",
+      "default": "Both vinyl and wood playsets are built to last — the right choice depends on your priorities."
+    },
+    {
+      "type": "textarea",
+      "id": "mg_note",
+      "label": "Note",
+      "default": "Not sure? Our team will help you decide — no pressure."
+    },
+    {
+      "type": "header",
+      "content": "Material guide colors"
+    },
+    {
+      "type": "color",
+      "id": "mg_eyebrow_color",
+      "label": "Eyebrow color",
+      "default": "#f5811f"
+    },
+    {
+      "type": "color",
+      "id": "mg_heading_color",
+      "label": "Heading color",
+      "default": "#ac5a16"
+    },
+    {
+      "type": "color",
+      "id": "mg_text_color",
+      "label": "Body / label text color",
+      "default": "#526572"
+    },
+    {
+      "type": "color",
+      "id": "mg_card_bg",
+      "label": "Comparison card background",
+      "default": "#e9eced"
+    },
+    {
+      "type": "color",
+      "id": "mg_card_title_color",
+      "label": "Card title color",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "mg_value_color",
+      "label": "Attribute value color",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "mg_divider_color",
+      "label": "Divider color",
+      "default": "#c8ced2"
+    },
+    {
+      "type": "color",
+      "id": "mg_link_color",
+      "label": "Link color",
+      "default": "#f5811f"
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 56
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "design_center_card",
+      "name": "Design center card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card heading",
+          "default": "The only custom vinyl swingsets in Chicagoland."
+        },
+        {
+          "type": "image_picker",
+          "id": "illustration",
+          "label": "Illustration"
+        },
+        {
+          "type": "color",
+          "id": "accent_color",
+          "label": "Heading accent color",
+          "default": "#f5811f"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Share link to Vinyl Design Center"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "material_card",
+      "name": "Material comparison card",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Tag"
+        },
+        {
+          "type": "text",
+          "id": "tag_label",
+          "label": "Tag label",
+          "default": "FEATURED"
+        },
+        {
+          "type": "checkbox",
+          "id": "tag_show_pill",
+          "label": "Show tag as filled pill",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "tag_bg",
+          "label": "Tag pill background",
+          "default": "#f5811f"
+        },
+        {
+          "type": "color",
+          "id": "tag_text_color",
+          "label": "Tag text color",
+          "default": "#f4f7f8"
+        },
+        {
+          "type": "header",
+          "content": "Title"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card title",
+          "default": "Vinyl Playsets"
+        },
+        {
+          "type": "header",
+          "content": "Attribute rows"
+        },
+        { "type": "text", "id": "attr_1_label", "label": "Row 1 label", "default": "Maintenance" },
+        { "type": "text", "id": "attr_1_value", "label": "Row 1 value", "default": "Zero — ever" },
+        { "type": "text", "id": "attr_2_label", "label": "Row 2 label", "default": "Splinters" },
+        { "type": "text", "id": "attr_2_value", "label": "Row 2 value", "default": "None" },
+        { "type": "text", "id": "attr_3_label", "label": "Row 3 label", "default": "Painting / Staining" },
+        { "type": "text", "id": "attr_3_value", "label": "Row 3 value", "default": "Not required" },
+        { "type": "text", "id": "attr_4_label", "label": "Row 4 label", "default": "Weather Resistance" },
+        { "type": "text", "id": "attr_4_value", "label": "Row 4 value", "default": "Excellent" },
+        { "type": "text", "id": "attr_5_label", "label": "Row 5 label", "default": "Customization" },
+        { "type": "text", "id": "attr_5_value", "label": "Row 5 value", "default": "Colors + add-ons" },
+        { "type": "text", "id": "attr_6_label", "label": "Row 6 label", "default": "Warranty" },
+        { "type": "text", "id": "attr_6_value", "label": "Row 6 value", "default": "Lifetime on structure" },
+        {
+          "type": "header",
+          "content": "Link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label",
+          "default": "Explore All Vinyl Playsets"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS More Options",
+      "blocks": [
+        {
+          "type": "design_center_card",
+          "settings": {
+            "title": "The only custom vinyl swingsets in Chicagoland.",
+            "accent_color": "#f5811f",
+            "button_label": "Share link to Vinyl Design Center"
+          }
+        },
+        {
+          "type": "design_center_card",
+          "settings": {
+            "title": "The best custom wood playsets in Chicagoland.",
+            "accent_color": "#02589b",
+            "button_label": "Share link to Wood Design Center"
+          }
+        },
+        {
+          "type": "material_card",
+          "settings": {
+            "tag_label": "FEATURED",
+            "tag_show_pill": true,
+            "tag_bg": "#f5811f",
+            "tag_text_color": "#f4f7f8",
+            "title": "Vinyl Playsets",
+            "attr_1_label": "Maintenance",       "attr_1_value": "Zero — ever",
+            "attr_2_label": "Splinters",         "attr_2_value": "None",
+            "attr_3_label": "Painting / Staining","attr_3_value": "Not required",
+            "attr_4_label": "Weather Resistance","attr_4_value": "Excellent",
+            "attr_5_label": "Customization",     "attr_5_value": "Colors + add-ons",
+            "attr_6_label": "Warranty",          "attr_6_value": "Lifetime on structure",
+            "link_label": "Explore All Vinyl Playsets"
+          }
+        },
+        {
+          "type": "material_card",
+          "settings": {
+            "tag_label": "ALSO AVAILABLE",
+            "tag_show_pill": false,
+            "tag_text_color": "#9ca7ae",
+            "title": "Wood Playsets",
+            "attr_1_label": "Maintenance",       "attr_1_value": "1x within first year, then as needed",
+            "attr_2_label": "Splinters",         "attr_2_value": "Smooth cedar finish",
+            "attr_3_label": "Painting / Staining","attr_3_value": "Every few years",
+            "attr_4_label": "Weather Resistance","attr_4_value": "Cedar is naturally durable",
+            "attr_5_label": "Customization",     "attr_5_value": "Fully modular",
+            "attr_6_label": "Warranty",          "attr_6_value": "Limited Lifetime",
+            "link_label": "Explore All Wood Playsets"
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

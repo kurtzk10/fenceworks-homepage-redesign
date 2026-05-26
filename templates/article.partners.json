@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_custom_LbGKMJ": {
+      "type": "section-custom",
+      "blocks": {
+        "spacer_aBw98f": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_aBw98f"
+      ],
+      "settings": {
+        "section-bottom-margin": false
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "tags": {
+          "type": "tags",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "meta": {
+          "type": "meta",
+          "settings": {
+            "show_author": false,
+            "show_sharing": true
+          }
+        }
+      },
+      "block_order": [
+        "tags",
+        "title",
+        "content",
+        "meta"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "div {font-size: 16px;}"
+      ],
+      "settings": {
+        "show_img": false
+      }
+    },
+    "section_image_with_text_Ba9PR4": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_iRMgWf": {
+          "type": "image",
+          "settings": {
+            "image": "{{ article.image }}",
+            "title": "{{ article.title }}",
+            "desc": "<p>{{ article.content }}</p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_iRMgWf"
+      ],
+      "settings": {
+        "image_ratio": "1:1",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 1,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow"
+      }
+    }
+  },
+  "order": [
+    "section_custom_LbGKMJ",
+    "main",
+    "section_image_with_text_Ba9PR4"
+  ]
+}

@@ -1,0 +1,824 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "replacement_image": "shopify://shop_images/Commercial_PG3.jpg",
+        "collection_banner_style": "center",
+        "text_align": "center",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 40
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "b40f1547-8d41-4a98-b788-4124427fb162": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Our commercial playsets are designed to give every child a happy, fun, and safe place to play. Each commercial playset we build can be ADA (Americans with Disabilities Act) compliant, giving children of all abilities the opportunity for outside fun.</p><p>Our playsets are designed for children to practice their balance and motor skills, build strength, and engage with their imagination. Choose from a variety of sizes and colors to find the perfect playground for your HOA, park, stadium, church, daycare, school, or campground.</p><p>Explore our small, medium, or large commercial playset series below, or contact an expert to get help customizing your own.</p>",
+            "align": "center",
+            "width": "2/3"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "829c4f49-0742-4ce1-aad3-eac8ed45b4f3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Gorilla Playset Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2022Catalog-FullSpread-Digital2.pdf",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1",
+        "829c4f49-0742-4ce1-aad3-eac8ed45b4f3"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "16989847110c28e5a3": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1724362395de4bcf58": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_multi_column_images_KJVbMf": {
+      "type": "section-multi-column-images",
+      "blocks": {
+        "image_dHALd7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Tiny-Island_White-Gray_Front-Right_1600x1200_c8512af2-1c98-48a0-bbbb-15dd27f4a6ae.png",
+            "title": "TINY ISLAND",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/tiny-island-playset"
+          }
+        },
+        "image_KiARLp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Tiny-Fun-Quest_Ash-Wood-Green_Front-Left_1600x1200_ccff943c-0d54-44c3-8173-8d35f39b7562.png",
+            "title": "Tiny Fun Quest",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/tiny-fun-quest"
+          }
+        },
+        "image_Bh4yga": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Tiny-Town_White-Blue_Back-Left_1600x1200_d218488e-994c-480c-ad1d-34a422d35d6b.png",
+            "title": "Tiny Town",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/tiny-town"
+          }
+        },
+        "image_ThmRPd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Tiny-Wonderland_Almond-Red-Yellow_Front-Left_1600x1200_5d5b2eaf-77bc-4013-93f5-93daa6352f4f.png",
+            "title": "Tiny Wonderland",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/tiny-wonderland"
+          }
+        }
+      },
+      "block_order": [
+        "image_dHALd7",
+        "image_KiARLp",
+        "image_Bh4yga",
+        "image_ThmRPd"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Ages 2-5",
+        "desc": "",
+        "image_toggle": true,
+        "image_ratio": "4:3",
+        "image_fit": false,
+        "image_size": 100,
+        "image_padding": 0,
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "large",
+        "grid": 4,
+        "spacing": 4,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_image": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_multi_column_images_AiY7hX": {
+      "type": "section-multi-column-images",
+      "blocks": {
+        "image_TJe8ki": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Junior-Cruiser_Ash-Wood-Blue_Back-Right_1600x1200_a88c089a-f6b0-48cb-80d4-3902d909cfd4.png",
+            "title": "Junior Cruiser",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/junior-cruiser"
+          }
+        },
+        "image_TETpLd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Junior-Dreamweaver_Ash-Wood-Green_Back-Left_1600x1200_04ed5f09-cb53-47c9-8cff-2347bd1a393c.png",
+            "title": "Junior Dreamweaver",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/junior-dreamweaver"
+          }
+        },
+        "image_zEbiVy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Junior-Race-Duo_Almond-Red-Yellow_Back-Left_1600x1200_2eab6b3f-e894-4fdf-b253-e3c141d9715a.png",
+            "title": "Junior Race Duo",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/junior-race-duo"
+          }
+        },
+        "image_Ljh8Vm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Junior-Power-Play_Chestnut-Wood-Gray_Front-Right_1600x1200-1.png",
+            "title": "Junior Power Play",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/junior-power-play"
+          }
+        }
+      },
+      "block_order": [
+        "image_TJe8ki",
+        "image_TETpLd",
+        "image_zEbiVy",
+        "image_Ljh8Vm"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Ages 5 - 12",
+        "desc": "",
+        "image_toggle": true,
+        "image_ratio": "4:3",
+        "image_fit": false,
+        "image_size": 100,
+        "image_padding": 0,
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "large",
+        "grid": 4,
+        "spacing": 4,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_image": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_multi_column_images_hXt4we": {
+      "type": "section-multi-column-images",
+      "blocks": {
+        "image_txdtUV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mighty-Escape_Ash-Wood-Red_Back-Right_1600x1200_02d85cbc-e9d8-4731-869c-c6f66252e5b8.png",
+            "title": "Mighty Escape",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/mighty-escape"
+          }
+        },
+        "image_hTEGn8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mighty-Journey_Ash-Wood-Blue_Front-Left_1600x1200_42d8246d-d5c9-4107-933f-469bc71f5d79.png",
+            "title": "Mighty Journey",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/mighty-journey"
+          }
+        },
+        "image_YELDMk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mighty-Expedition_Ash-Wood-Green_Front-Left_1600x1200_9cf7cbde-ed13-401f-9248-83398455e3de.png",
+            "title": "Mighty Expedition",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/mighty-expedition"
+          }
+        },
+        "image_4cTcUM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mighty-Adventure_White-Red_Front-Right_1600x1200_e471d6f7-8c50-41e1-8b1d-2d769d3b40dc.png",
+            "title": "Mighty Adventure",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "",
+            "link": "shopify://products/mighty-adventure"
+          }
+        }
+      },
+      "block_order": [
+        "image_txdtUV",
+        "image_hTEGn8",
+        "image_YELDMk",
+        "image_4cTcUM"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Ages 2 - 12",
+        "desc": "",
+        "image_toggle": true,
+        "image_ratio": "4:3",
+        "image_fit": false,
+        "image_size": 100,
+        "image_padding": 0,
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "large",
+        "grid": 4,
+        "spacing": 4,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_image": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_tabbed_column_grid_WzUwk3": {
+      "type": "section-tabbed-column-grid",
+      "blocks": {
+        "grid_item_aaLEhF": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "main",
+            "image": "shopify://shop_images/H68-2-hero-1440x660_jpg.jpg",
+            "title": "Swing Set Package #H68-2",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_XGaTwb": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "main",
+            "image": "shopify://shop_images/H68-10.jpg",
+            "title": "Swing Set Package #H68-10",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_b7UCb8": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "main",
+            "image": "shopify://shop_images/B44-6-fixed.jpg",
+            "title": "Swing Set Package B44-6",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_YDKWdW": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "main",
+            "image": "shopify://shop_images/58484-PKG-D68-8-1440x660.jpg",
+            "title": "Swing Set Package #D68-8",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_KTJiPn": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_Yn8qpX": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-1.jpg",
+            "title": "Swing Set Package",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_MJ6xbi": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-2.jpg",
+            "title": "Frolic Zone Backyard Playground FA33-2",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_UgRxEq": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-3.jpg",
+            "title": "Busy Basecamp Package #B55-1",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_tXeUy9": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_pVgRXk": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-1.jpg",
+            "title": "Swing Set Package",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_cKn7fV": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-2.jpg",
+            "title": "Frolic Zone Backyard Playground FA33-2",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_AJqQg3": {
+          "type": "grid_item",
+          "settings": {
+            "tab": "1",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-3.jpg",
+            "title": "Busy Basecamp Package #B55-1",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_VkY4CG": {
+          "type": "grid_item",
+          "name": "Grid item Medium",
+          "settings": {
+            "tab": "2",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_z3kPQU": {
+          "type": "grid_item",
+          "name": "Grid item Medium",
+          "settings": {
+            "tab": "2",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-1.jpg",
+            "title": "Swing Set Package",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_bTeVNb": {
+          "type": "grid_item",
+          "name": "Grid item Medium",
+          "settings": {
+            "tab": "2",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-2.jpg",
+            "title": "Frolic Zone Backyard Playground FA33-2",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_YL6Fri": {
+          "type": "grid_item",
+          "name": "Grid item Medium",
+          "settings": {
+            "tab": "2",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-3.jpg",
+            "title": "Busy Basecamp Package #B55-1",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_dFtkg9": {
+          "type": "grid_item",
+          "name": "Grid item Large",
+          "settings": {
+            "tab": "3",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_gDX3Ax": {
+          "type": "grid_item",
+          "name": "Grid item Large",
+          "settings": {
+            "tab": "3",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-1.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_CwWXEF": {
+          "type": "grid_item",
+          "name": "Grid item Large",
+          "settings": {
+            "tab": "3",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-2.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        },
+        "grid_item_ViYLxa": {
+          "type": "grid_item",
+          "name": "Grid item Large",
+          "settings": {
+            "tab": "3",
+            "image": "shopify://shop_images/A-1_Standard_Climber_Playset-3.jpg",
+            "title": "Swing Set Package #A-3",
+            "price": "",
+            "button_text": "Learn more",
+            "button_link": "shopify://pages/free-estimate"
+          }
+        }
+      },
+      "block_order": [
+        "grid_item_aaLEhF",
+        "grid_item_XGaTwb",
+        "grid_item_b7UCb8",
+        "grid_item_YDKWdW",
+        "grid_item_KTJiPn",
+        "grid_item_Yn8qpX",
+        "grid_item_MJ6xbi",
+        "grid_item_UgRxEq",
+        "grid_item_tXeUy9",
+        "grid_item_pVgRXk",
+        "grid_item_cKn7fV",
+        "grid_item_AJqQg3",
+        "grid_item_VkY4CG",
+        "grid_item_z3kPQU",
+        "grid_item_bTeVNb",
+        "grid_item_YL6Fri",
+        "grid_item_dFtkg9",
+        "grid_item_gDX3Ax",
+        "grid_item_CwWXEF",
+        "grid_item_ViYLxa"
+      ],
+      "name": "Tabbed column grid",
+      "settings": {
+        "title": "Find the right play set size",
+        "intro": "<p>Compare play set sizes to see which option works best for your space, usage, and age group.</p>",
+        "tab_main_label": "Popular",
+        "tab_main_subtitle": "Most Pupular",
+        "tab_main_title": "BEST SELLERS",
+        "tab_main_description": "<p>These are our most popular best sellers for durable play in any space!</p>",
+        "tab_main_load_more_text": "Load more playsets",
+        "tab_1_label": "Small",
+        "tab_1_subtitle": "For Schools & Compact Spaces",
+        "tab_1_title": "Small playsets",
+        "tab_1_description": "<p>Durable play sets designed for smaller outdoor areas and everyday school use.</p>",
+        "tab_1_load_more_text": "Load more small playsets",
+        "tab_2_label": "Medium",
+        "tab_2_subtitle": "For Schools & Compact Spaces",
+        "tab_2_title": "Medium playsets",
+        "tab_2_description": "<p>Durable play sets designed for smaller outdoor areas and everyday school use.</p>",
+        "tab_2_load_more_text": "Load more medium playsets",
+        "tab_3_label": "Large",
+        "tab_3_subtitle": "For Schools & Compact Spaces",
+        "tab_3_title": "Large playsets",
+        "tab_3_description": "<p>Durable play sets designed for smaller outdoor areas and everyday school use.</p>",
+        "tab_3_load_more_text": "Load more large playsets",
+        "show_contact_callout": true,
+        "contact_text": "<p>Contact Fenceworks (for Pricing, Delivery & Installation) <a href=\"mailto:contact@theguyon41.com\" title=\"mailto:contact@theguyon41.com\">contact@theguyon41.com</a></p>",
+        "section_width": "large",
+        "grid_columns_desktop": 4,
+        "grid_columns_mobile": "2",
+        "grid_spacing": 32,
+        "initial_items_per_tab": 4,
+        "show_load_more": true,
+        "section_bg": "#ffffff",
+        "content_bg": "#ecf2f5",
+        "content_border_radius": 12,
+        "tab_active_bg": "#f5811f",
+        "tab_inactive_bg": "#9ea6ac",
+        "tab_text_color": "#ffffff",
+        "heading_color": "#131313",
+        "text_color": "#131313",
+        "accent_color": "#f5811f",
+        "contact_bg": "#fef2e9",
+        "contact_border_color": "#f5811f",
+        "contact_text_color": "#131313",
+        "contact_link_color": "#f5811f",
+        "button_bg": "#f78b2a",
+        "button_text_color": "#ffffff",
+        "button_border_radius": 6,
+        "load_more_bg": "rgba(0,0,0,0)",
+        "load_more_text_color": "#131313",
+        "load_more_border_color": "#383838",
+        "load_more_border_radius": 16,
+        "heading_size": 32,
+        "tab_heading_size": 24,
+        "padding_top": 21,
+        "padding_bottom": 48,
+        "section_bottom_margin": false
+      }
+    },
+    "section_custom_79zEDM": {
+      "type": "section-custom",
+      "blocks": {
+        "spacer_bW7Wd6": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "button_WGLh9d": {
+          "type": "button",
+          "settings": {
+            "title": "REQUEST ESTIMATE",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/3"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_bW7Wd6",
+        "button_WGLh9d"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "section_testimonials_x3aycM": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_YMKL44": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Amazing quality swingset. Everyone was very helpful and friendly during the entire process. Our daughter loves the swings!!!!<br/></p>",
+            "name": "Matthew Leaf",
+            "source": "Google Reviews"
+          }
+        },
+        "text_YzCpVJ": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Jake at Fenceworks was excellent to work with. We are thrilled with our Playground One swingset that we got from them.<br/></p>",
+            "name": "Joe Janas",
+            "source": "Google Reviews"
+          }
+        },
+        "text_Y6K3hL": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Fantastic experience from start to finish! Our kids just love their new swing set!</p>",
+            "name": "Molly Flynn",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_YMKL44",
+        "text_YzCpVJ",
+        "text_Y6K3hL"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "b40f1547-8d41-4a98-b788-4124427fb162",
+    "product-grid",
+    "16989847110c28e5a3",
+    "1724362395de4bcf58",
+    "section_multi_column_images_KJVbMf",
+    "section_multi_column_images_AiY7hX",
+    "section_multi_column_images_hXt4we",
+    "section_tabbed_column_grid_WzUwk3",
+    "section_custom_79zEDM",
+    "section_testimonials_x3aycM"
+  ]
+}

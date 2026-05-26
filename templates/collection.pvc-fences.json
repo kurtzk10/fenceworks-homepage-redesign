@@ -1,0 +1,331 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 0
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "b2cb64e8-e65e-4844-90e0-80221b9d09ce": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "template--21394251284787__b2cb64e8-e65e-4844-90e0-80221b9d09ce-text-1": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-love-it",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Minimal Maintenance",
+            "sub_title": "",
+            "desc": "<p>Vinyl fences require little to no maintenance, as they don't need painting or staining.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251284787__b2cb64e8-e65e-4844-90e0-80221b9d09ce-text-2": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-light-bulb-shine",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "UV Resistant",
+            "sub_title": "",
+            "desc": "<p>PVC fences are resistant to the sun's UV rays, ensuring they don't fade or degrade quickly.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251284787__b2cb64e8-e65e-4844-90e0-80221b9d09ce-text-3": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-color-painting-palette",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Variety of Styles",
+            "sub_title": "",
+            "desc": "<p>PVC fences come in a range of styles, and designs to fit any aesthetic preference.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251284787__b2cb64e8-e65e-4844-90e0-80221b9d09ce-text-4": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-ecology-leaf",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Non-Toxic",
+            "sub_title": "",
+            "desc": "<p>PVC fences are made without harmful chemicals and don't release toxins into the environment.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251284787__b2cb64e8-e65e-4844-90e0-80221b9d09ce-text-1",
+        "template--21394251284787__b2cb64e8-e65e-4844-90e0-80221b9d09ce-text-2",
+        "template--21394251284787__b2cb64e8-e65e-4844-90e0-80221b9d09ce-text-3",
+        "template--21394251284787__b2cb64e8-e65e-4844-90e0-80221b9d09ce-text-4"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "full",
+        "grid": 4,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "{{ shop.brand.colors.primary[0].foreground }}",
+        "color_text": "{{ shop.brand.colors.secondary[0].background }}",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "icon_size": 25,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "3970b750-ddaf-42b4-bf9f-95a14b758498": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21394251284787__3970b750-ddaf-42b4-bf9f-95a14b758498-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "c7dfd966-265a-4a23-99eb-b9056179caee": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Fence Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2021-FenceCatalog.pdf",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251284787__3970b750-ddaf-42b4-bf9f-95a14b758498-button-1",
+        "c7dfd966-265a-4a23-99eb-b9056179caee"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "c027b7b4-4d6a-4ae0-b35d-7bc9ee18510e": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21394251284787__c027b7b4-4d6a-4ae0-b35d-7bc9ee18510e-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "PVC / Vinyl Fencing",
+            "text": "<p>PVC vinyl fences are a modern and practical choice for homeowners and property owners seeking a low-maintenance and <a href=\"https://theguyon41.com/\">versatile fencing solution</a>. These fences are meticulously crafted from durable PVC (Polyvinyl Chloride) material, offering a host of advantages that make them a popular option for various outdoor applications.</p><ol><li><strong>Sleek and Contemporary:</strong> PVC vinyl fences boast a sleek, clean appearance that complements both modern and traditional architectural styles.</li><li><strong>Exceptional Durability:</strong> Unlike traditional wood, PVC vinyl is highly resistant to rot, decay, and insect infestations, ensuring your fence remains in excellent condition for years to come.</li><li><strong>Weather Resistance:</strong> PVC vinyl is engineered to withstand a wide range of weather conditions, including harsh sunlight, rain, and extreme temperatures, without warping, cracking, or fading.</li><li><strong>Quick Installation</strong>: PVC vinyl fences are designed for easy and efficient installation, saving you time and labor costs compared to some other fencing materials.</li><li><strong>UV Protection</strong>: Most PVC vinyl fences come with UV-resistant coatings, ensuring that they retain their vibrant color and finish even under prolonged exposure to the sun's rays.</li></ol>",
+            "align": "left",
+            "width": "2/3"
+          }
+        },
+        "template--21394251284787__c027b7b4-4d6a-4ae0-b35d-7bc9ee18510e-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/vinyl_5b9d9168-3633-49de-8a75-7b2cb5c985dd.webp",
+            "link": "",
+            "width": "1/3"
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251284787__c027b7b4-4d6a-4ae0-b35d-7bc9ee18510e-text-1",
+        "template--21394251284787__c027b7b4-4d6a-4ae0-b35d-7bc9ee18510e-image-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "16968683999ce2cd55": {
+      "type": "apps",
+      "blocks": {
+        "041e08a1-e2a5-4777-911b-1818fed7e5c1": {
+          "type": "shopify://apps/easy-zipcode-check-validate/blocks/app-block/0aee76b4-6928-4f3f-aff6-81beaca5418d",
+          "settings": {}
+        },
+        "966e9538-3d5d-4759-abd6-0312f211970d": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 3,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "041e08a1-e2a5-4777-911b-1818fed7e5c1",
+        "966e9538-3d5d-4759-abd6-0312f211970d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_testimonials_Wn6P3J": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_egfeUp": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Amazing family owned company, only place I refer my clients for fences, playgrounds and basketball hoops. Highly recommend going local with Fenceworks “The Guy on 41”!<br/></p>",
+            "name": "Alec Mancheski",
+            "source": "Google Reviews"
+          }
+        },
+        "text_bginrd": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I really can't say enough great things about Fenceworks! They always treat you with respect, honesty, and transparency. Regarding your next Fence project, look no further than \"The Guy on 41\"! I will be back this spring for Basketball Hoops, Trampolines, and Playgrounds... excited to complete my backyard with Fenceworks running the show!</p>",
+            "name": "J Cov",
+            "source": "Google Reviews"
+          }
+        },
+        "text_ThjN8t": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>When it comes to a Fence instillation.. there is no better company in the north shore/chicago that I would recommend more than Fenceworks. They truly care about each customer like their family. I was informed every step of the way, true transparency throughout. Pricing was fair and competitive, and the craftsmanship was truly amazing. I look forward to buying a playground, trampoline, and basketball hoop this spring to wrap up all my home improvement projects in the future!</p>",
+            "name": "Adrish Saha",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_egfeUp",
+        "text_bginrd",
+        "text_ThjN8t"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "product-grid",
+    "b2cb64e8-e65e-4844-90e0-80221b9d09ce",
+    "3970b750-ddaf-42b4-bf9f-95a14b758498",
+    "c027b7b4-4d6a-4ae0-b35d-7bc9ee18510e",
+    "16968683999ce2cd55",
+    "section_testimonials_Wn6P3J"
+  ]
+}

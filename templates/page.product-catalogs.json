@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "892b4a58-a1ea-470a-80d2-e32840cc01d3": {
+      "type": "section-collection-list",
+      "blocks": {
+        "template--21433057771827__892b4a58-a1ea-470a-80d2-e32840cc01d3-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Fence Collection",
+            "description": "",
+            "button_label": "View Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2021-FenceCatalog.pdf",
+            "image": "shopify://shop_images/Untitled_24.png"
+          }
+        },
+        "template--21433057771827__892b4a58-a1ea-470a-80d2-e32840cc01d3-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Gorilla Playsets",
+            "description": "",
+            "button_label": "View Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2022Catalog-FullSpread-Digital2.pdf",
+            "image": "shopify://shop_images/Untitled_93.png"
+          }
+        },
+        "template--21433057771827__892b4a58-a1ea-470a-80d2-e32840cc01d3-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Swing Kingdom",
+            "description": "",
+            "button_label": "View Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/SK-2023-Catalog.pdf",
+            "image": "shopify://shop_images/Untitled_23.png"
+          }
+        },
+        "template--21433057771827__892b4a58-a1ea-470a-80d2-e32840cc01d3-collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "AlleyOop Trampolines",
+            "description": "",
+            "button_label": "View Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/AOS-Brochure.pdf",
+            "image": "shopify://shop_images/Untitled_22.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--21433057771827__892b4a58-a1ea-470a-80d2-e32840cc01d3-collection-1",
+        "template--21433057771827__892b4a58-a1ea-470a-80d2-e32840cc01d3-collection-2",
+        "template--21433057771827__892b4a58-a1ea-470a-80d2-e32840cc01d3-collection-3",
+        "template--21433057771827__892b4a58-a1ea-470a-80d2-e32840cc01d3-collection-4"
+      ],
+      "settings": {
+        "title": "Product Catalogs",
+        "desc": "<p>Discover Chicago's #1 supplier of fences, trampolines, basketball hoops, and swing sets through the below catalogs! They're available for free download to our amazing visitors at any time! </p>",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "alignment": "middle-center",
+        "text_alignment": "center",
+        "visibility_heading": true,
+        "visibility_count": false,
+        "visibility_border": true,
+        "visibility_description": false,
+        "visibility_button": true,
+        "hover_options": "hover-all",
+        "section_width": "full",
+        "grid": 4,
+        "spacing": 1,
+        "enable_carousel_desktop": true,
+        "enable_carousel_mobile": true,
+        "color_text": "#ffffff",
+        "color_overlay": "{{ shop.brand.colors.secondary[0].background }}",
+        "color_overlay_strength": 30,
+        "color_default_heading": false,
+        "color_default_border": true,
+        "title_size": 3,
+        "button_style": "c-btn c-btn--primary",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "b1e6207d-e953-4f0b-bafd-b0dca3de1bb7": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21433057771827__b1e6207d-e953-4f0b-bafd-b0dca3de1bb7-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21433057771827__b1e6207d-e953-4f0b-bafd-b0dca3de1bb7-button-1"
+      ],
+      "settings": {
+        "section-bottom-margin": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "892b4a58-a1ea-470a-80d2-e32840cc01d3",
+    "b1e6207d-e953-4f0b-bafd-b0dca3de1bb7"
+  ]
+}

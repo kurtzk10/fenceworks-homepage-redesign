@@ -1,0 +1,56 @@
+{% comment %}
+  Renders product page image block
+
+  Accepts:
+  - image: {Object} Image
+  - image_width: {String} Image width
+  - image_sizes: {String} Image sizes
+  - link: {Object} Link
+  - align: {String} Image align
+{% endcomment %}
+
+{% if image != blank %}
+  <div
+    class="product-form__img"
+    style="
+      --text-align: {{ align }};
+      --image-width: {{ image_width }}px
+    "
+  >
+    {% unless link == blank %}
+      <a href="{{ link }}" class="product-form__img__link">
+    {% endunless %}
+    {%- liquid
+      assign min_width = image_width | plus: 1
+      assign max_width = image_width
+      assign block_sizes = 'calc(100vw - 36px)'
+      if min_width > 480
+        assign block_sizes = block_sizes | prepend: '(min-width: 480px) 480px, '
+        if min_width > 540
+          assign max_width = 540
+          assign block_sizes = block_sizes | prepend: 'px, '
+          assign block_sizes = block_sizes | prepend: max_width
+          assign block_sizes = block_sizes | prepend: '(min-width: 767px) '
+        else
+          assign media_query = '(min-width: ' | append: min_width | append: 'px) ' | append: image_width | append: 'px, '
+          assign block_sizes = block_sizes | prepend: media_query
+        endif
+      else
+        assign media_query = '(min-width: ' | append: min_width | append: 'px) ' | append: image_width | append: 'px, '
+        assign block_sizes = block_sizes | prepend: media_query
+      endif
+    -%}
+    {% render 'image',
+      image: image,
+      additional_classes: 'product-form__img__img',
+      alt_string: image.alt,
+      image_ratio: 'natural',
+      image_srcset_widths: '180, 360, 540, 720, 900, 1080, 1296, 1512',
+      image_sizes: block_sizes,
+      render_skeleton: true
+    %}
+    {% unless link == blank %}
+      </a>
+    {% endunless %}
+  </div>
+{% endif %}

@@ -1,0 +1,467 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_image_with_text_overlap_izCBxm": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_r4AtyB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/installation_services.webp",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Basketball Hoops",
+            "desc": "<p>Whether wall-mounted or <a href=\"https://theguyon41.com/pages/free-standing-swing-set\">freestanding</a>, Fenceworks has the best options for bringing on-the-court fun to your backyard.</p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "shopify://pages/free-estimate",
+            "bg_color_block": "#ffffff",
+            "bg_color_content": "#f2f2f2",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_r4AtyB"
+      ],
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "right",
+        "container": "full",
+        "block_spacing": 5,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_bGghPi": {
+      "type": "section-rich-text",
+      "name": "Rich text",
+      "settings": {
+        "section_title": "Types of Hoops at Fenceworks",
+        "text": "<p>What can you expect from our basketball hoops in Chicago?</p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_overlap_873W4p": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_fJiFa6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/72-inch-hoop_1.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "In-Ground Hoops",
+            "desc": "<p>Offering stability and durability, our in-ground hoops provide a realistic playing experience, whether you want to shoot a few hoops after a long day of work or play with friends. With professional installation, you’ll have a weather-resistant solution for years to come. </p>",
+            "horizontal_align": "left",
+            "link_title": "Learn more",
+            "link": "https://theguyon41.com/pages/free-estimate",
+            "bg_color_block": "#e5e5e5",
+            "bg_color_content": "#f2f2f2",
+            "color_text": "#212121",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_fJiFa6"
+      ],
+      "name": "Image with text overlap",
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "left",
+        "container": "large",
+        "block_spacing": 3,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_collection_kpCk9X": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_eKFEtq": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "in-ground-hoops",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_eKFEtq"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "title": "In Ground Hoops Collection",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 3,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "shopify://collections/in-ground-hoops",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_overlap_MBqnUQ": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_eAmTbt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Types_of_Basketball_Hoops.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Wall-Mount Hoops",
+            "desc": "<p>Balancing stability and space-saving, wall-mount hoops still offer a realistic rebound but without taking quite so much space. From the <a href=\"https://theguyon41.com/products/wall-mount-wm54\">WM54</a> to the <a href=\"https://theguyon41.com/products/wall-mount-wm72\">WM72</a>, you’ll have a superior playing experience, wherever the installation. This is a basketball hoop purchase that will continue to yield dividends. </p>",
+            "horizontal_align": "left",
+            "link_title": "free estimate",
+            "link": "https://theguyon41.com/pages/free-estimate",
+            "bg_color_block": "#e5e5e5",
+            "bg_color_content": "#f2f2f2",
+            "color_text": "#212121",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_eAmTbt"
+      ],
+      "name": "Image with text overlap",
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "right",
+        "container": "large",
+        "block_spacing": 3,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_collection_DiCKWU": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_fxmdCV": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "wall-mount-hoops",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_fxmdCV"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "title": "Wall Mount Hoops Collection",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 3,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "shopify://collections/wall-mount-hoops",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_kwytBc": {
+      "type": "section-rich-text",
+      "name": "Rich text",
+      "settings": {
+        "section_title": "Our Services - What to Expect",
+        "text": "<p>Whether you need a new basketball hoop set or some simple maintenance, you’re in the right place with Fenceworks. Offering residential and commercial services, why not let our family help yours?</p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_WecFR8": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_mAXfG7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Pro-Formance-54-e1559579796967.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "",
+            "desc": "<h3>Residential Hoop Installation</h3><p>Whether you opt for an in-ground or wall-mount basketball hoop in Chicago, we’ll visit your property and ensure the highest quality installation. If you need advice regarding placement or hoop type, our family is always happy to help.</p><h3>Commercial Hoop Installation </h3><p>We have extensive experience in installing both in-ground and wall-mount hoops in schools, gyms, and other commercial settings. When you buy basketball hoops, you have extra rules and regulations around safety, so you need to partner with a professional service you can trust. <br/></p>",
+            "horizontal_align": "left",
+            "link_title": "Contact Us",
+            "link": "https://theguyon41.com/pages/free-estimate",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "rgba(0,0,0,0)",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        },
+        "image_CtzEhV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Hoop-works-lowered.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "",
+            "desc": "<h3>Basketball Hoop Maintenance/Repair</h3><p>The best way to extend the life of your basketball hoop set is to look after it, and this means performing regular maintenance and repairs. Rather than adding to your own to-do list, allow our friendly team to check, tighten, and lubricate in all the right places. </p><h3>Hoop Removal </h3><p>If you’ve had your in-ground hoop for many years, and you’re ready for an upgrade, we can also help you remove the old hoop. It has created many memories and been a reliable partner, but it’s now time to utilize the amazing modern hoops available at Fenceworks.</p><h3>Hoop Relocation </h3><p>We can safely and efficiently move your basketball hoop from its current location to a new space. Whether residential or <a href=\"https://theguyon41.com/collections/commercial-play-sets\">commercial</a>, you don’t need to regret your basketball hoop purchase. Instead, get more value from it in a new location. <br/></p>",
+            "horizontal_align": "left",
+            "link_title": "Fenceworks Basketball FAQ'S",
+            "link": "https://theguyon41.com/pages/basketball-faqs-your-questions-answered-by-fenceworks",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "rgba(0,0,0,0)",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_mAXfG7",
+        "image_CtzEhV"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_KBibYF": {
+      "type": "section-rich-text",
+      "name": "Rich text",
+      "settings": {
+        "section_title": "Why Choose Fenceworks?",
+        "text": "<p>When you choose <a href=\"https://theguyon41.com/\">Fenceworks</a>, you’re not going for a big box retailer that doesn’t know your name. You’re not going for an online retailer that isn’t passionate about the quality of the product. You’re choosing a member of the community, a family in Chicago, just like yours. </p><p>We first opened in 1967, and we’re proud to have helped thousands of people since, whether with fencing, playsets, trampolines, or basketball hoops in Chicago. Every transition our business goes through is to better serve our customers, and we now have three generations of our family within the business. </p><p>We’ll visit your home to provide advice, and we only ever put our name to the highest-quality products, including basketball hoops. To learn more about our products or our mission, <a href=\"https://theguyon41.com/pages/free-estimate\" title=\"https://theguyon41.com/pages/free-estimate\">get in touch today</a>. You’re also welcome to visit our Northbrook showroom - we’d love to see you! </p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "overlay_strength": 40
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "1699355642edb3b4fc": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_testimonials_KmVhV9": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_GhNLxM": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I had a wonderful purchasing experience with Jake and Julie. They made my decision effortless. I purchased a basketball hoop for my grandson and we all love it. Bob did a fabulous job with installation. I highly recommend becoming a client of Fenceworks for any of their service offerings. Thanks again<br/></p>",
+            "name": "Kathy Johnson",
+            "source": "Google Reviews"
+          }
+        },
+        "text_nQ8GcA": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Highly recommend using fenceworks! Jake and team were excellent to work with. My kids love their new basketball hoop and I’m excited for all the fun times they will have playing with it.<br/></p>",
+            "name": "Colleen Morgan",
+            "source": "Google Reviews"
+          }
+        },
+        "text_XbiUa3": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I purchased a basketball hoop from Fenceworks in 2024. The purchasing and installation process was seamless. The customer service from Jake was top notch. Glad I purchased from Fenceworks.</p>",
+            "name": "Elliot N",
+            "source": "Google Reviews"
+          }
+        },
+        "text_nfjTKE": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>A+++ experience.<br/><br/>Sean G was fast to respond and helped explain every single detail. The basketball hoop quality is great and they installed it ASAP<br/><br/>Would highly recommend to everybody</p>",
+            "name": "Ricky Silverman",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_GhNLxM",
+        "text_nQ8GcA",
+        "text_XbiUa3",
+        "text_nfjTKE"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "section_image_with_text_overlap_izCBxm",
+    "section_rich_text_bGghPi",
+    "section_image_with_text_overlap_873W4p",
+    "section_collection_kpCk9X",
+    "section_image_with_text_overlap_MBqnUQ",
+    "section_collection_DiCKWU",
+    "section_rich_text_kwytBc",
+    "section_image_with_text_WecFR8",
+    "section_rich_text_KBibYF",
+    "subcollections",
+    "banner",
+    "product-grid",
+    "1699355642edb3b4fc",
+    "section_testimonials_KmVhV9"
+  ]
+}

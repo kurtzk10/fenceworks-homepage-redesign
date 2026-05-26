@@ -1,0 +1,148 @@
+{% comment %}
+  Renders product page collapsible tab block
+
+  Accepts:
+  - block_id: {String}
+  - is_open: {Boolean}
+  - title: {String}
+  - icon: {String}
+  - icon_color: {Object}
+  - icon_size: {String}
+  - icon_custom_svg: {String}
+  - text: {String}
+  - link: {Object}
+  - image: {Object}
+  - image_width: {String}
+  - image_sizes: {String}
+  - align: {String}
+  - page_title: {String}
+  - page_content: {String}
+{% endcomment %}
+
+{%- if page_title == blank -%}
+  {%- unless title == blank -%}
+    <details
+      {% if is_open %}
+        open
+      {% endif %}
+      id="{{ block_id }}"
+    >
+      <summary>
+        {% unless icon == 'none' and icon_custom_svg == blank %}
+          <div
+            class="product-single__accordion__icon block--{{ block_id }}"
+          >
+            {%- liquid
+              assign custom_svg = null
+              if icon_custom_svg != blank
+                assign custom_svg = icon_custom_svg
+              endif
+
+              if icon_color == 'rgba(0,0,0,0)'
+                assign icon_color = settings.color_text
+              endif
+
+              assign icon_size = icon_size | plus: 1 | times: 3 | plus: 12 | append: 'px'
+            -%}
+
+            {% render 'icons-selection',
+              icon: icon,
+              icon_color: icon_color,
+              icon_size: icon_size,
+              custom_svg: custom_svg
+            %}
+          </div>
+        {% endunless %}
+        <h3 class="f-family--body u-large u-text-transform--none u-color-text">{{ title | escape }}</h3>
+        <summary-icon>
+          {% render 'icons-theme', icon: 'plus' %}
+        </summary-icon>
+      </summary>
+
+      <details-content>
+        <div class="product-single__accordion__item-wrap rte">
+          {{ text }}
+        </div>
+        {% if image != blank %}
+          <div class="product-form__img" style="text-align: {{ align }}">
+            {% unless link == blank %}
+              <a href="{{ link }}" class="product-form__img__link">
+            {% endunless %}
+            {%- liquid
+              assign image_height = image_width | divided_by: image.aspect_ratio | round
+            -%}
+            {% render 'image-skeleton', alt: image.alt, width: image_width, height: image_height %}
+            <img
+              class="product-form__img__img"
+              src="{{ image | image_url: width: 360 }}"
+              srcset="
+                {{ image | image_url: width: 180 }} 180w {{ 180 | divided_by: image.aspect_ratio | round }}h,
+                {{ image | image_url: width: 360 }} 360w {{ 360 | divided_by: image.aspect_ratio | round }}h,
+                {{ image | image_url: width: 540 }} 540w {{ 540 | divided_by: image.aspect_ratio | round }}h,
+                {{ image | image_url: width: 720 }} 720w {{ 720 | divided_by: image.aspect_ratio | round }}h,
+                {{ image | image_url: width: 900 }} 900w {{ 900 | divided_by: image.aspect_ratio | round }}h,
+                {{ image | image_url: width: 1080 }} 1080w {{ 1080 | divided_by: image.aspect_ratio | round }}h,
+                {{ image | image_url: width: 1296 }} 1296w {{ 1296 | divided_by: image.aspect_ratio | round }}h,
+                {{ image | image_url: width: 1512 }} 1512w {{ 1512 | divided_by: image.aspect_ratio | round }}h
+              "
+              width="{{ image_width }}"
+              height="{{  image_height }}"
+              alt="{{ image.alt }}"
+              loading="lazy"
+              style="max-width: {{ image_width }}px"
+              sizes="{% if image_width < 380 %}{{ image_width }}px{% else %}{{ image_sizes }}{% endif %}"
+            >
+            {% unless link == blank %}
+              </a>
+            {% endunless %}
+          </div>
+        {% endif %}
+      </details-content>
+    </details>
+  {%- endunless -%}
+{%- else -%}
+  <details
+    {% if is_open %}
+      open
+    {% endif %}
+    id="{{ block_id }}"
+  >
+    <summary>
+      {% unless icon == 'none' and icon_custom_svg == blank %}
+        <div
+          class="product-single__accordion__icon block--{{ block_id }}"
+        >
+          {%- liquid
+            assign custom_svg = null
+            if icon_custom_svg != blank
+              assign custom_svg = icon_custom_svg
+            endif
+
+            if icon_color == 'rgba(0,0,0,0)'
+              assign icon_color = settings.color_text
+            endif
+
+            assign icon_size = icon_size | plus: 1 | times: 3 | plus: 12 | append: 'px'
+          -%}
+
+          {% render 'icons-selection',
+            icon: icon,
+            icon_color: icon_color,
+            icon_size: icon_size,
+            custom_svg: custom_svg
+          %}
+        </div>
+      {% endunless %}
+      <h3 class="f-family--body u-large u-text-transform--none u-color-text">{{ page_title }}</h3>
+      <summary-icon>
+        {% render 'icons-theme', icon: 'plus' %}
+      </summary-icon>
+    </summary>
+
+    <details-content>
+      <div class="product-single__accordion__item-wrap rte">
+        {{ page_content }}
+      </div>
+    </details-content>
+  </details>
+{%- endif -%}

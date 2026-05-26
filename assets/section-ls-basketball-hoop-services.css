@@ -1,0 +1,281 @@
+/* ============================================================
+   Section: LS Basketball Hoop Services
+   ============================================================ */
+
+.section--ls-basketball-hoop-services {
+  padding-top: var(--space-top);
+  padding-bottom: var(--space-bottom);
+}
+
+/* ── Outer wrapper ─────────────────────────────────────────── */
+.lsbhs__outer {
+  width: 100%;
+}
+
+/* ── Card ──────────────────────────────────────────────────── */
+.lsbhs__card {
+  background-color: var(--lsbhs-bg);
+  border-radius: var(--lsbhs-radius);
+  padding: 40px;
+  max-width: 800px;
+}
+
+/* ── Heading ───────────────────────────────────────────────── */
+.lsbhs__heading {
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--lsbhs-heading-color);
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+/* ── Body text ─────────────────────────────────────────────── */
+.lsbhs__body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--lsbhs-body-color);
+  margin: 0 0 16px;
+}
+
+.lsbhs__body p {
+  margin: 0 0 0.75em;
+}
+
+.lsbhs__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Support text ───────────────────────────────────────────── */
+.lsbhs__support {
+  font-size: 14px;
+  color: var(--lsbhs-support-color);
+  margin: 0 0 20px;
+  line-height: 1.4;
+}
+
+/* ── Button ────────────────────────────────────────────────── */
+.lsbhs__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lsbhs-btn-text);
+  background: transparent;
+  border: 2px solid var(--lsbhs-btn-border);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lsbhs__btn:hover,
+.lsbhs__btn:focus-visible {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media screen and (max-width: 749px) {
+  .lsbhs__card {
+    padding: 32px 24px;
+  }
+
+  .lsbhs__heading {
+    font-size: 20px;
+  }
+
+  .lsbhs__body {
+    font-size: 15px;
+  }
+
+  .lsbhs__btn {
+    width: 100%;
+  }
+}
+
+
+.lsptc__spec-rte li {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.lsptc__spec-rte ul, .lsptc__spec-rte ol {
+  margin-left: 12px;
+}
+
+h2.lsbhs__heading {
+  color: var(--txt-light, #F4F7F8);
+
+/* Desktop/H3 */
+  font-family: "Cabinet Grotesk";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%; /* 44.8px */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+
+.lsbhs__body.rte {
+  color: var(--txt-light, #F4F7F8);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+p.lsbhs__support {
+  color: var(--txt-disclaim, #526572);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+a.lsbhs__btn {
+  color: var(--txt-light, #F4F7F8);
+  font-family: "Host Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: 0.5px;
+}
+
+p.lsbhs__support {
+  color: var(--txt-disclaim, #526572);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+.lsbhs__card {
+  max-width: 100%;
+  border-radius: 24px;
+  background: var(--bg-dark, #101A21);
+}
+
+.lsptc__spec-rte li {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.lsptc__spec-rte ul, .lsptc__spec-rte ol {
+  margin-left: 12px;
+}
+
+h2.lsbhs__heading {
+  color: var(--txt-light, #F4F7F8);
+
+/* Desktop/H3 */
+  font-family: "Cabinet Grotesk";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%; /* 44.8px */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+
+.lsbhs__body.rte {
+  color: var(--txt-light, #F4F7F8);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+p.lsbhs__support {
+  color: var(--txt-disclaim, #526572);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+a.lsbhs__btn {
+  color: var(--txt-light, #F4F7F8);
+  font-family: "Host Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: 0.5px;
+}
+
+p.lsbhs__support {
+  color: var(--txt-disclaim, #526572);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+.lsbhs__card {
+  max-width: 100%;
+  border-radius: 24px;
+  background: var(--bg-dark, #101A21);
+}
+
+a.lsbhs__btn {
+  border-radius: 99px;
+  border: 1px solid var(--bg-white, #FEFFFE);
+  color: var(--txt-light, #F4F7F8);
+  font-family: "Host Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: 0.5px;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  h2.lsbhs__heading {
+    font-size: 22px;
+    line-height: 1.3em;
+}
+
+.lsbhs__body.rte {
+    font-size: 16px;
+    opacity: .9;
+    line-height: 1.4em;
+}
+
+p.lsbhs__support {
+    font-size: 16px;
+}
+}

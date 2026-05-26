@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Pop-ups",
+  "type": "aside",
+  "sections": {
+    "promo-pop": {
+      "type": "promo-pop",
+      "disabled": true,
+      "settings": {
+        "enable_newsletter": false,
+        "title": "",
+        "text": "",
+        "link_title": "More info",
+        "link": "",
+        "delay": 3,
+        "expiry": 7
+      }
+    },
+    "age-checker": {
+      "type": "age-checker",
+      "disabled": true,
+      "settings": {
+        "title": "Age verification",
+        "text": "<p>By clicking enter you are verifying that you are old enough to consume alcohol.</p>",
+        "enter_btn_label": "Enter",
+        "leave_btn_label": "Leave",
+        "leave_link": ""
+      }
+    }
+  },
+  "order": [
+    "promo-pop",
+    "age-checker"
+  ]
+}

@@ -1,0 +1,287 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {font-size: 30px; padding-top: 20px; /* adjust the value as needed */}"
+      ],
+      "settings": {}
+    },
+    "section_liquid_qBprpw": {
+      "type": "section-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
+    "section_custom_ntYhrK": {
+      "type": "section-custom",
+      "blocks": {
+        "text_UU99XR": {
+          "type": "text",
+          "settings": {
+            "title": "Request a quote for Trampoline Installation in your area",
+            "text": "<p><strong>Contact Us Today </strong>— <a href=\"https://theguyon41.com/\">Fenceworks</a> is a trusted supplier and builder of trampolines since 1967.</p>",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "spacer_NKzRKm": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_UU99XR",
+        "spacer_NKzRKm"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "1730389734b92cddae": {
+      "type": "apps",
+      "blocks": {
+        "html_css_rich_content_embed_app_block_mc9DBc": {
+          "type": "shopify://apps/html-css-rich-content-embed/blocks/app-block/9219617d-b85d-43b5-991a-71aa7eb65965",
+          "settings": {
+            "content_embed_code": "<script charset=\"utf-8\" type=\"text/javascript\" src=\"//js.hsforms.net/forms/embed/v2.js\"></script>\n<script>\n  hbspt.forms.create({\n    portalId: \"39829965\",\n    formId: \"080ef661-8b55-4a33-ae36-8bc9b24953fd\"\n  });\n</script>",
+            "notes": ""
+          }
+        }
+      },
+      "block_order": [
+        "html_css_rich_content_embed_app_block_mc9DBc"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17229818280cc87843": {
+      "type": "apps",
+      "blocks": {
+        "xo_gallery_xo_gallery_xtCqJn": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 32,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "xo_gallery_xo_gallery_xtCqJn"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_multi_column_icons_aPRU4h": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "text_FgdyqA": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-hospital-first-aid",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Reliable Safety Net",
+            "sub_title": "",
+            "desc": "<p>With an unforgettable overlapping doorway, rest zones for multiple jumpers, a thick and easy to grab open weave net, and a 5 year warranty, you can be confident that your kids will stay safe for years to come.<br/><br/></p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_PbTKGM": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-ruler",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "High Performance Black Springs",
+            "sub_title": "",
+            "desc": "<p>Take it from the kids who care about their bounce - nothing is as bouncy or as responsive as an AlleyOOP. Our springs have the longest stretch and smoothest recoil rate on the market.<br/><br/></p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_aidBy7": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Column heading",
+            "sub_title": "",
+            "desc": "<p>Describe the main features of your brand or products using a few lines of text and an icon.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_nET8Wt": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-award-trophy-star-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Top Rated Trampoline Games",
+            "sub_title": "",
+            "desc": "<p>Giving kids a specific activity, like a <a href=\"/collections/in-ground-trampolines\" title=\"In Ground Trampolines\">trampoline basketball hoop</a>, keep kids focused on safe play that’s fun! With the largest selection of trampoline accessories in the industry we have the right games for your kids and your budget.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_nDUrYE": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-shield-check",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Lifetime Frame Warranty",
+            "sub_title": "",
+            "desc": "<p>Have confidence that your trampoline will actually hold up to constant jumping and extreme weather. Plus, check out our extended warranty Fail-Safe Guarantee for other parts.<br/><br/></p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_FgdyqA",
+        "text_PbTKGM",
+        "text_aidBy7",
+        "text_nET8Wt",
+        "text_nDUrYE"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "full",
+        "grid": 5,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 2,
+        "icon_size": 30,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_testimonials_aHyNcK": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_kjdkAT": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>We had Fenceworks install an AconX trampoline, and the experience was solid. The team was efficient and professional throughout the process. They took the time to explain the different trampoline models and helped us choose the right one. Overall, great experience!</p>",
+            "name": "Mike Harrington",
+            "source": "Google Reviews"
+          }
+        },
+        "text_B9Xyrk": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Absolutely thrilled with Fenceworks and their trampoline service! From first inquiry to final installation, the process was seamless and professional. Jake expertly explained the different options and walked me through the possible add-ons. We ended up with the 14 ft double bounce with basketball hoop. The installation team was friendly, efficient, and made sure everything was safe and perfect. Our kids are absolutely thrilled, and we’re so happy with the final result. Highly recommend if you’re looking for a quality trampoline and top-notch service!<br/></p>",
+            "name": "Jill Osborn",
+            "source": "Google Reviews"
+          }
+        },
+        "text_txx7DA": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Working with Jake and the Fenceworks team has been a wonderful experience! Jake is so attentive and professional, coming multiple times to my home to ensure that our new trampoline was installed in the ideal and safest location of our yard. Our trampoline is incredible, top of the line quality and safety and I know will be enjoyed for many, many years. Our family has used Fenceworks for swingset installations as well as our experience has always been great. Their products, installation and customer service are superb and I would recommend Fenceworks to all of my family and friends!<br/></p>",
+            "name": "Samantha Malach",
+            "source": "Google Reviews"
+          }
+        },
+        "text_DNm4yP": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Excellent guidance and service. The delivery and installation process was seamless. My girls (11 & 8) love their new trampoline. I cannot give a higher recommendation than Jake and his team.</p>",
+            "name": "Edison Reformado",
+            "source": "Google Reviews"
+          }
+        },
+        "text_PKDxeq": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>My alleyoop trampoline was installed about 8 years ago and has held up great! Fenceworks came out to replace a bent upright- installers always have been on time and do a great job - highly recommend!</p>",
+            "name": "Linda B",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_kjdkAT",
+        "text_B9Xyrk",
+        "text_txx7DA",
+        "text_DNm4yP",
+        "text_PKDxeq"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_liquid_qBprpw",
+    "section_custom_ntYhrK",
+    "1730389734b92cddae",
+    "17229818280cc87843",
+    "section_multi_column_icons_aPRU4h",
+    "section_testimonials_aHyNcK"
+  ]
+}

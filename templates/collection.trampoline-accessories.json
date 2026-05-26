@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "replacement_image": "shopify://shop_images/trampoline-slider-image.jpg",
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 0
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "section_testimonials_7RdVUT": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_tQGLR4": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Great company! I needed some parts on my trampoline fixed and they responded to me so quick, got me on the schedule promptly, came to expect my trampoline and give me other recommendations on what needed to be fixed. Will definitely be doing business with them in the future. Thanks again Fenceworks!<br/></p>",
+            "name": "Lauren Palka",
+            "source": "Google Reviews"
+          }
+        },
+        "text_3igGVE": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>We have loved our years with Fenceworks! The quality of our trampoline was superb. When we needed any replacement parts (which was rare), they were very respnosive. We've always loved their seasonal take down/set up service as well, which has kept ours in great condition. Jake and his team are the best!!<br/></p>",
+            "name": "Annie Pezza",
+            "source": "Google Reviews"
+          }
+        },
+        "text_wKig6h": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Love that Fenceworks is family owned and offers seamless customer service. We bought a trampoline from them in 2006 and after our 4 children outgrew it, the trampoline moved to our neighbor's house, and now we just bought a new safety net and the trampoline is moving to our daughter and son-in-law's house for their kids to enjoy. Thank you for the personalized customer service and for sticking with us and the trampoline three homes later.<br/></p>",
+            "name": "Colleen Clay",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_tQGLR4",
+        "text_3igGVE",
+        "text_wKig6h"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "product-grid",
+    "section_testimonials_7RdVUT"
+  ]
+}

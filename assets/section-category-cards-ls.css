@@ -1,0 +1,177 @@
+/* ==========================================================================
+   #CATEGORY CARDS SECTION (LS)
+   ========================================================================== */
+
+.section--category-cards {
+  background-color: var(--cc-section-bg);
+}
+
+.cc__bg {
+  padding-top: var(--space-top);
+  padding-bottom: var(--space-bottom);
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+
+.cc__header {
+  margin-bottom: 40px;
+}
+
+.cc__eyebrow {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--cc-eyebrow-color);
+  margin: 0 0 10px;
+  letter-spacing: 0.02em;
+}
+
+.cc__heading {
+  font-size: var(--cc-heading-size, 40px);
+  font-weight: 900;
+  color: var(--cc-heading-color);
+  line-height: 1.1;
+  margin: 0;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.cc__heading-line {
+  display: block;
+}
+
+.cc__heading-accent {
+  color: var(--cc-accent-color);
+}
+
+/* --------------------------------------------------------------------------
+   Grid
+   -------------------------------------------------------------------------- */
+
+.cc__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--cc-grid-gap, 16px);
+}
+
+/* --------------------------------------------------------------------------
+   Card
+   -------------------------------------------------------------------------- */
+
+.cc__card {
+  position: relative;
+  background-color: var(--cc-card-bg);
+  border-radius: var(--cc-card-radius, 16px);
+  overflow: hidden;
+  transition: background-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.cc__card:hover,
+.cc__card:focus-within {
+  background-color: var(--cc-card-hover-bg);
+}
+
+.cc__card-link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Card image area
+   -------------------------------------------------------------------------- */
+
+.cc__card-image-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 200px;
+}
+
+.cc__card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px 16px 8px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cc__card-image--active {
+  opacity: 1;
+}
+
+.cc__card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Card label
+   -------------------------------------------------------------------------- */
+
+.cc__card-label {
+  padding: 12px 12px 18px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--cc-label-color);
+  text-align: center;
+  transition: color 0.25s ease;
+  line-height: 1.2;
+}
+
+.cc__card:hover .cc__card-label,
+.cc__card:focus-within .cc__card-label {
+  color: var(--cc-label-hover-color);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 61.24em) {
+  .cc__header {
+    margin-bottom: 28px;
+  }
+
+  .cc__heading {
+    font-size: calc(var(--cc-heading-size, 40px) * 0.75);
+  }
+
+  .cc__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cc__card-image-wrap {
+    min-height: 150px;
+  }
+
+  .cc__card-image {
+    padding: 12px 12px 6px;
+  }
+
+  .cc__card-label {
+    font-size: 11px;
+    padding: 10px 10px 14px;
+  }
+}
+
+@media (max-width: 30em) {
+  .cc__card-image-wrap {
+    min-height: 120px;
+  }
+}

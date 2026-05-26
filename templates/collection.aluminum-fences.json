@@ -1,0 +1,331 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 0
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "04eb94b5-6c93-4b0b-80cd-1126e428d49c": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "template--21394251317555__04eb94b5-6c93-4b0b-80cd-1126e428d49c-text-3": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-accounting-coins-stack",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Cost-Effective",
+            "sub_title": "",
+            "desc": "<p>Aluminum can be more cost-effective than other materials due to its durability and low maintenance.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251317555__04eb94b5-6c93-4b0b-80cd-1126e428d49c-text-2": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-shield-check",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Lightweight & Versatile",
+            "sub_title": "",
+            "desc": "<p>Aluminum fences are easy to install and can be adapted to various terrains.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251317555__04eb94b5-6c93-4b0b-80cd-1126e428d49c-text-1": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Low Maintenance",
+            "sub_title": "",
+            "desc": "<p>Unlike other metals, aluminum doesn't rust, making it a low-maintenance option.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251317555__04eb94b5-6c93-4b0b-80cd-1126e428d49c-text-4": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-recycling-sign",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Eco-Friendly",
+            "sub_title": "",
+            "desc": "<p>Aluminum is recyclable, making it an environmentally-friendly fencing choice.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251317555__04eb94b5-6c93-4b0b-80cd-1126e428d49c-text-3",
+        "template--21394251317555__04eb94b5-6c93-4b0b-80cd-1126e428d49c-text-2",
+        "template--21394251317555__04eb94b5-6c93-4b0b-80cd-1126e428d49c-text-1",
+        "template--21394251317555__04eb94b5-6c93-4b0b-80cd-1126e428d49c-text-4"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "full",
+        "grid": 4,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "icon_size": 30,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "3c294191-5867-403b-9149-404911339663": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21394251317555__3c294191-5867-403b-9149-404911339663-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "948a1259-c13e-4f08-90b5-3dcbc2ea7010": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Fence Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2021-FenceCatalog.pdf",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251317555__3c294191-5867-403b-9149-404911339663-button-1",
+        "948a1259-c13e-4f08-90b5-3dcbc2ea7010"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "7b70e88a-df7c-4d1f-9cc2-971c01d94186": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21394251317555__7b70e88a-df7c-4d1f-9cc2-971c01d94186-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Aluminum Fencing",
+            "text": "<p>Aluminum fences are a stylish and durable choice for homeowners and property owners seeking an elegant yet robust <a href=\"https://theguyon41.com/\">fencing solution</a>. These fences are expertly crafted from lightweight and corrosion-resistant aluminum materials, offering a multitude of benefits that make them a favored option for enhancing the appearance and security of outdoor spaces.</p><ul><li><strong>Longevity:</strong> Aluminum fences are designed to last, offering a long-term solution for your property's security and privacy needs.</li><li><strong>Eco-Friendly:</strong> Many aluminum products are recyclable, making them an environmentally conscious choice for homeowners.</li><li><strong>Security and Safety:</strong> Aluminum fences can provide both security and safety, keeping your property protected and delineated.</li><li><strong>Rust Resistance</strong>: Aluminum's natural resistance to corrosion ensures that your fence remains rust-free and continues to look pristine, even in humid or coastal environments.</li></ul>",
+            "align": "left",
+            "width": "1/2"
+          }
+        },
+        "14821504-ad53-4a0b-98d1-fc8e0b5899f5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3-Rail-with-Circles-and-Safety-Spear-Tops_06ac1fd6-eadc-4df7-ae15-fbbc90324fc3.jpg",
+            "link": "",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251317555__7b70e88a-df7c-4d1f-9cc2-971c01d94186-text-1",
+        "14821504-ad53-4a0b-98d1-fc8e0b5899f5"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "1696868443f5a0ae04": {
+      "type": "apps",
+      "blocks": {
+        "ddf10bba-2f42-4661-a0d4-26d9f4dc7b60": {
+          "type": "shopify://apps/easy-zipcode-check-validate/blocks/app-block/0aee76b4-6928-4f3f-aff6-81beaca5418d",
+          "settings": {}
+        },
+        "b9fe1352-5feb-4273-94d1-70bf02527d52": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 4,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "ddf10bba-2f42-4661-a0d4-26d9f4dc7b60",
+        "b9fe1352-5feb-4273-94d1-70bf02527d52"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_testimonials_Ytezjk": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_ceVAAB": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I really can't say enough great things about Fenceworks! They always treat you with respect, honesty, and transparency. Regarding your next Fence project, look no further than \"The Guy on 41\"! I will be back this spring for Basketball Hoops, Trampolines, and Playgrounds... excited to complete my backyard with Fenceworks running the show!</p>",
+            "name": "J Cov",
+            "source": "Google Reviews"
+          }
+        },
+        "text_dXart3": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>When it comes to a Fence instillation.. there is no better company in the north shore/chicago that I would recommend more than Fenceworks. They truly care about each customer like their family. I was informed every step of the way, true transparency throughout. Pricing was fair and competitive, and the craftsmanship was truly amazing. I look forward to buying a playground, trampoline, and basketball hoop this spring to wrap up all my home improvement projects in the future!</p>",
+            "name": "Adrish Saha",
+            "source": "Google Reviews"
+          }
+        },
+        "text_YJg9NU": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I am so happy with the work that was completed. Fast, friendly, courteous, and honest.<br/>I had a beautiful fence built in my backyard and they worked so hard and quickly. I could not be happier and I will use them for any future projects.</p>",
+            "name": "Brad Rooks",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_ceVAAB",
+        "text_dXart3",
+        "text_YJg9NU"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "04eb94b5-6c93-4b0b-80cd-1126e428d49c",
+    "3c294191-5867-403b-9149-404911339663",
+    "7b70e88a-df7c-4d1f-9cc2-971c01d94186",
+    "product-grid",
+    "1696868443f5a0ae04",
+    "section_testimonials_Ytezjk"
+  ]
+}

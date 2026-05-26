@@ -1,0 +1,2 @@
+class ProductSingle extends HTMLElement{#e;connectedCallback(){this.mediaGallery=this.querySelector("media-gallery"),this.#t()}updateMedia(){if(!this.mediaGallery||!this.#e.featured_media)return;const e=this.#e.featured_media.id;this.mediaGallery.goToSlide(e)}set variant(e){this.#e=e,this.updateMedia()}get variant(){return this.#e}#t(){this.querySelectorAll("sticky-scroll modal-dialog, sticky-scroll popup-dialog").forEach((e=>{this.append(e)}))}}customElements.define("product-single",ProductSingle);
+//# sourceMappingURL=product-single.js.map

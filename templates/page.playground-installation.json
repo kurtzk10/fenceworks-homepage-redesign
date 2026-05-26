@@ -1,0 +1,358 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {font-size: 30px; padding-top: 20px; /* adjust the value as needed */}"
+      ],
+      "settings": {}
+    },
+    "section_liquid_qBprpw": {
+      "type": "section-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
+    "section_testimonials_qCz8tW": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_gKKJx9": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I worked with Fenceworks to have a swing set installed in my backyard. Jake was professional and easy to work with. It was easy to set up the installation with his crew and they arrived right on time. They were communicative and helpful. They even cut some branches from a tree so they wouldn’t be in the way of the swings. Overall it was a positive experience and I highly recommend Fenceworks. My kids love their new swing set!<br/></p>",
+            "name": "Carly Friedland Goldstein",
+            "source": "Google Reviews"
+          }
+        },
+        "text_ak9JVp": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>We had a great experience working with Fenceworks to select and install the right swing set for our backyard. Jake helped us pick the right model, get the best deal possible on it, and ensured installation was as smooth as possible<br/></p>",
+            "name": "Brian Slivnick",
+            "source": "Google Reviews"
+          }
+        },
+        "text_UCWnXk": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Fantastic experience working with Jake and team from start to finish. From picking the perfect swingset to a clean and easy installation, Fenceworks made our family’s dream a possibility!<br/></p>",
+            "name": "Michael Zappala",
+            "source": "Google Reviews"
+          }
+        },
+        "text_kN6ipq": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Amazing experience. My old swing set broke just weeks before my son’s birthday party. I called Jake and within two weeks. I had a new swingset in my backyard. He made the entire process as easy as it could be.<br/></p>",
+            "name": "Rockne Brubaker",
+            "source": "Google Reviews"
+          }
+        },
+        "text_MqHGVQ": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Jake was honest and super helpful in choosing the right swing set for our son. Installation by their team was a breeze. I would highly recommend Jake!</p>",
+            "name": "Parth Mangrola",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_gKKJx9",
+        "text_ak9JVp",
+        "text_UCWnXk",
+        "text_kN6ipq",
+        "text_MqHGVQ"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_custom_ntYhrK": {
+      "type": "section-custom",
+      "blocks": {
+        "text_UU99XR": {
+          "type": "text",
+          "settings": {
+            "title": "Request a quote for Playground installation in your area",
+            "text": "<p><strong>Contact Us Today </strong>— <a href=\"https://theguyon41.com/\">Fenceworks</a> is a trusted supplier and builder of playgrounds since 1967.</p>",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "spacer_NKzRKm": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_UU99XR",
+        "spacer_NKzRKm"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "1730389734b92cddae": {
+      "type": "apps",
+      "blocks": {
+        "html_css_rich_content_embed_app_block_mc9DBc": {
+          "type": "shopify://apps/html-css-rich-content-embed/blocks/app-block/9219617d-b85d-43b5-991a-71aa7eb65965",
+          "settings": {
+            "content_embed_code": "<script charset=\"utf-8\" type=\"text/javascript\" src=\"//js.hsforms.net/forms/embed/v2.js\"></script>\n<script>\n  hbspt.forms.create({\n    portalId: \"39829965\",\n    formId: \"080ef661-8b55-4a33-ae36-8bc9b24953fd\"\n  });\n</script>",
+            "notes": ""
+          }
+        }
+      },
+      "block_order": [
+        "html_css_rich_content_embed_app_block_mc9DBc"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17229818280cc87843": {
+      "type": "apps",
+      "blocks": {
+        "xo_gallery_xo_gallery_xtCqJn": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 24,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "xo_gallery_xo_gallery_xtCqJn"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_multi_column_icons_aPRU4h": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "text_bKwgJn": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-award-medal",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "WE SPECIALIZE IN GLASS",
+            "sub_title": "",
+            "desc": "<p>Our tempered glass used by professional teams remains clear, offering excellent play and serving as a valuable learning tool for kids.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_FgdyqA": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-hospital-first-aid",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "SAFETY FIRST",
+            "sub_title": "",
+            "desc": "<p>All our units come with free pole and board padding to protect those who are practicing or shooting.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_NPM7yQ": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-send-email",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "ACCESSIBILITY",
+            "sub_title": "",
+            "desc": "<p>Our systems adjust to an industry-low of 6 feet (PROview) or 7.5 feet (PROforce), ideal for boosting young kids' confidence and allowing older kids to dunk.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_PbTKGM": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-ruler",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "PEDESTAL BASE",
+            "sub_title": "",
+            "desc": "<p>We exclusively offer pedestal base systems, ensuring portability and affordability compared to direct bury units.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_wLaLVT": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-hammer-wrench",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "BASKETBALL HOOP INSTALLATION",
+            "sub_title": "",
+            "desc": "<p>Every hoop we sell comes with the option of professional installation.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_LaHXt4": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-flag",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "GAUGE INFO",
+            "sub_title": "",
+            "desc": "<p>We provide only 5 gauge (PROview) and 11 gauge (PROforce) one-piece poles.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_nET8Wt": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-award-trophy-star-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "HIGH GRADE MATERIAL",
+            "sub_title": "",
+            "desc": "<p>Our top-quality materials stand out, not just in appearance but also in sound when compared to other systems.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_nDUrYE": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-shield-check",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "WARRANTY",
+            "sub_title": "",
+            "desc": "<p>We pride ourselves on our industry-leading Limited Lifetime warranty.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_pUeDhQ": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "EXPERIENCE",
+            "sub_title": "",
+            "desc": "<p>With over 30+ years in the business, we're passionate about our products and offer a personalized shopping experience.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_gVaxFG": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-gift-box",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "SPECIAL GIFT",
+            "sub_title": "",
+            "desc": "<p>Every basketball hoop purchase from Fenceworks comes with a special gift for your kids from “The Guy On 41.”</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_bKwgJn",
+        "text_FgdyqA",
+        "text_NPM7yQ",
+        "text_PbTKGM",
+        "text_wLaLVT",
+        "text_LaHXt4",
+        "text_nET8Wt",
+        "text_nDUrYE",
+        "text_pUeDhQ",
+        "text_gVaxFG"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "small",
+        "grid": 5,
+        "spacing": 2,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 2,
+        "icon_size": 30,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_liquid_qBprpw",
+    "section_testimonials_qCz8tW",
+    "section_custom_ntYhrK",
+    "1730389734b92cddae",
+    "17229818280cc87843",
+    "section_multi_column_icons_aPRU4h"
+  ]
+}

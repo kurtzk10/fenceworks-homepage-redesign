@@ -1,0 +1,262 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-usp-icons.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-usp-icons.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-usp-icons.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<section
+  class="
+    section
+    section--padded
+    section--usp-icons
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="usp-icons"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="usp-icons">
+    <div class="container container--{{ section.settings.container_width }}">
+      {%- if section.settings.orange_text_box != blank -%}
+        <div class="usp-icons__callout js-animate-single" data-animation-displacement="5">
+          <div class="usp-icons__callout-inner rte">
+            {{ section.settings.orange_text_box }}
+          </div>
+        </div>
+      {%- endif -%}
+
+      <div
+        class="
+          section__title
+          section__title--center
+          usp-icons__header
+          {% unless section.settings.text == blank %}section__title--desc{% endunless %}
+        "
+      >
+        {%- unless section.settings.heading == blank -%}
+          <div class="usp-icons__title-line"></div>
+          <div class="section__title-text usp-icons__heading rte">{{ section.settings.heading }}</div>
+        {%- endunless -%}
+        {%- unless section.settings.text == blank -%}
+          <div
+            class="usp-icons__desc rte js-animate-single"
+            data-animation-displacement="0"
+            data-animation-delay="0.1"
+          >
+            {{ section.settings.text }}
+          </div>
+        {%- endunless -%}
+      </div>
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="usp-icons__grid">
+          {% for block in section.blocks %}
+            <div
+              class="usp-icons__block block--{{ block.id }}"
+              {{ block.shopify_attributes }}
+              style="
+                --usp-block-bg: {{ block.settings.bg_color_desktop }};
+                --usp-block-radius: {{ block.settings.border_radius }}px;
+              "
+            >
+              {%- if block.settings.icon_image != blank -%}
+                <div class="usp-icons__block-icon">
+                  {% render 'image',
+                    image: block.settings.icon_image,
+                    additional_classes: 'usp-icons__block-icon-img',
+                    image_ratio: 'natural',
+                    image_default_width: 64,
+                    alt_string: block.settings.label | strip_html | default: block.settings.icon_image.alt
+                  %}
+                </div>
+              {%- endif -%}
+              {%- unless block.settings.label == blank -%}
+                <div class="usp-icons__block-label rte">{{ block.settings.label }}</div>
+              {%- endunless -%}
+            </div>
+          {% endfor %}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% if section.blocks.size == 0 %}
+  <div class="placeholder-noblocks">
+    {{ 'homepage.onboarding.no_content' | t }}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "USP Icons",
+  "class": "js-section__usp-icons",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "orange_text_box",
+      "label": "Text for the orange text box",
+      "info": "Callout box with light orange background and dashed border. Shown above the heading."
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>PREMIUM PLAY SETS, BUILT THE RIGHT WAY</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Adventure World Playsets are known for their quality, safety, and craftsmanship. Every play set is built to last, with thoughtful design and materials parents can trust.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "container_width",
+      "label": "Section width",
+      "default": "small",
+      "options": [
+        {
+          "label": "Default",
+          "value": "large"
+        },
+        {
+          "label": "Narrow",
+          "value": "small"
+        },
+        {
+          "label": "Wide",
+          "value": "full"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 48
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp_item",
+      "name": "USP item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Image for the icon"
+        },
+        {
+          "type": "richtext",
+          "id": "label",
+          "label": "Text for the text below",
+          "default": "<p>HIGH-QUALITY SWING SETS</p>"
+        },
+        {
+          "type": "color",
+          "id": "bg_color_desktop",
+          "label": "Background color (desktop)",
+          "default": "#f5f7f9"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "label": "Border radius",
+          "unit": "px",
+          "min": 0,
+          "max": 32,
+          "step": 2,
+          "default": 16
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP Icons",
+      "blocks": [
+        {
+          "type": "usp_item",
+          "settings": {
+            "label": "<p>HIGH-QUALITY SWING SETS</p>",
+            "border_radius": 16
+          }
+        },
+        {
+          "type": "usp_item",
+          "settings": {
+            "label": "<p>DELIVERED & INSTALLED ACROSS CHICAGOLAND</p>",
+            "border_radius": 16
+          }
+        },
+        {
+          "type": "usp_item",
+          "settings": {
+            "label": "<p>INDUSTRY-LEADING WARRANTY</p>",
+            "border_radius": 16
+          }
+        },
+        {
+          "type": "usp_item",
+          "settings": {
+            "label": "<p>MAINTENANCE-FREE VINYL CONSTRUCTION</p>",
+            "border_radius": 16
+          }
+        },
+        {
+          "type": "usp_item",
+          "settings": {
+            "label": "<p>CUSTOM-BUILT, AMISH-MADE CRAFTSMANSHIP</p>",
+            "border_radius": 16
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %}

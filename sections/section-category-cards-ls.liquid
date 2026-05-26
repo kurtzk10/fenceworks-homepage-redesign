@@ -1,0 +1,370 @@
+{%- liquid
+  assign cards = section.blocks | where: 'type', 'card'
+-%}
+
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-category-cards-ls.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-category-cards-ls.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-category-cards-ls.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<section
+  class="
+    section
+    section--{{ section.id }}
+    section--category-cards
+    {% if section.settings.section_bottom_margin %}section--mb-0{% else %}section--mb-s{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="category-cards"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --cc-section-bg: {{ section.settings.section_bg }};
+    --cc-card-bg: {{ section.settings.card_bg }};
+    --cc-card-hover-bg: {{ section.settings.card_hover_bg }};
+    --cc-label-color: {{ section.settings.label_color }};
+    --cc-label-hover-color: {{ section.settings.label_hover_color }};
+    --cc-heading-color: {{ section.settings.heading_color }};
+    --cc-accent-color: {{ section.settings.accent_color }};
+    --cc-eyebrow-color: {{ section.settings.eyebrow_color }};
+    --cc-card-radius: {{ section.settings.card_border_radius }}px;
+    --cc-grid-gap: {{ section.settings.grid_gap }}px;
+    --cc-heading-size: {{ section.settings.heading_size }}px;
+  "
+>
+  <div class="cc__bg">
+    <div class="container container--{{ section.settings.section_width }}">
+      <div class="cc__content">
+
+        {%- if section.settings.eyebrow != blank or section.settings.heading_line1 != blank or section.settings.heading_accent != blank -%}
+          <div class="cc__header">
+            {%- if section.settings.eyebrow != blank -%}
+              <p class="cc__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.heading_line1 != blank or section.settings.heading_line2 != blank or section.settings.heading_accent != blank -%}
+              <h2 class="cc__heading">
+                {%- if section.settings.heading_line1 != blank -%}
+                  <span class="cc__heading-line">{{ section.settings.heading_line1 | escape }}</span>
+                {%- endif -%}
+                {%- if section.settings.heading_line2 != blank or section.settings.heading_accent != blank -%}
+                  <span class="cc__heading-line">
+                    {%- if section.settings.heading_line2 != blank -%}{{ section.settings.heading_line2 | escape }} {%- endif -%}
+                    {%- if section.settings.heading_accent != blank -%}<span class="cc__heading-accent">{{ section.settings.heading_accent | escape }}</span>{%- endif -%}
+                  </span>
+                {%- endif -%}
+              </h2>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- if cards.size > 0 -%}
+          <div class="cc__grid">
+            {%- for block in cards -%}
+              {%- liquid
+                assign img_count = 0
+                if block.settings.image_1 != blank
+                  assign img_count = img_count | plus: 1
+                endif
+                if block.settings.image_2 != blank
+                  assign img_count = img_count | plus: 1
+                endif
+                if block.settings.image_3 != blank
+                  assign img_count = img_count | plus: 1
+                endif
+              -%}
+
+              <div
+                class="cc__card"
+                {{ block.shopify_attributes }}
+                data-image-count="{{ img_count }}"
+              >
+                {%- if block.settings.link != blank -%}
+                  <a
+                    href="{{ block.settings.link }}"
+                    class="cc__card-link"
+                    aria-label="{{ block.settings.label | default: '' | escape }}"
+                  >
+                {%- endif -%}
+
+                <div class="cc__card-image-wrap">
+                  {%- if block.settings.image_1 != blank -%}
+                    <img
+                      class="cc__card-image cc__card-image--active"
+                      src="{{ block.settings.image_1 | image_url: width: 600 }}"
+                      alt="{{ block.settings.image_1.alt | default: block.settings.label | escape }}"
+                      loading="lazy"
+                      data-img-index="0"
+                    >
+                  {%- else -%}
+                    <div class="cc__card-image-placeholder"></div>
+                  {%- endif -%}
+
+                  {%- if block.settings.image_2 != blank -%}
+                    <img
+                      class="cc__card-image"
+                      src="{{ block.settings.image_2 | image_url: width: 600 }}"
+                      alt="{{ block.settings.image_2.alt | default: block.settings.label | escape }}"
+                      loading="lazy"
+                      data-img-index="1"
+                    >
+                  {%- endif -%}
+
+                  {%- if block.settings.image_3 != blank -%}
+                    <img
+                      class="cc__card-image"
+                      src="{{ block.settings.image_3 | image_url: width: 600 }}"
+                      alt="{{ block.settings.image_3.alt | default: block.settings.label | escape }}"
+                      loading="lazy"
+                      data-img-index="2"
+                    >
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.label != blank -%}
+                  <p class="cc__card-label">{{ block.settings.label | escape }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.link != blank -%}
+                  </a>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ 'section-category-cards-ls.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "LS - Category Cards",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "Explore Categories"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Heading — line 1",
+      "default": "ONE-STOP SOLUTIONS"
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Heading — line 2 prefix",
+      "default": "BY",
+      "info": "Appears before the accent text on the second line. Leave blank to show accent on its own line."
+    },
+    {
+      "type": "text",
+      "id": "heading_accent",
+      "label": "Heading — accent text",
+      "default": "THE GUY ON 41",
+      "info": "This text renders in the accent color."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#EBEBEB"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#1B2A3B"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow color",
+      "default": "#E87722"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Heading accent color",
+      "default": "#E87722"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#9EA6AC"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_bg",
+      "label": "Card hover background",
+      "default": "#E87722"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label color",
+      "default": "#131313"
+    },
+    {
+      "type": "color",
+      "id": "label_hover_color",
+      "label": "Label hover color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "wide",
+      "options": [
+        { "value": "narrow", "label": "Narrow" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "wide", "label": "Wide" },
+        { "value": "full", "label": "Full width" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap between cards",
+      "unit": "px",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "unit": "px",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Category card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Category"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "header",
+          "content": "Images"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Image 3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS - Category Cards",
+      "blocks": [
+        { "type": "card", "settings": { "label": "Fences" } },
+        { "type": "card", "settings": { "label": "Playsets" } },
+        { "type": "card", "settings": { "label": "Basketball Hoops" } },
+        { "type": "card", "settings": { "label": "Trampolines" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

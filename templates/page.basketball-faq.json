@@ -1,0 +1,265 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_custom_Q7mMEx": {
+      "type": "section-custom",
+      "blocks": {
+        "spacer_AzEVWk": {
+          "type": "spacer",
+          "settings": {
+            "space": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_AzEVWk"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "section_faq_HQknCD": {
+      "type": "section-faq",
+      "blocks": {
+        "category_HTyKAt": {
+          "type": "category",
+          "settings": {
+            "title": "FAQ'S"
+          }
+        },
+        "article_UP3xzn": {
+          "type": "article",
+          "settings": {
+            "title": "What types of basketball hoops are available at Fenceworks?",
+            "text": "<p>Explore our range of in-ground and mounted basketball systems suitable for various playing levels, budget and spaces.</p>"
+          }
+        },
+        "article_CyRX4q": {
+          "type": "article",
+          "settings": {
+            "title": "How do I choose the right basketball hoop for my home?",
+            "text": "<p>Choosing the right basketball hoop involves more than just measuring your space. At <a href=\"https://theguyon41.com/\">Fenceworks</a>, we bring over 58 years of experience and thousands of successful installations to help you find the perfect hoop. Unlike online or big-box retailers who may see you as just another number, we offer a personalized service that considers the age and skill level of the players, the specifics of your home environment, and whether an <a href=\"/collections/basketball-hoops\" title=\"Basketball Hoops\">in-ground </a>or <a href=\"/collections/wall-mount-hoops\" title=\"Wall Mount Hoops\">mounted hoop</a> system best suits your needs. Visit our showroom or contact us directly to ensure you get expert advice tailored just for you.<br/><br/></p>"
+          }
+        },
+        "article_BPbqJi": {
+          "type": "article",
+          "settings": {
+            "title": "Can Fenceworks assist with basketball hoop installation?",
+            "text": "<p>Absolutely! At Fenceworks, we offer a white-glove installation service that sets us apart from online retailers. Our comprehensive approach includes a free consultation either in our showroom, over the phone, or through a free site visit, guiding you every step of the way—from the initial selection to the final <a href=\"https://theguyon41.com/pages/basketball-hoop-installation/\">installation of your basketball hoop</a>. We handle everything, ensuring there are NEVER unwanted boxes left on your driveway, and we eliminate additional delivery or shipping charges. More importantly, we provide a personalized service experience; you're not just another call to a call center. When you reach out to us, we remember you and manage your needs with the utmost care and attention.</p><p>Additionally, we coordinate with public utilities in your respective city to ensure all necessary clearances and preparations are handled correctly. This is a crucial step that many other companies overlook, leaving you responsible for potential fines, delays, and issues with neighbors. Our full-service approach covers these details, preventing unforeseen expenses and ensuring your installation is compliant and hassle-free. This meticulous attention to detail ensures that your basketball setup is perfectly suited to your home and lifestyle, without any complications.</p>"
+          }
+        },
+        "article_r3Cqzd": {
+          "type": "article",
+          "settings": {
+            "title": "What is the typical cost for a basketball hoop and installation at Fenceworks?",
+            "text": "<p>Costs vary depending on the type of hoop and installation requirements; contact us for a detailed quote.</p>"
+          }
+        },
+        "article_x78JkP": {
+          "type": "article",
+          "settings": {
+            "title": "What should I know about maintaining my basketball hoop?",
+            "text": "<p>Absolutely! At Fenceworks, we offer a white-glove installation service that sets us apart from online retailers. Our comprehensive approach includes a free consultation either in our showroom, over the phone, or through a free site visit, guiding you every step of the way—from the initial selection to the final installation of your basketball hoop. We handle everything, ensuring there are NEVER unwanted boxes left on your driveway, and we eliminate additional delivery or shipping charges. More importantly, we provide a personalized service experience; you're not just another call to a call center. When you reach out to us, we remember you and manage your needs with the utmost care and attention.</p><p>Additionally, we coordinate with public utilities in your respective city to ensure all necessary clearances and preparations are handled correctly. This is a crucial step that many other companies overlook, leaving you responsible for potential fines, delays, and issues with neighbors. Our full-service approach covers these details, preventing unforeseen expenses and ensuring your installation is compliant and hassle-free.</p><p>At Fenceworks, we pride ourselves on offering only the best-in-class products on the market. We are constantly evaluating our offerings to ensure they meet our high standards for quality and durability. Our basketball hoops use only stainless steel AND zinc-coated hardware, which is the only type we trust to withstand Chicago's harsh winters and aggressive play. This commitment to quality means you can enjoy your hoop for generations—it's not uncommon to see hoops in local neighborhoods that are older than our third-generation Fenceworks team member (Jake)! This meticulous attention to detail ensures that your basketball setup is perfectly suited to your home and lifestyle, without any complications.</p><p>It’s always suggested to check out the hoop every so often, and if you have even the slightest concern, we are here for you! </p>"
+          }
+        },
+        "article_jk48bN": {
+          "type": "article",
+          "settings": {
+            "title": "Are there warranty options for basketball hoops purchased from Fenceworks?",
+            "text": "<p>Yes! All basketball hoops sold by Fenceworks are backed by a <strong>limited lifetime manufacturer’s warranty</strong>, offering far superior protection compared to the 5- to 10-year warranties provided by most online retailers or big-box stores. <br/>The premium hoops we offer are specifically designed to withstand <strong>harsh Chicago weather</strong> and frequent use. The manufacturers we partner with build their systems to last, and their warranty coverage reflects that quality.<br/><br/></p>"
+          }
+        },
+        "article_PWLKmt": {
+          "type": "article",
+          "settings": {
+            "title": "How long does installation take once I purchase a basketball hoop?",
+            "text": "<p>Installation times can vary, but we typically complete setups within a few days from purchase.</p>"
+          }
+        },
+        "article_3qFdEm": {
+          "type": "article",
+          "settings": {
+            "title": "Does Fenceworks offer any basketball accessories?",
+            "text": "<p>Yes, we offer a range of accessories, including nets, balls, and protective padding.</p>"
+          }
+        },
+        "article_pQqLyf": {
+          "type": "article",
+          "settings": {
+            "title": "Why should I choose Fenceworks for my basketball hoop needs?",
+            "text": "<p>With years of experience and a commitment to quality, Fenceworks is your trusted local expert for basketball systems.</p>"
+          }
+        },
+        "article_qFbTYd": {
+          "type": "article",
+          "settings": {
+            "title": "How can I get in touch with Fenceworks for more information or to schedule an installation?",
+            "text": "<p>You can contact us through our website or <a href=\"https://theguyon41.com/pages/free-estimate/\">call us directly</a>; we're here to help with all your basketball needs.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_HTyKAt",
+        "article_UP3xzn",
+        "article_CyRX4q",
+        "article_BPbqJi",
+        "article_r3Cqzd",
+        "article_x78JkP",
+        "article_jk48bN",
+        "article_PWLKmt",
+        "article_3qFdEm",
+        "article_pQqLyf",
+        "article_qFbTYd"
+      ],
+      "settings": {
+        "title": "Fenceworks Basketball FAQ'S",
+        "desc": "",
+        "heading_alignment": "center",
+        "enable_sidebar": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_testimonials_wPjPEt": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_ReLQAG": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Jake at Fenceworks has been such a pleasure to work with. The quality and ease of the Hoops Works Basketball System has exceeded all of my expectations. They made the process painless and easy with seamless installation and competitive pricing. It’s a great family owned business, which I am thrilled to support. My Son is loving his new Basketball Hoop!<br/><br/></p>",
+            "name": "Beth B.",
+            "source": "Google Reviews"
+          }
+        },
+        "text_8mfEPL": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Highly recommend using fenceworks! Jake and team were excellent to work with. My kids love their new basketball hoop and I’m excited for all the fun times they will have playing with it.<br/><br/></p>",
+            "name": "Colleen M.",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_ReLQAG",
+        "text_8mfEPL"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": false,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "60ec9da9-bd17-41d3-82c2-0972b96e3692": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2502.jpg",
+            "link": "",
+            "width": "1/2"
+          }
+        },
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Chicagoland's top provider for fences, playgrounds, basketball hoops, and trampolines",
+            "text": "<p>Fenceworks is the leading company in the Chicagoland area for all your fence, playground, basketball, and trampoline needs. All the products in our <a href=\"/collections/play-sets\" title=\"Play Sets\">Playground</a>, <a href=\"https://theguyon41.com/collections/basketball-hoops\">Basketball</a>, and <a href=\"https://theguyon41.com/pages/trampolines\" title=\"Trampoline\">Trampoline</a> departments were carefully selected with your child’s safety in mind, as well as offer the best products in the industry. We welcome you to visit our indoor showroom! We pride ourselves in giving you, the customer, all our knowledge and professionalism that you have come to expect.</p>",
+            "align": "left",
+            "width": "1/2"
+          }
+        },
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Contact Us",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-image-1",
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-text-1",
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-button-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "6cd5d025-ee6a-4c0a-9dad-505c3d04def1": {
+      "type": "section-logo-list",
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "full",
+        "content_width": "large",
+        "grid": 4,
+        "logo_width": 80,
+        "grid_mobile": "2",
+        "logo_width_mobile": 80,
+        "enable_carousel_mobile": true,
+        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "opacity": 100,
+        "link_title": "Shop now",
+        "link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "section_custom_Q7mMEx",
+    "section_faq_HQknCD",
+    "main",
+    "section_testimonials_wPjPEt",
+    "60ec9da9-bd17-41d3-82c2-0972b96e3692",
+    "6cd5d025-ee6a-4c0a-9dad-505c3d04def1"
+  ]
+}

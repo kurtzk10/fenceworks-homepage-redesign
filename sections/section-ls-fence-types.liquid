@@ -1,0 +1,391 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-fence-types.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-fence-types.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-fence-types.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-fence-types
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-fence-types"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --lsft-section-bg: {{ section.settings.section_bg }};
+    --lsft-card-bg: {{ section.settings.card_bg }};
+    --lsft-card-hover-bg: {{ section.settings.card_hover_bg }};
+    --lsft-card-radius: {{ section.settings.card_radius }}px;
+    --lsft-card-height: {{ section.settings.card_height }}px;
+    --lsft-image-overlap: {{ section.settings.image_overlap }}px;
+    --lsft-grid-gap: {{ section.settings.grid_gap }}px;
+    --lsft-grid-cols-desktop: {{ section.settings.grid_columns_desktop }};
+    --lsft-grid-cols-mobile: {{ section.settings.grid_columns_mobile }};
+    --lsft-eyebrow-color: {{ section.settings.eyebrow_color }};
+    --lsft-heading-color: {{ section.settings.heading_color }};
+    --lsft-desc-color: {{ section.settings.desc_color }};
+    --lsft-label-color: {{ section.settings.label_color }};
+    --lsft-cta-border: {{ section.settings.cta_border_color }};
+    --lsft-cta-helper-color: {{ section.settings.cta_helper_color }};
+    --lsft-cta-text-color: {{ section.settings.cta_text_color }};
+  "
+>
+  <div class="lsft__outer">
+    <div class="container container--{{ section.settings.section_width }}">
+
+      {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank -%}
+        <div class="lsft__header">
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="lsft__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="lsft__heading">{{ section.settings.heading }}</h2>
+          {%- endif -%}
+          {%- if section.settings.description != blank -%}
+            <div class="lsft__desc rte">{{ section.settings.description }}</div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="lsft__grid">
+          {%- for block in section.blocks -%}
+
+            {%- if block.type == 'fence_card' -%}
+              <div
+                class="lsft__card-wrap block--{{ block.id }}"
+                {{ block.shopify_attributes }}
+              >
+                {%- assign card_link = block.settings.link | default: '#' -%}
+                <a href="{{ card_link }}" class="lsft__card">
+                  <div class="lsft__card-inner">
+
+                    <div class="lsft__card-img-wrap">
+                      {%- if block.settings.image != blank -%}
+                        {% render 'image',
+                          image: block.settings.image,
+                          additional_classes: 'lsft__img',
+                          image_ratio: 'natural',
+                          image_srcset_widths: '300, 480, 600',
+                          image_sizes: '(min-width: 990px) 33vw, 50vw',
+                          loading: 'lazy',
+                          alt_string: block.settings.label | escape
+                        %}
+                      {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg lsft__img lsft__img--placeholder' }}
+                      {%- endif -%}
+                    </div>
+
+                    {%- unless block.settings.label == blank -%}
+                      <span class="lsft__card-label">{{ block.settings.label | escape }}</span>
+                    {%- endunless -%}
+
+                  </div>
+                </a>
+              </div>
+
+            {%- elsif block.type == 'cta_card' -%}
+              <div
+                class="lsft__cta-wrap block--{{ block.id }}"
+                {{ block.shopify_attributes }}
+              >
+                {%- assign cta_link = block.settings.link | default: '#' -%}
+                <a href="{{ cta_link }}" class="lsft__cta-card">
+                  {%- if block.settings.helper_text != blank -%}
+                    <span class="lsft__cta-helper">{{ block.settings.helper_text | escape }}</span>
+                  {%- endif -%}
+                  {%- if block.settings.cta_text != blank -%}
+                    <span class="lsft__cta-text">{{ block.settings.cta_text  }}</span>
+                  {%- endif -%}
+                </a>
+              </div>
+
+            {%- endif -%}
+
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <div class="placeholder-noblocks">
+          {{ 'homepage.onboarding.no_content' | t }}
+        </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS Fence Types Grid",
+  "class": "js-section__ls-fence-types",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "Explore Our Fencing Options"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Wrap text in <em> tags for the accent color.",
+      "default": "<p>FENCES DESIGNED FOR<br>CHICAGOLAND HOMES</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>From added privacy to curb appeal and security, our fences are designed to fit your home, your needs, and your neighborhood — all installed by a trusted local team.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "grid_columns_desktop",
+      "label": "Columns (desktop)",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "grid_columns_mobile",
+      "label": "Columns (mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap between cards",
+      "unit": "px",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Card sizing"
+    },
+    {
+      "type": "range",
+      "id": "card_height",
+      "label": "Card height (colored box)",
+      "unit": "px",
+      "min": 100,
+      "max": 320,
+      "step": 10,
+      "default": 190
+    },
+    {
+      "type": "range",
+      "id": "image_overlap",
+      "label": "Image overflow above card",
+      "unit": "px",
+      "min": 20,
+      "max": 180,
+      "step": 10,
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_bg",
+      "label": "Card hover background",
+      "default": "#F5C49A"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Card label text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow text",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading text",
+      "default": "#1B2733"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "Description text",
+      "default": "#3D4752"
+    },
+    {
+      "type": "color",
+      "id": "cta_border_color",
+      "label": "CTA card border",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "color",
+      "id": "cta_helper_color",
+      "label": "CTA helper text",
+      "default": "#3D4752"
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "CTA button text",
+      "default": "#F78B2A"
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "fence_card",
+      "name": "Fence card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Wood"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Fence image"
+        }
+      ]
+    },
+    {
+      "type": "cta_card",
+      "name": "CTA card",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "helper_text",
+          "label": "Helper text",
+          "default": "Need help?"
+        },
+        {
+          "type": "richtext",
+          "id": "cta_text",
+          "label": "CTA text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Fence Types Grid",
+      "blocks": [
+        { "type": "fence_card", "settings": { "label": "Wood" } },
+        { "type": "fence_card", "settings": { "label": "PVC / Vinyl" } },
+        { "type": "fence_card", "settings": { "label": "Aluminum" } },
+        { "type": "fence_card", "settings": { "label": "Composite" } },
+        { "type": "fence_card", "settings": { "label": "Chainlink" } },
+        { "type": "cta_card", "settings": { "helper_text": "Need help?", "cta_text": "<p>REQUEST A FREE QUOTE</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

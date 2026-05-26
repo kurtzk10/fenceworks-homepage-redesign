@@ -1,0 +1,53 @@
+{% comment %}
+  Renders product page block with description
+
+  Accepts:
+  - id: {String} Block id
+  - is_open: {Boolean} Block is open
+  - title: {String} Block title
+  - icon: {String} Block icon
+  - icon_color: {Object} Block icon color
+  - icon_size: {String} Block icon size
+  - icon_custom_svg: {String} Block icon custom svg
+  - description: {String} Block description
+{% endcomment %}
+
+<details
+  {% if is_open %}
+    open
+  {% endif %}
+  id="{{ id }}"
+>
+  <summary>
+    {% unless icon == 'none' and icon_custom_svg == blank %}
+      <div
+        class="product-single__accordion__icon block--{{ id }}"
+      >
+        {%- liquid
+          assign custom_svg = null
+          if icon_custom_svg != blank
+            assign custom_svg = icon_custom_svg
+          endif
+
+          if icon_color == 'rgba(0,0,0,0)'
+            assign icon_color = settings.color_text
+          endif
+
+          assign icon_size = icon_size | plus: 1 | times: 3 | plus: 12 | append: 'px'
+        -%}
+
+        {% render 'icons-selection', icon: icon, icon_color: icon_color, icon_size: icon_size, custom_svg: custom_svg %}
+      </div>
+    {% endunless %}
+    <h3 class="f-family--body u-large u-text-transform--none u-color-text">{{ title | escape }}</h3>
+    <summary-icon>
+      {% render 'icons-theme', icon: 'plus' %}
+    </summary-icon>
+  </summary>
+
+  <details-content>
+    <div class="product-single__accordion__item-wrap rte">
+      {{ description }}
+    </div>
+  </details-content>
+</details>

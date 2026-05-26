@@ -1,0 +1,230 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_faq_HQknCD": {
+      "type": "section-faq",
+      "blocks": {
+        "category_HTyKAt": {
+          "type": "category",
+          "settings": {
+            "title": "FENCES - FAQS"
+          }
+        },
+        "article_UP3xzn": {
+          "type": "article",
+          "settings": {
+            "title": "Can I get an estimate or ballpark price over the phone?",
+            "text": "<p>Fenceworks does not provide any quotes over the phone. Every job site is different; therefore, we must visit your home to ensure the accuracy of your quote.</p>"
+          }
+        },
+        "article_CyRX4q": {
+          "type": "article",
+          "settings": {
+            "title": "Do I have to be home during an estimate?",
+            "text": "<p>Yes. It is very important that a <a href=\"https://theguyon41.com/\">Fenceworks</a> representative meets with you, to discuss any questions you or the salesman have regarding the fence.</p>"
+          }
+        },
+        "article_BPbqJi": {
+          "type": "article",
+          "settings": {
+            "title": "Does Fenceworks take down and haul away old fences?",
+            "text": "<p>Yes. Fenceworks will take down and haul away your old fence for an additional charge.</p>"
+          }
+        },
+        "article_r3Cqzd": {
+          "type": "article",
+          "settings": {
+            "title": "Does Fenceworks have a showroom?",
+            "text": "<p>We do have an indoor showroom in Northbrook. <a href=\"https://maps.app.goo.gl/rqkX34x53MPpGptv9\" title=\"Maps\">3177 MacArthur Blvd. Northbrook, IL 60062</a>.</p>"
+          }
+        },
+        "article_x78JkP": {
+          "type": "article",
+          "settings": {
+            "title": "Can I get an estimate by coming to your showroom?",
+            "text": "<p>No. There is no salesperson on-site to provide you with a quote. This is why we offer a free in-home estimate. You are welcome to visit our showroom to see the styles or pick up a fence catalog.</p>"
+          }
+        },
+        "article_jk48bN": {
+          "type": "article",
+          "settings": {
+            "title": "What cities do you provide service to? (Fence Department Only)",
+            "text": "<p><a href=\"https://theguyon41.com/blogs/locations/bannockburn-fence-installation/\">Bannockburn</a>, Buffalo Grove (Lake County Only), Chicago (North Side only, from Madison Ave to Howard St and East of Central Ave), Deerfield, Evanston, Fort Sheridan, Glencoe, Glenview, Highland Park, Highwood, Kenilworth, Lake Bluff, Lake Forest, Lincolnshire, Lincolnwood, Morton Grove, Niles, Northbrook, Northfield, Park Ridge, Riverwoods, Skokie, Wilmette, and Winnetka.</p>"
+          }
+        },
+        "article_PWLKmt": {
+          "type": "article",
+          "settings": {
+            "title": "What are the payment options for placing an order?",
+            "text": "<p>We require a 1/2 down deposit when you sign a contract with the balance due upon completion. We take Visa, MasterCard, Discover, Check or Cash.</p>"
+          }
+        },
+        "article_3qFdEm": {
+          "type": "article",
+          "settings": {
+            "title": "Do I need a building permit?",
+            "text": "<p>Depending on where you live, and what fence you are installing, you may need a building permit. Your Fenceworks representative can advise you once on site.</p>"
+          }
+        },
+        "article_pQqLyf": {
+          "type": "article",
+          "settings": {
+            "title": "What are the rules and regulations regarding fencing in my city?",
+            "text": "<p>Every suburb and city has different codes and height limitations. Let your Fenceworks representative explain what you can and cannot do.</p>"
+          }
+        },
+        "article_qFbTYd": {
+          "type": "article",
+          "settings": {
+            "title": "Is Fenceworks Licensed?",
+            "text": "<p>Yes. Fenceworks is Licensed, Bonded and insured with the <a href=\"https://theguyon41.com/pages/areas-served/\">suburbs and cities we work with</a>.</p>"
+          }
+        },
+        "article_Mp9E9i": {
+          "type": "article",
+          "settings": {
+            "title": "How do I know where my property lines are?",
+            "text": "<p>You should have a plat survey for your home. Fenceworks will install the Fence according to the Plat, unless otherwise noted by the customer.</p>"
+          }
+        },
+        "article_zXnjzc": {
+          "type": "article",
+          "settings": {
+            "title": "Who is responsible for locating underground utility wires?",
+            "text": "<p>Fenceworks will call J.U.L.I.E (Joint Utility Locating Information for Excavators) for the customer. J.U.L.I.E will only mark public utilities: gas, electricity, phone, water, and cable. J.U.L.I.E will not mark private underground lines: sprinkler systems, invisible dog fences, or private electric or gas lines. Therefore, private lines must be marked by the customer prior to installation.</p>"
+          }
+        },
+        "article_FawqDX": {
+          "type": "article",
+          "settings": {
+            "title": "Is there a fee for a fence consultation?",
+            "text": "<p>NO! All consultations are free.</p>"
+          }
+        },
+        "article_M4Mqaa": {
+          "type": "article",
+          "settings": {
+            "title": "What are the installation times?",
+            "text": "<p>Install times will vary depending on the material and the time of the season. During your consultation, your estimator will discuss current lead times with you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_HTyKAt",
+        "article_UP3xzn",
+        "article_CyRX4q",
+        "article_BPbqJi",
+        "article_r3Cqzd",
+        "article_x78JkP",
+        "article_jk48bN",
+        "article_PWLKmt",
+        "article_3qFdEm",
+        "article_pQqLyf",
+        "article_qFbTYd",
+        "article_Mp9E9i",
+        "article_zXnjzc",
+        "article_FawqDX",
+        "article_M4Mqaa"
+      ],
+      "settings": {
+        "title": "Faqs",
+        "desc": "",
+        "heading_alignment": "center",
+        "enable_sidebar": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "60ec9da9-bd17-41d3-82c2-0972b96e3692": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2502.jpg",
+            "link": "",
+            "width": "1/2"
+          }
+        },
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Chicagoland's top provider for fences, playgrounds, basketball courts, and trampolines.",
+            "text": "<p>Fenceworks is the leading company in the Chicagoland area for all your fence, playground, basketball, and trampoline needs. The business was started in 1967 by Stan Ascher, “The Guy on 41.” Stan, along with the Fenceworks family, Lindsey and Sandy are here to provide you with all the quality service, selection, and value you expect from Fenceworks. Our Fence department has provided thousands of yards everywhere with beauty, privacy, and security. All the products in our <a href=\"/collections/play-sets\" title=\"Play Sets\">Playground</a>, <a href=\"/collections/basketball-hoops\" title=\"Basketball Hoops\">Basketball</a>, and <a href=\"https://theguyon41.com/pages/trampolines\" title=\"Trampoline\">Trampoline</a> departments were carefully selected with your child’s safety in mind, as well as offer the best products in the industry. We welcome you to visit our indoor showroom! We pride ourselves in giving you, the customer, all our knowledge and professionalism that you have come to expect.</p>",
+            "align": "left",
+            "width": "1/2"
+          }
+        },
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Contact Us",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-image-1",
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-text-1",
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-button-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "6cd5d025-ee6a-4c0a-9dad-505c3d04def1": {
+      "type": "section-logo-list",
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "full",
+        "content_width": "large",
+        "grid": 4,
+        "logo_width": 80,
+        "grid_mobile": "2",
+        "logo_width_mobile": 80,
+        "enable_carousel_mobile": true,
+        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "opacity": 100,
+        "link_title": "Shop now",
+        "link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "section_faq_HQknCD",
+    "main",
+    "60ec9da9-bd17-41d3-82c2-0972b96e3692",
+    "6cd5d025-ee6a-4c0a-9dad-505c3d04def1"
+  ]
+}

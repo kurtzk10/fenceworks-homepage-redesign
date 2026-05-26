@@ -1,0 +1,363 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "overlay_strength": 50
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "74b66f2d-69d2-4531-af34-a2acb680f6ee": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "template--21394251219251__74b66f2d-69d2-4531-af34-a2acb680f6ee-text-1": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-like-1",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Western Red Cedar",
+            "sub_title": "",
+            "desc": "<p>Western Red Cedar Fences. Low maintenance, minimal upkeep, & able to withstand decay.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251219251__74b66f2d-69d2-4531-af34-a2acb680f6ee-text-4": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-clothes-design-sewing-machine",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Customizable",
+            "sub_title": "",
+            "desc": "<p>All wood fences are custom built at your home. This allows us to tailor the fence to your home's needs</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251219251__74b66f2d-69d2-4531-af34-a2acb680f6ee-text-2": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-recycling-sign",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Renewable Resource",
+            "sub_title": "",
+            "desc": "<p>As a natural material, wood is a sustainable choice, especially when sourced responsibly.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "template--21394251219251__74b66f2d-69d2-4531-af34-a2acb680f6ee-text-3": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-megaphone",
+            "color_icon": "{{ shop.brand.colors.primary[0].background }}",
+            "svg-code": "",
+            "title": "Sound Absorption",
+            "sub_title": "",
+            "desc": "<p>Wood's natural properties help in dampening and reducing ambient noise.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251219251__74b66f2d-69d2-4531-af34-a2acb680f6ee-text-1",
+        "template--21394251219251__74b66f2d-69d2-4531-af34-a2acb680f6ee-text-4",
+        "template--21394251219251__74b66f2d-69d2-4531-af34-a2acb680f6ee-text-2",
+        "template--21394251219251__74b66f2d-69d2-4531-af34-a2acb680f6ee-text-3"
+      ],
+      "settings": {
+        "title": "Why wood?",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "full",
+        "grid": 4,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "{{ shop.brand.colors.primary[0].foreground }}",
+        "color_text": "{{ shop.brand.colors.secondary[0].background }}",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 1,
+        "icon_size": 25,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "0ba3d48a-90a9-48c5-9b5e-aa4a8086875c": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21394251219251__0ba3d48a-90a9-48c5-9b5e-aa4a8086875c-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "212a3653-a0c7-401a-bd4d-0d85e48126a6": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Fence Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2021-FenceCatalog.pdf",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251219251__0ba3d48a-90a9-48c5-9b5e-aa4a8086875c-button-1",
+        "212a3653-a0c7-401a-bd4d-0d85e48126a6"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "7553cca3-d11a-45d9-8d86-ec1cc55bf099": {
+      "type": "section-custom",
+      "blocks": {
+        "53e80a3d-160d-4bb8-a9f1-3a862f8515a6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2023-10-26_at_1.44.45_PM.png",
+            "link": "",
+            "width": "1/2"
+          }
+        },
+        "template--21394251219251__7553cca3-d11a-45d9-8d86-ec1cc55bf099-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Western Red Cedar",
+            "text": "<ul><li><strong>Durability:</strong> This wood is naturally resistant to decay and insects, ensuring a long-lasting fence that demands minimal maintenance.</li><li><strong>Lightweight:</strong> Western Red Cedar's relatively lightweight nature makes it an installer-friendly choice, reducing the effort and time required for fence installation and repairs.</li><li><strong>Aromatic Delight:</strong> Enjoy the pleasant, natural aroma of Western Red Cedar, enhancing the ambiance of your outdoor space.</li><li><strong>Sustainability:</strong> Western Red Cedar is sourced from responsibly managed forests, making it an eco-conscious choice for environmentally aware consumers.</li><li><strong>Natural Beauty</strong>: Western Red Cedar boasts a stunning natural grain pattern and rich reddish-brown color that adds an elegant and timeless aesthetic to any outdoor setting.</li><li><strong>Weather Resistance</strong>: This wood's inherent weather-resistant properties help it withstand the harshest of climates, ensuring your fence remains strong and attractive for years to come.</li></ul>",
+            "align": "left",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "53e80a3d-160d-4bb8-a9f1-3a862f8515a6",
+        "template--21394251219251__7553cca3-d11a-45d9-8d86-ec1cc55bf099-text-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "4d9d52cf-45a3-42ff-b05a-ceb2068d60e7": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21394251219251__4d9d52cf-45a3-42ff-b05a-ceb2068d60e7-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/iStock-1426120626.jpg",
+            "link": "",
+            "width": "1/2"
+          }
+        },
+        "template--21394251219251__4d9d52cf-45a3-42ff-b05a-ceb2068d60e7-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Michigan White Cedar",
+            "text": "<ul><li><strong>Native Beauty:</strong> Michigan White Cedar boasts a natural, pale appearance that lends a timeless charm to any outdoor space.</li><li><strong>Exceptional Resilience:</strong> This wood is naturally resistant to rot, decay, and insects, ensuring your fence stands strong against the elements.</li><li><strong>Local Sustainability:</strong> By choosing Michigan White Cedar, you're supporting sustainable forestry practices and reducing your environmental footprint.</li><li><strong>Low Maintenance:</strong> Enjoy a low-maintenance fencing solution that retains its beauty with minimal effort.</li><li><strong>Time and Cost Savings</strong>: With its low maintenance requirements, Michigan White Cedar allows you to spend more time enjoying your outdoor space and less time on upkeep, saving you both time and money.</li><li><strong>Versatile Application</strong>: Michigan White Cedar can be easily adapted to various fence styles and landscaping designs, allowing you to create a customized and harmonious outdoor environment.</li><li>Enhanced Property Aesthetics: A Michigan White Cedar fence not only enhances the value of your property but also brings a touch of Michigan's natural beauty to your outdoor living space, creating a welcoming and picturesque atmosphere.</li></ul>",
+            "align": "left",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21394251219251__4d9d52cf-45a3-42ff-b05a-ceb2068d60e7-image-1",
+        "template--21394251219251__4d9d52cf-45a3-42ff-b05a-ceb2068d60e7-text-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "16965398861469fe6c": {
+      "type": "apps",
+      "blocks": {
+        "d1bdc06f-5ecb-4b66-97a9-1f525d2b805d": {
+          "type": "shopify://apps/easy-zipcode-check-validate/blocks/app-block/0aee76b4-6928-4f3f-aff6-81beaca5418d",
+          "settings": {}
+        },
+        "38a307f2-1311-4516-8a46-64ae736a3ba0": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 1,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "d1bdc06f-5ecb-4b66-97a9-1f525d2b805d",
+        "38a307f2-1311-4516-8a46-64ae736a3ba0"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_testimonials_K3t84k": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_jKzJyP": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>When it comes to a Fence instillation.. there is no better company in the north shore/chicago that I would recommend more than Fenceworks. They truly care about each customer like their family. I was informed every step of the way, true transparency throughout. Pricing was fair and competitive, and the craftsmanship was truly amazing. I look forward to buying a playground, trampoline, and basketball hoop this spring to wrap up all my home improvement projects in the future!</p>",
+            "name": "Adrish Saha",
+            "source": "Google Reviews"
+          }
+        },
+        "text_gbJh6z": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I am so happy with the work that was completed. Fast, friendly, courteous, and honest.<br/>I had a beautiful fence built in my backyard and they worked so hard and quickly. I could not be happier and I will use them for any future projects.</p>",
+            "name": "Brad Rooks",
+            "source": "Google Reviews"
+          }
+        },
+        "text_F7bdEH": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Great experience shopping at Fenceworks. The whole team (family!) was super accommodating & incredibly knowledgable. Pricing was honest & fair. If you're looking for fencing or backyard essentials in the Chicagoland area, look no further.</p>",
+            "name": "Addison Jacoby",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_jKzJyP",
+        "text_gbJh6z",
+        "text_F7bdEH"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "product-grid",
+    "74b66f2d-69d2-4531-af34-a2acb680f6ee",
+    "0ba3d48a-90a9-48c5-9b5e-aa4a8086875c",
+    "7553cca3-d11a-45d9-8d86-ec1cc55bf099",
+    "4d9d52cf-45a3-42ff-b05a-ceb2068d60e7",
+    "16965398861469fe6c",
+    "section_testimonials_K3t84k"
+  ]
+}

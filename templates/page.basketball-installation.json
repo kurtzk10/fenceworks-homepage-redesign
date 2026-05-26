@@ -1,0 +1,381 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {font-size: 30px; padding-top: 20px; /* adjust the value as needed */}"
+      ],
+      "settings": {}
+    },
+    "section_liquid_qBprpw": {
+      "type": "section-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
+    "section_custom_ntYhrK": {
+      "type": "section-custom",
+      "blocks": {
+        "text_UU99XR": {
+          "type": "text",
+          "settings": {
+            "title": "Request a quote for basketball hoop installation in your area",
+            "text": "<p><strong><a href=\"https://theguyon41.com/pages/free-estimate\">Contact Us Today</a> </strong>— Fenceworks is a trusted builder of outdoor basketball hoops since 1967.</p>",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "spacer_NKzRKm": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_UU99XR",
+        "spacer_NKzRKm"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "1730389734b92cddae": {
+      "type": "apps",
+      "blocks": {
+        "html_css_rich_content_embed_app_block_mc9DBc": {
+          "type": "shopify://apps/html-css-rich-content-embed/blocks/app-block/9219617d-b85d-43b5-991a-71aa7eb65965",
+          "settings": {
+            "content_embed_code": "<script charset=\"utf-8\" type=\"text/javascript\" src=\"//js.hsforms.net/forms/embed/v2.js\"></script>\n<script>\n  hbspt.forms.create({\n    portalId: \"39829965\",\n    formId: \"080ef661-8b55-4a33-ae36-8bc9b24953fd\"\n  });\n</script>",
+            "notes": ""
+          }
+        }
+      },
+      "block_order": [
+        "html_css_rich_content_embed_app_block_mc9DBc"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17229818280cc87843": {
+      "type": "apps",
+      "blocks": {
+        "xo_gallery_xo_gallery_xtCqJn": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 31,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "xo_gallery_xo_gallery_xtCqJn"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_multi_column_icons_aPRU4h": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "text_bKwgJn": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-award-medal",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "WE SPECIALIZE IN GLASS",
+            "sub_title": "",
+            "desc": "<p>Our tempered glass used by professional teams remains clear, offering excellent play and serving as a valuable learning tool for kids.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_FgdyqA": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-hospital-first-aid",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "SAFETY FIRST",
+            "sub_title": "",
+            "desc": "<p>All our units come with free pole and board padding to protect those who are practicing or shooting.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_NPM7yQ": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-send-email",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "ACCESSIBILITY",
+            "sub_title": "",
+            "desc": "<p>Our systems adjust to an industry-low of 6 feet (PROview) or 7.5 feet (PROforce), ideal for boosting young kids' confidence and allowing older kids to dunk.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_PbTKGM": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-ruler",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "PEDESTAL BASE",
+            "sub_title": "",
+            "desc": "<p>We exclusively offer pedestal base systems, ensuring portability and affordability compared to direct bury units.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_wLaLVT": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-hammer-wrench",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "BASKETBALL HOOP INSTALLATION",
+            "sub_title": "",
+            "desc": "<p>Every hoop we sell comes with the option of professional installation.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_LaHXt4": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-flag",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "GAUGE INFO",
+            "sub_title": "",
+            "desc": "<p>We provide only 5 gauge (PROview) and 11 gauge (PROforce) one-piece poles.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_nET8Wt": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-award-trophy-star-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "HIGH GRADE MATERIAL",
+            "sub_title": "",
+            "desc": "<p>Our top-quality materials stand out, not just in appearance but also in sound when compared to other systems.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_nDUrYE": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-shield-check",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "WARRANTY",
+            "sub_title": "",
+            "desc": "<p>We pride ourselves on our industry-leading Limited Lifetime warranty.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_pUeDhQ": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "EXPERIENCE",
+            "sub_title": "",
+            "desc": "<p>With over 30+ years in the business, we're passionate about our products and offer a personalized shopping experience.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_gVaxFG": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-gift-box",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "SPECIAL GIFT",
+            "sub_title": "",
+            "desc": "<p>Every basketball hoop purchase from Fenceworks comes with a special gift for your kids from “The Guy On 41.”</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_bKwgJn",
+        "text_FgdyqA",
+        "text_NPM7yQ",
+        "text_PbTKGM",
+        "text_wLaLVT",
+        "text_LaHXt4",
+        "text_nET8Wt",
+        "text_nDUrYE",
+        "text_pUeDhQ",
+        "text_gVaxFG"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "small",
+        "grid": 5,
+        "spacing": 2,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 2,
+        "icon_size": 30,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_testimonials_nqbFCX": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_BjRnU6": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Well thought out placement of our basketball hoop which had driveway challenges. Perfect installation and great communication. High quality hoop. Highly recommend for install.</p>",
+            "name": "Brian Bortman",
+            "source": "Google Reviews"
+          }
+        },
+        "text_YXjaNA": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>We are 2nd generation clients of Fenceworks. And this 2nd round did not disappoint. Jake from Fenceworks helped us install an in ground basketball hoop. Our kids are 5 and 8. We were initially 50-50 on if we wanted to finally do this. And make the investment. We are glad we did. On day 1 of it being installed, it was a rainy gloomy evening. And instead of our kids asking to play video games or watch TV, they asked \"can we go out in the rain and play basketball?!\" Instantly we knew this was the right choice. As an amenity for the house. As a benefit to get our kids more active. To bring years of memories and activities. I have already referred Jake and Fencework to friends and my real estate clients for basketball hoops and fences, as we were pleased working with this family company.</p>",
+            "name": "Joel Holland",
+            "source": "Google Reviews"
+          }
+        },
+        "text_HKmkXW": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Jake and the team did an outstanding job installing our driveway basketball hoop. Top quality product, and seamless ordering and installation. The kids love it - thanks!</p>",
+            "name": "Robert McQueen",
+            "source": "Google Reviews"
+          }
+        },
+        "text_dX9tyP": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Jake, the basketball hoop looks great. Bob did a wonderful job with the installation and our grandsons love it. Almost wish we had a need for a fence so we could use you again.<br/>We would recommend you to anyone.</p>",
+            "name": "Steve Kramer",
+            "source": "Google Reviews"
+          }
+        },
+        "text_GGm7hJ": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Great experience from start to finish- Jake was a pleasure to work with- great quality basketball hoop that was professionally installed in a timely fashion at competitive price. Highly recommend!</p>",
+            "name": "Herschel Rush",
+            "source": "Google Reviews"
+          }
+        },
+        "text_VycMrV": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>As good of an experience as anything I’ve purchased recently. From the treatment & education Jake gave me in the showroom, to the customer service through installation of my new basketball hoop, to my kids reaction seeing it for the first time. There is no place that checks all the boxes like Fenceworks.</p>",
+            "name": "Marc Silverman",
+            "source": "Google Reviews"
+          }
+        },
+        "text_JhdKaG": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>A+++ experience.<br/><br/>Sean G was fast to respond and helped explain every single detail. The basketball hoop quality is great and they installed it ASAP<br/><br/>Would highly recommend to everybody</p>",
+            "name": "Ricky Silverman",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_BjRnU6",
+        "text_YXjaNA",
+        "text_HKmkXW",
+        "text_dX9tyP",
+        "text_GGm7hJ",
+        "text_VycMrV",
+        "text_JhdKaG"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_liquid_qBprpw",
+    "section_custom_ntYhrK",
+    "1730389734b92cddae",
+    "17229818280cc87843",
+    "section_multi_column_icons_aPRU4h",
+    "section_testimonials_nqbFCX"
+  ]
+}

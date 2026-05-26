@@ -1,0 +1,401 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+            "vendor_size": 2,
+            "vendor_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": 3,
+            "title_size_mobile": 3
+          }
+        },
+        "inventory_notice": {
+          "type": "inventory_notice",
+          "disabled": true,
+          "settings": {
+            "inventory_limit": 27,
+            "align": "left",
+            "show_qty": true
+          }
+        },
+        "callout_P6LWeH": {
+          "type": "callout",
+          "settings": {
+            "column": "primary",
+            "icon": "icon-send-email",
+            "svg-code": "",
+            "icon_size": 2,
+            "title": "Get a FREE Estimate Today!",
+            "title_bold": true,
+            "text": "<p>Let our seasoned experts help you bring your vision to life with a hassle-free estimate.</p><p>-</p><p>Delivery and Installation fees will be calculated at purchase over the phone, or in person at our showroom. Fees typically range between 15% and 40% of item price based on installation complexity, plus a charge for mileage.</p>",
+            "color_bg": "#ffffff",
+            "color_text": "#131313",
+            "show_border": false
+          }
+        },
+        "link_DkYX9D": {
+          "type": "link",
+          "settings": {
+            "column": "primary",
+            "title": "FREE ESTIMATE",
+            "link": "shopify://pages/free-estimate",
+            "style": "arrow",
+            "align": "center",
+            "new_tab": false
+          }
+        },
+        "callout_PePaDb": {
+          "type": "callout",
+          "settings": {
+            "column": "primary",
+            "icon": "icon-pin",
+            "svg-code": "",
+            "icon_size": 2,
+            "title": "Visit Fenceworks in Northbrook!",
+            "title_bold": true,
+            "text": "<p>Looking for the perfect playset to keep your kids active and entertained? Stop by our Northbrook showroom to explore our top-quality playsets in person!</p>",
+            "color_bg": "#e5f7db",
+            "color_text": "#4a9f53",
+            "show_border": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "column": "secondary",
+            "title": "Description",
+            "display_collapsible_tab": false,
+            "open": false,
+            "icon": "none",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": ""
+          }
+        },
+        "c13717d6-5def-40f5-9684-68f8f103b0d4": {
+          "type": "tab",
+          "settings": {
+            "column": "secondary",
+            "title": "Installation Information",
+            "icon": "icon-check-circle-1",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "text": "<p>At Fenceworks, we do things a little differently — no surprise boxes dumped on your driveway. We offer white-glove installation to ensure your playset is expertly assembled and ready for play.</p><ul><li><strong>White-Glove Installation:</strong> If you’re within 60 miles of our Northbrook office, our team will handle delivery and installation with care. With 58+ years of experience and in-depth knowledge of city codes, we make sure everything is set up safely and correctly.</li><li><strong>Outside Our Service Area?</strong> If you’re beyond 60 miles, additional fees may apply. Please call us at <a href=\"tel:847-432-0900\" title=\"tel:847-432-0900\">847-432-0900</a> or email <a href=\"mailto:contact@theguyon41.com\" title=\"mailto:contact@theguyon41.com\">contact@theguyon41.com</a> to get a custom installation quote.<br/><br/></li></ul><p><strong>Questions?</strong> Reach out anytime. We’re here to help every step of the way.</p>",
+            "image_width": 1000,
+            "align": "center",
+            "link": "",
+            "tab_content": "",
+            "open": false
+          }
+        },
+        "663a3435-b014-41e0-916d-1ed9505f5691": {
+          "type": "tab",
+          "settings": {
+            "column": "secondary",
+            "title": "Warranty & Fenceworks Guarantee",
+            "icon": "icon-check-circle-1",
+            "icon_size": 2,
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "text": "<p><em>We stand behind our playsets with a limited lifetime warranty — no fine print, no gimmicks. From natural wear and tear to unexpected surprises, we’ve got you covered. The only exceptions are acts of nature (like a tree falling) or intentional damage (like taking a baseball bat to the playground). Play hard with confidence — we’re here for the long haul. Contact </em><a href=\"mailto:contact@theguyon41.com\" title=\"mailto:contact@theguyon41.com\">contact@theguyon41.com</a> for support.</p>",
+            "image_width": 1000,
+            "align": "center",
+            "link": "",
+            "tab_content": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "inventory_notice",
+        "callout_P6LWeH",
+        "link_DkYX9D",
+        "callout_PePaDb",
+        "description",
+        "c13717d6-5def-40f5-9684-68f8f103b0d4",
+        "663a3435-b014-41e0-916d-1ed9505f5691"
+      ],
+      "settings": {
+        "style": "clean",
+        "style_clean_mobile": true,
+        "layout-order": "media-right",
+        "enable_sticky_content": true,
+        "container": "large",
+        "show_breadcrumbs": false,
+        "breadcrumbs_align": "left",
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "product_image_ratio": "4:3",
+        "enable_gallery_arrows": true,
+        "thumbnails_position": "bottom",
+        "thumbnails_ratio": "1:1",
+        "thumbnails_show_border": true
+      }
+    },
+    "section_multi_column_icons_Lqx7VH": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "text_qrx9bQ": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-love-it",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "MAINTENANCE FREE MATERIALS",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_GAVNfh": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-light-bulb-shine",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "100% CUSTOMIZABLE",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_fCpLph": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "ANCHORS FOR STABILITY",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_Qmtda3": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-lock-2",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "STAINLESS STEEL FASTENERS",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_x9nhcd": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-check-circle-1",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "CUSTOM FINISHED CAPS",
+            "sub_title": "",
+            "desc": "",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_qrx9bQ",
+        "text_GAVNfh",
+        "text_fCpLph",
+        "text_Qmtda3",
+        "text_x9nhcd"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "small",
+        "grid": 5,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "icon_size": 30,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_custom_R9z3Nn": {
+      "type": "section-custom",
+      "blocks": {
+        "spacer_DTaTYG": {
+          "type": "spacer",
+          "settings": {
+            "space": "large"
+          }
+        },
+        "text_mg7mhH": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<h3>Customize Your Playset with Swing Kingdom's Design Center</h3>",
+            "align": "center",
+            "width": "1/2"
+          }
+        },
+        "spacer_3x8NaM": {
+          "type": "spacer",
+          "settings": {
+            "space": "large"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_DTaTYG",
+        "text_mg7mhH",
+        "spacer_3x8NaM"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "apps_ArVnkJ": {
+      "type": "apps",
+      "blocks": {
+        "html_css_rich_content_embed_app_block_Dc3Ypi": {
+          "type": "shopify://apps/html-css-rich-content-embed/blocks/app-block/9219617d-b85d-43b5-991a-71aa7eb65965",
+          "settings": {
+            "content_embed_code": "<script>\n(function () {\n  var ua = navigator.userAgent;\n  var isIOS = /iPad|iPhone|iPod/.test(ua);\n  var isSafari = /^((?!chrome|android).)*safari/i.test(ua);\n\n  if (!(isIOS || isSafari)) return;\n\n  function removeIframe() {\nvar trigger = document.querySelector('.swingkingdom-text');\n\n    var currentSection = trigger.closest('.shopify-section');\n    if (currentSection) {\n      var prev = currentSection.previousElementSibling;\n      if (prev && prev.classList.contains('js-section__custom-content')) {\n        prev.remove();\n      }\n      currentSection.remove();\n    }\n    var iframe = document.querySelector('iframe[src*=\"swingkingdom\"]');\n    if (iframe) {\n      iframe.remove();\n      observer.disconnect();\n    }\n  }\n\n  var observer = new MutationObserver(removeIframe);\n\n  observer.observe(document.documentElement, {\n    childList: true,\n    subtree: true\n  });\n\n  // run once in case it's already there\n  removeIframe();\n})();\n</script>\n\n<script id=\"designcenter\" src=\"https://www.swingkingdom.com/ibuildlive/designcenter.js?dID=1275&amp;width=950&amp;height=600\">\n</script>\n\n<center class=\"swingkingdom-text\"><a href=\"https://www.swingkingdom.com/design-center/?pID=skdefault&amp;dID=1275\">Click Here to Build Your Custom Swingset Today!</a></center>",
+            "notes": ""
+          }
+        }
+      },
+      "block_order": [
+        "html_css_rich_content_embed_app_block_Dc3Ypi"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "9904a28f-6381-41fe-96eb-d4a73d60f0a0": {
+      "type": "section-testimonials",
+      "blocks": {
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-0": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>My old swing set broke just weeks before my son’s birthday party. I called Jake and within two weeks. I had a new swingset in my backyard. He made the entire process as easy as it could be.</p>",
+            "name": "Rockne",
+            "source": "Google Reviews"
+          }
+        },
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-1": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>About 15 years ago, we purchased a swing set for our yard. Our kids and the neighborhood kids spent hours playing outside on it. Now that we are selling our home, we are leaving behind the set, and I have to believe that its presence in the yard helped the sale price. Truly a great long-term investment, that brought countless memories to our family.</p>",
+            "name": "David",
+            "source": "Google Reviews"
+          }
+        },
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-2": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Fenceworks does amazing work!  Communication is transparent and respectful, and can see why they are a multigenerational family business and have been around for decades! No one does it better!</p>",
+            "name": "Joey R.",
+            "source": "Google"
+          }
+        }
+      },
+      "block_order": [
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-0",
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-1",
+        "template--16580692508926__9904a28f-6381-41fe-96eb-d4a73d60f0a0-1666784019a14d8867-2"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "grid",
+        "desktop_carousel": false,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-recommendations": {
+      "type": "section-product-recommendations",
+      "disabled": true,
+      "settings": {
+        "title": "More Playsets",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 10,
+        "grid": 3,
+        "grid_mobile": "1",
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_multi_column_icons_Lqx7VH",
+    "section_custom_R9z3Nn",
+    "apps_ArVnkJ",
+    "9904a28f-6381-41fe-96eb-d4a73d60f0a0",
+    "product-recommendations"
+  ]
+}

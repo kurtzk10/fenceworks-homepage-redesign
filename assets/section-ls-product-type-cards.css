@@ -1,0 +1,483 @@
+/* ============================================================
+   Section: LS Product Type Cards
+   ============================================================ */
+
+.section--ls-product-type-cards {
+  background-color: var(--lsptc-section-bg);
+  padding-top: var(--space-top);
+  padding-bottom: var(--space-bottom);
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+
+.lsptc__header {
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+
+.lsptc__eyebrow {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--lsptc-eyebrow-color);
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.lsptc__heading {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--lsptc-heading-color);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.lsptc__heading p {
+  margin: 0;
+}
+
+.lsptc__heading em {
+  font-style: normal;
+  color: var(--lsptc-eyebrow-color);
+}
+
+.lsptc__desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--lsptc-desc-color);
+  margin: 0;
+  max-width: 520px;
+}
+
+.lsptc__desc p {
+  margin: 0;
+}
+
+/* ── Grid ───────────────────────────────────────────────────── */
+/*
+  Only apply the grid when Swiper has NOT taken over the wrapper.
+  Once the carousel initialises it adds .swiper-wrapper, which flips
+  the element to display:flex. If we applied display:grid unconditionally
+  our higher-specificity rule (0,1,1) would beat Swiper's (0,1,0) and
+  leave a grid layout active — causing each slide to be measured at
+  1/3-width, making every slide after the first misaligned.
+*/
+media-carousel-wrapper.lsptc__grid:not(.swiper-wrapper) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--lsptc-grid-gap);
+  align-items: start;
+}
+
+/* ── Card wrap ──────────────────────────────────────────────── */
+
+.lsptc__card-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+
+.lsptc__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ── Card image ─────────────────────────────────────────────── */
+
+.lsptc__card-img-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: var(--lsptc-image-height, 220px);
+  margin-bottom: -28px;
+  pointer-events: none;
+}
+
+.lsptc__card-img-wrap--empty {
+  height: 28px;
+  margin-bottom: 0;
+}
+
+.lsptc__card-img,
+.lsptc__card-img img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+}
+
+/* ── Card body ──────────────────────────────────────────────── */
+
+.lsptc__card-body {
+  position: relative;
+  z-index: 1;
+  background-color: var(--lsptc-card-bg);
+  border-radius: var(--lsptc-card-radius);
+  padding: 44px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 14px;
+}
+
+/* ── Card title ─────────────────────────────────────────────── */
+
+.lsptc__card-title {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--lsptc-card-title-color);
+  margin: 0;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+/* ── Card description ───────────────────────────────────────── */
+
+.lsptc__card-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--lsptc-card-text-color);
+  margin: 0;
+}
+
+/* ── Specs container ────────────────────────────────────────── */
+
+.lsptc__specs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+/* ── Spec row ───────────────────────────────────────────────── */
+
+.lsptc__spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* ── Spec icon ──────────────────────────────────────────────── */
+
+.lsptc__spec-icon-wrap {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--lsptc-spec-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lsptc__spec-icon-img,
+.lsptc__spec-icon-img img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.lsptc__spec-icon-placeholder {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+}
+
+/* ── Spec content ───────────────────────────────────────────── */
+
+.lsptc__spec-content {
+  flex: 1;
+  padding-top: 3px;
+}
+
+.lsptc__spec-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lsptc-spec-label-color);
+  margin: 0 0 3px;
+  line-height: 1.3;
+}
+
+.lsptc__spec-rte {
+  font-size: 13px;
+  color: var(--lsptc-spec-value-color);
+  line-height: 1.6;
+}
+
+.lsptc__spec-rte p {
+  margin: 0;
+}
+
+.lsptc__spec-rte ul,
+.lsptc__spec-rte ol {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.lsptc__spec-rte li {
+  line-height: 1.65;
+}
+
+.lsptc__spec-rte > * + * {
+  margin-top: 2px;
+}
+
+/* ── CTA button ─────────────────────────────────────────────── */
+
+.lsptc__card-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--lsptc-btn-bg);
+  color: var(--lsptc-btn-text);
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  margin-top: auto;
+}
+
+.lsptc__card-btn:hover {
+  opacity: 0.85;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media screen and (max-width: 989px) {
+  .lsptc__header {
+    max-width: 100%;
+    margin-bottom: 36px;
+  }
+
+  .lsptc__heading {
+    font-size: clamp(24px, 5vw, 38px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lsptc__card-img-wrap {
+    height: calc(var(--lsptc-image-height, 220px) * 0.8);
+  }
+
+  .lsptc__card-body {
+    padding: 40px 18px 20px;
+  }
+
+  .lsptc__card-title {
+    font-size: 16px;
+  }
+
+  .lsptc__header {
+    margin-bottom: 28px;
+  }
+}
+
+
+span.lsft__cta-text p {
+  margin: 0;
+}
+
+span.lsft__cta-text {
+  max-width: 100%;
+}
+
+p.lsptc__eyebrow {
+  color: var(--bg-accent-main, #F5811F);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+.lsptc__heading p {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/H2 */
+  font-family: "Cabinet Grotesk";
+  font-size: 57px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 57px */
+  letter-spacing: -1.14px;
+  text-transform: uppercase;
+}
+
+.lsptc__desc.rte {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4em; /* 25.2px */
+  letter-spacing: 0.54px;
+  max-width: 100%;
+}
+
+.lsptc__header {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+.lsptc__card-img-wrap {
+  height: auto;
+  max-height: 100%;
+  margin-bottom: -180px;
+}
+
+.lsptc__card-img, .lsptc__card-img img {
+  height: auto;
+  max-height: 330px;
+}
+
+h3.lsptc__card-title {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/H3 */
+  font-family: "Cabinet Grotesk";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%; /* 44.8px */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+
+p.lsptc__card-desc {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+.lsptc__spec-content p, .lsptc__spec-content span {
+  font-size: 18px;
+}
+
+p.lsptc__spec-label {
+  margin: 0;
+}
+
+.lsptc__spec-item {
+  align-items: center;
+}
+
+a.lsptc__card-btn {
+  color: var(--txt-light, #F4F7F8);
+  font-family: "Host Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: 0.5px;
+}
+
+.lsptc__specs {
+  margin: 12px 0;
+}
+
+media-carousel-wrapper.lsptc__grid {
+  align-items: initial;
+}
+
+.lsptc__card-body {
+  border-radius: 24px;
+  background: var(--bg-accent-xlight, #FEF2E9);
+
+/* shadow-3 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+  padding-top: 200px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .lsptc__heading p {
+      font-size: 32px;
+  }
+  
+  p.lsptc__eyebrow {
+      font-size: 16px;
+  }
+  
+  .lsptc__desc.rte {
+      font-size: 16px;
+  }
+  
+  .lsptc__header {
+      margin-bottom: 20px;
+  }
+  
+  h3.lsptc__card-title {
+      font-size: 22px;
+  }
+  
+  p.lsptc__card-desc {
+      font-size: 16px;
+  }
+  
+  .lsptc__spec-content p, .lsptc__spec-content span {
+      font-size: 16px;
+  }
+
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #F5811F;
+}
+
+media-carousel-pagination.media-carousel__pagination.swiper-pagination {
+    margin-top: 30px!Important;
+}
+  }
+
+  .lsptc__outer .swiper-slide {
+    height: auto;
+}
+  
+
+img.lsptc__spec-icon-img {
+  width: 40px;
+  height: 40px;
+}
+
+media-carousel-wrapper.lsptc__grid:not(.swiper-wrapper) {
+  align-items: initial;
+}
+
+.lsptc__spec-rte li {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.lsptc__spec-rte ul, .lsptc__spec-rte ol {
+  margin-left: 12px;
+}

@@ -1,0 +1,207 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 40
+      }
+    },
+    "b40f1547-8d41-4a98-b788-4124427fb162": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Our Outing Series swing sets are perfect for smaller sized yards. They’ve been pre-configured with our most popular accessories and add-ons to make your buying decision easy.</p>",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "width": "1/2"
+          }
+        },
+        "829c4f49-0742-4ce1-aad3-eac8ed45b4f3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Gorilla Playset Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2022Catalog-FullSpread-Digital2.pdf",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1",
+        "829c4f49-0742-4ce1-aad3-eac8ed45b4f3"
+      ],
+      "disabled": true,
+      "settings": {
+        "section-bottom-margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "sort_enable": true,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "16989847110c28e5a3": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_rich_text_iFQe3a": {
+      "type": "section-rich-text",
+      "settings": {
+        "section_title": "Capital Play® Trampolines",
+        "text": "<p>The first in-ground trampoline introduced to the market is still considered the best and most innovative <a href=\"https://theguyon41.com/pages/trampolines/\">trampoline</a> in the market today. No other in-ground Trampoline comes close.</p><p>Every kit comes with the trampoline, a pre-built retaining wall, and an easy-to-follow installation manual. Capital Play in-ground trampolines will give you years of trouble-free super fun,  and most importantly SAFE backyard play.</p>"
+      }
+    },
+    "section_collection_LhmRrP": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_fym8ab": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "in-ground-trampoline",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_fym8ab"
+      ],
+      "settings": {
+        "title": "Trampolines",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 4,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true
+      }
+    },
+    "section_rich_text_PWPkbT": {
+      "type": "section-rich-text",
+      "settings": {
+        "section_title": "",
+        "text": "<p> </p>"
+      }
+    },
+    "section_image_slideshow_j4ptTf": {
+      "type": "section-image-slideshow",
+      "blocks": {
+        "image_38wgNE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/CPIG-USA-1024x721.jpg",
+            "link": ""
+          }
+        },
+        "image_pjhVME": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/usps-1024x1024.jpg",
+            "link": ""
+          }
+        },
+        "image_xVyrTE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/In-ground-Trampoline-Hole-Guide-Rectangular.jpg",
+            "link": ""
+          }
+        },
+        "image_DgDEFg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/In-ground-Trampoline-Hole-Guide-Circular-2.jpg",
+            "link": ""
+          }
+        },
+        "image_MMYPAj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/amazon-cp-usa-ROUND_06-1024x1020.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_38wgNE",
+        "image_pjhVME",
+        "image_xVyrTE",
+        "image_DgDEFg",
+        "image_MMYPAj"
+      ],
+      "settings": {
+        "slideshow_width": "contained",
+        "nav_style": "solid-brand",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "overlay_color": "#000000",
+        "overlay_strength": 0
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {}
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "b40f1547-8d41-4a98-b788-4124427fb162",
+    "product-grid",
+    "16989847110c28e5a3",
+    "section_rich_text_iFQe3a",
+    "section_collection_LhmRrP",
+    "section_rich_text_PWPkbT",
+    "section_image_slideshow_j4ptTf"
+  ]
+}

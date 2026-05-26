@@ -1,0 +1,2 @@
+class DynamicButton extends HTMLElement{#t;constructor(){super(),this.#t=null}connectedCallback(){if(this.children.length>1){const t=this.children[this.children.length-1],e={attributes:!1,childList:!0,subtree:!0};new MutationObserver(((t,e)=>{if(t.some((t=>"childList"===t.type))){const t=this.querySelector(".dynamic-button__placeholder");t&&t.remove(),e.disconnect()}})).observe(t,e)}}disconnectedCallback(){this.#t&&this.#t.disconnect()}}customElements.define("dynamic-button",DynamicButton);
+//# sourceMappingURL=dynamic-button.js.map

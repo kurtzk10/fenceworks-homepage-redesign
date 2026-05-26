@@ -1,0 +1,238 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "16:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 40
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_PMEz8i": {
+      "type": "section-rich-text",
+      "name": "Rich text",
+      "settings": {
+        "section_title": "Explore Our Collection",
+        "text": "",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "b40f1547-8d41-4a98-b788-4124427fb162": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Our Outing Series swing sets are perfect for smaller sized yards. They’ve been pre-configured with our most popular accessories and add-ons to make your buying decision easy.</p>",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "829c4f49-0742-4ce1-aad3-eac8ed45b4f3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Gorilla Playset Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2022Catalog-FullSpread-Digital2.pdf",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1",
+        "829c4f49-0742-4ce1-aad3-eac8ed45b4f3"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "16989847110c28e5a3": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_collection_LhmRrP": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_fym8ab": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "alleyoop-trampolines",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_fym8ab"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Trampolines",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 4,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_collection_XfHAcQ": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_nh8PCQ": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "all-products",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_nh8PCQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Trampoline Accessories",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 4,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "section_rich_text_PMEz8i",
+    "product-grid",
+    "b40f1547-8d41-4a98-b788-4124427fb162",
+    "16989847110c28e5a3",
+    "section_collection_LhmRrP",
+    "section_collection_XfHAcQ"
+  ]
+}

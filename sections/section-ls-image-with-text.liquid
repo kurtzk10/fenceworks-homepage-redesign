@@ -1,0 +1,212 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-image-with-text.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-image-with-text.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-image-with-text.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{%- liquid
+  assign heading = section.settings.heading
+  assign body = section.settings.body
+  assign image = section.settings.image
+  assign image_caption = section.settings.image_caption
+  assign button_label = section.settings.button_label
+  assign button_link = section.settings.button_link
+  assign button_style = section.settings.button_style
+-%}
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-image-with-text
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-image-with-text"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="container container--{{ section.settings.container_width }}">
+    <div class="ls-iwt">
+      {%- comment -%} Left: image + caption; button here shown only on mobile {%- endcomment -%}
+      <div class="ls-iwt__left">
+        {%- if image != blank -%}
+          <div class="ls-iwt__media">
+            {% render 'image',
+              image: image,
+              additional_classes: 'ls-iwt__img',
+              image_ratio: section.settings.image_ratio,
+              image_sizes: '(min-width: 768px) 50vw, 100vw',
+              image_default_width: 800,
+              alt_string: image_caption | strip_html | default: image.alt
+            %}
+          </div>
+        {%- endif -%}
+        {%- unless image_caption == blank -%}
+          <div class="ls-iwt__caption rte">{{ image_caption }}</div>
+        {%- endunless -%}
+        {%- if button_label != blank and button_link != blank -%}
+          <div class="ls-iwt__button-wrap ls-iwt__button-wrap--mobile">
+            <a
+              href="{{ button_link }}"
+              class="ls-iwt__button c-btn c-btn--{{ button_style }}"
+            >
+              {{ button_label | escape }}
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} Right: heading + body; button here shown only on desktop {%- endcomment -%}
+      <div class="ls-iwt__right">
+        {%- unless heading == blank -%}
+          <h2 class="ls-iwt__heading">{{ heading | escape }}</h2>
+        {%- endunless -%}
+        {%- unless body == blank -%}
+          <div class="ls-iwt__body rte">{{ body }}</div>
+        {%- endunless -%}
+        {%- if button_label != blank and button_link != blank -%}
+          <div class="ls-iwt__button-wrap ls-iwt__button-wrap--desktop">
+            <a
+              href="{{ button_link }}"
+              class="ls-iwt__button c-btn c-btn--{{ button_style }}"
+            >
+              {{ button_label | escape }}
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS Image with text",
+  "class": "js-section__ls-image-with-text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "FAMILY-OWNED. COMMUNITY-ROOTED."
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>For over 59 years, Fenceworks a.k.a. The Guy on 41 has helped families build better backyards in the same neighborhoods we call home.</p><p>We're not a franchise or call center — we're a local, family-run team focused on quality, trust, and long-term relationships.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "default": "natural",
+      "options": [
+        { "value": "natural", "label": "Natural" },
+        { "value": "1:1", "label": "Square" },
+        { "value": "3:4", "label": "Portrait 3:4" },
+        { "value": "4:3", "label": "Landscape 4:3" },
+        { "value": "16:9", "label": "Widescreen 16:9" }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "image_caption",
+      "label": "Image caption",
+      "default": "<p>Meet the family: Left to Right → Sandy (President, Fence Lead, 2nd Generation), Stan \"The Guy on 41\" (1st Generation) & Jake (VP, Playground/Basketball/Trampoline Lead, 3rd Generation).</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Read About Us"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "default": "hollow",
+      "options": [
+        { "value": "hollow", "label": "Outline" },
+        { "value": "primary", "label": "Primary" },
+        { "value": "mono", "label": "Mono" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "container_width",
+      "label": "Section width",
+      "default": "small",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 48
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Image with text"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

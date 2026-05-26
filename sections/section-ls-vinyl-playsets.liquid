@@ -1,0 +1,662 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-vinyl-playsets.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-vinyl-playsets.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-vinyl-playsets.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{% if section.settings.layout == 'sidebar_carousel' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'component-media-carousel.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+  </noscript>
+  <script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+{% endif %}
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-vinyl-playsets
+    section--{{ section.id }}
+    section--layout-{{ section.settings.layout }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-vinyl-playsets"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --lsvp-section-bg: {{ section.settings.section_bg }};
+    --lsvp-heading-color: {{ section.settings.heading_color }};
+    --lsvp-desc-color: {{ section.settings.desc_color }};
+    --lsvp-subheading-color: {{ section.settings.subheading_color }};
+    --lsvp-feature-icon-color: {{ section.settings.feature_icon_color }};
+    --lsvp-feature-text-color: {{ section.settings.feature_text_color }};
+    --lsvp-card-bg: {{ section.settings.card_bg }};
+    --lsvp-card-title-color: {{ section.settings.card_title_color }};
+    --lsvp-card-meta-color: {{ section.settings.card_meta_color }};
+    --lsvp-price-color: {{ section.settings.price_color }};
+    --lsvp-cta-border: {{ section.settings.cta_border_color }};
+    --lsvp-cta-text-color: {{ section.settings.cta_text_color }};
+    --lsvp-contact-bg: {{ section.settings.contact_bg }};
+    --lsvp-contact-border: {{ section.settings.contact_border_color }};
+    --lsvp-contact-text-color: {{ section.settings.contact_text_color }};
+    --lsvp-contact-email-color: {{ section.settings.contact_email_color }};
+    --lsvp-accent-border: {{ section.settings.accent_border_color }};
+    --lsvp-grid-gap: {{ section.settings.grid_gap }}px;
+    --lsvp-card-radius: {{ section.settings.card_radius }}px;
+    --lsvp-image-height: {{ section.settings.image_height }}px;
+  "
+>
+  <div class="lsvp__outer">
+    {% if section.settings.layout == 'sidebar_carousel' %}
+      <div class="lsvp__sidebar-layout">
+        <div class="lsvp__sidebar">
+          <div class="container container--{{ section.settings.section_width }}">
+            <div class="lsvp__sidebar-inner">
+              {%- if section.settings.heading != blank or section.settings.description != blank -%}
+                <div class="lsvp__header">
+                  {%- if section.settings.heading != blank -%}
+                    <h2 class="lsvp__heading">{{ section.settings.heading }}</h2>
+                  {%- endif -%}
+                  {%- if section.settings.description != blank -%}
+                    <div class="lsvp__desc rte">{{ section.settings.description }}</div>
+                  {%- endif -%}
+                
+                {%- assign feature_blocks = section.blocks | where: 'type', 'feature' -%}
+              {%- if feature_blocks.size > 0 -%}
+                <ul class="lsvp__features">
+                  {%- for block in feature_blocks -%}
+                    <li class="lsvp__feature block--{{ block.id }}" {{ block.shopify_attributes }}>
+                      <div class="lsvp__feature-icon-wrap">
+                        {%- if block.settings.icon != blank -%}
+                          {% render 'image',
+                            image: block.settings.icon,
+                            additional_classes: 'lsvp__feature-icon',
+                            image_ratio: 'natural',
+                            image_srcset_widths: '40, 80',
+                            image_sizes: '40px',
+                            loading: 'lazy',
+                            alt_string: block.settings.label | escape
+                          %}
+                        {%- else -%}
+                          <span class="lsvp__feature-icon-placeholder" aria-hidden="true"></span>
+                        {%- endif -%}
+                      </div>
+                      <span class="lsvp__feature-label">{{ block.settings.label | escape }}</span>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+              </div>
+              {%- endif -%}
+
+              
+
+              {%- if section.settings.subheading != blank -%}
+                <h3 class="lsvp__subheading">{{ section.settings.subheading }}</h3>
+              {%- endif -%}
+
+              {%- if section.settings.contact_text != blank or section.settings.contact_email != blank -%}
+                <div class="lsvp__contact">
+                  {%- if section.settings.contact_text != blank -%}
+                    <p class="lsvp__contact-text">{{ section.settings.contact_text | escape }}</p>
+                  {%- endif -%}
+                  {%- if section.settings.contact_email != blank -%}
+                    <a href="mailto:{{ section.settings.contact_email | escape }}" class="lsvp__contact-email">
+                      {{ section.settings.contact_email | escape }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+
+              {%- assign product_blocks = section.blocks | where: 'type', 'product_card' -%}
+              {%- assign cta_blocks = section.blocks | where: 'type', 'cta_card' -%}
+              {%- assign total_slides = product_blocks.size | plus: cta_blocks.size -%}
+              {%- if total_slides > 1 -%}
+                <div class="lsvp__carousel-dots" aria-hidden="true">
+                  {%- for i in (1..total_slides) -%}
+                    <span class="lsvp__carousel-dot{% if forloop.first %} lsvp__carousel-dot--active{% endif %}"></span>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+
+        {%- assign has_carousel_blocks = false -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'product_card' or block.type == 'cta_card' -%}
+            {%- assign has_carousel_blocks = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if has_carousel_blocks -%}
+        <div class="lsvp__carousel-area">
+          <media-carousel
+            data-speed="500"
+            data-loop="false"
+            data-pagination="true"
+            data-space-between="16"
+            data-navigation="false"
+            data-breakpoint-max="tab"
+          >
+            <media-carousel-slider>
+              <media-carousel-wrapper class="lsvp__carousel-grid">
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'product_card' -%}
+                    <media-carousel-slide class="lsvp__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                      {%- assign card_link = block.settings.link | default: '#' -%}
+                      <a href="{{ card_link }}" class="lsvp__card">
+                        <div class="lsvp__card-img-wrap">
+                          {%- if block.settings.image != blank -%}
+                            {% render 'image',
+                              image: block.settings.image,
+                              additional_classes: 'lsvp__card-img',
+                              image_ratio: 'natural',
+                              image_srcset_widths: '300, 480, 600',
+                              image_sizes: '(min-width: 990px) 33vw, 80vw',
+                              loading: 'lazy',
+                              alt_string: block.settings.title | escape
+                            %}
+                          {%- else -%}
+                            <div class="lsvp__card-img-placeholder">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+                          {%- endif -%}
+                        </div>
+                        <div class="lsvp__card-body">
+                          {%- if block.settings.title != blank -%}
+                            <h4 class="lsvp__card-title">{{ block.settings.title | escape }}</h4>
+                          {%- endif -%}
+                          {%- if block.settings.ages != blank -%}
+                            <p class="lsvp__card-ages">{{ block.settings.ages | escape }}</p>
+                          {%- endif -%}
+                          {%- if block.settings.price != blank -%}
+                            <p class="lsvp__card-price">{{ block.settings.price | escape }}</p>
+                          {%- endif -%}
+                        </div>
+                      </a>
+                    </media-carousel-slide>
+                  {%- elsif block.type == 'cta_card' -%}
+                    <media-carousel-slide class="lsvp__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                      {%- assign cta_link = block.settings.link | default: '#' -%}
+                      <a href="{{ cta_link }}" class="lsvp__cta-card">
+                        {{ block.settings.cta_text | escape }}
+                      </a>
+                    </media-carousel-slide>
+                  {%- endif -%}
+                {%- endfor -%}
+              </media-carousel-wrapper>
+            </media-carousel-slider>
+            {%- assign product_count = section.blocks | where: 'type', 'product_card' | size -%}
+            {%- assign cta_count = section.blocks | where: 'type', 'cta_card' | size -%}
+            {%- assign carousel_total = product_count | plus: cta_count -%}
+            {%- if carousel_total > 1 -%}
+              <media-carousel-pagination
+                class="media-carousel__pagination swiper-pagination js-carousel-pagination lsvp__pagination"
+                hidden
+              ></media-carousel-pagination>
+            {%- endif -%}
+          </media-carousel>
+        </div>
+        {%- endif -%}
+      </div>
+    {% else %}
+      <div class="container container--{{ section.settings.section_width }}">
+        {%- if section.settings.heading != blank or section.settings.description != blank -%}
+          <div class="lsvp__header">
+            {%- if section.settings.heading != blank -%}
+              <h2 class="lsvp__heading">{{ section.settings.heading }}</h2>
+            {%- endif -%}
+            {%- if section.settings.description != blank -%}
+              <div class="lsvp__desc rte">{{ section.settings.description }}</div>
+            {%- endif -%}
+         
+           {%- assign feature_blocks = section.blocks | where: 'type', 'feature' -%}
+        {%- if feature_blocks.size > 0 -%}
+          <ul class="lsvp__features lsvp__features--grid">
+            {%- for block in feature_blocks -%}
+              <li class="lsvp__feature block--{{ block.id }}" {{ block.shopify_attributes }}>
+                <div class="lsvp__feature-icon-wrap">
+                  {%- if block.settings.icon != blank -%}
+                    {% render 'image',
+                      image: block.settings.icon,
+                      additional_classes: 'lsvp__feature-icon',
+                      image_ratio: 'natural',
+                      image_srcset_widths: '40, 80',
+                      image_sizes: '40px',
+                      loading: 'lazy',
+                      alt_string: block.settings.label | escape
+                    %}
+                  {%- else -%}
+                    <span class="lsvp__feature-icon-placeholder" aria-hidden="true"></span>
+                  {%- endif -%}
+                </div>
+                <span class="lsvp__feature-label">{{ block.settings.label | escape }}</span>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+         </div>
+        {%- endif -%}
+
+       
+
+        {%- if section.settings.subheading != blank -%}
+          <h3 class="lsvp__subheading">{{ section.settings.subheading }}</h3>
+        {%- endif -%}
+
+        {%- assign has_product_blocks = false -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'product_card' or block.type == 'cta_card' -%}
+            {%- assign has_product_blocks = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if has_product_blocks -%}
+          <div class="lsvp__grid">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'product_card' -%}
+                <div class="lsvp__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                  {%- assign card_link = block.settings.link | default: '#' -%}
+                  <a href="{{ card_link }}" class="lsvp__card">
+                    <div class="lsvp__card-img-wrap">
+                      {%- if block.settings.image != blank -%}
+                        {% render 'image',
+                          image: block.settings.image,
+                          additional_classes: 'lsvp__card-img',
+                          image_ratio: 'natural',
+                          image_srcset_widths: '300, 480, 600',
+                          image_sizes: '(min-width: 990px) 33vw, 50vw',
+                          loading: 'lazy',
+                          alt_string: block.settings.title | escape
+                        %}
+                      {%- else -%}
+                        <div class="lsvp__card-img-placeholder">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+                      {%- endif -%}
+                    </div>
+                    <div class="lsvp__card-body">
+                      {%- if block.settings.title != blank -%}
+                        <h4 class="lsvp__card-title">{{ block.settings.title | escape }}</h4>
+                      {%- endif -%}
+                      {%- if block.settings.ages != blank -%}
+                        <p class="lsvp__card-ages">{{ block.settings.ages | escape }}</p>
+                      {%- endif -%}
+                      {%- if block.settings.price != blank -%}
+                        <p class="lsvp__card-price">{{ block.settings.price | escape }}</p>
+                      {%- endif -%}
+                    </div>
+                  </a>
+                </div>
+              {%- elsif block.type == 'cta_card' -%}
+                <div class="lsvp__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                  {%- assign cta_link = block.settings.link | default: '#' -%}
+                  <a href="{{ cta_link }}" class="lsvp__cta-card">
+                    {{ block.settings.cta_text | escape }}
+                  </a>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.contact_text != blank or section.settings.contact_email != blank -%}
+          <div class="lsvp__contact">
+            {%- if section.settings.contact_text != blank -%}
+              <p class="lsvp__contact-text">{{ section.settings.contact_text | escape }}</p>
+            {%- endif -%}
+            {%- if section.settings.contact_email != blank -%}
+              <a href="mailto:{{ section.settings.contact_email | escape }}" class="lsvp__contact-email">
+                {{ section.settings.contact_email | escape }}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS Vinyl Playsets",
+  "class": "js-section__ls-vinyl-playsets",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>VINYL PLAY SETS BUILT FOR GROWING FAMILIES</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Safe, durable, and virtually maintenance-free. Our vinyl play sets are designed with everything parents care about most.</p>"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Products section heading",
+      "default": "BEST VINYL PLAYSETS IN CHICAGOLAND"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "grid",
+      "options": [
+        { "label": "Grid (stacked)", "value": "grid" },
+        { "label": "Sidebar + Carousel", "value": "sidebar_carousel" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap between cards",
+      "unit": "px",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Product image height",
+      "unit": "px",
+      "min": 120,
+      "max": 360,
+      "step": 10,
+      "default": 220
+    },
+    {
+      "type": "header",
+      "content": "Contact footer"
+    },
+    {
+      "type": "text",
+      "id": "contact_text",
+      "label": "Contact text",
+      "default": "Contact Fenceworks (for Delivery & Installation)"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "Contact email",
+      "default": "contact@theguyon41.com"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading text",
+      "default": "#1C2D38"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "Description text",
+      "default": "#3D4752"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Products section heading",
+      "default": "#3D2B1F"
+    },
+    {
+      "type": "color",
+      "id": "feature_icon_color",
+      "label": "Feature icon accent",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "feature_text_color",
+      "label": "Feature text",
+      "default": "#1C2D38"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title",
+      "default": "#1C2D38"
+    },
+    {
+      "type": "color",
+      "id": "card_meta_color",
+      "label": "Card meta (ages)",
+      "default": "#6B7280"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price text",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "cta_border_color",
+      "label": "CTA card border",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "CTA card text",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "contact_bg",
+      "label": "Contact box background",
+      "default": "#F3F4F6"
+    },
+    {
+      "type": "color",
+      "id": "contact_border_color",
+      "label": "Contact box border",
+      "default": "#D1D5DB"
+    },
+    {
+      "type": "color",
+      "id": "contact_text_color",
+      "label": "Contact text",
+      "default": "#3D4752"
+    },
+    {
+      "type": "color",
+      "id": "contact_email_color",
+      "label": "Contact email link",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "accent_border_color",
+      "label": "Accent border (sidebar layout)",
+      "default": "#3B82F6"
+    },
+    {
+      "type": "header",
+      "content": "Padding and margin"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "High-Quality Swing Sets"
+        }
+      ]
+    },
+    {
+      "type": "product_card",
+      "name": "Product card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Adventure Castle"
+        },
+        {
+          "type": "text",
+          "id": "ages",
+          "label": "Age range",
+          "default": "Ages 3-12"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price text",
+          "default": "Starting at $3,999"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "cta_card",
+      "name": "CTA card",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA text",
+          "default": "CLICK TO CHECK ALL VINYL PLAYSETS"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Vinyl Playsets",
+      "blocks": [
+        { "type": "feature", "settings": { "label": "High-Quality Swing Sets" } },
+        { "type": "feature", "settings": { "label": "Delivered & Installed Across Chicagoland" } },
+        { "type": "feature", "settings": { "label": "Industry-Leading Warranty" } },
+        { "type": "feature", "settings": { "label": "Maintenance-Free Vinyl Construction" } },
+        { "type": "feature", "settings": { "label": "Custom-Built, Amish-Made Craftsmanship" } },
+        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
+        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
+        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
+        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
+        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
+        { "type": "cta_card", "settings": { "cta_text": "CLICK TO CHECK ALL VINYL PLAYSETS" } }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

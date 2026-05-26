@@ -1,0 +1,796 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_image_with_text_overlap_izCBxm": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_r4AtyB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GWF-6.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "{{ collection.title }}",
+            "desc": "<p>At Fenceworks we understand the importance of giving your backyard a personalized touch with a new fence. We take pride in offering a vast range of fencing materials that can be customized to your preference and taste.</p>",
+            "horizontal_align": "left",
+            "link_title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "bg_color_block": "#ffffff",
+            "bg_color_content": "#f2f2f2",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_r4AtyB"
+      ],
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "right",
+        "container": "full",
+        "block_spacing": 5,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "overlay_strength": 40
+      }
+    },
+    "b050d990-506f-4b04-a198-a43c5c95da3f": {
+      "type": "section-collection-list",
+      "blocks": {
+        "template--21397165506867__b050d990-506f-4b04-a198-a43c5c95da3f-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "wood-fences",
+            "heading": "Wood",
+            "description": "",
+            "button_label": "",
+            "link": "",
+            "image": "shopify://shop_images/Untitled_86.png"
+          }
+        },
+        "template--21397165506867__b050d990-506f-4b04-a198-a43c5c95da3f-collection-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "pvc-vinyl-fences",
+            "heading": "PVC / Vinyl",
+            "description": "",
+            "button_label": "",
+            "link": "shopify://collections/pvc-vinyl-fences",
+            "image": "shopify://shop_images/Screenshot_2023-10-11_at_6.30.57_PM.png"
+          }
+        },
+        "template--21397165506867__b050d990-506f-4b04-a198-a43c5c95da3f-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "aluminum-fences",
+            "heading": "Aluminum",
+            "description": "",
+            "button_label": "",
+            "link": "shopify://collections/aluminum-fences",
+            "image": "shopify://shop_images/Screenshot_2023-10-11_at_6.30.01_PM.png"
+          }
+        },
+        "collection_cDFCnL": {
+          "type": "collection",
+          "settings": {
+            "collection": "composite-fences",
+            "heading": "Composite",
+            "description": "",
+            "button_label": "",
+            "link": "shopify://collections/composite-fences"
+          }
+        },
+        "template--21397165506867__b050d990-506f-4b04-a198-a43c5c95da3f-collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "chainlink-fence",
+            "heading": "Chainlink",
+            "description": "",
+            "button_label": "",
+            "link": "",
+            "image": "shopify://shop_images/grid-7892225_1920.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--21397165506867__b050d990-506f-4b04-a198-a43c5c95da3f-collection-1",
+        "template--21397165506867__b050d990-506f-4b04-a198-a43c5c95da3f-collection-5",
+        "template--21397165506867__b050d990-506f-4b04-a198-a43c5c95da3f-collection-3",
+        "collection_cDFCnL",
+        "template--21397165506867__b050d990-506f-4b04-a198-a43c5c95da3f-collection-4"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "alignment": "middle-center",
+        "text_alignment": "center",
+        "visibility_heading": true,
+        "visibility_count": false,
+        "visibility_border": true,
+        "visibility_description": false,
+        "visibility_button": true,
+        "hover_options": "hover-button",
+        "section_width": "full",
+        "grid": 4,
+        "spacing": 1,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true,
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "color_overlay_strength": 20,
+        "color_default_heading": false,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "title_size": 3,
+        "button_style": "c-btn c-btn--primary",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 9,
+        "padding_bottom": 24,
+        "section_bottom_margin": false
+      }
+    },
+    "2800b30d-4be6-4972-942c-2c3c4629c81e": {
+      "type": "section-custom",
+      "blocks": {
+        "24dac424-726c-4ccc-ab92-549a800cd268": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Fence Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2021-FenceCatalog.pdf",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "template--21397165506867__2800b30d-4be6-4972-942c-2c3c4629c81e-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Keep your children and pets safe from busy streets, guard your property from intrusion, and allow your family to lounge in the privacy of your own backyard! We offer you the widest selection of materials and styles for Chicagoland fence installation, including Wood, Stockade, Picket, Chainlink, Aluminum & PVC/Vinyl. At Fenceworks, we have the right fence for your business or home.</p>",
+            "align": "center",
+            "width": "2/3"
+          }
+        },
+        "f0a98b4c-f180-436c-b00b-adb2162ab98f": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "24dac424-726c-4ccc-ab92-549a800cd268",
+        "template--21397165506867__2800b30d-4be6-4972-942c-2c3c4629c81e-text-1",
+        "f0a98b4c-f180-436c-b00b-adb2162ab98f"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "1c613b79-e24c-400b-ae5b-43f02283a03a": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "template--21397165506867__1c613b79-e24c-400b-ae5b-43f02283a03a-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Wood_Fence_2.png",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Why Choose Fenceworks for Your Fencing?",
+            "desc": "<p>Here are some reasons to trust our family with your project: </p><ul><li>Established in 1967 - three generations of the family now work in the business</li><li>Friendly customer service </li><li>High-quality, durable fencing </li><li>Visits to your property to ensure tailored solutions</li><li>Wide selection of materials and fence types </li><li>Installation, repair, and maintenance services </li></ul><p>Furthermore, we aim to make installation day as stress-free as possible and we’ve always offered fair prices. When our technicians visit, you’ll notice that they treat the property as if it were their own. We can even take away your old fencing, so you really don’t need to worry about a thing. </p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "shopify://pages/free-estimate",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "template--21397165506867__1c613b79-e24c-400b-ae5b-43f02283a03a-image-2"
+      ],
+      "settings": {
+        "image_ratio": "1:1",
+        "block_align": "right",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_t6UYqe": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_jwCDTn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GWF-2_1.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Fenceworks Promise.",
+            "desc": "<p>A Fenceworks’ fence offers you beauty, privacy and home security. Fenceworks, since 1967, is Chicagoland’s #1 choice for quality fences and professional installation. Fenceworks offers the widest selection of fence materials and fence styles, including <a href=\"/collections/wood-fences\" title=\"Wood Fences\">Wood Fences</a>, Stockade Fences, Picket Fences, <a href=\"https://theguyon41.com/collections/chainlink-fence\" title=\"https://theguyon41.com/collections/chainlink-fence\">Chainlink Fences</a>, <a href=\"https://theguyon41.com/collections/aluminum-fences\" title=\"https://theguyon41.com/collections/aluminum-fences\">Aluminum Fences</a>, Wrought Iron Fences, PVC Fences and Vinyl Fences. Our Western Red Cedar Fence is a Fenceworks’ specialty and one of our most popular Chicago fencing choices. Cedar Fences look great, age beautifully, and withstand the Chicago seasons year after year.</p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "shopify://pages/free-estimate",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "image_U8NFXr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Wood_Fence_2.png",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Fenceworks Value.",
+            "desc": "<p>When you call for a Free in-home Fence estimate we will present photos and descriptions of selected fences, survey your property, discuss with you your fencing needs, and provide you with a complete fence estimate along with a choice of convenient installation dates. We custom design and install every fence on site. Fenceworks has earned the Highest A+ Rating with the Better Business Bureau. We are among the most recommended Chicago fence contractors, serving the Chicago and Chicago northern and North Shore suburban communities.</p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "shopify://pages/free-estimate",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "image_6GhKdW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/picket-fence-flowers.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Fenceworks, a licensed & bonded Chicago fence contractor, has been safeguarding properties since 1967.",
+            "desc": "<p>We work with the finest American-made suppliers, only partnering with the best to ensure the utmost quality and longevity, as that is what our customers deserve. We offer custom designs, colors, and size options, to match your current outdoor living space. Our low-maintenance fencing options ensure that you and your family will enjoy the beauty of our fence installation in Chicago, IL, for years to come.</p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_jwCDTn",
+        "image_U8NFXr",
+        "image_6GhKdW"
+      ],
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "1699355642edb3b4fc": {
+      "type": "apps",
+      "blocks": {
+        "f8aba721-6064-4863-8be7-3f2fda30b8d4": {
+          "type": "shopify://apps/easy-zipcode-check-validate/blocks/app-block/0aee76b4-6928-4f3f-aff6-81beaca5418d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "f8aba721-6064-4863-8be7-3f2fda30b8d4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_custom_mV7Xbr": {
+      "type": "section-custom",
+      "blocks": {
+        "text_bMEHb9": {
+          "type": "text",
+          "settings": {
+            "title": "Why buy a fence from our Chicagoland fence company? ",
+            "text": "<p>When you choose Fenceworks, the best fence company in Chicago, you're investing in more than just a fence—you're securing a promise. Since 1967, Fenceworks has been Chicagoland's top choice for high-quality fences and expert installation. Our fences provide beauty, privacy, and enhanced security for your home. We offer the widest selection of materials and styles, including wood, chain link, aluminum, <a href=\"https://theguyon41.com/collections/composite-fences\" title=\"https://theguyon41.com/collections/composite-fences\">composite fences</a>, and PVC/vinyl fences. One of our specialties, the Western Red Cedar fence, is a customer favorite for its timeless look, durability, and ability to withstand Chicago's weather year after year.</p>",
+            "align": "center",
+            "width": "2/3"
+          }
+        },
+        "spacer_Dj7gq4": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "button_UHQnLi": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/3"
+          }
+        }
+      },
+      "block_order": [
+        "text_bMEHb9",
+        "spacer_Dj7gq4",
+        "button_UHQnLi"
+      ],
+      "custom_css": [
+        "{background-color: lightgray; padding: 20px;}"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "section_image_with_text_VbTWjc": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_QcxC8L": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Build_a_Fence.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Repair vs Replacement - Which Should I Choose?",
+            "desc": "<p>One of the most common questions we’re asked as fence specialists is whether it’s better to repair fencing or replace it entirely. Ultimately, there’s no universal answer to this question, as it depends on a few factors. </p><h3>Extent of Damage </h3><p>For cosmetic damage or loose panels, repairs could be the way to go. If the damage is more extensive, our professionals may recommend a replacement. For example, this might be the case for structural problems, rotting, or if you’ve previously tried repairs only for more problems to arise. </p><h3>Budget </h3><p>Naturally, repairs are the cheaper option of the two, while replacements will require a larger budget. It might be that you want to perform short-term repairs now, and then replace fully when you have the budget. Of course, we’ll always advise if we think your fencing needs a replacement now. <br/></p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "rgba(0,0,0,0)",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        },
+        "image_jznGiq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Chicago_Fence_Installation.png",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "",
+            "desc": "<h3>Fence Age </h3><p>If your fence is at an age that we would consider to be the end of its life, the most cost-effective decision in the long term may be a full replacement. On the other hand, a fairly young fence may be the perfect candidate for simple repairs and maintenance. </p><h3>Security </h3><p>Since fencing is pivotal for the security of your property, we may recommend a replacement in cases where we think your fencing leaves you vulnerable. As well as potential crime, poor fencing can open the door to pests. </p><h3>Property Value </h3><p>If you’re planning to sell the property soon, this could impact whether you opt for repair or replacement. With a full replacement, you may just recuperate some of the cost through a higher selling price and increased interest from buyers. <br/><br/>Don’t worry, our specialists can visit your property and provide all the advice you need to decide between repair and replacement. If you have any questions, call our team or pop into our Northbrook showroom today! <br/></p>",
+            "horizontal_align": "left",
+            "link_title": "",
+            "link": "",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "rgba(0,0,0,0)",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_QcxC8L",
+        "image_jznGiq"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image_ratio": "1:1",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_HzXDVB": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_qx3VBP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/steps-and-picket-fences.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "A Short Guide to Codes and Permits in Northbrook",
+            "desc": "<p>As a homeowner, you’re responsible for ensuring that your property adheres to all the relevant codes. We appreciate that knowing the right steps can be confusing, and this is where our experience comes in handy. We’ll guide you through the relevant permits, and ensure that your property meets the requirements at every stage. </p><p>For example, you’ll need to send two copies of the plat of survey, alongside the fence application. Does your fence need a permit application? All new installations are likely to need an application, as are replacements that cover more than 25% for each side. </p><p>Make the most of our experience and knowledge, and your worries about permits and codes will be long gone! </p>",
+            "horizontal_align": "left",
+            "link_title": "Contact Us",
+            "link": "https://theguyon41.com/pages/free-estimate",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "rgba(0,0,0,0)",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_qx3VBP"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_overlap_4pyn7U": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_8GnWTf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Traditional_Modern_Top.png",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Wooden fences sold and installed in Chicagoland ",
+            "desc": "<p><a href=\"https://theguyon41.com/collections/wood-fences\" title=\"https://theguyon41.com/pages/wood-fences\">Wood Fences</a> are customizable, every wood fence we install is custom-built at your home. This allows us to tailor the fence to your home’s needs. A wood fence is a renewable resource.</p>",
+            "horizontal_align": "left",
+            "link_title": "Shop Wooden Fencing",
+            "link": "shopify://collections/wood-fences",
+            "bg_color_block": "#f2f2f2",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "image_DArTFN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Light_bronze_aluminum.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Aluminum Fence Installation in Chicago, IL ",
+            "desc": "<p>Aluminum fences are a stylish and durable choice for homeowners and property owners seeking an elegant yet robust fencing solution. These fences are expertly crafted from lightweight and corrosion-resistant aluminum materials, offering a multitude of benefits that make them a favored option for enhancing the appearance and security of outdoor spaces.</p>",
+            "horizontal_align": "left",
+            "link_title": "SHOP ALUMINUM FENCING",
+            "link": "shopify://collections/aluminum-fences",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "image_UWAUfy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Black_Chainlink.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Chainlink Fencing installed by Chicago Fence Contractors ",
+            "desc": "<p>Chain link fences are a practical and cost-effective choice for homeowners, businesses, and property owners seeking a durable and versatile fencing solution. These fences are constructed using interwoven metal wires, typically made of galvanized steel, providing a range of benefits that make them a popular option for a wide variety of applications. If you’re looking for commercial fence installation in Chicago, this is a strong choice. </p>",
+            "horizontal_align": "left",
+            "link_title": "SHOP CHAINLINK FENCING",
+            "link": "shopify://collections/chainlink-fence",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "image_7CFmec": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/greenwood-fence-wpc-euro-eco-green-fences-6.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Composite Fencing installed and repaired by Fenceworks ",
+            "desc": "<p>Fenceworks works with Greenwood Fence for all of our composite installs. Greenwood is a distributor of high-quality modern European style fencing for the residential, commercial, industrial, and agricultural sectors. As a fence repair company in Chicago, just let us know about your project, and we’ll offer our advice to get your fencing back into the best condition.</p>",
+            "horizontal_align": "left",
+            "link_title": "SHOP COMPOSITE FENCING",
+            "link": "shopify://collections/composite-fences",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        },
+        "image_9zm4dn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PVC_photo_replace_on_main_fences_page.png",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "PVC / Vinyl Fencing installed by Fenceworks in the Chicago area ",
+            "desc": "<p><a href=\"https://theguyon41.com/collections/pvc-vinyl-fences\" title=\"https://theguyon41.com/collections/pvc-vinyl-fences\">PVC vinyl fences</a> are a modern and practical choice for homeowners and property owners seeking a low-maintenance and versatile fencing solution. These fences are meticulously crafted from durable PVC (Polyvinyl Chloride) material, offering a host of advantages that make them a popular option for various outdoor applications.</p>",
+            "horizontal_align": "left",
+            "link_title": "SHOP PVC vinyl",
+            "link": "shopify://collections/pvc-vinyl-fences",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_8GnWTf",
+        "image_DArTFN",
+        "image_UWAUfy",
+        "image_7CFmec",
+        "image_9zm4dn"
+      ],
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "right",
+        "container": "large",
+        "block_spacing": 5,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_logo_list_jNxMKm": {
+      "type": "section-logo-list",
+      "settings": {
+        "title": "Fenceworks Reviews",
+        "desc": "<p>We hope you visit us to experience the difference provided by a family-owned and operated business with thousands of satisfied customers.</p>",
+        "heading_alignment": "center",
+        "section_width": "full",
+        "content_width": "large",
+        "grid": 4,
+        "logo_width": 80,
+        "grid_mobile": "2",
+        "logo_width_mobile": 80,
+        "enable_carousel_mobile": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "opacity": 100,
+        "link_title": "Shop now",
+        "link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_testimonials_G7krrQ": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_R7MX9f": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>When it comes to a Fence instillation.. there is no better company in the north shore/chicago that I would recommend more than Fenceworks. They truly care about each customer like their family. I was informed every step of the way, true transparency throughout. Pricing was fair and competitive, and the craftsmanship was truly amazing. I look forward to buying a playground, trampoline, and basketball hoop this spring to wrap up all my home improvement projects in the future!</p>",
+            "name": "Adrish Saha",
+            "source": "Google Reviews"
+          }
+        },
+        "text_ByH48U": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I really can't say enough great things about Fenceworks! They always treat you with respect, honesty, and transparency. Regarding your next Fence project, look no further than \"The Guy on 41\"! I will be back this spring for Basketball Hoops, Trampolines, and Playgrounds... excited to complete my backyard with Fenceworks running the show!</p>",
+            "name": "J Cov",
+            "source": "Google Reviews"
+          }
+        },
+        "text_bi9Lag": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>I am so happy with the work that was completed. Fast, friendly, courteous, and honest.<br/>I had a beautiful fence built in my backyard and they worked so hard and quickly. I could not be happier and I will use them for any future projects.</p>",
+            "name": "Brad Rooks",
+            "source": "Google Reviews"
+          }
+        },
+        "text_Tk4h4K": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Great experience shopping at Fenceworks. The whole team (family!) was super accommodating & incredibly knowledgable. Pricing was honest & fair. If you're looking for fencing or backyard essentials in the Chicagoland area, look no further.</p>",
+            "name": "Addison Jacoby",
+            "source": "Google Reviews"
+          }
+        },
+        "text_K84bzq": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Amazing Service! My go to for all my backyard needs!</p>",
+            "name": "Sam Pidgeon",
+            "source": "Google Reviews"
+          }
+        },
+        "text_Qte8ya": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Got multiple quotes for our new privacy fence in the back yard. Fenceworks was not only competitive with pricing, (and surprisingly reasonable), but also most importantly - They had the best ideas and options, confidently answering all of my (MANY) questions as to logistics. I knew I’d “like” whatever they did, but I am blown away as to the end result (all of which happened in one day!) far exceeded my expectations. [We do have a small Chicago yard, but can’t believe this was all done in a day, still.]<br/>To say I am happy and would recommend this company to others is an understatement!<br/><br/>(5/8/25) - Fenceworks had put a “gate”/door in as part of our fence: It looks great, but…weather and settling happen, so it was difficult to open the door after several months. I called Fenceworks to mention it, and LITERALLY they came out the NEXT day and slightly altered it. It’s been working perfectly ever since. Again, highly recommend going with this company if you’re thinking about installing a fence.</p>",
+            "name": "Jessica Ohlson",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_R7MX9f",
+        "text_ByH48U",
+        "text_bi9Lag",
+        "text_Tk4h4K",
+        "text_K84bzq",
+        "text_Qte8ya"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "section_image_with_text_overlap_izCBxm",
+    "subcollections",
+    "banner",
+    "b050d990-506f-4b04-a198-a43c5c95da3f",
+    "2800b30d-4be6-4972-942c-2c3c4629c81e",
+    "product-grid",
+    "1c613b79-e24c-400b-ae5b-43f02283a03a",
+    "section_image_with_text_t6UYqe",
+    "1699355642edb3b4fc",
+    "section_custom_mV7Xbr",
+    "section_image_with_text_VbTWjc",
+    "section_image_with_text_HzXDVB",
+    "section_image_with_text_overlap_4pyn7U",
+    "section_logo_list_jNxMKm",
+    "section_testimonials_G7krrQ"
+  ]
+}

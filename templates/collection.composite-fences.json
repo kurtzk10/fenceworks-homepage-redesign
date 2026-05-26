@@ -1,0 +1,383 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "32:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 40
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_multi_column_icons_yinDTp": {
+      "type": "section-multi-column-icons",
+      "blocks": {
+        "text_fkcAK7": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-diamond",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Low Maintenance",
+            "sub_title": "",
+            "desc": "<p>Composite fencing is known for its many low maintenance features. The material is made to not fade or fracture and to withstand the elements for many years.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_9gmATK": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-color-painting-palette",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Attractive",
+            "sub_title": "",
+            "desc": "<p>Our composite fences are designed with a modern look in mind for beautiful accents to your property! Composite material can even be made to look like wood.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        },
+        "text_YyNK9W": {
+          "type": "text",
+          "settings": {
+            "icon": "icon-recycling-sign",
+            "color_icon": "rgba(0,0,0,0)",
+            "svg-code": "",
+            "title": "Eco-Friendly",
+            "sub_title": "",
+            "desc": "<p>Composite fencing is one of the greenest options around! Not a single tree has been deforested to manufacture our composite fences, and the material that is used comes from recycled cellulose wood fibers.</p>",
+            "link_title": "Learn more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_fkcAK7",
+        "text_9gmATK",
+        "text_YyNK9W"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "alignment": "center",
+        "container": "small",
+        "grid": 3,
+        "spacing": 3,
+        "grid_mobile": "1",
+        "mobile_carousel": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "text_heading_color": false,
+        "text_border_color": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "heading_size": 3,
+        "icon_size": 30,
+        "icon_padding": 0,
+        "block_link_style": "hollow",
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_6nxihT": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_7qT7QH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Classic_Privacy_5_-_CDB.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "COMPOSITE FENCING",
+            "desc": "<p><em>Greenwood Fence is a distributor of high quality modern European style fencing for the residential, commercial, industrial, and agricultural sectors. Looking for a fence that combines aesthetics with durability and requires very little maintenance? Then welcome to wood plastic composite (WPC) fence solutions, an increasingly desirable, modern and practical alternative to more </em><a href=\"https://theguyon41.com/collections/fences\"><em>traditional fence options</em></a><em> such as lumber.</em></p>",
+            "horizontal_align": "left",
+            "link_title": "Learn more About Greenwood Fence",
+            "link": "https://greenwoodfence.com/shop/",
+            "bg_color_block": "rgba(0,0,0,0)",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": false,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_7qT7QH"
+      ],
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_faq_c69cGt": {
+      "type": "section-faq",
+      "blocks": {
+        "category_N8zzaF": {
+          "type": "category",
+          "settings": {
+            "title": "COMPOSITE FENCING"
+          }
+        },
+        "article_aWjnct": {
+          "type": "article",
+          "settings": {
+            "title": "Strong Aluminum Posts",
+            "text": "<p>Our composite fences are installed with strong, decorative aluminum posts made to interlock with each panel for a beautiful look and long-lasting durability. We install all of our posts at top industry standards so you can be sure your fence will stay in place and last many years.</p>"
+          }
+        },
+        "article_QdUWXq": {
+          "type": "article",
+          "settings": {
+            "title": "Premium Rails",
+            "text": "<p>Every one of our composite fences are built with horizontal aluminum rails that connect the panels to each fence post, seamlessly. The number of rails included in your composite fence is determined by the style fence you choose.</p>"
+          }
+        },
+        "article_KEkTcC": {
+          "type": "article",
+          "settings": {
+            "title": "Premium Composite Panels",
+            "text": "<p>The most common styles of composite fencing are built with solid panels creating full privacy for your space. Each panel is made with wood plastic composite boards interlocked with each other to create a complete panel, without the need of screw or exposed hardware. Many other styles are available that creates a semi-private look with spaces between the rails and boards to meet your exact preferences.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_N8zzaF",
+        "article_aWjnct",
+        "article_QdUWXq",
+        "article_KEkTcC"
+      ],
+      "settings": {
+        "title": "Faqs",
+        "desc": "",
+        "heading_alignment": "center",
+        "enable_sidebar": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "b40f1547-8d41-4a98-b788-4124427fb162": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Composite fencing is a popular, modern option that is suitable for all homes and businesses. Its long-lasting and attractive features make it a wonderful choice!</p>",
+            "align": "center",
+            "width": "1/2"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "spacer_7AQhh8": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1",
+        "spacer_7AQhh8"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "16989847110c28e5a3": {
+      "type": "apps",
+      "blocks": {
+        "63af661c-084b-4c3c-91c3-9effb058f468": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "settings": {
+            "id": 22,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "63af661c-084b-4c3c-91c3-9effb058f468"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_testimonials_rLQ4Qr": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_ij9HLU": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Amazing family owned company, only place I refer my clients for fences, playgrounds and basketball hoops. Highly recommend going local with Fenceworks “The Guy on 41”!<br/></p>",
+            "name": "Alec Mancheski",
+            "source": "Google Reviews"
+          }
+        },
+        "text_WH4Bq3": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Amazing Service! My go to for all my backyard needs!</p>",
+            "name": "Sam Pidgeon",
+            "source": "Google Reviews"
+          }
+        },
+        "text_Rb9EKU": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Great experience shopping at Fenceworks. The whole team (family!) was super accommodating & incredibly knowledgable. Pricing was honest & fair. If you're looking for fencing or backyard essentials in the Chicagoland area, look no further.</p>",
+            "name": "Addison Jacoby",
+            "source": "Google Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "text_ij9HLU",
+        "text_WH4Bq3",
+        "text_Rb9EKU"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": true,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections",
+    "section_multi_column_icons_yinDTp",
+    "section_image_with_text_6nxihT",
+    "section_faq_c69cGt",
+    "product-grid",
+    "b40f1547-8d41-4a98-b788-4124427fb162",
+    "16989847110c28e5a3",
+    "section_testimonials_rLQ4Qr"
+  ]
+}

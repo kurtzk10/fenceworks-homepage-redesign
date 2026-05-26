@@ -1,0 +1,210 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "16990286313e7eb8e5": {
+      "type": "apps",
+      "blocks": {
+        "01c57051-4108-4548-b309-51b32248f2f6": {
+          "type": "shopify://apps/easy-zipcode-check-validate/blocks/app-block/0aee76b4-6928-4f3f-aff6-81beaca5418d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "01c57051-4108-4548-b309-51b32248f2f6"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "b6197a03-d7d1-4545-b861-bbc2889ee0d6": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21433044730163__b6197a03-d7d1-4545-b861-bbc2889ee0d6-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "📍Areas we serve!",
+            "text": "<p>Do you fall within these above areas in North Chicago? Use the zip code finder at the top of the page to confirm our service area for your home improvement needs!</p>",
+            "align": "center",
+            "width": "2/3"
+          }
+        },
+        "template--21433044730163__b6197a03-d7d1-4545-b861-bbc2889ee0d6-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Contact Us",
+            "link": "",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21433044730163__b6197a03-d7d1-4545-b861-bbc2889ee0d6-text-1",
+        "template--21433044730163__b6197a03-d7d1-4545-b861-bbc2889ee0d6-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "f71bc95b-20a9-450b-a2bc-f41fe85f24cb": {
+      "type": "section-slideshow",
+      "blocks": {
+        "09d3f8ba-b648-462e-9cc6-e754f82979f0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2023-11-02_at_9.43.47_PM.png",
+            "title": "We provide Trampoline Sales All Across The US!",
+            "text": "",
+            "alignment": "left",
+            "link_title": "",
+            "link": "",
+            "link_style": "c-btn c-btn--hollow",
+            "link_title_2": "Contact Us",
+            "link_2": "shopify://pages/free-estimate",
+            "link_style_2": "c-btn c-btn--primary"
+          }
+        },
+        "template--21433044730163__f71bc95b-20a9-450b-a2bc-f41fe85f24cb-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mapline_Fenceworks_Map_1.png",
+            "image_mobile": "shopify://shop_images/Mapline_Fenceworks_Map_1.png",
+            "title": "Fence Service Area",
+            "text": "<p>Do you fall within this area of north Chicago? Use the zip code finder above to confirm our service area. </p>",
+            "alignment": "left",
+            "link_title": "",
+            "link": "",
+            "link_style": "c-btn c-btn--hollow",
+            "link_title_2": "Request Estimate",
+            "link_2": "shopify://pages/free-estimate",
+            "link_style_2": "c-btn c-btn--primary"
+          }
+        },
+        "template--21433044730163__f71bc95b-20a9-450b-a2bc-f41fe85f24cb-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mapline_Fenceworks_Map_4.png",
+            "image_mobile": "shopify://shop_images/Mapline_Fenceworks_Map_4.png",
+            "title": "Basketball & Play Set Service Area",
+            "text": "",
+            "alignment": "bottom-right",
+            "link_title": "",
+            "link": "",
+            "link_style": "c-btn c-btn--hollow",
+            "link_title_2": "Request Estimate",
+            "link_2": "shopify://pages/free-estimate",
+            "link_style_2": "c-btn c-btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "09d3f8ba-b648-462e-9cc6-e754f82979f0",
+        "template--21433044730163__f71bc95b-20a9-450b-a2bc-f41fe85f24cb-image-1",
+        "template--21433044730163__f71bc95b-20a9-450b-a2bc-f41fe85f24cb-image-2"
+      ],
+      "settings": {
+        "slideshow_height": "medium",
+        "slideshow_width": "full",
+        "nav_style": "solid-brand",
+        "hide_nav_arrows": false,
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style": "transparent",
+        "text_bg_color": "#ffffff",
+        "text_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "overlay_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "overlay_strength": 0,
+        "text_heading_color": false,
+        "text_border_color": true,
+        "title_size": 3,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_Tfbmc8": {
+      "type": "section-rich-text",
+      "custom_css": [],
+      "name": "Rich text",
+      "settings": {
+        "section_title": "Fence Installation by Town",
+        "text": "<p>Click the links below for more specific information about installing a fence in your village or township.</p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_FdAhrh": {
+      "type": "section-rich-text",
+      "custom_css": [
+        ".rte,.rte p,.rte a,.rte h1,.rte h2,.rte h3,.rte h4,.rte span {color: #000 !important;}",
+        ".rte {column-count: 3; column-gap: 2rem; -webkit-column-count: 3; -webkit-column-gap: 2rem;}",
+        "@media (max-width: 767px) {.rte {column-count: 1 !important; -webkit-column-count: 1 !important; column-gap: 1rem !important; line-height: 1.5 !important; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_title": "",
+        "text": "<p><a href=\"/blogs/locations/bannockburn-fence-installation\" title=\"Bannockburn Fence Installation\">Bannockburn</a><br/><a href=\"/blogs/locations/buffalo-grove-fence-installation\" title=\"Buffalo Grove Fence Installation\">Buffalo Grove</a><br/><a href=\"https://theguyon41.com/collections/fences\">Chicago</a><br/><a href=\"/blogs/locations/deerfield-fence-installation\" title=\"Deerfield Fence Installation\">Deerfield</a><br/><a href=\"/blogs/locations/evanston-fence-installation\" title=\"Evanston Fence Installation\">Evanston</a><br/><a href=\"/blogs/locations/fort-sheridan-fence-installation\" title=\"Fort Sheridan Fence Installation\">Fort Sheridan</a><br/><a href=\"/blogs/locations/glencoe-fence-installation\" title=\"Glencoe Fence Installation\">Glencoe</a><br/><a href=\"/blogs/locations/glenview-fence-installation\" title=\"Glenview Fence Installation\">Glenview</a><br/><a href=\"/blogs/locations/golf-fence-installation\" title=\"Golf Fence Installation\">Golf</a><br/><a href=\"/blogs/locations/highland-park-fence-installation\" title=\"Highland Park Fence Installation\">Highland Park</a><br/><a href=\"/blogs/locations/highwood-fence-installation\" title=\"Highwood Fence Installation\">Highwood</a><br/><a href=\"/blogs/locations/kenilworth-fence-installation\" title=\"Kenilworth Fence Installation\">Kenilworth</a><br/><a href=\"/blogs/locations/lake-bluff-fence-installation\" title=\"Lake Bluff Fence Installation\">Lake Bluff</a><br/><a href=\"/blogs/locations/lake-forest-fence-installation\" title=\"Lake Forest Fence Installation\">Lake Forest</a><br/><a href=\"/blogs/locations/lincolnshire-fence-installation\" title=\"Lincolnshire Fence Installation\">Lincolnshire</a><br/><a href=\"/blogs/locations/morton-grove-fence-installation\" title=\"Morton Grove Fence Installation\">Morton Grove</a><br/><a href=\"/blogs/locations/niles-fence-installation\" title=\"Niles Fence Installation\">Niles</a><br/><a href=\"/blogs/locations/northbrook-fence-installation\" title=\"Northbrook Fence Installation\">Northbrook</a><br/><a href=\"/blogs/locations/northfield-fence-installation\" title=\"Northfield Fence Installation\">Northfield</a><br/><a href=\"/blogs/locations/park-ridge-fence-installation\" title=\"Park Ridge Fence Installation\">Park Ridge</a><br/><a href=\"/blogs/locations/skokie-fence-installation\" title=\"Skokie Fence Installation\">Skokie</a><br/><a href=\"/blogs/locations/wilmette-fence-installation\" title=\"Wilmette Fence Installation\">Wilmette</a><br/><a href=\"/blogs/locations/winnetka-fence-installation\" title=\"Winnetka Fence Installation\">Winnetka</a></p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_HrKyL8": {
+      "type": "section-rich-text",
+      "name": "Rich text",
+      "settings": {
+        "section_title": "Additional areas served",
+        "text": "<p>We are unfortunately unable to provide fences in the following villages and townships, but we'd be more than happy to help you with Play Sets, Basketball Hoops, and Trampolines.</p>",
+        "section_width": "tiny",
+        "padding_top": 48,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_PrAfLp": {
+      "type": "section-rich-text",
+      "custom_css": [
+        ".rte,.rte p,.rte a,.rte h1,.rte h2,.rte h3,.rte h4,.rte span {color: #000 !important;}",
+        ".rte {column-count: 3; column-gap: 2rem; -webkit-column-count: 3; -webkit-column-gap: 2rem;}",
+        "@media (max-width: 767px) {.rte {column-count: 1 !important; -webkit-column-count: 1 !important; column-gap: 1rem !important; line-height: 1.5 !important; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_title": "",
+        "text": "<p>Arlington Heights<br/>Aurora<br/>Barrington<br/>Des Plaines<br/>Elk Grove<br/>Elmhurst<br/>Hampshire<br/>Hindsdale<br/>Kildeer<br/>Lake Zurich<br/>Libertyville<br/>Mokena<br/>Mt. Prospect<br/>Mundelein<br/>Naperville<br/>Palatine<br/>Schaumburg<br/>Vernon Hills<br/>Wadsworth<br/>Waukegan<br/>Wheeling</p>",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16990286313e7eb8e5",
+    "b6197a03-d7d1-4545-b861-bbc2889ee0d6",
+    "f71bc95b-20a9-450b-a2bc-f41fe85f24cb",
+    "section_rich_text_Tfbmc8",
+    "section_rich_text_FdAhrh",
+    "section_rich_text_HrKyL8",
+    "section_rich_text_PrAfLp"
+  ]
+}

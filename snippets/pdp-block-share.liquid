@@ -1,0 +1,18 @@
+{% comment %}
+  Renders product page social media share icons block
+
+  Accepts:
+  - block_align: {String}
+  - product_url: {String}
+  - product_title: {String}
+  - product_image: {Object}
+{% endcomment %}
+
+<div class="product-single__share" style="text-align: {{ block_align }}">
+  {%- liquid
+    assign share_link = shop.url | append: product_url
+    assign share_title = product_title | url_param_escape
+    assign share_img = product_image | image_url: width: 1024, height: 1024
+  -%}
+  {%- render 'share-links', share_link: share_link, share_title: share_title, share_img: share_img -%}
+</div>

@@ -1,0 +1,286 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_custom_RjTbWN": {
+      "type": "section-custom",
+      "blocks": {
+        "spacer_DmhAqe": {
+          "type": "spacer",
+          "settings": {
+            "space": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_DmhAqe"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "section_faq_HQknCD": {
+      "type": "section-faq",
+      "blocks": {
+        "category_HTyKAt": {
+          "type": "category",
+          "settings": {
+            "title": "General Questions"
+          }
+        },
+        "article_UP3xzn": {
+          "type": "article",
+          "settings": {
+            "title": "What sets Fenceworks playgrounds apart from others?",
+            "text": "<p>At Fenceworks, you get more than just a playground; you receive a piece of our family's commitment to joy and safety. We partner with top brands like <a href=\"https://theguyon41.com/collections/playground-one/\">Playground One</a> and <a href=\"https://theguyon41.com/collections/swing-kingdom/\">Swing Kingdom</a>, ensuring every playground is a perfect fit for your family's fun and peace of mind.</p>"
+          }
+        },
+        "article_CyRX4q": {
+          "type": "article",
+          "settings": {
+            "title": "How safe are Fenceworks playgrounds?",
+            "text": "<p>Safety is a family promise at <a href=\"https://theguyon41.com/\">Fenceworks</a>. Our playgrounds adhere to the highest safety standards, built to ensure every laugh and giggle is free from worry.</p>"
+          }
+        },
+        "article_BPbqJi": {
+          "type": "article",
+          "settings": {
+            "title": "Can I customize my Fenceworks playground?",
+            "text": "<p>Absolutely! Your family's dream playground is just a consultation away. We specialize in tailoring designs to fit your unique space and imagination.</p>"
+          }
+        },
+        "category_HUe8Nt": {
+          "type": "category",
+          "settings": {
+            "title": "Installation & Maintenance"
+          }
+        },
+        "article_Bpwt3W": {
+          "type": "article",
+          "settings": {
+            "title": "What does installation include when I purchase a Fenceworks playground?",
+            "text": "<p>Say goodbye to weekend projects; our family handles everything from delivery to installation, ensuring your playground is ready for play without any hassle. Unlike online retailers or franchises, we know every city regulation, backed by 58+ years and three generations of expertise.</p>"
+          }
+        },
+        "article_efPWAA": {
+          "type": "article",
+          "settings": {
+            "title": "How should I maintain my playground equipment?",
+            "text": "<p>Fenceworks playgrounds are built to last, requiring no staining or sealing for warranty coverage—a testament to the quality we stand behind. We are the only company that doesn’t hide warranty conditions in small print; what you see is what you get.</p>"
+          }
+        },
+        "article_aDxJ8J": {
+          "type": "article",
+          "settings": {
+            "title": "What materials are used in your playgrounds?",
+            "text": "<p>We use the best quality premium Pacific Cedar and the thickest eco-friendly vinyl on the market. When you buy from us, you’re investing in a playground that will look as good for the next generation of your family as it does today.</p>"
+          }
+        },
+        "category_JTbnBY": {
+          "type": "category",
+          "settings": {
+            "title": "Warranty & Support"
+          }
+        },
+        "article_ytYkHD": {
+          "type": "article",
+          "settings": {
+            "title": "What kind of warranty does Fenceworks provide?",
+            "text": "<p>All playgrounds and swing sets sold by Fenceworks are backed by the manufacturer’s official warranty. We proudly partner with premium brands which offer comprehensive warranty coverage designed to give families peace of mind.</p>"
+          }
+        },
+        "article_gRPz8E": {
+          "type": "article",
+          "settings": {
+            "title": "How do I contact your family for help?",
+            "text": "<p>When you have questions or need assistance, you’re not calling a distant call center; you're reaching out to Jake and the family here at Fenceworks. We're here to help you, just like family.</p>"
+          }
+        },
+        "category_bMJVKK": {
+          "type": "category",
+          "settings": {
+            "title": "Additional Services"
+          }
+        },
+        "article_tr6iiD": {
+          "type": "article",
+          "settings": {
+            "title": "Can I upgrade my playground over time?",
+            "text": "<p>Our playgrounds grow with your family. Adding new features or making adjustments is easy and handled with the care only a family-run business can provide.</p>"
+          }
+        },
+        "article_W9yn36": {
+          "type": "article",
+          "settings": {
+            "title": "Does Fenceworks offer services for playground relocation or removal?",
+            "text": "<p>Whether you're moving or making room for new adventures, our family is here to help manage your playground's transition smoothly and professionally.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_HTyKAt",
+        "article_UP3xzn",
+        "article_CyRX4q",
+        "article_BPbqJi",
+        "category_HUe8Nt",
+        "article_Bpwt3W",
+        "article_efPWAA",
+        "article_aDxJ8J",
+        "category_JTbnBY",
+        "article_ytYkHD",
+        "article_gRPz8E",
+        "category_bMJVKK",
+        "article_tr6iiD",
+        "article_W9yn36"
+      ],
+      "settings": {
+        "title": "Fenceworks Playground FAQ’s",
+        "desc": "",
+        "heading_alignment": "center",
+        "enable_sidebar": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_testimonials_7V7gik": {
+      "type": "section-testimonials",
+      "blocks": {
+        "text_NeKWbB": {
+          "type": "text",
+          "settings": {
+            "media": "stars-brand",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Had the best experience working with Jake. Helped me pick out the best swing set for my son. He made the whole process so simple.</p>",
+            "name": "Robert S.",
+            "source": "Google Reviews"
+          }
+        },
+        "text_ciT94h": {
+          "type": "text",
+          "settings": {
+            "media": "quote",
+            "svg-code": "",
+            "image_round": true,
+            "text": "<p>Amazing quality swingset. Everyone was very helpful and friendly during the entire process. Our daughter loves the swings!!</p>",
+            "name": "Matthew L.",
+            "source": "Google"
+          }
+        }
+      },
+      "block_order": [
+        "text_NeKWbB",
+        "text_ciT94h"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "desc": "",
+        "heading_alignment": "center",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "style_desktop": "featured-grid",
+        "desktop_carousel": false,
+        "mobile_carousel": true,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "60ec9da9-bd17-41d3-82c2-0972b96e3692": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2502.jpg",
+            "link": "",
+            "width": "1/2"
+          }
+        },
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Chicagoland's top provider for fences, playgrounds, basketball hoops, and trampolines",
+            "text": "<p>Fenceworks is the leading company in the Chicagoland area for all your fence, playground, basketball, and trampoline needs. All the products in our <a href=\"/collections/play-sets\" title=\"Play Sets\">Playground</a>, <a href=\"/collections/basketball-hoops\" title=\"Basketball Hoops\">Basketball</a>, and <a href=\"https://theguyon41.com/pages/trampolines\" title=\"Trampoline\">Trampoline</a> departments were carefully selected with your child’s safety in mind, as well as offer the best products in the industry. We welcome you to visit our indoor showroom! We pride ourselves in giving you, the customer, all our knowledge and professionalism that you have come to expect.</p>",
+            "align": "left",
+            "width": "1/2"
+          }
+        },
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Contact Us",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-image-1",
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-text-1",
+        "template--21388694487347__60ec9da9-bd17-41d3-82c2-0972b96e3692-button-1"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": true
+      }
+    },
+    "6cd5d025-ee6a-4c0a-9dad-505c3d04def1": {
+      "type": "section-logo-list",
+      "settings": {
+        "title": "",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "full",
+        "content_width": "large",
+        "grid": 4,
+        "logo_width": 80,
+        "grid_mobile": "2",
+        "logo_width_mobile": 80,
+        "enable_carousel_mobile": true,
+        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "opacity": 100,
+        "link_title": "Shop now",
+        "link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "section_custom_RjTbWN",
+    "section_faq_HQknCD",
+    "main",
+    "section_testimonials_7V7gik",
+    "60ec9da9-bd17-41d3-82c2-0972b96e3692",
+    "6cd5d025-ee6a-4c0a-9dad-505c3d04def1"
+  ]
+}

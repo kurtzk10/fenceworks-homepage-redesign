@@ -1,0 +1,82 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "tags": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "meta": {
+          "type": "meta",
+          "settings": {
+            "show_author": false,
+            "show_sharing": true
+          }
+        }
+      },
+      "block_order": [
+        "tags",
+        "title",
+        "content",
+        "meta"
+      ],
+      "custom_css": [
+        "div {font-size: 16px;}"
+      ],
+      "settings": {
+        "show_img": false
+      }
+    },
+    "section_custom_LbGKMJ": {
+      "type": "section-custom",
+      "blocks": {
+        "image_EKkyKR": {
+          "type": "image",
+          "settings": {
+            "image": "{{ article.image }}",
+            "link": "",
+            "width": "1/3"
+          }
+        },
+        "spacer_aBw98f": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        }
+      },
+      "block_order": [
+        "image_EKkyKR",
+        "spacer_aBw98f"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_custom_LbGKMJ"
+  ]
+}

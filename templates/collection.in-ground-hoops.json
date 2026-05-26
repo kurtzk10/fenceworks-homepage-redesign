@@ -1,0 +1,402 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "image_ratio": "16:9",
+        "image_ratio_mobile": "16:9",
+        "use_first_product_image": false,
+        "collection_banner_style": "overlap",
+        "text_align": "left",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "overlay_color": "#000000",
+        "overlay_strength": 40
+      }
+    },
+    "section_image_with_text_overlap_c3giJN": {
+      "type": "section-image-with-text-overlap",
+      "blocks": {
+        "image_8GckeP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/proforce-54.png",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "What Are In-Ground Hoops?",
+            "desc": "<p>As the name suggests, in-ground basketball systems are installed into concrete to provide a stable, permanent playing experience. With solid foundations, the hoop won’t wobble from contact or due to heavy wind, improving the experience for all. We know that choosing an in-ground glass basketball hoop is a big commitment, so our family is here to provide advice on product choice, installation location, and more. </p>",
+            "horizontal_align": "left",
+            "link_title": "Learn more",
+            "link": "",
+            "bg_color_block": "#e5e5e5",
+            "bg_color_content": "#ffffff",
+            "color_text": "#212121",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_8GckeP"
+      ],
+      "name": "Image with text overlap",
+      "settings": {
+        "image_ratio": "1:1",
+        "block_align": "right",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "2/3",
+        "text_style": "solid",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_FBewRV": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_7tKxcz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/In_ground_basketball_hoop.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Benefits of In-Ground Hoops",
+            "desc": "<h3>Long-Term Results </h3><p>We pride ourselves on quality at <a href=\"https://theguyon41.com/\">Fenceworks</a>, and this means partnering with a leader like PROformance Hoops. With thick tempered glass on the backboard and a galvanized steel pole, your investment will survive the weather and offer fun for the family for many years to come. </p><h3>Stability and Strength </h3><p>Your in-ground hoop is set in concrete, which prevents tipping, wobbling, shaking, and other movement. In a commercial setting where competitive play is common, this stability is invaluable. </p><h3>Professional Appearance </h3><p>Whether residential or commercial, you might seek that professional feel, and it comes with in-ground options. With 72-, 54-, and 60-inch basketball hoops in-ground, you can tailor your choice to your needs, and the hoop will look professional both now and in the future.</p><h3>Theft Protection </h3><p>If you’re tired of your portable hoop being a target of theft, or blowing over in the wind, it could be time for an upgrade. <br/></p>",
+            "horizontal_align": "left",
+            "link_title": "FREE ESTIMATE",
+            "link": "https://theguyon41.com/pages/free-estimate",
+            "bg_color_block": "#ffffff",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "rgba(0,0,0,0)",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_7tKxcz"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image_ratio": "2:3",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_MtNVFK": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_gR496U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3045.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Situations Where In-Ground Hoops Thrive",
+            "desc": "<p>Where do in-ground hoops make sense?</p><ul><li>Property owners who want a long-term investment </li><li>Those seeking high-quality, durable hoops</li><li>People who play regularly and want a professional hoop</li><li>Commercial or residential property owners wanting a real court experience</li></ul><p>With an in-ground 60-inch basketball hoop, for example, you’re sure to have something that creates memories, with friends, colleagues, family, and beyond. </p>",
+            "horizontal_align": "left",
+            "link_title": "contact us",
+            "link": "https://theguyon41.com/pages/free-estimate",
+            "bg_color_block": "#f2f2f2",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "rgba(0,0,0,0)",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_gR496U"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image_ratio": "4:3",
+        "block_align": "right",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_image_with_text_xFefbP": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_pWrj6x": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3033_1.jpg",
+            "video": "",
+            "video_button_color": "primary",
+            "title": "Why Choose Fenceworks for In-Ground Basketball Hoops?",
+            "desc": "<p>Our business was affectionately known as ‘The Guy on 41’ for many years; while we may have moved to a stunning showroom in Northbrook, our small family business feel remains. We strive to provide value for all customers, whether you need fencing, playsets, basketball hoops, or trampolines. Stan Ascher launched the business in the 1960s, and now the second and third generation both work in the business.</p><p>We’re proud of our reputation in the community, and this means we’ll only ever put our name to reliable, quality products. We’ll visit your property, provide tailored advice, and give that personal touch that big box stores and online retailers just can’t offer. If you like to buy products with a touch of old-school customer service, Fenceworks is the place for you. </p><p>Contact our family today to explore in-ground basketball systems and potentially find the one that provides your friends, family, colleagues, and customers with endless fun! </p>",
+            "horizontal_align": "left",
+            "link_title": "Area served",
+            "link": "https://theguyon41.com/pages/areas-served",
+            "bg_color_block": "#ffffff",
+            "bg_color_content": "rgba(0,0,0,0)",
+            "color_text": "rgba(0,0,0,0)",
+            "text_heading_color": true,
+            "text_border_color": true
+          }
+        }
+      },
+      "block_order": [
+        "image_pWrj6x"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image_ratio": "1:1",
+        "block_align": "left",
+        "vertical_align": "top",
+        "container": "large",
+        "block_spacing": 2,
+        "block_layout": "1/2",
+        "heading_size": 3,
+        "link_style": "hollow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "subcollections": {
+      "type": "section-sub-collections",
+      "settings": {
+        "menu": "",
+        "title": "",
+        "desc": "",
+        "image_source": "collection",
+        "image_ratio": "1:1",
+        "heading_alignment": "center",
+        "show_related": true,
+        "show_parent": true,
+        "section_width": "full",
+        "layout_size_desktop": 5,
+        "layout_spacing_desktop": 5,
+        "layout_size_mobile": 5,
+        "layout_spacing_mobile": 5,
+        "bg_color": "rgba(0,0,0,0)",
+        "image_color": "rgba(0,0,0,0)",
+        "color_text": "rgba(0,0,0,0)",
+        "color_default_heading": true,
+        "color_default_border": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "text_size_desktop": 3,
+        "text_size_mobile": 3,
+        "text_style": "body",
+        "text_bold": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_rich_text_PMEz8i": {
+      "type": "section-rich-text",
+      "name": "Rich text",
+      "settings": {
+        "section_title": "Explore Our Collection",
+        "text": "",
+        "section_width": "tiny",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter": {
+          "type": "filter",
+          "settings": {
+            "count": true,
+            "show_swatches": true,
+            "square_check": true,
+            "filter_visibility": "three"
+          }
+        }
+      },
+      "block_order": [
+        "filter"
+      ],
+      "settings": {
+        "show_count": true,
+        "sort_enable": true,
+        "filter_style": "drawer",
+        "maximum_products": 18,
+        "grid": 3,
+        "grid_mobile": "2"
+      }
+    },
+    "b40f1547-8d41-4a98-b788-4124427fb162": {
+      "type": "section-custom",
+      "blocks": {
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Our Outing Series swing sets are perfect for smaller sized yards. They’ve been pre-configured with our most popular accessories and add-ons to make your buying decision easy.</p>",
+            "align": "center",
+            "width": "1/1"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": "none"
+          }
+        },
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1": {
+          "type": "button",
+          "settings": {
+            "title": "Request Estimate",
+            "link": "shopify://pages/free-estimate",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        },
+        "829c4f49-0742-4ce1-aad3-eac8ed45b4f3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "title": "Download Gorilla Playset Catalog",
+            "link": "https://theguyon41.com/wp-content/uploads/2022Catalog-FullSpread-Digital2.pdf",
+            "link_style": "primary",
+            "width": "1/2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-text-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-spacer-1",
+        "template--21388694323507__b40f1547-8d41-4a98-b788-4124427fb162-button-1",
+        "829c4f49-0742-4ce1-aad3-eac8ed45b4f3"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bottom-margin": false
+      }
+    },
+    "16989847110c28e5a3": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "section_collection_LhmRrP": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_fym8ab": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "alleyoop-trampolines",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_fym8ab"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Trampolines",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 4,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_collection_XfHAcQ": {
+      "type": "section-collection",
+      "blocks": {
+        "collection_nh8PCQ": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "heading_color": "rgba(0,0,0,0)",
+            "collection": "all-products",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_nh8PCQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Trampoline Accessories",
+        "desc": "",
+        "heading_alignment": "center",
+        "section_width": "large",
+        "maximum_products": 18,
+        "grid": 4,
+        "enable_carousel_desktop": true,
+        "grid_mobile": "1",
+        "enable_carousel_mobile": true,
+        "divider_top": false,
+        "divider_bottom": false,
+        "section_link_title": "View all",
+        "section_link_link": "",
+        "section_link_style": "link link--arrow",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "section_image_with_text_overlap_c3giJN",
+    "section_image_with_text_FBewRV",
+    "section_image_with_text_MtNVFK",
+    "section_image_with_text_xFefbP",
+    "subcollections",
+    "section_rich_text_PMEz8i",
+    "product-grid",
+    "b40f1547-8d41-4a98-b788-4124427fb162",
+    "16989847110c28e5a3",
+    "section_collection_LhmRrP",
+    "section_collection_XfHAcQ"
+  ]
+}

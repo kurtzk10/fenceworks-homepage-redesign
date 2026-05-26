@@ -1,0 +1,458 @@
+/* ============================================================
+   Section: LS Fence Types Grid
+   ============================================================ */
+
+.section--ls-fence-types {
+  background-color: var(--lsft-section-bg);
+  padding-top: var(--space-top);
+  padding-bottom: var(--space-bottom);
+}
+
+/* ── Outer wrapper ─────────────────────────────────────────── */
+.lsft__outer {
+  width: 100%;
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+.lsft__header {
+  margin-bottom: 48px;
+}
+
+.lsft__eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lsft-eyebrow-color);
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.lsft__heading {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--lsft-heading-color);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.lsft__heading p {
+  margin: 0;
+}
+
+.lsft__heading em {
+  font-style: normal;
+  color: var(--lsft-eyebrow-color);
+}
+
+.lsft__desc {
+  color: var(--lsft-desc-color);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0;
+}
+
+.lsft__desc p {
+  margin: 0;
+}
+
+/* ── Grid ──────────────────────────────────────────────────── */
+.lsft__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--lsft-grid-cols-desktop), 1fr);
+  gap: var(--lsft-grid-gap);
+  align-items: end;
+}
+
+/* ── Fence card wrapper ────────────────────────────────────── */
+.lsft__card-wrap {
+  /* grid cell */
+}
+
+/* ── Fence card (anchor) ───────────────────────────────────── */
+.lsft__card {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  padding-top: var(--lsft-image-overlap);
+  outline: none;
+}
+
+/* ── Card inner (colored box) ──────────────────────────────── */
+.lsft__card-inner {
+  position: relative;
+  background-color: var(--lsft-card-bg);
+  border-radius: var(--lsft-card-radius);
+  height: var(--lsft-card-height);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  overflow: visible;
+  transition: background-color 0.3s ease;
+}
+
+.lsft__card:hover .lsft__card-inner,
+.lsft__card:focus-visible .lsft__card-inner {
+  background-color: var(--lsft-card-hover-bg);
+}
+
+/* ── Image container ───────────────────────────────────────── */
+.lsft__card-img-wrap {
+  position: absolute;
+  top: calc(var(--lsft-image-overlap) * -1);
+  left: 6%;
+  right: 6%;
+  bottom: calc(var(--lsft-card-height) * -1 + 44px);
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: transform 0.35s ease;
+}
+
+.lsft__card:hover .lsft__card-img-wrap,
+.lsft__card:focus-visible .lsft__card-img-wrap {
+  transform: scale(1.06) translateY(-6px);
+}
+
+/* ── Fence image ───────────────────────────────────────────── */
+.lsft__card-img-wrap picture {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.lsft__card-img-wrap .lsft__img,
+.lsft__card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+}
+
+.lsft__img--placeholder {
+  width: 60%;
+  height: 60%;
+  opacity: 0.4;
+}
+
+/* ── Card label ────────────────────────────────────────────── */
+.lsft__card-label {
+  display: block;
+  color: var(--lsft-label-color);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+  padding: 0 8px;
+}
+
+/* ── CTA card ──────────────────────────────────────────────── */
+.lsft__cta-wrap {
+  /* grid cell — aligns to end like fence cards */
+  align-self: end;
+}
+
+.lsft__cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  height: var(--lsft-card-height);
+  border: 2px solid var(--lsft-cta-border);
+  border-radius: var(--lsft-card-radius);
+  padding: 20px 24px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.lsft__cta-card:hover,
+.lsft__cta-card:focus-visible {
+  background-color: color-mix(in srgb, var(--lsft-cta-border) 8%, transparent);
+}
+
+.lsft__cta-helper {
+  display: block;
+  font-size: 14px;
+  color: var(--lsft-cta-helper-color);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.lsft__cta-text {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--lsft-cta-text-color);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media screen and (max-width: 989px) {
+  .lsft__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lsft__heading {
+    font-size: clamp(24px, 5vw, 36px);
+  }
+
+  .lsft__header {
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .lsft__grid {
+    grid-template-columns: repeat(var(--lsft-grid-cols-mobile), 1fr);
+    gap: 12px;
+  }
+
+  .lsft__header {
+    margin-bottom: 28px;
+  }
+
+  .lsft__card-label {
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+
+  .lsft__cta-text {
+    font-size: 14px;
+  }
+}
+
+
+.lsft__card-wrap {
+  max-width: 320px;
+  width: 100%;
+  
+}
+
+.lsft__grid {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
+}
+
+span.lsft__card-label {
+  color: var(--txt-light, #F4F7F8);
+  text-align: center;
+  font-family: "Cabinet Grotesk";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%; /* 50.4px */
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+
+.lsft__card-img-wrap {
+  left: 50%;
+  transform: translateX(-50%);
+  height: 230px;
+  width: 90%;
+}
+
+a.lsft__card {
+  opacity: 1;
+}
+
+.lsft__card:hover .lsft__card-img-wrap, .lsft__card:focus-visible .lsft__card-img-wrap {
+  transform: rotate(-5deg) translateY(-30px) translateX(-50%);
+}
+
+.lsft__card-img-wrap {
+  transition: .4s ease-in-out;
+}
+
+h2.lsft__heading {
+  color: var(--txt-dark, #1C2D38);
+
+/* Desktop/H2 */
+  font-family: "Cabinet Grotesk";
+  font-size: 57px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 57px */
+  letter-spacing: -1.14px;
+  text-transform: uppercase;
+}
+
+p.lsft__eyebrow {
+  color: var(--bg-accent-light, #FBCDA5);
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+}
+
+.lsft__header {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+span.lsft__cta-text {
+  color: var(--bg-accent-main, #F5811F);
+  text-align: center;
+
+/* Desktop/H3 */
+  font-family: "Cabinet Grotesk";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.1em; /* 44.8px */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+
+a.lsft__card:hover {}
+
+.lsft__card-inner {
+  height: 190px;
+  transition: .4s ease-in-out;
+}
+
+a.lsft__card:hover .lsft__card-inner {
+  height: 200px;
+}
+
+span.lsft__cta-helper {
+  position: absolute;
+  color: var(--txt-disclaim, #526572);
+  text-align: center;
+
+/* Desktop/body */
+  font-family: "Host Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.54px;
+  top: -35px;
+}
+
+.lsft__cta-wrap {
+  position: relative;
+}
+
+a.lsft__cta-card {
+  transition: .2s ease-in-out;
+}
+
+span.lsft__cta-text {
+  max-width: 180px;
+}
+
+.lsft__grid {
+  /* width: calc(100% - 20px); */
+}
+
+@media screen and (max-width: 768px) {
+
+.lsft__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a.lsft__card {
+  padding-top: 80px;
+}
+
+span.lsft__card-label {
+  color: var(--txt-light, #F4F7F8);
+  text-align: center;
+
+/* Mobile/H3 */
+  font-family: "Cabinet Grotesk";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%; /* 30.8px */
+  text-transform: uppercase;
+}
+
+.lsft__card-inner {
+  height: 120px;
+}
+
+a.lsft__card:hover .lsft__card-inner {
+  height: 130px;
+}
+
+.lsft__card-img-wrap {
+  height: 140px;
+  bottom: 50px;
+  top: auto;
+}
+
+.lsft__cta-wrap.block--cta_card_mymMCN {}
+
+.lsft__card-wrap, .lsft__cta-wrap {
+  max-width: 320px;
+  width: 100%;
+  width: calc(50% - 6px);
+}
+
+span.lsft__cta-text {
+  color: var(--bg-accent-main, #F5811F);
+  text-align: center;
+
+/* Mobile/H3 */
+  
+  font-size: 22px;
+  
+}
+
+a.lsft__cta-card {
+  height: 120px;
+}
+}
+
+p.lsft__eyebrow {
+  text-transform: initial;
+}
+@media screen and (max-width: 768px) {
+h2.lsft__heading {
+  font-size: 32px;
+}
+
+
+
+.lsft__desc.rte {
+  font-size: 16px;
+}
+}
+
+
+span.lsft__cta-text p {
+    margin: 0;
+}
+
+span.lsft__cta-text {
+    max-width: 100%;
+}

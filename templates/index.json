@@ -1,0 +1,973 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "deed0c7d-a6b2-434e-8882-2a7cba84c982": {
+      "type": "section-map",
+      "blocks": {
+        "template--16580692541694__deed0c7d-a6b2-434e-8882-2a7cba84c982-16667837825ddf24c3-0": {
+          "type": "map",
+          "settings": {
+            "title": "Our Home",
+            "desc": "<p>3177 MacArthur Blvd.</p><p>Northbrook, IL 60062<br/></p><p>(847) 432 0900<br/></p><p>contact@thguyon41.com</p>",
+            "sub_desc": "<p><strong>Monday - Friday: </strong>9:00AM to 5:00PM<br/><strong>Saturday:</strong> 10:00AM to 5:00PM<br/><strong>Sunday:</strong> Closed</p>",
+            "address": "3177 MacArthur Blvd. Northbrook, IL 60062"
+          }
+        }
+      },
+      "block_order": [
+        "template--16580692541694__deed0c7d-a6b2-434e-8882-2a7cba84c982-16667837825ddf24c3-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "google_api_key": "",
+        "show_directions_btn": true,
+        "bg_color": "#efefee",
+        "map_style": "light",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_hero_banner_deqfb6": {
+      "type": "section-ls-hero-banner",
+      "blocks": {
+        "slide_F6hfrW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hero.png",
+            "image_mobile": "shopify://shop_images/69cb83863b8177159fa5ddcd217976ba2c3300f9.png",
+            "title": "YARDS BUILT RIGHT FOR CHICAGOLAND HOMES",
+            "text": "<p>From fences to playsets, basketball hoops, and trampolines — we help families build outdoor spaces done right, by a local team you can trust.</p>",
+            "link_title": "Get a Free Fence Quote",
+            "link": "",
+            "link_title_2": "Browse Fences",
+            "link_2": "",
+            "floating_cta_title": "Get a Free Quote",
+            "floating_cta_link": "",
+            "rating_value": "4.9/5.0",
+            "rating_text": "Trusted by Backyard experts"
+          }
+        }
+      },
+      "block_order": [
+        "slide_F6hfrW"
+      ],
+      "name": "LS Hero banner",
+      "settings": {
+        "slideshow_height": "medium",
+        "slideshow_width": "full",
+        "hide_nav_arrows": false,
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "section_bottom_margin": false
+      }
+    },
+    "section_featured_in_nRMgyL": {
+      "type": "section-featured-in",
+      "blocks": {
+        "logo_ybikQg": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_40.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_pxhXgX": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_32.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_PAmb83": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_38.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_WUJWmh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image001_1.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_dUecAx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_36.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_84DUwM": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_31.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_qdfd6q": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_39.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_6TCb7z": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_33.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_gq6e3a": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_37.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_XVHz3Q": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_34.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "logo_Tx4BmU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_35.png",
+            "title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_ybikQg",
+        "logo_pxhXgX",
+        "logo_PAmb83",
+        "logo_WUJWmh",
+        "logo_dUecAx",
+        "logo_84DUwM",
+        "logo_qdfd6q",
+        "logo_6TCb7z",
+        "logo_gq6e3a",
+        "logo_XVHz3Q",
+        "logo_Tx4BmU"
+      ],
+      "name": "Featured In [LS]",
+      "settings": {
+        "title": "FEATURED IN",
+        "schema_keyword": "LS",
+        "content_width": "large",
+        "marquee_speed": 30,
+        "color_bg": "",
+        "color_heading": "#9ca7ae",
+        "logo_opacity": 100,
+        "divider_top": false,
+        "divider_bottom": false,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_usp_en3zBG": {
+      "type": "section-ls-usp",
+      "blocks": {
+        "ls_usp_item_AqWf8d": {
+          "type": "ls_usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/users-solid.png",
+            "title": "FAMILY-OWNED & LOCAL",
+            "subtitle": "<p>Your neighbors, not a national chain. We live here too.</p>"
+          }
+        },
+        "ls_usp_item_ciKMMD": {
+          "type": "ls_usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector-1.png",
+            "title": "ONE-STOP SOLUTION",
+            "subtitle": "<p>Sales, installation, maintenance. All under one roof.</p>"
+          }
+        },
+        "ls_usp_item_78WBGD": {
+          "type": "ls_usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector-2.png",
+            "title": "ESTABLISHED IN 1967",
+            "subtitle": "<p>Nearly 60 years of trusted service to Chicagoland families</p>"
+          }
+        },
+        "ls_usp_item_KiQB39": {
+          "type": "ls_usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector-3.png",
+            "title": "PREMIUM STANDARDS",
+            "subtitle": "<p>Professional crews delivering high-end service, every time</p>"
+          }
+        },
+        "ls_usp_item_yCAYD4": {
+          "type": "ls_usp_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector-4.png",
+            "title": "CHICAGOLAND EXPERTS",
+            "subtitle": "<p>Deep local knowledge of permits, weather, & local styles</p>"
+          }
+        }
+      },
+      "block_order": [
+        "ls_usp_item_AqWf8d",
+        "ls_usp_item_ciKMMD",
+        "ls_usp_item_78WBGD",
+        "ls_usp_item_KiQB39",
+        "ls_usp_item_yCAYD4"
+      ],
+      "name": "LS USP",
+      "settings": {
+        "container_width": "small",
+        "background_color": "#f5f5f5",
+        "icon_bg_color": "#fff3e0",
+        "icon_color": "#e65100",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_image_banner_4LJrPY": {
+      "type": "section-ls-image-banner",
+      "name": "LS Image banner",
+      "settings": {
+        "image_desktop": "shopify://shop_images/go41_difference_desktop_bg_image_1x_c342571e-9542-4bc1-b300-b11e3e3cca53.webp",
+        "image_mobile": "shopify://shop_images/go41_difference_mobile_bg_image_1x_9cd086b3-72e9-4cc7-9416-b1a9337fd9a7.webp",
+        "headline": "A SMARTER WAY TO BUY & INSTALL",
+        "bullets": "<ul><li>CONSULTATION</li><li>PROFESSIONAL INSTALLATION</li><li>PRODUCT SELECTION</li><li>ONGOING SUPPORT</li></ul>",
+        "body": "<p>No third parties. No confusion. Just one experienced team managing your project from start to finish.</p>",
+        "cta_label": "Book Your Free Consultation",
+        "cta_link": "",
+        "section_width": "full",
+        "section_bottom_margin": true
+      }
+    },
+    "section_ls_image_with_text_mUtz4T": {
+      "type": "section-ls-image-with-text",
+      "name": "LS Image with text",
+      "settings": {
+        "heading": "FAMILY-OWNED. COMMUNITY-ROOTED.",
+        "body": "<p>For over 59 years, Fenceworks a.k.a. The Guy on 41 has helped families build better backyards in the same neighborhoods we call home.</p><p>We're not a franchise or call center — we're a local, family-run team focused on quality, trust, and long-term relationships.</p>",
+        "image": "shopify://shop_images/image_47_1x_f7a6e31b-6fea-4457-bb2d-c96885d60982.webp",
+        "image_ratio": "natural",
+        "image_caption": "<p><strong>Meet the family:</strong> Left to Right → <strong>Sandy</strong> (President, Fence Lead, 2nd Generation), <strong>Stan \"The Guy on 41\" </strong>(1st Generation) & <strong>Jake</strong> (VP, Playground/Basketball/Trampoline Lead, 3rd Generation).</p>",
+        "button_label": "Read About Us",
+        "button_link": "shopify://pages/about-us",
+        "button_style": "hollow",
+        "container_width": "small",
+        "padding_top": 81,
+        "padding_bottom": 30,
+        "section_bottom_margin": false
+      }
+    },
+    "section_stats_Rhy4FR": {
+      "type": "section-stats",
+      "blocks": {
+        "stat_keAKmM": {
+          "type": "stat",
+          "settings": {
+            "number": "1,340",
+            "label": "<p>Number of in-ground Trampolines Installed</p>"
+          }
+        },
+        "stat_FyMjYK": {
+          "type": "stat",
+          "settings": {
+            "number": "1,043",
+            "label": "<p>Number of on-ground Trampolines Installed</p>"
+          }
+        },
+        "stat_RXTJxT": {
+          "type": "stat",
+          "settings": {
+            "number": "942",
+            "label": "<p>Properties intervened in Chicagoland</p>"
+          }
+        },
+        "stat_CByknA": {
+          "type": "stat",
+          "settings": {
+            "number": "59+",
+            "label": "<p>Years in <br/>Business</p>"
+          }
+        }
+      },
+      "block_order": [
+        "stat_keAKmM",
+        "stat_FyMjYK",
+        "stat_RXTJxT",
+        "stat_CByknA"
+      ],
+      "name": "Stats (auto scroll)",
+      "settings": {
+        "scroll_speed": 20,
+        "color_bg": "#f5f2ee",
+        "color_number": "#c45c2a",
+        "color_label": "#333333",
+        "padding_top": 24,
+        "padding_bottom": 80,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_category_cards_DJKeha": {
+      "type": "section-ls-category-cards",
+      "blocks": {
+        "category_card_DwGqMA": {
+          "type": "category_card",
+          "settings": {
+            "label": "Fences",
+            "link": "",
+            "image_1": "shopify://shop_images/fencing_desktop_fence_aluminum_1x_9a279300-576c-4f5c-843c-d107e875cfc8.webp",
+            "image_2": "shopify://shop_images/categories_desktop_cat_fencing_1x_977b636f-95d3-40f7-8463-7554067de8fc.webp"
+          }
+        },
+        "category_card_JtEYJN": {
+          "type": "category_card",
+          "settings": {
+            "label": "Playsets",
+            "link": "",
+            "image_1": "shopify://shop_images/categories_desktop_cat_vinyl.webp",
+            "image_2": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp"
+          }
+        },
+        "category_card_KitAmR": {
+          "type": "category_card",
+          "settings": {
+            "label": "Basketball Hoops",
+            "link": "",
+            "image_1": "shopify://shop_images/basketball_hoops_desktop_hoop_1_1x_e5085d8f-ca57-4396-80e0-f3eab57dae29.webp",
+            "image_2": "shopify://shop_images/categories_desktop_cat_playsets_1x_a4bd1d4a-5392-4b06-a33d-064b2c0a438d.webp"
+          }
+        },
+        "category_card_cBLrNG": {
+          "type": "category_card",
+          "settings": {
+            "label": "Trampolines",
+            "link": "",
+            "image_1": "shopify://shop_images/trampolines_desktop_trampoline_1_1x_2fd7d2d4-14e6-4093-b7b5-a68e6dfa31fc.webp",
+            "image_2": "shopify://shop_images/categories_desktop_cat_trampolines_1x_e5b1a7d7-3d76-4669-81d7-039a2c54cdfd.webp"
+          }
+        }
+      },
+      "block_order": [
+        "category_card_DwGqMA",
+        "category_card_JtEYJN",
+        "category_card_KitAmR",
+        "category_card_cBLrNG"
+      ],
+      "name": "LS Category Cards",
+      "settings": {
+        "eyebrow": "Explore Categories",
+        "heading": "<p>ONE-STOP SOLUTIONS<br/>BY <em>THE GUY ON 41</em></p>",
+        "section_width": "large",
+        "grid_gap": 16,
+        "card_height": 190,
+        "image_overlap": 100,
+        "card_radius": 16,
+        "section_bg": "#e9ebec",
+        "card_bg": "#9ea6ac",
+        "card_hover_bg": "#f78b2a",
+        "label_color": "#ffffff",
+        "eyebrow_color": "#f78b2a",
+        "heading_color": "#1b2733",
+        "heading_accent_color": "#f78b2a",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_reviews_MLNJjd": {
+      "type": "section-ls-reviews",
+      "blocks": {
+        "review_gR8t9n": {
+          "type": "review",
+          "settings": {
+            "text": "Fenceworks (they offer playsets, too!) has been around a long time and really loves the community it serves. Their playset designs are carefully thought out, beautifully constructed, and safe. I've loved working with them and highly recommend.",
+            "rating": 5,
+            "name": "Leslie Levine",
+            "source": "Google Reviews",
+            "source_url": ""
+          }
+        },
+        "review_BQV3UP": {
+          "type": "review",
+          "settings": {
+            "text": "Fenceworks (they offer playsets, too!) has been around a long time and really loves the community it serves. Their playset designs are carefully thought out, beautifully constructed, and safe. I've loved working with them and highly recommend.",
+            "rating": 5,
+            "name": "Leslie Levine",
+            "source": "Google Reviews",
+            "source_url": ""
+          }
+        },
+        "review_3ETYnq": {
+          "type": "review",
+          "settings": {
+            "text": "Fenceworks (they offer playsets, too!) has been around a long time and really loves the community it serves. Their playset designs are carefully thought out, beautifully constructed, and safe. I've loved working with them and highly recommend.",
+            "rating": 5,
+            "name": "Leslie Levine",
+            "source": "Google Reviews",
+            "source_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_gR8t9n",
+        "review_BQV3UP",
+        "review_3ETYnq"
+      ],
+      "name": "LS Reviews",
+      "settings": {
+        "heading_line1": "WHAT PEOPLE SAY ABOUT",
+        "heading_line2": "THE GUY ON 41",
+        "background_color": "#ffffff",
+        "heading_color": "#0f1e24",
+        "accent_color": "#e86f1a",
+        "card_bg_color": "#e9eced",
+        "text_color": "#0f1e24",
+        "stars_color": "#e86f1a",
+        "quote_color": "#e86f1a",
+        "autoplay": false,
+        "autoplay_speed": 6,
+        "section_link_title": "Read All Reviews",
+        "section_link_link": "shopify://collections",
+        "section_link_style": "c-btn c-btn--hollow",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_fence_types_zqBztV": {
+      "type": "section-ls-fence-types",
+      "blocks": {
+        "fence_card_7YGNhV": {
+          "type": "fence_card",
+          "settings": {
+            "label": "Wood",
+            "link": "",
+            "image": "shopify://shop_images/fencing_desktop_fence_wood_1x_8b99721a-e92c-451e-a4b4-1cf5525e55fb.webp"
+          }
+        },
+        "fence_card_FemMWw": {
+          "type": "fence_card",
+          "settings": {
+            "label": "PVC / Vinyl",
+            "link": "",
+            "image": "shopify://shop_images/fencing_desktop_fence_vinyl_1x_1efd27dc-3124-4f3d-bc68-e698b236d34d.webp"
+          }
+        },
+        "fence_card_JRN8eC": {
+          "type": "fence_card",
+          "settings": {
+            "label": "Aluminum",
+            "link": "",
+            "image": "shopify://shop_images/fencing_desktop_fence_aluminum_1x_1339dc65-fab2-409f-9a9c-3c85ff7fe4b6.webp"
+          }
+        },
+        "fence_card_zdVeW6": {
+          "type": "fence_card",
+          "settings": {
+            "label": "Composite",
+            "link": "",
+            "image": "shopify://shop_images/fencing_desktop_fence_composite_1x_d30dc47c-3e3f-4750-a07f-7c1f9db6912b.webp"
+          }
+        },
+        "fence_card_KfcEGm": {
+          "type": "fence_card",
+          "settings": {
+            "label": "Chainlink",
+            "link": "",
+            "image": "shopify://shop_images/fencing_desktop_fence_chainlink_1x_d5737ffb-2537-457e-8f39-7ef7236053d9.webp"
+          }
+        },
+        "cta_card_mymMCN": {
+          "type": "cta_card",
+          "settings": {
+            "helper_text": "Need help?",
+            "cta_text": "<p>REQUEST <br/>A FREE QUOTE</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "fence_card_7YGNhV",
+        "fence_card_FemMWw",
+        "fence_card_JRN8eC",
+        "fence_card_zdVeW6",
+        "fence_card_KfcEGm",
+        "cta_card_mymMCN"
+      ],
+      "name": "LS Fence Types Grid",
+      "settings": {
+        "eyebrow": "Explore Our Fencing Options",
+        "heading": "<p>FENCES DESIGNED FOR<br/>CHICAGOLAND HOMES</p>",
+        "description": "<p>From added privacy to curb appeal and security, our fences are designed to fit your home, your needs, and your neighborhood — all installed by a trusted local team.</p>",
+        "section_width": "large",
+        "grid_columns_desktop": 3,
+        "grid_columns_mobile": 2,
+        "grid_gap": 16,
+        "card_height": 190,
+        "image_overlap": 110,
+        "card_radius": 16,
+        "section_bg": "#ffffff",
+        "card_bg": "#f78b2a",
+        "card_hover_bg": "#f5c49a",
+        "label_color": "#ffffff",
+        "eyebrow_color": "#f78b2a",
+        "heading_color": "#1b2733",
+        "desc_color": "#3d4752",
+        "cta_border_color": "#f78b2a",
+        "cta_helper_color": "#3d4752",
+        "cta_text_color": "#f78b2a",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_media_cta_6kxicf": {
+      "type": "section-ls-media-cta",
+      "name": "LS Media CTA",
+      "settings": {
+        "eyebrow": "Explore the Details Up Close",
+        "intro_content": "<h2>LET'S START THE CONVERSATION</h2><p>Our showroom features fences, playsets, basketball hoops, and trampolines — but visits are by appointment so we can give you the attention your project deserves.</p>",
+        "fence_content": "<h3>PLANNING A FENCE?</h3><p>Fence consultations require coordination and on-site planning.</p><p>Start with a quick call so we can understand your project and schedule the right next step.</p>",
+        "button_1_label": "Request a Fence Consultation",
+        "button_1_link": "",
+        "extra_content": "<p><em>Online booking isn't available for fence projects — we'll coordinate everything personally by phone.</em></p><h3>LOOKING FOR PLAYSETS, HOOPS OR TRAMPOLINES?</h3><p>We're happy to connect by phone or schedule a showroom visit to walk through options together.</p>",
+        "button_2_label": "Book a Call or Showroom Visit",
+        "button_2_link": "",
+        "video_upload": "shopify://files/videos/96f9943a-a841-42c7-a3f1-e873c2bd7a98.mp4",
+        "video_url": "",
+        "container_width": "large",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_product_type_cards_FL4jEW": {
+      "type": "section-ls-product-type-cards",
+      "blocks": {
+        "product_card_Emm7yE": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/basketball_hoops_desktop_hoop_1_1x_17335bd4-71cb-4372-96ac-c8c7518e0478.webp",
+            "title": "In-Ground Mount",
+            "description": "Perfect for driveways and tight spaces. Securely mounted to walls or roof structures for space-efficient, reliable performance.",
+            "btn_label": "Shop In-Ground Hoops",
+            "btn_link": "",
+            "spec_1_icon": "shopify://shop_images/Container_1f4b5192-531e-4a56-a280-7edcfd58ff93.png",
+            "spec_1_label": "Adjustable Height",
+            "spec_1_value": "<p>6' – 10'</p>",
+            "spec_2_icon": "shopify://shop_images/Container-1.png",
+            "spec_2_label": "Backboard Size",
+            "spec_2_value": "<ul><li>54\"x36\"</li><li>60\"x38\"</li><li>72\"x42\"</li></ul>",
+            "spec_3_icon": "shopify://shop_images/Container-2.png",
+            "spec_3_label": "Glass Thickness",
+            "spec_3_value": "<ul><li>1/2\"</li><li>3/8</li></ul>",
+            "spec_4_icon": "shopify://shop_images/Container-3.png",
+            "spec_4_label": "Pole Base",
+            "spec_4_value": "<ul><li>5\"x5\"</li><li>6\"x6\"</li></ul>",
+            "spec_5_icon": "shopify://shop_images/Container-4.png",
+            "spec_5_label": "Overhang",
+            "spec_5_value": "<p>3' From Pole to Backboard</p>"
+          }
+        },
+        "product_card_pjHw3C": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/basketball_hoops_desktop_hoop_2_1x_385aa58d-b9f4-40c4-b324-3d4b5ca2aea1.webp",
+            "title": "Wall Mount",
+            "description": "The gold standard for stability and performance. Professionally installed in concrete for maximum durability and authentic play experience.",
+            "btn_label": "Shop Wall Mount Hoops",
+            "btn_link": "",
+            "spec_1_icon": "shopify://shop_images/Container_1f4b5192-531e-4a56-a280-7edcfd58ff93.png",
+            "spec_1_label": "Adjustable Height",
+            "spec_1_value": "<p>7.5' – 10'</p>",
+            "spec_2_icon": "shopify://shop_images/Container-1.png",
+            "spec_2_label": "Backboard Size",
+            "spec_2_value": "<ul><li>54\"x36\"</li><li>60\"x38\"</li><li>72\"x42\"</li></ul>",
+            "spec_3_icon": "shopify://shop_images/Container-2.png",
+            "spec_3_label": "Glass Thickness",
+            "spec_3_value": "<p>3/8\"</p>",
+            "spec_4_icon": "shopify://shop_images/Container-4.png",
+            "spec_4_label": "Overhang",
+            "spec_4_value": "<p>3' From Wall to Backboard</p>",
+            "spec_5_label": "",
+            "spec_5_value": ""
+          }
+        },
+        "product_card_AybzAE": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/basketball_hoops_desktop_hoop_3_1x_6d0cb489-9611-4153-9ffe-e7cd0512faad.webp",
+            "title": "Accessories",
+            "description": "Upgrade your setup with premium add-ons designed to improve safety, performance, and long-term durability. Built to complement your hoop and elevate every game.",
+            "btn_label": "Shop Accessories",
+            "btn_link": "",
+            "spec_1_icon": "shopify://shop_images/Container-4.png",
+            "spec_1_label": "Performance",
+            "spec_1_value": "<ul><li>Nets</li><li>Stencil kit</li></ul>",
+            "spec_2_icon": "shopify://shop_images/Container-5.png",
+            "spec_2_label": "Safety",
+            "spec_2_value": "<ul><li>Edge padding</li><li>Gusset pads</li><li>Safety Nets</li></ul>",
+            "spec_3_icon": "shopify://shop_images/Container-6.png",
+            "spec_3_label": "Spare Parts",
+            "spec_3_value": "<ul><li>Nets</li><li>Handles</li><li>Locks</li><li>Mounts</li></ul>",
+            "spec_4_label": "",
+            "spec_4_value": "",
+            "spec_5_label": "",
+            "spec_5_value": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_Emm7yE",
+        "product_card_pjHw3C",
+        "product_card_AybzAE"
+      ],
+      "name": "LS Product Type Cards",
+      "settings": {
+        "eyebrow": "One Stop, Everything for your Backyard",
+        "heading": "<p>BASKETBALL HOOPS<br>FOR HOMES</p>",
+        "description": "<p>Professional-grade basketball hoops designed for safety, performance, and everyday play. Choose the perfect setup for your space.</p>",
+        "section_width": "large",
+        "grid_gap": 24,
+        "card_radius": 16,
+        "image_height": 220,
+        "section_bg": "#ffffff",
+        "card_bg": "#fbf0e8",
+        "eyebrow_color": "#f5811f",
+        "heading_color": "#1c2d38",
+        "desc_color": "#3d4752",
+        "card_title_color": "#1c2d38",
+        "card_text_color": "#3d4752",
+        "spec_icon_bg": "#3d2b1f",
+        "spec_label_color": "#1c2d38",
+        "spec_value_color": "#3d4752",
+        "btn_bg": "#f5811f",
+        "btn_text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_basketball_hoop_services_jTpdPr": {
+      "type": "section-ls-basketball-hoop-services",
+      "name": "LS Hoop Services",
+      "settings": {
+        "heading": "COMPLETE BASKETBALL HOOP SERVICES",
+        "body_text": "<p>We offer professional installation (residential and commercial), relocation, removal, and maintenance services for all basketball hoop systems. Our experienced team ensures safe, proper setup for years of reliable performance.</p>",
+        "support_text": "Need Help? Contact Us",
+        "button_label": "Contact Fenceworks",
+        "button_link": "",
+        "section_width": "large",
+        "card_radius": 40,
+        "card_bg": "#12191d",
+        "heading_color": "#ffffff",
+        "body_color": "#ffffff",
+        "support_color": "#6b7280",
+        "button_border_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_vinyl_playsets_8JbgJq": {
+      "type": "section-ls-vinyl-playsets",
+      "blocks": {
+        "feature_rHReEC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_certified_2x_f4f7f7cb-058b-40fd-bb6a-36e34addce7c.webp",
+            "label": "High-Quality Swing Sets"
+          }
+        },
+        "feature_FpTHTc": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_tools_solid_2x_273a76c5-daae-4bb7-882e-fe3dc3b656a0.webp",
+            "label": "Delivered & Installed Across Chicagoland"
+          }
+        },
+        "feature_WwBQVj": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_shield_alt_solid_2x_83e83ef7-b7fa-4f44-8906-9f51980b1c82.webp",
+            "label": "Industry-Leading Warranty"
+          }
+        },
+        "feature_UYfLRy": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_cog_solid.webp",
+            "label": "Maintenance-Free Vinyl Construction"
+          }
+        },
+        "feature_9yjqtn": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_paint_brush_solid.webp",
+            "label": "Custom-Built, Amish-Made Craftsmanship"
+          }
+        },
+        "product_card_CeQUnG": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/proview_672.webp",
+            "title": "PROview® 672",
+            "ages": "Ages 3-12",
+            "price": "Starting at $3,999",
+            "link": ""
+          }
+        },
+        "product_card_B8fR9e": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/proview_672.webp",
+            "title": "PROview® 672",
+            "ages": "Ages 3-12",
+            "price": "Starting at $3,999",
+            "link": ""
+          }
+        },
+        "product_card_wRawHW": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/proview_672.webp",
+            "title": "PROview® 672",
+            "ages": "Ages 3-12",
+            "price": "Starting at $3,999",
+            "link": ""
+          }
+        },
+        "product_card_y4RNjt": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/proview_672.webp",
+            "title": "PROview® 672",
+            "ages": "Ages 3-12",
+            "price": "Starting at $3,999",
+            "link": ""
+          }
+        },
+        "product_card_6FCtzx": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/proview_672.webp",
+            "title": "PROview® 672",
+            "ages": "Ages 3-12",
+            "price": "Starting at $3,999",
+            "link": ""
+          }
+        },
+        "cta_card_LPaATx": {
+          "type": "cta_card",
+          "settings": {
+            "cta_text": "CLICK TO CHECK ALL VINYL PLAYSETS",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_rHReEC",
+        "feature_FpTHTc",
+        "feature_WwBQVj",
+        "feature_UYfLRy",
+        "feature_9yjqtn",
+        "product_card_CeQUnG",
+        "product_card_B8fR9e",
+        "product_card_wRawHW",
+        "product_card_y4RNjt",
+        "product_card_6FCtzx",
+        "cta_card_LPaATx"
+      ],
+      "name": "LS Vinyl Playsets",
+      "settings": {
+        "heading": "<p>VINYL PLAY SETS BUILT FOR GROWING FAMILIES</p>",
+        "description": "<p>Safe, durable, and virtually maintenance-free. Our vinyl play sets are designed with everything parents care about most.</p>",
+        "subheading": "BEST VINYL PLAYSETS IN CHICAGOLAND",
+        "layout": "grid",
+        "section_width": "large",
+        "grid_gap": 32,
+        "card_radius": 24,
+        "image_height": 300,
+        "contact_text": "Contact Fenceworks (for Delivery & Installation)",
+        "contact_email": "contact@theguyon41.com",
+        "section_bg": "#e9eced",
+        "heading_color": "#1c2d38",
+        "desc_color": "#3d4752",
+        "subheading_color": "#3d2b1f",
+        "feature_icon_color": "#f5811f",
+        "feature_text_color": "#1c2d38",
+        "card_bg": "#ffffff",
+        "card_title_color": "#1c2d38",
+        "card_meta_color": "#6b7280",
+        "price_color": "#f5811f",
+        "cta_border_color": "#f5811f",
+        "cta_text_color": "#f5811f",
+        "contact_bg": "#f3f4f6",
+        "contact_border_color": "#d1d5db",
+        "contact_text_color": "#3d4752",
+        "contact_email_color": "#f5811f",
+        "accent_border_color": "#3b82f6",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_more_options_h72pLx": {
+      "type": "section-ls-more-options",
+      "blocks": {
+        "design_center_card_vinyl": {
+          "type": "design_center_card",
+          "settings": {
+            "title": "The only custom vinyl swingsets in Chicagoland.",
+            "illustration": "shopify://shop_images/vinyl-illustration.webp",
+            "accent_color": "#e86f1a",
+            "button_label": "Share link to Vinyl Design Center",
+            "button_link": ""
+          }
+        },
+        "design_center_card_wood": {
+          "type": "design_center_card",
+          "settings": {
+            "title": "The best custom wood playsets in Chicagoland.",
+            "illustration": "shopify://shop_images/wood-illustration.webp",
+            "accent_color": "#1e3a5f",
+            "button_label": "Share link to Wood Design Center",
+            "button_link": ""
+          }
+        },
+        "material_card_mRTPfK": {
+          "type": "material_card",
+          "settings": {
+            "tag_label": "FEATURED",
+            "tag_show_pill": true,
+            "tag_bg": "#f5811f",
+            "tag_text_color": "#f4f7f8",
+            "title": "Vinyl Playsets",
+            "attr_1_label": "Maintenance",
+            "attr_1_value": "Zero — ever",
+            "attr_2_label": "Splinters",
+            "attr_2_value": "None",
+            "attr_3_label": "Painting / Staining",
+            "attr_3_value": "Not required",
+            "attr_4_label": "Weather Resistance",
+            "attr_4_value": "Excellent",
+            "attr_5_label": "Customization",
+            "attr_5_value": "Colors + add-ons",
+            "attr_6_label": "Warranty",
+            "attr_6_value": "Lifetime on structure",
+            "link_label": "Explore All Vinyl Playsets",
+            "link_url": ""
+          }
+        },
+        "material_card_G8nUPY": {
+          "type": "material_card",
+          "settings": {
+            "tag_label": "ALSO AVAILABLE",
+            "tag_show_pill": false,
+            "tag_bg": "#f5811f",
+            "tag_text_color": "#9ca7ae",
+            "title": "Wood playsets",
+            "attr_1_label": "Maintenance",
+            "attr_1_value": "1x within first year, then as needed",
+            "attr_2_label": "Splinters",
+            "attr_2_value": "Smooth cedar finish",
+            "attr_3_label": "Painting / Staining",
+            "attr_3_value": "Every few years",
+            "attr_4_label": "Weather Resistance",
+            "attr_4_value": "Cedar is naturally durable",
+            "attr_5_label": "Customization",
+            "attr_5_value": "Fully modular",
+            "attr_6_label": "Warranty",
+            "attr_6_value": "Limited Lifetime",
+            "link_label": "Explore All Wood Playsets",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "design_center_card_vinyl",
+        "design_center_card_wood",
+        "material_card_mRTPfK",
+        "material_card_G8nUPY"
+      ],
+      "name": "LS More Options",
+      "settings": {
+        "heading": "Need more options?",
+        "desktop_note": "This tool is only available on desktop devices.",
+        "section_width": "large",
+        "grid_gap": 16,
+        "card_radius": 16,
+        "section_bg": "#ffffff",
+        "section_heading_color": "#9ca7ae",
+        "card_bg": "#fef2e9",
+        "note_color": "#6b7280",
+        "button_bg_hover": "#fbcda5",
+        "button_border": "#111827",
+        "button_text": "#1c2d38",
+        "pagination_active": "#e86f1a",
+        "pagination_inactive": "#d1d5db",
+        "mg_eyebrow": "Material Guide",
+        "mg_heading": "Which material is right for your family?",
+        "mg_subtitle": "Both vinyl and wood playsets are built to last — the right choice depends on your priorities.",
+        "mg_note": "Not sure? Our team will help you decide — no pressure.",
+        "mg_eyebrow_color": "#f5811f",
+        "mg_heading_color": "#ac5a16",
+        "mg_text_color": "#526572",
+        "mg_card_bg": "#e9eced",
+        "mg_card_title_color": "#1c2d38",
+        "mg_value_color": "#1c2d38",
+        "mg_divider_color": "#c8ced2",
+        "mg_link_color": "#f5811f",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "section_bottom_margin": false
+      }
+    }
+  },
+  "order": [
+    "deed0c7d-a6b2-434e-8882-2a7cba84c982",
+    "section_ls_hero_banner_deqfb6",
+    "section_featured_in_nRMgyL",
+    "section_ls_usp_en3zBG",
+    "section_ls_image_banner_4LJrPY",
+    "section_ls_image_with_text_mUtz4T",
+    "section_stats_Rhy4FR",
+    "section_ls_category_cards_DJKeha",
+    "section_ls_reviews_MLNJjd",
+    "section_ls_fence_types_zqBztV",
+    "section_ls_media_cta_6kxicf",
+    "section_ls_product_type_cards_FL4jEW",
+    "section_ls_basketball_hoop_services_jTpdPr",
+    "section_ls_vinyl_playsets_8JbgJq",
+    "section_ls_more_options_h72pLx"
+  ]
+}

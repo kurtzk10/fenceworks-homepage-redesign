@@ -1,0 +1,2 @@
+import DeferredMedia from"deferred-media";class LazyVideo extends DeferredMedia{connectedCallback(){new IntersectionObserver((e=>{e.forEach((e=>{const t=e.target;if(e.isIntersecting)if(t.hasAttribute("loaded")){const e=t.querySelector("video");e&&e.play()}else{t.loadContent();const e=t.querySelector("video");e.play().catch((t=>{"NotAllowedError"===t.name&&e.remove()}))}else{if(!t.hasAttribute("loaded"))return;const e=t.querySelector("video");e&&e.pause()}}))})).observe(this)}}customElements.define("lazy-video",LazyVideo);
+//# sourceMappingURL=lazy-video.js.map
