@@ -698,45 +698,45 @@
         "section_bottom_margin": false
       }
     },
-    "section_ls_vinyl_playsets_8JbgJq": {
+    "section_ls_product_grid_HjH3f6": {
       "type": "section-ls-product-grid",
       "blocks": {
-        "feature_rHReEC": {
+        "feature_e4A933": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/line_awesome_certified_2x_f4f7f7cb-058b-40fd-bb6a-36e34addce7c.webp",
             "label": "High-Quality Swing Sets"
           }
         },
-        "feature_FpTHTc": {
+        "feature_nFCUzb": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/line_awesome_tools_solid_2x_273a76c5-daae-4bb7-882e-fe3dc3b656a0.webp",
             "label": "Delivered & Installed Across Chicagoland"
           }
         },
-        "feature_WwBQVj": {
+        "feature_Y3tyQY": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/line_awesome_shield_alt_solid_2x_83e83ef7-b7fa-4f44-8906-9f51980b1c82.webp",
             "label": "Industry-Leading Warranty"
           }
         },
-        "feature_UYfLRy": {
+        "feature_BAhced": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/line_awesome_cog_solid.webp",
             "label": "Maintenance-Free Vinyl Construction"
           }
         },
-        "feature_9yjqtn": {
+        "feature_GFcTCG": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/line_awesome_paint_brush_solid.webp",
             "label": "Custom-Built, Amish-Made Craftsmanship"
           }
         },
-        "product_card_CeQUnG": {
+        "product_card_VVEmCb": {
           "type": "product_card",
           "settings": {
             "image": "shopify://shop_images/proview_672.webp",
@@ -761,7 +761,7 @@
             "btn_2_primary": false
           }
         },
-        "product_card_B8fR9e": {
+        "product_card_bpMRiQ": {
           "type": "product_card",
           "settings": {
             "image": "shopify://shop_images/proview_672.webp",
@@ -786,7 +786,7 @@
             "btn_2_primary": false
           }
         },
-        "product_card_wRawHW": {
+        "product_card_ngiaL6": {
           "type": "product_card",
           "settings": {
             "image": "shopify://shop_images/proview_672.webp",
@@ -811,7 +811,7 @@
             "btn_2_primary": false
           }
         },
-        "product_card_y4RNjt": {
+        "product_card_MpQfmW": {
           "type": "product_card",
           "settings": {
             "image": "shopify://shop_images/proview_672.webp",
@@ -836,7 +836,7 @@
             "btn_2_primary": false
           }
         },
-        "product_card_6FCtzx": {
+        "product_card_exCqEL": {
           "type": "product_card",
           "settings": {
             "image": "shopify://shop_images/proview_672.webp",
@@ -851,7 +851,7 @@
             "feature_2_text": "3 - 10 years",
             "price_label": "Starting at",
             "price": "$3,999",
-            "rating": 4.1,
+            "rating": 5,
             "review_count": "28",
             "btn_1_label": "Get a Free Estimate",
             "btn_1_link": "",
@@ -861,7 +861,7 @@
             "btn_2_primary": false
           }
         },
-        "cta_card_LPaATx": {
+        "cta_card_twGAGH": {
           "type": "cta_card",
           "settings": {
             "cta_text": "CLICK TO CHECK ALL VINYL PLAYSETS",
@@ -870,30 +870,263 @@
         }
       },
       "block_order": [
-        "feature_rHReEC",
-        "feature_FpTHTc",
-        "feature_WwBQVj",
-        "feature_UYfLRy",
-        "feature_9yjqtn",
-        "product_card_CeQUnG",
-        "product_card_B8fR9e",
-        "product_card_wRawHW",
-        "product_card_y4RNjt",
-        "product_card_6FCtzx",
-        "cta_card_LPaATx"
+        "feature_e4A933",
+        "feature_nFCUzb",
+        "feature_Y3tyQY",
+        "feature_BAhced",
+        "feature_GFcTCG",
+        "product_card_VVEmCb",
+        "product_card_bpMRiQ",
+        "product_card_ngiaL6",
+        "product_card_MpQfmW",
+        "product_card_exCqEL",
+        "cta_card_twGAGH"
       ],
-      "name": "LS Vinyl Playsets",
+      "name": "LS Product Grid",
       "settings": {
         "heading": "<p>VINYL PLAY SETS BUILT FOR GROWING FAMILIES</p>",
         "description": "<p>Safe, durable, and virtually maintenance-free. Our vinyl play sets are designed with everything parents care about most.</p>",
         "subheading": "BEST VINYL PLAYSETS IN CHICAGOLAND",
         "layout": "grid",
         "section_width": "large",
-        "grid_gap": 32,
-        "card_radius": 24,
-        "image_height": 300,
+        "grid_gap": 24,
+        "card_radius": 16,
+        "section_radius_top": 24,
+        "section_radius_bottom": 0,
+        "image_height": 220,
+        "show_contact_footer": true,
         "contact_title": "Contact Fenceworks",
-        "contact_text": "Contact Fenceworks (for Delivery & Installation)",
+        "contact_text": "(for Delivery & Installation)",
+        "contact_email": "contact@theguyon41.com",
+        "section_bg": "#e9eced",
+        "heading_color": "#1c2d38",
+        "desc_color": "#3d4752",
+        "subheading_color": "#3d2b1f",
+        "feature_icon_color": "#f5811f",
+        "feature_text_color": "#1c2d38",
+        "card_bg": "#e9eced",
+        "card_title_color": "#1c2d38",
+        "card_meta_color": "#6b7280",
+        "price_color": "#f5811f",
+        "cta_border_color": "#f5811f",
+        "cta_text_color": "#f5811f",
+        "contact_border_color": "#9ca7ae",
+        "contact_text_color": "#212121",
+        "contact_email_color": "#f5811f",
+        "accent_border_color": "#3b82f6",
+        "price_label_color": "#526572",
+        "star_color": "#ffbf1a",
+        "star_empty_color": "#d1d5db",
+        "card_btn_primary_bg": "#f5811f",
+        "card_btn_primary_text": "#fefffe",
+        "card_btn_secondary_border": "#101a21",
+        "card_btn_secondary_text": "#1c2d38",
+        "pagination_active": "#f5811f",
+        "pagination_inactive": "#d1d5db",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_product_grid_Ddggr7": {
+      "type": "section-ls-product-grid",
+      "blocks": {
+        "feature_rBB9MC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_certified_2x_f4f7f7cb-058b-40fd-bb6a-36e34addce7c.webp",
+            "label": "Premium cedar & redwood construction"
+          }
+        },
+        "feature_cYj8WB": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_smile_beam_2x_ecd85bc7-b921-4b9f-9124-3078d05b3937.webp",
+            "label": "Chemical-free, naturally rot-resistant"
+          }
+        },
+        "feature_g6aMNi": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_shield_alt_solid_2x_83e83ef7-b7fa-4f44-8906-9f51980b1c82.webp",
+            "label": "Smooth-sanded, sealed for safety"
+          }
+        },
+        "feature_A6wQzV": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/heart_04_2x_124f7c6a-7043-44e8-bf48-8af7294dbf50.webp",
+            "label": "Built board-by-board on your property"
+          }
+        },
+        "feature_EAyWrE": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_tools_solid_2x_273a76c5-daae-4bb7-882e-fe3dc3b656a0.webp",
+            "label": "Delivered & Installed Across Chicagoland"
+          }
+        },
+        "product_card_eNtidg": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "product_card_e6hqQ8": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "product_card_EQRwdy": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "product_card_Jnnw6x": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "product_card_fGW7Bc": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "cta_card_Y3gCcn": {
+          "type": "cta_card",
+          "settings": {
+            "cta_text": "CLICK TO CHECK ALL WOOD PLAYSETS",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_rBB9MC",
+        "feature_cYj8WB",
+        "feature_g6aMNi",
+        "feature_A6wQzV",
+        "feature_EAyWrE",
+        "product_card_eNtidg",
+        "product_card_e6hqQ8",
+        "product_card_EQRwdy",
+        "product_card_Jnnw6x",
+        "product_card_fGW7Bc",
+        "cta_card_Y3gCcn"
+      ],
+      "name": "LS Product Grid",
+      "settings": {
+        "heading": "<p>Wooden Play Sets Natural & Timeless</p>",
+        "description": "<p>Premium wood construction that blends naturally with your backyard. Built with the same quality standards and attention to detail families have trusted for decades.<br/><br/></p>",
+        "subheading": "Best wood playsets in chicagoland",
+        "layout": "grid",
+        "section_width": "large",
+        "grid_gap": 24,
+        "card_radius": 24,
+        "section_radius_top": 0,
+        "section_radius_bottom": 24,
+        "image_height": 220,
+        "show_contact_footer": false,
+        "contact_title": "Contact Fenceworks",
+        "contact_text": "(for Delivery & Installation)",
         "contact_email": "contact@theguyon41.com",
         "section_bg": "#e9eced",
         "heading_color": "#1c2d38",
@@ -908,7 +1141,7 @@
         "cta_border_color": "#f5811f",
         "cta_text_color": "#f5811f",
         "contact_border_color": "#9ca7ae",
-        "contact_text_color": "#3d4752",
+        "contact_text_color": "#212121",
         "contact_email_color": "#f5811f",
         "accent_border_color": "#3b82f6",
         "price_label_color": "#526572",
@@ -1012,6 +1245,8 @@
         "section_width": "large",
         "grid_gap": 16,
         "card_radius": 16,
+        "section_radius_top": 0,
+        "section_radius_bottom": 0,
         "section_bg": "#ffffff",
         "section_heading_color": "#9ca7ae",
         "card_bg": "#fef2e9",
@@ -1035,6 +1270,236 @@
         "mg_link_color": "#f5811f",
         "padding_top": 56,
         "padding_bottom": 56,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_product_grid_gyW483": {
+      "type": "section-ls-product-grid",
+      "blocks": {
+        "feature_U6gGCy": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_certified_2x_f4f7f7cb-058b-40fd-bb6a-36e34addce7c.webp",
+            "label": "Premium, weather-resistant materials"
+          }
+        },
+        "feature_H3KLGU": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_tools_solid_2x_273a76c5-daae-4bb7-882e-fe3dc3b656a0.webp",
+            "label": "Professionally installed across Chicagoland"
+          }
+        },
+        "feature_pFLhhm": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/puzzle-piece-solid.webp",
+            "label": "Compatible with new & existing playsets"
+          }
+        },
+        "feature_kLMQtJ": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/line_awesome_shield_alt_solid_2x_83e83ef7-b7fa-4f44-8906-9f51980b1c82.webp",
+            "label": "Built for safety and durability"
+          }
+        },
+        "feature_az6Eat": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/cloud-sun-solid.webp",
+            "label": "Designed to expand imagination"
+          }
+        },
+        "product_card_N89BwV": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "product_card_9URjRW": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "product_card_PDgtWj": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "product_card_rCMaJC": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "product_card_T8AqLt": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/categories_desktop_cat_vinyl_1x_c53bc603-3778-4099-8ad6-50e550a76fa6.webp",
+            "pill_enabled": true,
+            "pill_text": "VINYL",
+            "pill_text_color": "#1c2d38",
+            "pill_border_color": "#1c2d38",
+            "title": "PROview® 672",
+            "feature_1_icon": "shopify://shop_images/expand-arrows-alt-solid.png",
+            "feature_1_text": "20' x 15'",
+            "feature_2_icon": "shopify://shop_images/user-friends-solid.png",
+            "feature_2_text": "3 - 10 years",
+            "price_label": "Starting at",
+            "price": "$3,999",
+            "rating": 5,
+            "review_count": "28",
+            "btn_1_label": "Get a Free Estimate",
+            "btn_1_link": "",
+            "btn_1_primary": true,
+            "btn_2_label": "View Details",
+            "btn_2_link": "",
+            "btn_2_primary": false
+          }
+        },
+        "cta_card_hYm6zc": {
+          "type": "cta_card",
+          "settings": {
+            "cta_text": "CLICK TO CHECK ALL WOOD PLAYSETS",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_U6gGCy",
+        "feature_H3KLGU",
+        "feature_pFLhhm",
+        "feature_kLMQtJ",
+        "feature_az6Eat",
+        "product_card_N89BwV",
+        "product_card_9URjRW",
+        "product_card_PDgtWj",
+        "product_card_rCMaJC",
+        "product_card_T8AqLt",
+        "cta_card_hYm6zc"
+      ],
+      "name": "LS Product Grid",
+      "settings": {
+        "heading": "<p>Want to make playsets funnier?</p>",
+        "description": "<p>Enhance your backyard experience with add-ons built for safety, creativity, and all-day play. Our accessories are professionally installed and designed to grow with your family.<br/><br/></p>",
+        "subheading": "Best wood playsets in chicagoland",
+        "layout": "grid",
+        "section_width": "large",
+        "grid_gap": 24,
+        "card_radius": 16,
+        "section_radius_top": 0,
+        "section_radius_bottom": 0,
+        "image_height": 220,
+        "show_contact_footer": false,
+        "contact_title": "Contact Fenceworks",
+        "contact_text": "(for Delivery & Installation)",
+        "contact_email": "contact@theguyon41.com",
+        "section_bg": "#e9eced",
+        "heading_color": "#1c2d38",
+        "desc_color": "#3d4752",
+        "subheading_color": "#3d2b1f",
+        "feature_icon_color": "#f5811f",
+        "feature_text_color": "#1c2d38",
+        "card_bg": "#ffffff",
+        "card_title_color": "#1c2d38",
+        "card_meta_color": "#6b7280",
+        "price_color": "#f5811f",
+        "cta_border_color": "#f5811f",
+        "cta_text_color": "#f5811f",
+        "contact_border_color": "#9ca7ae",
+        "contact_text_color": "#212121",
+        "contact_email_color": "#f5811f",
+        "accent_border_color": "#3b82f6",
+        "price_label_color": "#526572",
+        "star_color": "#ffbf1a",
+        "star_empty_color": "#d1d5db",
+        "card_btn_primary_bg": "#f5811f",
+        "card_btn_primary_text": "#fefffe",
+        "card_btn_secondary_border": "#101a21",
+        "card_btn_secondary_text": "#1c2d38",
+        "pagination_active": "#f5811f",
+        "pagination_inactive": "#d1d5db",
+        "padding_top": 60,
+        "padding_bottom": 60,
         "section_bottom_margin": false
       }
     },
@@ -1130,6 +1595,79 @@
         "padding_bottom": 56,
         "section_bottom_margin": false
       }
+    },
+    "section_ls_trust_stats_RxK4Mc": {
+      "type": "section-ls-trust-stats",
+      "blocks": {
+        "reason_pj3W8a": {
+          "type": "reason",
+          "settings": {
+            "title": "Real People. Always",
+            "body": "<p>No call centers. No AI Chatbots. No automated systems. When you contact Fenceworks, you speak directly with a knowledgeable member of our family-run team who understands your project from start to finish.</p>"
+          }
+        },
+        "reason_DqYW4t": {
+          "type": "reason",
+          "settings": {
+            "title": "Custom-Built. Never Cookie-Cutter.",
+            "body": "<p>We don't believe in one-size-fits-all solutions. Every project is tailored to your space, your goals, and how your family uses your backyard.</p>"
+          }
+        },
+        "reason_Ka9HmL": {
+          "type": "reason",
+          "settings": {
+            "title": "No Credit Card Fees. Ever.",
+            "body": "<p>Pay how you prefer and keep the rewards.<br>We never add surprise surcharges.</p>"
+          }
+        },
+        "reason_T6yfQz": {
+          "type": "reason",
+          "settings": {
+            "title": "Exact Appointment Times",
+            "body": "<p>For your consultation, we provide a specific arrival time — not a vague window. We respect your schedule and show up when we say we will.</p>"
+          }
+        },
+        "reason_Vz2NbR": {
+          "type": "reason",
+          "settings": {
+            "title": "On-Site Consultations — No Guesswork",
+            "body": "<p>We don't rely on satellite images or rough estimates.<br>Every proposal is created in person to ensure accuracy, safety, and the right solution for your property.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "reason_pj3W8a",
+        "reason_DqYW4t",
+        "reason_Ka9HmL",
+        "reason_T6yfQz",
+        "reason_Vz2NbR"
+      ],
+      "name": "LS Trust Stats",
+      "settings": {
+        "eyebrow": "Built on Trust",
+        "heading_line_1": "Why Homeowners",
+        "heading_line_2": "Choose Fenceworks",
+        "body": "<p>When you work with a family business rooted in this community, you get more than a product — you gain a long-term backyard partner.</p>",
+        "button_label": "Get a Free Quote",
+        "button_link": "",
+        "section_width": "large",
+        "section_radius_top": 0,
+        "section_radius_bottom": 0,
+        "section_bg": "#f7f9fa",
+        "eyebrow_color": "#f5811f",
+        "heading_color": "#1c2d38",
+        "body_color": "#526572",
+        "btn_bg": "#f5811f",
+        "btn_text_color": "#f4f7f8",
+        "btn_bg_hover": "#ac5a16",
+        "icon_bg_color": "#fef2e9",
+        "icon_color": "#f5811f",
+        "reason_title_color": "#ac5a16",
+        "reason_body_color": "#526572",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "section_bottom_margin": false
+      }
     }
   },
   "order": [
@@ -1146,8 +1684,11 @@
     "section_ls_media_cta_6kxicf",
     "section_ls_product_type_cards_FL4jEW",
     "section_ls_basketball_hoop_services_jTpdPr",
-    "section_ls_vinyl_playsets_8JbgJq",
+    "section_ls_product_grid_HjH3f6",
+    "section_ls_product_grid_Ddggr7",
     "section_ls_more_options_h72pLx",
+    "section_ls_product_grid_gyW483",
+    "section_ls_trust_stats_RxK4Mc",
     "section_ls_faq_HYJmhW"
   ]
 }

@@ -6,6 +6,17 @@
   background-color: var(--lsmo-section-bg);
   padding-top: var(--space-top);
   padding-bottom: var(--space-bottom);
+  /*
+    Top + bottom corner radii are set independently from the schema, so
+    the section can be flush at one end (e.g. against an adjacent
+    section) and rounded at the other. `overflow: clip` lets the radius
+    visually clip overflowing content without breaking sticky/fixed
+    positioning the way `overflow: hidden` would.
+  */
+  border-radius:
+    var(--lsmo-section-radius-top, 0) var(--lsmo-section-radius-top, 0)
+    var(--lsmo-section-radius-bottom, 0) var(--lsmo-section-radius-bottom, 0);
+  overflow: clip;
 }
 
 .lsmo__section-heading {
@@ -88,7 +99,7 @@ media-carousel-wrapper.lsmo__grid:not(.swiper-wrapper) {
 .lsmo__illus img {
   width: 100%;
   max-width: 100%;
-  margin-top: -2rem;
+  margin-top: -1rem;
   height: auto;
   object-fit: contain;
 }

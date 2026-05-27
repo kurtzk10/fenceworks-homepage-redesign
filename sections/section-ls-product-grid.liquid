@@ -68,6 +68,8 @@
     --lspg-pagination-inactive: {{ section.settings.pagination_inactive }};
     --lspg-grid-gap: {{ section.settings.grid_gap }}px;
     --lspg-card-radius: {{ section.settings.card_radius }}px;
+    --lspg-section-radius-top: {{ section.settings.section_radius_top }}px;
+    --lspg-section-radius-bottom: {{ section.settings.section_radius_bottom }}px;
     --lspg-image-height: {{ section.settings.image_height }}px;
   "
 >
@@ -393,6 +395,26 @@
       "max": 32,
       "step": 2,
       "default": 16
+    },
+    {
+      "type": "range",
+      "id": "section_radius_top",
+      "label": "Section top corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_radius_bottom",
+      "label": "Section bottom corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 0
     },
     {
       "type": "range",

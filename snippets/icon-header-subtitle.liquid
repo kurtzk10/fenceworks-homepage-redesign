@@ -1,0 +1,52 @@
+{%- comment -%}
+  Icon + header + subtitle list item.
+
+  Reusable building block: a circular icon on the left, a heading and
+  body on the right. Section-agnostic — the parent section is
+  responsible for loading the CSS that styles these classes (e.g.
+  `section-ls-trust-stats.css`).
+
+  Parameters
+  ----------
+  icon : image (optional)
+    Image_picker source for the icon. Rendered inside a circular
+    background. Pass blank to omit the icon container.
+  title : string (required)
+    Heading text. HTML-escaped on render.
+  body : string (optional, may contain HTML)
+    Body / subtitle. Pass a richtext setting directly — do NOT escape.
+  block_id : string (optional)
+    Block id used to build a `block--{id}` class so the theme editor
+    can scroll-to-block on this item.
+  shopify_attributes : string (optional)
+    Raw output of `block.shopify_attributes` for theme editor block
+    selection / highlighting.
+{%- endcomment -%}
+
+<li
+  class="icon-header-subtitle{% if block_id != blank %} block--{{ block_id }}{% endif %}"
+  {{ shopify_attributes }}
+>
+  {%- if icon != blank -%}
+    <span class="icon-header-subtitle__icon-wrap" aria-hidden="true">
+      {% render 'image',
+        image: icon,
+        additional_classes: 'icon-header-subtitle__icon',
+        image_ratio: 'natural',
+        image_srcset_widths: '32, 64, 96',
+        image_sizes: '32px',
+        loading: 'lazy',
+        alt_string: title | escape
+      %}
+    </span>
+  {%- endif -%}
+
+  <div class="icon-header-subtitle__text">
+    {%- if title != blank -%}
+      <h3 class="icon-header-subtitle__title">{{ title | escape }}</h3>
+    {%- endif -%}
+    {%- if body != blank -%}
+      <div class="icon-header-subtitle__body">{{ body }}</div>
+    {%- endif -%}
+  </div>
+</li>

@@ -1,0 +1,320 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-trust-stats.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-trust-stats.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-trust-stats.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-trust-stats
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-trust-stats"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --lsts-section-bg: {{ section.settings.section_bg }};
+    --lsts-section-radius-top: {{ section.settings.section_radius_top }}px;
+    --lsts-section-radius-bottom: {{ section.settings.section_radius_bottom }}px;
+    --lsts-eyebrow-color: {{ section.settings.eyebrow_color }};
+    --lsts-heading-color: {{ section.settings.heading_color }};
+    --lsts-body-color: {{ section.settings.body_color }};
+    --lsts-btn-bg: {{ section.settings.btn_bg }};
+    --lsts-btn-text: {{ section.settings.btn_text_color }};
+    --lsts-btn-bg-hover: {{ section.settings.btn_bg_hover }};
+    --lsts-icon-bg: {{ section.settings.icon_bg_color }};
+    --lsts-icon-color: {{ section.settings.icon_color }};
+    --lsts-reason-title-color: {{ section.settings.reason_title_color }};
+    --lsts-reason-body-color: {{ section.settings.reason_body_color }};
+  "
+>
+  <div class="container container--{{ section.settings.section_width }}">
+    <div class="lsts__grid">
+
+      <aside class="lsts__header">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="lsts__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.heading_line_1 != blank or section.settings.heading_line_2 != blank -%}
+          <h2 class="lsts__heading">
+            {%- if section.settings.heading_line_1 != blank -%}
+              <span class="lsts__heading-line">{{ section.settings.heading_line_1 | escape }}</span>
+            {%- endif -%}
+            {%- if section.settings.heading_line_2 != blank -%}
+              <span class="lsts__heading-line">{{ section.settings.heading_line_2 | escape }}</span>
+            {%- endif -%}
+          </h2>
+        {%- endif -%}
+
+        {%- if section.settings.body != blank -%}
+          <div class="lsts__body">{{ section.settings.body }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.button_label != blank -%}
+          {%- assign btn_href = section.settings.button_link | default: '#' -%}
+          <a href="{{ btn_href }}" class="lsts__btn">
+            <span>{{ section.settings.button_label | escape }}</span>
+            <svg class="lsts__btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        {%- endif -%}
+      </aside>
+
+      <ul class="lsts__list">
+        {%- if section.blocks.size > 0 -%}
+          {%- for block in section.blocks -%}
+            {% render 'icon-header-subtitle',
+              icon: block.settings.icon,
+              title: block.settings.title,
+              body: block.settings.body,
+              block_id: block.id,
+              shopify_attributes: block.shopify_attributes
+            %}
+          {%- endfor -%}
+        {%- else -%}
+          <li class="placeholder-noblocks">
+            {{ 'homepage.onboarding.no_content' | t }}
+          </li>
+        {%- endif -%}
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS Trust Stats",
+  "class": "js-section__ls-trust-stats",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Built on Trust"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_1",
+      "label": "Heading (line 1)",
+      "default": "Why Homeowners"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_2",
+      "label": "Heading (line 2)",
+      "default": "Choose Fenceworks"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>When you work with a family business rooted in this community, you get more than a product — you gain a long-term backyard partner.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Get a Free Quote"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "section_radius_top",
+      "label": "Section top radius",
+      "unit": "px",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_radius_bottom",
+      "label": "Section bottom radius",
+      "unit": "px",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#f7f9fa"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow color",
+      "default": "#f5811f"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Body text color",
+      "default": "#526572"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Button background",
+      "default": "#f5811f"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button text",
+      "default": "#f4f7f8"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_hover",
+      "label": "Button background (hover)",
+      "default": "#ac5a16"
+    },
+    {
+      "type": "color",
+      "id": "icon_bg_color",
+      "label": "Icon background",
+      "default": "#fef2e9"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#f5811f"
+    },
+    {
+      "type": "color",
+      "id": "reason_title_color",
+      "label": "Reason title color",
+      "default": "#ac5a16"
+    },
+    {
+      "type": "color",
+      "id": "reason_body_color",
+      "label": "Reason body color",
+      "default": "#526572"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 56
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "reason",
+      "name": "Reason",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Real People. Always"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body",
+          "default": "<p>No call centers. No AI Chatbots. No automated systems. When you contact Fenceworks, you speak directly with a knowledgeable member of our family-run team who understands your project from start to finish.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Trust Stats",
+      "blocks": [
+        { "type": "reason", "settings": { "title": "Real People. Always",                  "body": "<p>No call centers. No AI Chatbots. No automated systems. When you contact Fenceworks, you speak directly with a knowledgeable member of our family-run team who understands your project from start to finish.</p>" } },
+        { "type": "reason", "settings": { "title": "Custom-Built. Never Cookie-Cutter.",   "body": "<p>We don't believe in one-size-fits-all solutions. Every project is tailored to your space, your goals, and how your family uses your backyard.</p>" } },
+        { "type": "reason", "settings": { "title": "No Credit Card Fees. Ever.",           "body": "<p>Pay how you prefer and keep the rewards.<br>We never add surprise surcharges.</p>" } },
+        { "type": "reason", "settings": { "title": "Exact Appointment Times",              "body": "<p>For your consultation, we provide a specific arrival time — not a vague window. We respect your schedule and show up when we say we will.</p>" } },
+        { "type": "reason", "settings": { "title": "On-Site Consultations — No Guesswork", "body": "<p>We don't rely on satellite images or rough estimates.<br>Every proposal is created in person to ensure accuracy, safety, and the right solution for your property.</p>" } }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

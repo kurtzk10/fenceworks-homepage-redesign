@@ -1,0 +1,228 @@
+/* ============================================================
+   Section: LS Trust Stats
+   Two-column: sticky header (left) + list of icon reasons (right).
+   ============================================================ */
+
+.section--ls-trust-stats {
+  background-color: var(--lsts-section-bg);
+  padding-top: var(--space-top);
+  padding-bottom: var(--space-bottom);
+  border-radius:
+    var(--lsts-section-radius-top, 0) var(--lsts-section-radius-top, 0)
+    var(--lsts-section-radius-bottom, 0) var(--lsts-section-radius-bottom, 0);
+  overflow: clip;
+}
+
+/* ── Layout grid ───────────────────────────────────────────── */
+
+.lsts__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .lsts__grid {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 64px;
+  }
+}
+
+/* ── Header column ─────────────────────────────────────────── */
+
+.lsts__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .lsts__header {
+    flex: 0 0 clamp(280px, 36%, 460px);
+    /*
+      Sticky only on desktop, offset by the site's sticky header.
+      --header-height = header's height; --header-is-sticky = 0 when
+      the site header isn't sticky.
+    */
+    position: sticky;
+    top: calc(var(--header-height, 0px) * var(--header-is-sticky, 0) + 24px);
+  }
+}
+
+.lsts__eyebrow {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lsts-eyebrow-color, #f5811f);
+}
+
+.lsts__heading {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: clamp(32px, calc(23.2px + 2.35vw), 57px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--lsts-heading-color, #1c2d38);
+}
+
+@media screen and (min-width: 768px) {
+  .lsts__heading {
+    line-height: 1;
+  }
+}
+
+.lsts__heading-line {
+  display: block;
+}
+
+.lsts__body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lsts-body-color, #526572);
+}
+
+.lsts__body > *:first-child {
+  margin-top: 0;
+}
+
+.lsts__body > *:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Header button (solid / primary style) ─────────────────── */
+
+.lsts__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 50px;
+  padding: 8px 24px;
+  border-radius: 999px;
+  border: 0;
+  background-color: var(--lsts-btn-bg, #f5811f);
+  color: var(--lsts-btn-text, #f4f7f8);
+  font-size: clamp(13px, 3.6vw, 16px);
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.lsts__btn:hover,
+.lsts__btn:focus-visible {
+  background-color: var(--lsts-btn-bg-hover, #ac5a16);
+  color: var(--lsts-btn-text, #f4f7f8);
+  opacity: 1;
+}
+
+.lsts__btn-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ── Reasons list ──────────────────────────────────────────── */
+
+.lsts__list {
+  flex: 1 1 auto;
+  min-width: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/*
+  Styles for the `icon-header-subtitle` snippet. Kept here (rather
+  than scoped under `.section--ls-trust-stats`) so the snippet renders
+  with sensible defaults wherever its CSS gets loaded. Section-level
+  theming is driven by the `--lsts-*` custom properties declared on
+  the section root.
+*/
+
+.icon-header-subtitle {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Icon */
+
+.icon-header-subtitle__icon-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background-color: var(--lsts-icon-bg, #fef2e9);
+  color: var(--lsts-icon-color, #f5811f);
+}
+
+.icon-header-subtitle__icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Text */
+
+.icon-header-subtitle__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.icon-header-subtitle__title {
+  margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: clamp(18px, calc(15.2px + 0.78vw), 22px);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--lsts-reason-title-color, #ac5a16);
+  overflow-wrap: anywhere;
+}
+
+.icon-header-subtitle__body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lsts-reason-body-color, #526572);
+}
+
+@media screen and (min-width: 768px) {
+  .icon-header-subtitle__body {
+    font-size: 18px;
+  }
+}
+
+.icon-header-subtitle__body > *:first-child {
+  margin-top: 0;
+}
+
+.icon-header-subtitle__body > *:last-child {
+  margin-bottom: 0;
+}
