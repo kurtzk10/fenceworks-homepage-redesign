@@ -115,11 +115,23 @@
 
 /* ── Grid ───────────────────────────────────────────────────── */
 
-.lsvp__grid {
+/*
+  Desktop grid layout — only applies when Swiper has NOT taken over
+  the wrapper. On mobile (<tab breakpoint) Swiper adds .swiper-wrapper
+  and flips this to a flex carousel track; without :not(.swiper-wrapper)
+  our grid display would beat Swiper's and break the slide layout.
+*/
+media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--lsvp-grid-gap);
-  align-items: start;
+  /*
+    stretch so every grid item fills the row's height — that's what
+    pulls the CTA card up to match the product cards. Products already
+    have `.lsvp__card { height: 100% }`; the CTA card gets the same
+    treatment below.
+  */
+  align-items: stretch;
   margin-bottom: 48px;
 }
 
@@ -135,23 +147,20 @@
   flex-direction: column;
   text-decoration: none;
   height: 100%;
-  background-color: var(--lsvp-card-bg);
+  background-color: var(--lsvp-card-bg, #fefffe);
   border-radius: var(--lsvp-card-radius);
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.lsvp__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
 }
 
 .lsvp__card-img-wrap {
   position: relative;
-  height: var(--lsvp-image-height);
+  width: 100%;
+  /* Figma uses a 1:1 image area. Falls back to the legacy fixed height
+     for sections still relying on the --lsvp-image-height variable. */
+  aspect-ratio: 1 / 1;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   background-color: #f9fafb;
   overflow: hidden;
@@ -159,11 +168,9 @@
 
 .lsvp__card-img,
 .lsvp__card-img img {
-  width: auto;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: bottom center;
+  object-fit: cover;
   display: block;
 }
 
@@ -182,41 +189,229 @@
 }
 
 .lsvp__card-body {
-  padding: 20px 24px 24px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: "Host Grotesk", sans-serif;
+  color: var(--lsvp-card-title-color, #1c2d38);
+}
+
+/* ── Pill ───────────────────────────────────────────────────── */
+
+.lsvp__card-pill-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding-bottom: 8px;
+}
+
+.lsvp__card-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid var(--pill-border, #1c2d38);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--pill-text, #1c2d38);
+  white-space: nowrap;
+}
+
+/* ── Name + features ──────────────────────────────────────── */
+
+.lsvp__card-name-spec {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
 .lsvp__card-title {
-  font-size: 18px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--lsvp-card-title-color);
   margin: 0;
-  letter-spacing: 0.03em;
-  line-height: 1.2;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--lsvp-card-title-color, #1c2d38);
 }
 
-.lsvp__card-ages {
-  font-size: 14px;
-  color: var(--lsvp-card-meta-color);
+.lsvp__card-features {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.lsvp__card-feature {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lsvp-card-title-color, #1c2d38);
+}
+
+.lsvp__card-feature-icon,
+.lsvp__card-feature-icon img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── Price + rating row ───────────────────────────────────── */
+
+.lsvp__card-price-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
 }
 
 .lsvp__card-price {
-  font-size: 16px;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.lsvp__card-price-label {
+  font-weight: 400;
+  color: var(--lsvp-price-label-color, #526572);
+}
+
+.lsvp__card-price-value {
   font-weight: 700;
-  color: var(--lsvp-price-color);
-  margin: 8px 0 0;
+  font-size: 18px;
+  color: var(--lsvp-price-color, #f5811f);
+}
+
+/* ── Stars ─────────────────────────────────────────────────── */
+
+.lsvp__card-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.lsvp__card-stars {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  /* The base is invisible — it only reserves layout space so the
+     filled overlay can be clipped to the rating percentage. */
+}
+
+.lsvp__card-stars-base {
+  /* Empty/under-filled stars stay visible (muted) so the "x out of 5"
+     scale is communicated. Filled stars are overlaid in --lsvp-star-color. */
+  color: var(--lsvp-star-empty-color, #d1d5db);
+}
+
+.lsvp__card-stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--lsvp-star-color, #ffbf1a);
+  width: var(--rating-percent, 0%);
+}
+
+.lsvp__card-review-count {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lsvp-price-label-color, #526572);
+}
+
+/* ── Button stack ──────────────────────────────────────────── */
+
+.lsvp__card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 20px;
+  margin-top: auto;
+}
+
+.lsvp__card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 50px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.lsvp__card-btn--primary {
+  background-color: var(--lsvp-card-btn-primary-bg, #f5811f);
+  color: var(--lsvp-card-btn-primary-text, #fefffe);
+  border: 1px solid var(--lsvp-card-btn-primary-bg, #f5811f);
+  font-weight: 400;
+}
+
+.lsvp__card-btn--secondary {
+  background-color: transparent;
+  color: var(--lsvp-card-btn-secondary-text, #1c2d38);
+  border: 1px solid var(--lsvp-card-btn-secondary-border, #101a21);
+  font-weight: 700;
+}
+
+.lsvp__card-btn:hover,
+.lsvp__card-btn:focus-visible {
+  opacity: 0.9;
+}
+
+.lsvp__card-btn-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 /* ── CTA Card ───────────────────────────────────────────────── */
 
 .lsvp__cta-wrap {
-  align-self: stretch;
+  /*
+    Mirror .lsvp__card-wrap (product wrap) exactly — a flex column that
+    fills its grid row via the grid's `align-items: stretch`. The CTA
+    card inside then uses `height: 100%` to fill the wrap, identical to
+    how .lsvp__card fills its wrap.
+
+    `container-type: inline-size` makes this element a query container,
+    so the CTA card below can use `100cqi` to reference the wrap's
+    width — which (because product card images are aspect-ratio 1/1)
+    equals the product card's image-area height. That lets the CTA
+    track product-card height dynamically without a hardcoded number.
+  */
   display: flex;
+  flex-direction: column;
+  container-type: inline-size;
 }
 
 .lsvp__cta-card {
@@ -224,7 +419,25 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 200px;
+  /*
+    `height: 100%` matches the product card's height: 100% — both fill
+    their stretched wrap, so they share the row height exactly.
+    `min-height` is a floor for the cases where percentage chains don't
+    resolve (mobile Swiper slide-equal-height, CTA alone in a grid row).
+    Bumped to 580px to cover the new card design (1:1 image + tall body).
+  */
+  height: 100%;
+  /*
+    `100cqi` = the wrap's inline (horizontal) size = the product card
+    image-area height (because product images are aspect-ratio 1/1).
+    The `+ 290px` is the product card body height: 20px top padding
+    + ~30px pill + ~31px title + 6px gap + ~20px features + 16px top
+    pad + ~25px price/rating + 20px top pad + 50px btn + 8px gap +
+    50px btn + 20px bottom padding ≈ 290px.
+    Bump the constant if your product cards render taller than the CTA
+    (e.g. titles wrapping to two lines): try 320px or 340px.
+  */
+  min-height: calc(100cqi + 290px);
   padding: 24px;
   border: 2px solid var(--lsvp-cta-border);
   border-radius: var(--lsvp-card-radius);
@@ -244,30 +457,53 @@
 
 /* ── Contact footer ─────────────────────────────────────────── */
 
+/*
+  Contact footer — sits below the product grid. margin-top owns the
+  spacing from the product cards; horizontal margins inset the footer
+  so the cards visibly stick out past its edges per the Figma.
+*/
 .lsvp__contact {
-  padding: 24px 32px;
-  background-color: var(--lsvp-contact-bg);
-  border: 1px dashed var(--lsvp-contact-border);
-  border-radius: var(--lsvp-card-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 12px 24px;
+  margin: 5% 7.5% 0;
+  background-color: transparent;
+  border: 2px dashed var(--lsvp-contact-border, #9ca7ae);
+  border-radius: 16px;
+  font-family: "Host Grotesk", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lsvp-contact-text-color, #212121);
+}
+
+.lsvp__contact-title {
+  margin: 0;
+  font-weight: 700;
+  color: inherit;
 }
 
 .lsvp__contact-text {
-  font-size: 15px;
-  color: var(--lsvp-contact-text-color);
-  margin: 0 0 4px;
-  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+  color: inherit;
 }
 
 .lsvp__contact-email {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--lsvp-contact-email-color);
+  display: inline-block;
+  font-weight: 400;
+  color: var(--lsvp-contact-email-color, #f5811f);
   text-decoration: none;
+  transition: opacity 0.15s ease;
 }
 
-.lsvp__contact-email:hover {
-  text-decoration: underline;
+.lsvp__contact-email:hover,
+.lsvp__contact-email:focus-visible {
+  opacity: 0.8;
+  text-decoration: none;
 }
 
 /* ============================================================
@@ -367,8 +603,13 @@ media-carousel-wrapper.lsvp__carousel-grid:not(.swiper-wrapper) {
   gap: 16px;
 }
 
-media-carousel-slide.lsvp__card-wrap,
-media-carousel-slide.lsvp__cta-wrap {
+/*
+  Slide widths for the sidebar layout's carousel only — it shows
+  multiple ~280px cards across. The grid layout's mobile carousel
+  keeps Swiper's default slidesPerView:1 so cards span full width.
+*/
+.section--layout-sidebar_carousel media-carousel-slide.lsvp__card-wrap,
+.section--layout-sidebar_carousel media-carousel-slide.lsvp__cta-wrap {
   flex: 0 0 auto;
   width: 280px;
   min-width: 200px;
@@ -379,12 +620,23 @@ media-carousel-slide.lsvp__cta-wrap {
   min-height: 180px;
 }
 
-.lsvp__pagination {
-  margin-top: 24px;
+/*
+  Pagination — mirrors the section-ls-more-options pattern. Active and
+  inactive bullet colors come from the section CSS variables, so the
+  merchant can tune them in the theme editor.
+*/
+.section--ls-vinyl-playsets .media-carousel__pagination {
+  position: relative;
+  margin-top: 0;
 }
 
-.section--layout-sidebar_carousel .swiper-pagination-bullet-active {
-  background: var(--lsvp-cta-text-color) !important;
+.section--ls-vinyl-playsets .media-carousel__pagination .swiper-pagination-bullet-active {
+  background: var(--lsvp-pagination-active);
+}
+
+.section--ls-vinyl-playsets .media-carousel__pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background: var(--lsvp-pagination-inactive);
+  opacity: 1;
 }
 
 /* ============================================================
@@ -392,7 +644,7 @@ media-carousel-slide.lsvp__cta-wrap {
    ============================================================ */
 
 @media screen and (max-width: 989px) {
-  .lsvp__grid {
+  media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -419,9 +671,13 @@ media-carousel-slide.lsvp__cta-wrap {
 }
 
 @media screen and (max-width: 768px) {
-  .lsvp__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  /*
+    Below the tab breakpoint Swiper is active and turns the wrapper
+    into a flex track, so we don't need to override grid-template-columns
+    here. We do still want the bottom-margin so the contact footer
+    doesn't crowd the carousel/pagination.
+  */
+  media-carousel-wrapper.lsvp__grid {
     margin-bottom: 32px;
   }
 
@@ -448,16 +704,17 @@ media-carousel-slide.lsvp__cta-wrap {
   }
 
   .lsvp__cta-card {
-    min-height: 140px;
     font-size: 14px;
   }
 
   .lsvp__contact {
-    padding: 20px 24px;
+    padding: 12px 20px;
+    margin: 3% 0 0;
+    font-size: 16px;
   }
 
-  media-carousel-slide.lsvp__card-wrap,
-  media-carousel-slide.lsvp__cta-wrap {
+  .section--layout-sidebar_carousel media-carousel-slide.lsvp__card-wrap,
+  .section--layout-sidebar_carousel media-carousel-slide.lsvp__cta-wrap {
     width: 260px;
     min-width: 240px;
   }
@@ -586,13 +843,13 @@ h3.lsvp__subheading {
 h4.lsvp__card-title {
     color: var(--txt-dark, #1C2D38);
 
-/* Desktop/H3 */
+/* Desktop/H4 (Figma product card title) */
     font-family: "Cabinet Grotesk";
-    font-size: 32px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 800;
-    line-height: 140%; /* 44.8px */
-    letter-spacing: -0.64px;
+    line-height: 140%; /* 30.8px */
+    letter-spacing: 0;
     text-transform: uppercase;
 }
 
@@ -615,8 +872,6 @@ ul.lsvp__features.lsvp__features--grid {
     justify-content: center;
     padding: 20px 0 30px;
 }
-
-.lsvp__features--grid .lsvp__feature {}
 
 h3.lsvp__subheading {
     font-size: 32px;

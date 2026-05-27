@@ -1,0 +1,161 @@
+{%- comment -%}
+  Vinyl Playsets product card (used by section-ls-vinyl-playsets).
+
+  Renders the full card: image, material pill, title, two features,
+  price + rating row, two action buttons.
+
+  Parameters
+  ----------
+  block : object (required)
+    A `product_card` block. The snippet reads from block.settings.
+  image_sizes : string (optional)
+    The `sizes` attribute passed to the image render snippet.
+{%- endcomment -%}
+
+{%- assign rating = block.settings.rating | default: 0 -%}
+{%- assign rating_percent = rating | times: 20 -%}
+{%- assign btn_1_href = block.settings.btn_1_link | default: '#' -%}
+{%- assign btn_2_href = block.settings.btn_2_link | default: '#' -%}
+
+<div class="lsvp__card">
+  <div class="lsvp__card-img-wrap">
+    {%- if block.settings.image != blank -%}
+      {% render 'image',
+        image: block.settings.image,
+        additional_classes: 'lsvp__card-img',
+        image_ratio: 'natural',
+        image_srcset_widths: '300, 480, 600, 800',
+        image_sizes: image_sizes,
+        loading: 'lazy',
+        alt_string: block.settings.title | escape
+      %}
+    {%- else -%}
+      <div class="lsvp__card-img-placeholder">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+    {%- endif -%}
+  </div>
+
+  <div class="lsvp__card-body">
+    {%- if block.settings.pill_enabled and block.settings.pill_text != blank -%}
+      <div
+        class="lsvp__card-pill-row"
+      >
+        <span
+          class="lsvp__card-pill"
+          style="--pill-text: {{ block.settings.pill_text_color }}; --pill-border: {{ block.settings.pill_border_color }};"
+        >{{ block.settings.pill_text | escape }}</span>
+      </div>
+    {%- endif -%}
+
+    {%- if block.settings.title != blank or block.settings.feature_1_text != blank or block.settings.feature_2_text != blank -%}
+      <div class="lsvp__card-name-spec">
+        {%- if block.settings.title != blank -%}
+          <h4 class="lsvp__card-title">{{ block.settings.title | escape }}</h4>
+        {%- endif -%}
+
+        {%- if block.settings.feature_1_text != blank or block.settings.feature_1_icon != blank or block.settings.feature_2_text != blank or block.settings.feature_2_icon != blank -%}
+          <ul class="lsvp__card-features">
+            {%- if block.settings.feature_1_text != blank or block.settings.feature_1_icon != blank -%}
+              <li class="lsvp__card-feature">
+                {%- if block.settings.feature_1_icon != blank -%}
+                  {% render 'image',
+                    image: block.settings.feature_1_icon,
+                    additional_classes: 'lsvp__card-feature-icon',
+                    image_ratio: 'natural',
+                    image_srcset_widths: '16, 32',
+                    image_sizes: '16px',
+                    loading: 'lazy',
+                    alt_string: block.settings.feature_1_text | escape
+                  %}
+                {%- endif -%}
+                {%- if block.settings.feature_1_text != blank -%}
+                  <span>{{ block.settings.feature_1_text | escape }}</span>
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+            {%- if block.settings.feature_2_text != blank or block.settings.feature_2_icon != blank -%}
+              <li class="lsvp__card-feature">
+                {%- if block.settings.feature_2_icon != blank -%}
+                  {% render 'image',
+                    image: block.settings.feature_2_icon,
+                    additional_classes: 'lsvp__card-feature-icon',
+                    image_ratio: 'natural',
+                    image_srcset_widths: '16, 32',
+                    image_sizes: '16px',
+                    loading: 'lazy',
+                    alt_string: block.settings.feature_2_text | escape
+                  %}
+                {%- endif -%}
+                {%- if block.settings.feature_2_text != blank -%}
+                  <span>{{ block.settings.feature_2_text | escape }}</span>
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+          </ul>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if block.settings.price != blank or block.settings.review_count != blank or rating > 0 -%}
+      <div class="lsvp__card-price-rating">
+        {%- if block.settings.price_label != blank or block.settings.price != blank -%}
+          <p class="lsvp__card-price">
+            {%- if block.settings.price_label != blank -%}
+              <span class="lsvp__card-price-label">{{ block.settings.price_label | escape }}</span>
+            {%- endif -%}
+            {%- if block.settings.price != blank -%}
+              <span class="lsvp__card-price-value">{{ block.settings.price | escape }}</span>
+            {%- endif -%}
+          </p>
+        {%- endif -%}
+
+        {%- if rating > 0 or block.settings.review_count != blank -%}
+          <div class="lsvp__card-rating">
+            <span
+              class="lsvp__card-stars"
+              role="img"
+              aria-label="{{ rating }} out of 5 stars"
+              style="--rating-percent: {{ rating_percent }}%;"
+            >
+              <span class="lsvp__card-stars-base" aria-hidden="true">★★★★★</span>
+              <span class="lsvp__card-stars-fill" aria-hidden="true">★★★★★</span>
+            </span>
+            {%- if block.settings.review_count != blank -%}
+              <span class="lsvp__card-review-count">{{ block.settings.review_count | escape }}</span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if block.settings.btn_1_label != blank or block.settings.btn_2_label != blank -%}
+      <div class="lsvp__card-buttons">
+        {%- if block.settings.btn_1_label != blank -%}
+          <a
+            href="{{ btn_1_href }}"
+            class="lsvp__card-btn lsvp__card-btn--{% if block.settings.btn_1_primary %}primary{% else %}secondary{% endif %}"
+          >
+            <span>{{ block.settings.btn_1_label | escape }}</span>
+            {%- if block.settings.btn_1_primary -%}
+              <svg class="lsvp__card-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M3 12h17M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {%- endif -%}
+          </a>
+        {%- endif -%}
+        {%- if block.settings.btn_2_label != blank -%}
+          <a
+            href="{{ btn_2_href }}"
+            class="lsvp__card-btn lsvp__card-btn--{% if block.settings.btn_2_primary %}primary{% else %}secondary{% endif %}"
+          >
+            <span>{{ block.settings.btn_2_label | escape }}</span>
+            {%- if block.settings.btn_2_primary -%}
+              <svg class="lsvp__card-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M3 12h17M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {%- endif -%}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>

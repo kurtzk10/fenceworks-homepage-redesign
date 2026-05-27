@@ -450,12 +450,12 @@ media-carousel-wrapper.lsptc__grid {
   }
 
 
-span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+.section--ls-product-type-cards span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: #F5811F;
 }
 
-media-carousel-pagination.media-carousel__pagination.swiper-pagination {
-    margin-top: 30px!Important;
+.section--ls-product-type-cards media-carousel-pagination.media-carousel__pagination.swiper-pagination {
+    margin-top: 30px;
 }
   }
 

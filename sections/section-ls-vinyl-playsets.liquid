@@ -12,7 +12,7 @@
   {{ 'section-ls-vinyl-playsets.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
-{% if section.settings.layout == 'sidebar_carousel' %}
+{% if section.index > 2 %}
   <link
     rel="stylesheet"
     href="{{ 'component-media-carousel.css' | asset_url }}"
@@ -22,8 +22,10 @@
   <noscript>
     {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
   </noscript>
-  <script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+{% else %}
+  {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
 {% endif %}
+<script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
 
 <section
   class="
@@ -49,13 +51,21 @@
     --lsvp-card-title-color: {{ section.settings.card_title_color }};
     --lsvp-card-meta-color: {{ section.settings.card_meta_color }};
     --lsvp-price-color: {{ section.settings.price_color }};
+    --lsvp-price-label-color: {{ section.settings.price_label_color }};
+    --lsvp-star-color: {{ section.settings.star_color }};
+    --lsvp-star-empty-color: {{ section.settings.star_empty_color }};
+    --lsvp-card-btn-primary-bg: {{ section.settings.card_btn_primary_bg }};
+    --lsvp-card-btn-primary-text: {{ section.settings.card_btn_primary_text }};
+    --lsvp-card-btn-secondary-border: {{ section.settings.card_btn_secondary_border }};
+    --lsvp-card-btn-secondary-text: {{ section.settings.card_btn_secondary_text }};
     --lsvp-cta-border: {{ section.settings.cta_border_color }};
     --lsvp-cta-text-color: {{ section.settings.cta_text_color }};
-    --lsvp-contact-bg: {{ section.settings.contact_bg }};
     --lsvp-contact-border: {{ section.settings.contact_border_color }};
     --lsvp-contact-text-color: {{ section.settings.contact_text_color }};
     --lsvp-contact-email-color: {{ section.settings.contact_email_color }};
     --lsvp-accent-border: {{ section.settings.accent_border_color }};
+    --lsvp-pagination-active: {{ section.settings.pagination_active }};
+    --lsvp-pagination-inactive: {{ section.settings.pagination_inactive }};
     --lsvp-grid-gap: {{ section.settings.grid_gap }}px;
     --lsvp-card-radius: {{ section.settings.card_radius }}px;
     --lsvp-image-height: {{ section.settings.image_height }}px;
@@ -110,8 +120,11 @@
                 <h3 class="lsvp__subheading">{{ section.settings.subheading }}</h3>
               {%- endif -%}
 
-              {%- if section.settings.contact_text != blank or section.settings.contact_email != blank -%}
+              {%- if section.settings.contact_title != blank or section.settings.contact_text != blank or section.settings.contact_email != blank -%}
                 <div class="lsvp__contact">
+                  {%- if section.settings.contact_title != blank -%}
+                    <p class="lsvp__contact-title">{{ section.settings.contact_title | escape }}</p>
+                  {%- endif -%}
                   {%- if section.settings.contact_text != blank -%}
                     <p class="lsvp__contact-text">{{ section.settings.contact_text | escape }}</p>
                   {%- endif -%}
@@ -160,35 +173,10 @@
                 {%- for block in section.blocks -%}
                   {%- if block.type == 'product_card' -%}
                     <media-carousel-slide class="lsvp__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
-                      {%- assign card_link = block.settings.link | default: '#' -%}
-                      <a href="{{ card_link }}" class="lsvp__card">
-                        <div class="lsvp__card-img-wrap">
-                          {%- if block.settings.image != blank -%}
-                            {% render 'image',
-                              image: block.settings.image,
-                              additional_classes: 'lsvp__card-img',
-                              image_ratio: 'natural',
-                              image_srcset_widths: '300, 480, 600',
-                              image_sizes: '(min-width: 990px) 33vw, 80vw',
-                              loading: 'lazy',
-                              alt_string: block.settings.title | escape
-                            %}
-                          {%- else -%}
-                            <div class="lsvp__card-img-placeholder">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                          {%- endif -%}
-                        </div>
-                        <div class="lsvp__card-body">
-                          {%- if block.settings.title != blank -%}
-                            <h4 class="lsvp__card-title">{{ block.settings.title | escape }}</h4>
-                          {%- endif -%}
-                          {%- if block.settings.ages != blank -%}
-                            <p class="lsvp__card-ages">{{ block.settings.ages | escape }}</p>
-                          {%- endif -%}
-                          {%- if block.settings.price != blank -%}
-                            <p class="lsvp__card-price">{{ block.settings.price | escape }}</p>
-                          {%- endif -%}
-                        </div>
-                      </a>
+                      {% render 'lsvp-product-card',
+                        block: block,
+                        image_sizes: '(min-width: 990px) 33vw, 80vw'
+                      %}
                     </media-carousel-slide>
                   {%- elsif block.type == 'cta_card' -%}
                     <media-carousel-slide class="lsvp__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
@@ -268,54 +256,53 @@
         {%- endfor -%}
 
         {%- if has_product_blocks -%}
-          <div class="lsvp__grid">
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'product_card' -%}
-                <div class="lsvp__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
-                  {%- assign card_link = block.settings.link | default: '#' -%}
-                  <a href="{{ card_link }}" class="lsvp__card">
-                    <div class="lsvp__card-img-wrap">
-                      {%- if block.settings.image != blank -%}
-                        {% render 'image',
-                          image: block.settings.image,
-                          additional_classes: 'lsvp__card-img',
-                          image_ratio: 'natural',
-                          image_srcset_widths: '300, 480, 600',
-                          image_sizes: '(min-width: 990px) 33vw, 50vw',
-                          loading: 'lazy',
-                          alt_string: block.settings.title | escape
-                        %}
-                      {%- else -%}
-                        <div class="lsvp__card-img-placeholder">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                      {%- endif -%}
-                    </div>
-                    <div class="lsvp__card-body">
-                      {%- if block.settings.title != blank -%}
-                        <h4 class="lsvp__card-title">{{ block.settings.title | escape }}</h4>
-                      {%- endif -%}
-                      {%- if block.settings.ages != blank -%}
-                        <p class="lsvp__card-ages">{{ block.settings.ages | escape }}</p>
-                      {%- endif -%}
-                      {%- if block.settings.price != blank -%}
-                        <p class="lsvp__card-price">{{ block.settings.price | escape }}</p>
-                      {%- endif -%}
-                    </div>
-                  </a>
-                </div>
-              {%- elsif block.type == 'cta_card' -%}
-                <div class="lsvp__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
-                  {%- assign cta_link = block.settings.link | default: '#' -%}
-                  <a href="{{ cta_link }}" class="lsvp__cta-card">
-                    {{ block.settings.cta_text | escape }}
-                  </a>
-                </div>
-              {%- endif -%}
-            {%- endfor -%}
-          </div>
+          {%- assign grid_product_count = section.blocks | where: 'type', 'product_card' | size -%}
+          {%- assign grid_cta_count = section.blocks | where: 'type', 'cta_card' | size -%}
+          {%- assign grid_carousel_total = grid_product_count | plus: grid_cta_count -%}
+          <media-carousel
+            data-speed="500"
+            data-loop="false"
+            data-pagination="true"
+            data-space-between="16"
+            data-navigation="false"
+            data-breakpoint-max="tab"
+          >
+            <media-carousel-slider>
+              <media-carousel-wrapper class="lsvp__grid">
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'product_card' -%}
+                    <media-carousel-slide class="lsvp__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                      {% render 'lsvp-product-card',
+                        block: block,
+                        image_sizes: '(min-width: 990px) 33vw, 90vw'
+                      %}
+                    </media-carousel-slide>
+                  {%- elsif block.type == 'cta_card' -%}
+                    <media-carousel-slide class="lsvp__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                      {%- assign cta_link = block.settings.link | default: '#' -%}
+                      <a href="{{ cta_link }}" class="lsvp__cta-card">
+                        {{ block.settings.cta_text | escape }}
+                      </a>
+                    </media-carousel-slide>
+                  {%- endif -%}
+                {%- endfor -%}
+              </media-carousel-wrapper>
+            </media-carousel-slider>
+
+            {%- if grid_carousel_total > 1 -%}
+              <media-carousel-pagination
+                class="media-carousel__pagination swiper-pagination js-carousel-pagination lsvp__pagination"
+                hidden
+              ></media-carousel-pagination>
+            {%- endif -%}
+          </media-carousel>
         {%- endif -%}
 
-        {%- if section.settings.contact_text != blank or section.settings.contact_email != blank -%}
+        {%- if section.settings.contact_title != blank or section.settings.contact_text != blank or section.settings.contact_email != blank -%}
           <div class="lsvp__contact">
+            {%- if section.settings.contact_title != blank -%}
+              <p class="lsvp__contact-title">{{ section.settings.contact_title | escape }}</p>
+            {%- endif -%}
             {%- if section.settings.contact_text != blank -%}
               <p class="lsvp__contact-text">{{ section.settings.contact_text | escape }}</p>
             {%- endif -%}
@@ -419,9 +406,15 @@
     },
     {
       "type": "text",
+      "id": "contact_title",
+      "label": "Contact title (bold)",
+      "default": "Contact Fenceworks"
+    },
+    {
+      "type": "text",
       "id": "contact_text",
-      "label": "Contact text",
-      "default": "Contact Fenceworks (for Delivery & Installation)"
+      "label": "Contact subtitle",
+      "default": "(for Delivery & Installation)"
     },
     {
       "type": "text",
@@ -507,21 +500,15 @@
     },
     {
       "type": "color",
-      "id": "contact_bg",
-      "label": "Contact box background",
-      "default": "#F3F4F6"
-    },
-    {
-      "type": "color",
       "id": "contact_border_color",
       "label": "Contact box border",
-      "default": "#D1D5DB"
+      "default": "#9CA7AE"
     },
     {
       "type": "color",
       "id": "contact_text_color",
       "label": "Contact text",
-      "default": "#3D4752"
+      "default": "#212121"
     },
     {
       "type": "color",
@@ -534,6 +521,60 @@
       "id": "accent_border_color",
       "label": "Accent border (sidebar layout)",
       "default": "#3B82F6"
+    },
+    {
+      "type": "color",
+      "id": "price_label_color",
+      "label": "Price label color",
+      "default": "#526572"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star rating color (filled)",
+      "default": "#FFBF1A"
+    },
+    {
+      "type": "color",
+      "id": "star_empty_color",
+      "label": "Star rating color (empty)",
+      "default": "#D1D5DB"
+    },
+    {
+      "type": "color",
+      "id": "card_btn_primary_bg",
+      "label": "Card button — primary fill",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "card_btn_primary_text",
+      "label": "Card button — primary text",
+      "default": "#FEFFFE"
+    },
+    {
+      "type": "color",
+      "id": "card_btn_secondary_border",
+      "label": "Card button — secondary border",
+      "default": "#101A21"
+    },
+    {
+      "type": "color",
+      "id": "card_btn_secondary_text",
+      "label": "Card button — secondary text",
+      "default": "#1C2D38"
+    },
+    {
+      "type": "color",
+      "id": "pagination_active",
+      "label": "Carousel dot (active)",
+      "default": "#F5811F"
+    },
+    {
+      "type": "color",
+      "id": "pagination_inactive",
+      "label": "Carousel dot (inactive)",
+      "default": "#D1D5DB"
     },
     {
       "type": "header",
@@ -589,32 +630,160 @@
       "name": "Product card",
       "settings": [
         {
+          "type": "header",
+          "content": "Image"
+        },
+        {
           "type": "image_picker",
           "id": "image",
           "label": "Product image"
         },
         {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Adventure Castle"
+          "type": "header",
+          "content": "Material pill"
+        },
+        {
+          "type": "checkbox",
+          "id": "pill_enabled",
+          "label": "Show material pill",
+          "default": true
         },
         {
           "type": "text",
-          "id": "ages",
-          "label": "Age range",
-          "default": "Ages 3-12"
+          "id": "pill_text",
+          "label": "Material text",
+          "default": "VINYL"
+        },
+        {
+          "type": "color",
+          "id": "pill_text_color",
+          "label": "Pill text color",
+          "default": "#1C2D38"
+        },
+        {
+          "type": "color",
+          "id": "pill_border_color",
+          "label": "Pill border color",
+          "default": "#1C2D38"
+        },
+        {
+          "type": "header",
+          "content": "Title"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "PROview® 672"
+        },
+        {
+          "type": "header",
+          "content": "Feature 1 (e.g. size)"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_1_icon",
+          "label": "Icon (SVG or PNG)"
+        },
+        {
+          "type": "text",
+          "id": "feature_1_text",
+          "label": "Text",
+          "default": "20' x 15'"
+        },
+        {
+          "type": "header",
+          "content": "Feature 2 (e.g. age group)"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_2_icon",
+          "label": "Icon (SVG or PNG)"
+        },
+        {
+          "type": "text",
+          "id": "feature_2_text",
+          "label": "Text",
+          "default": "3 - 10 years"
+        },
+        {
+          "type": "header",
+          "content": "Price"
+        },
+        {
+          "type": "text",
+          "id": "price_label",
+          "label": "Price label",
+          "default": "Starting at"
         },
         {
           "type": "text",
           "id": "price",
-          "label": "Price text",
-          "default": "Starting at $3,999"
+          "label": "Price",
+          "default": "$3,999"
+        },
+        {
+          "type": "header",
+          "content": "Rating"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating (out of 5)",
+          "min": 0,
+          "max": 5,
+          "step": 0.1,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "review_count",
+          "label": "Review count",
+          "default": "28"
+        },
+        {
+          "type": "header",
+          "content": "Button 1"
+        },
+        {
+          "type": "text",
+          "id": "btn_1_label",
+          "label": "Button label",
+          "default": "Get a Free Estimate"
         },
         {
           "type": "url",
-          "id": "link",
-          "label": "Link"
+          "id": "btn_1_link",
+          "label": "Button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "btn_1_primary",
+          "label": "Primary style (orange fill)",
+          "info": "When off, button uses transparent fill with dark border + dark text.",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Button 2"
+        },
+        {
+          "type": "text",
+          "id": "btn_2_label",
+          "label": "Button label",
+          "default": "View Details"
+        },
+        {
+          "type": "url",
+          "id": "btn_2_link",
+          "label": "Button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "btn_2_primary",
+          "label": "Primary style (orange fill)",
+          "info": "When off, button uses transparent fill with dark border + dark text.",
+          "default": false
         }
       ]
     },
@@ -646,11 +815,11 @@
         { "type": "feature", "settings": { "label": "Industry-Leading Warranty" } },
         { "type": "feature", "settings": { "label": "Maintenance-Free Vinyl Construction" } },
         { "type": "feature", "settings": { "label": "Custom-Built, Amish-Made Craftsmanship" } },
-        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
-        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
-        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
-        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
-        { "type": "product_card", "settings": { "title": "Adventure Castle", "ages": "Ages 3-12", "price": "Starting at $3,999" } },
+        { "type": "product_card", "settings": { "pill_text": "VINYL", "title": "PROview® 672",  "feature_1_text": "20' x 15'", "feature_2_text": "3 - 10 years", "price_label": "Starting at", "price": "$3,999", "rating": 5, "review_count": "28", "btn_1_label": "Get a Free Estimate", "btn_1_primary": true,  "btn_2_label": "View Details", "btn_2_primary": false } },
+        { "type": "product_card", "settings": { "pill_text": "VINYL", "title": "PROview® 758",  "feature_1_text": "22' x 18'", "feature_2_text": "3 - 12 years", "price_label": "Starting at", "price": "$4,799", "rating": 5, "review_count": "19", "btn_1_label": "Get a Free Estimate", "btn_1_primary": true,  "btn_2_label": "View Details", "btn_2_primary": false } },
+        { "type": "product_card", "settings": { "pill_text": "VINYL", "title": "PROview® 850",  "feature_1_text": "25' x 18'", "feature_2_text": "3 - 12 years", "price_label": "Starting at", "price": "$5,499", "rating": 4.5, "review_count": "12", "btn_1_label": "Get a Free Estimate", "btn_1_primary": true,  "btn_2_label": "View Details", "btn_2_primary": false } },
+        { "type": "product_card", "settings": { "pill_text": "VINYL", "title": "PROview® 920",  "feature_1_text": "28' x 20'", "feature_2_text": "3 - 14 years", "price_label": "Starting at", "price": "$6,299", "rating": 5, "review_count": "8",  "btn_1_label": "Get a Free Estimate", "btn_1_primary": true,  "btn_2_label": "View Details", "btn_2_primary": false } },
+        { "type": "product_card", "settings": { "pill_text": "VINYL", "title": "PROview® 1100", "feature_1_text": "32' x 22'", "feature_2_text": "5 - 14 years", "price_label": "Starting at", "price": "$7,499", "rating": 5, "review_count": "5",  "btn_1_label": "Get a Free Estimate", "btn_1_primary": true,  "btn_2_label": "View Details", "btn_2_primary": false } },
         { "type": "cta_card", "settings": { "cta_text": "CLICK TO CHECK ALL VINYL PLAYSETS" } }
       ]
     }
