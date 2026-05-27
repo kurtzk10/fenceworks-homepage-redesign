@@ -1,15 +1,15 @@
 {% if section.index > 2 or section.location == 'footer' %}
   <link
     rel="stylesheet"
-    href="{{ 'section-ls-vinyl-playsets.css' | asset_url }}"
+    href="{{ 'section-ls-product-grid.css' | asset_url }}"
     media="print"
     onload="this.media='all'"
   >
   <noscript>
-    {{ 'section-ls-vinyl-playsets.css' | asset_url | stylesheet_tag }}
+    {{ 'section-ls-product-grid.css' | asset_url | stylesheet_tag }}
   </noscript>
 {% else %}
-  {{ 'section-ls-vinyl-playsets.css' | asset_url | stylesheet_tag }}
+  {{ 'section-ls-product-grid.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
 {% if section.index > 2 %}
@@ -31,71 +31,71 @@
   class="
     section
     section--padded
-    section--ls-vinyl-playsets
+    section--ls-product-grid
     section--{{ section.id }}
     section--layout-{{ section.settings.layout }}
     {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
   "
   data-section-id="{{ section.id }}"
-  data-section-type="ls-vinyl-playsets"
+  data-section-type="ls-product-grid"
   style="
     --space-top: {{ section.settings.padding_top }}px;
     --space-bottom: {{ section.settings.padding_bottom }}px;
-    --lsvp-section-bg: {{ section.settings.section_bg }};
-    --lsvp-heading-color: {{ section.settings.heading_color }};
-    --lsvp-desc-color: {{ section.settings.desc_color }};
-    --lsvp-subheading-color: {{ section.settings.subheading_color }};
-    --lsvp-feature-icon-color: {{ section.settings.feature_icon_color }};
-    --lsvp-feature-text-color: {{ section.settings.feature_text_color }};
-    --lsvp-card-bg: {{ section.settings.card_bg }};
-    --lsvp-card-title-color: {{ section.settings.card_title_color }};
-    --lsvp-card-meta-color: {{ section.settings.card_meta_color }};
-    --lsvp-price-color: {{ section.settings.price_color }};
-    --lsvp-price-label-color: {{ section.settings.price_label_color }};
-    --lsvp-star-color: {{ section.settings.star_color }};
-    --lsvp-star-empty-color: {{ section.settings.star_empty_color }};
-    --lsvp-card-btn-primary-bg: {{ section.settings.card_btn_primary_bg }};
-    --lsvp-card-btn-primary-text: {{ section.settings.card_btn_primary_text }};
-    --lsvp-card-btn-secondary-border: {{ section.settings.card_btn_secondary_border }};
-    --lsvp-card-btn-secondary-text: {{ section.settings.card_btn_secondary_text }};
-    --lsvp-cta-border: {{ section.settings.cta_border_color }};
-    --lsvp-cta-text-color: {{ section.settings.cta_text_color }};
-    --lsvp-contact-border: {{ section.settings.contact_border_color }};
-    --lsvp-contact-text-color: {{ section.settings.contact_text_color }};
-    --lsvp-contact-email-color: {{ section.settings.contact_email_color }};
-    --lsvp-accent-border: {{ section.settings.accent_border_color }};
-    --lsvp-pagination-active: {{ section.settings.pagination_active }};
-    --lsvp-pagination-inactive: {{ section.settings.pagination_inactive }};
-    --lsvp-grid-gap: {{ section.settings.grid_gap }}px;
-    --lsvp-card-radius: {{ section.settings.card_radius }}px;
-    --lsvp-image-height: {{ section.settings.image_height }}px;
+    --lspg-section-bg: {{ section.settings.section_bg }};
+    --lspg-heading-color: {{ section.settings.heading_color }};
+    --lspg-desc-color: {{ section.settings.desc_color }};
+    --lspg-subheading-color: {{ section.settings.subheading_color }};
+    --lspg-feature-icon-color: {{ section.settings.feature_icon_color }};
+    --lspg-feature-text-color: {{ section.settings.feature_text_color }};
+    --lspg-card-bg: {{ section.settings.card_bg }};
+    --lspg-card-title-color: {{ section.settings.card_title_color }};
+    --lspg-card-meta-color: {{ section.settings.card_meta_color }};
+    --lspg-price-color: {{ section.settings.price_color }};
+    --lspg-price-label-color: {{ section.settings.price_label_color }};
+    --lspg-star-color: {{ section.settings.star_color }};
+    --lspg-star-empty-color: {{ section.settings.star_empty_color }};
+    --lspg-card-btn-primary-bg: {{ section.settings.card_btn_primary_bg }};
+    --lspg-card-btn-primary-text: {{ section.settings.card_btn_primary_text }};
+    --lspg-card-btn-secondary-border: {{ section.settings.card_btn_secondary_border }};
+    --lspg-card-btn-secondary-text: {{ section.settings.card_btn_secondary_text }};
+    --lspg-cta-border: {{ section.settings.cta_border_color }};
+    --lspg-cta-text-color: {{ section.settings.cta_text_color }};
+    --lspg-contact-border: {{ section.settings.contact_border_color }};
+    --lspg-contact-text-color: {{ section.settings.contact_text_color }};
+    --lspg-contact-email-color: {{ section.settings.contact_email_color }};
+    --lspg-accent-border: {{ section.settings.accent_border_color }};
+    --lspg-pagination-active: {{ section.settings.pagination_active }};
+    --lspg-pagination-inactive: {{ section.settings.pagination_inactive }};
+    --lspg-grid-gap: {{ section.settings.grid_gap }}px;
+    --lspg-card-radius: {{ section.settings.card_radius }}px;
+    --lspg-image-height: {{ section.settings.image_height }}px;
   "
 >
-  <div class="lsvp__outer">
+  <div class="lspg__outer">
     {% if section.settings.layout == 'sidebar_carousel' %}
-      <div class="lsvp__sidebar-layout">
-        <div class="lsvp__sidebar">
+      <div class="lspg__sidebar-layout">
+        <div class="lspg__sidebar">
           <div class="container container--{{ section.settings.section_width }}">
-            <div class="lsvp__sidebar-inner">
+            <div class="lspg__sidebar-inner">
               {%- if section.settings.heading != blank or section.settings.description != blank -%}
-                <div class="lsvp__header">
+                <div class="lspg__header">
                   {%- if section.settings.heading != blank -%}
-                    <h2 class="lsvp__heading">{{ section.settings.heading }}</h2>
+                    <h2 class="lspg__heading">{{ section.settings.heading }}</h2>
                   {%- endif -%}
                   {%- if section.settings.description != blank -%}
-                    <div class="lsvp__desc rte">{{ section.settings.description }}</div>
+                    <div class="lspg__desc rte">{{ section.settings.description }}</div>
                   {%- endif -%}
                 
                 {%- assign feature_blocks = section.blocks | where: 'type', 'feature' -%}
               {%- if feature_blocks.size > 0 -%}
-                <ul class="lsvp__features">
+                <ul class="lspg__features">
                   {%- for block in feature_blocks -%}
-                    <li class="lsvp__feature block--{{ block.id }}" {{ block.shopify_attributes }}>
-                      <div class="lsvp__feature-icon-wrap">
+                    <li class="lspg__feature block--{{ block.id }}" {{ block.shopify_attributes }}>
+                      <div class="lspg__feature-icon-wrap">
                         {%- if block.settings.icon != blank -%}
                           {% render 'image',
                             image: block.settings.icon,
-                            additional_classes: 'lsvp__feature-icon',
+                            additional_classes: 'lspg__feature-icon',
                             image_ratio: 'natural',
                             image_srcset_widths: '40, 80',
                             image_sizes: '40px',
@@ -103,10 +103,10 @@
                             alt_string: block.settings.label | escape
                           %}
                         {%- else -%}
-                          <span class="lsvp__feature-icon-placeholder" aria-hidden="true"></span>
+                          <span class="lspg__feature-icon-placeholder" aria-hidden="true"></span>
                         {%- endif -%}
                       </div>
-                      <span class="lsvp__feature-label">{{ block.settings.label | escape }}</span>
+                      <span class="lspg__feature-label">{{ block.settings.label | escape }}</span>
                     </li>
                   {%- endfor -%}
                 </ul>
@@ -117,32 +117,34 @@
               
 
               {%- if section.settings.subheading != blank -%}
-                <h3 class="lsvp__subheading">{{ section.settings.subheading }}</h3>
+                <h3 class="lspg__subheading">{{ section.settings.subheading }}</h3>
               {%- endif -%}
 
-              {%- if section.settings.contact_title != blank or section.settings.contact_text != blank or section.settings.contact_email != blank -%}
-                <div class="lsvp__contact">
-                  {%- if section.settings.contact_title != blank -%}
-                    <p class="lsvp__contact-title">{{ section.settings.contact_title | escape }}</p>
-                  {%- endif -%}
-                  {%- if section.settings.contact_text != blank -%}
-                    <p class="lsvp__contact-text">{{ section.settings.contact_text | escape }}</p>
-                  {%- endif -%}
-                  {%- if section.settings.contact_email != blank -%}
-                    <a href="mailto:{{ section.settings.contact_email | escape }}" class="lsvp__contact-email">
-                      {{ section.settings.contact_email | escape }}
-                    </a>
-                  {%- endif -%}
-                </div>
+              {%- if section.settings.show_contact_footer -%}
+                {%- if section.settings.contact_title != blank or section.settings.contact_text != blank or section.settings.contact_email != blank -%}
+                  <div class="lspg__contact">
+                    {%- if section.settings.contact_title != blank -%}
+                      <p class="lspg__contact-title">{{ section.settings.contact_title | escape }}</p>
+                    {%- endif -%}
+                    {%- if section.settings.contact_text != blank -%}
+                      <p class="lspg__contact-text">{{ section.settings.contact_text | escape }}</p>
+                    {%- endif -%}
+                    {%- if section.settings.contact_email != blank -%}
+                      <a href="mailto:{{ section.settings.contact_email | escape }}" class="lspg__contact-email">
+                        {{ section.settings.contact_email | escape }}
+                      </a>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
               {%- endif -%}
 
               {%- assign product_blocks = section.blocks | where: 'type', 'product_card' -%}
               {%- assign cta_blocks = section.blocks | where: 'type', 'cta_card' -%}
               {%- assign total_slides = product_blocks.size | plus: cta_blocks.size -%}
               {%- if total_slides > 1 -%}
-                <div class="lsvp__carousel-dots" aria-hidden="true">
+                <div class="lspg__carousel-dots" aria-hidden="true">
                   {%- for i in (1..total_slides) -%}
-                    <span class="lsvp__carousel-dot{% if forloop.first %} lsvp__carousel-dot--active{% endif %}"></span>
+                    <span class="lspg__carousel-dot{% if forloop.first %} lspg__carousel-dot--active{% endif %}"></span>
                   {%- endfor -%}
                 </div>
               {%- endif -%}
@@ -159,7 +161,7 @@
         {%- endfor -%}
 
         {%- if has_carousel_blocks -%}
-        <div class="lsvp__carousel-area">
+        <div class="lspg__carousel-area">
           <media-carousel
             data-speed="500"
             data-loop="false"
@@ -169,19 +171,19 @@
             data-breakpoint-max="tab"
           >
             <media-carousel-slider>
-              <media-carousel-wrapper class="lsvp__carousel-grid">
+              <media-carousel-wrapper class="lspg__carousel-grid">
                 {%- for block in section.blocks -%}
                   {%- if block.type == 'product_card' -%}
-                    <media-carousel-slide class="lsvp__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
-                      {% render 'lsvp-product-card',
+                    <media-carousel-slide class="lspg__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                      {% render 'lspg-product-card',
                         block: block,
                         image_sizes: '(min-width: 990px) 33vw, 80vw'
                       %}
                     </media-carousel-slide>
                   {%- elsif block.type == 'cta_card' -%}
-                    <media-carousel-slide class="lsvp__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                    <media-carousel-slide class="lspg__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
                       {%- assign cta_link = block.settings.link | default: '#' -%}
-                      <a href="{{ cta_link }}" class="lsvp__cta-card">
+                      <a href="{{ cta_link }}" class="lspg__cta-card">
                         {{ block.settings.cta_text | escape }}
                       </a>
                     </media-carousel-slide>
@@ -194,7 +196,7 @@
             {%- assign carousel_total = product_count | plus: cta_count -%}
             {%- if carousel_total > 1 -%}
               <media-carousel-pagination
-                class="media-carousel__pagination swiper-pagination js-carousel-pagination lsvp__pagination"
+                class="media-carousel__pagination swiper-pagination js-carousel-pagination lspg__pagination"
                 hidden
               ></media-carousel-pagination>
             {%- endif -%}
@@ -205,24 +207,24 @@
     {% else %}
       <div class="container container--{{ section.settings.section_width }}">
         {%- if section.settings.heading != blank or section.settings.description != blank -%}
-          <div class="lsvp__header">
+          <div class="lspg__header">
             {%- if section.settings.heading != blank -%}
-              <h2 class="lsvp__heading">{{ section.settings.heading }}</h2>
+              <h2 class="lspg__heading">{{ section.settings.heading }}</h2>
             {%- endif -%}
             {%- if section.settings.description != blank -%}
-              <div class="lsvp__desc rte">{{ section.settings.description }}</div>
+              <div class="lspg__desc rte">{{ section.settings.description }}</div>
             {%- endif -%}
          
            {%- assign feature_blocks = section.blocks | where: 'type', 'feature' -%}
         {%- if feature_blocks.size > 0 -%}
-          <ul class="lsvp__features lsvp__features--grid">
+          <ul class="lspg__features lspg__features--grid">
             {%- for block in feature_blocks -%}
-              <li class="lsvp__feature block--{{ block.id }}" {{ block.shopify_attributes }}>
-                <div class="lsvp__feature-icon-wrap">
+              <li class="lspg__feature block--{{ block.id }}" {{ block.shopify_attributes }}>
+                <div class="lspg__feature-icon-wrap">
                   {%- if block.settings.icon != blank -%}
                     {% render 'image',
                       image: block.settings.icon,
-                      additional_classes: 'lsvp__feature-icon',
+                      additional_classes: 'lspg__feature-icon',
                       image_ratio: 'natural',
                       image_srcset_widths: '40, 80',
                       image_sizes: '40px',
@@ -230,10 +232,10 @@
                       alt_string: block.settings.label | escape
                     %}
                   {%- else -%}
-                    <span class="lsvp__feature-icon-placeholder" aria-hidden="true"></span>
+                    <span class="lspg__feature-icon-placeholder" aria-hidden="true"></span>
                   {%- endif -%}
                 </div>
-                <span class="lsvp__feature-label">{{ block.settings.label | escape }}</span>
+                <span class="lspg__feature-label">{{ block.settings.label | escape }}</span>
               </li>
             {%- endfor -%}
           </ul>
@@ -244,7 +246,7 @@
        
 
         {%- if section.settings.subheading != blank -%}
-          <h3 class="lsvp__subheading">{{ section.settings.subheading }}</h3>
+          <h3 class="lspg__subheading">{{ section.settings.subheading }}</h3>
         {%- endif -%}
 
         {%- assign has_product_blocks = false -%}
@@ -268,19 +270,19 @@
             data-breakpoint-max="tab"
           >
             <media-carousel-slider>
-              <media-carousel-wrapper class="lsvp__grid">
+              <media-carousel-wrapper class="lspg__grid">
                 {%- for block in section.blocks -%}
                   {%- if block.type == 'product_card' -%}
-                    <media-carousel-slide class="lsvp__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
-                      {% render 'lsvp-product-card',
+                    <media-carousel-slide class="lspg__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                      {% render 'lspg-product-card',
                         block: block,
                         image_sizes: '(min-width: 990px) 33vw, 90vw'
                       %}
                     </media-carousel-slide>
                   {%- elsif block.type == 'cta_card' -%}
-                    <media-carousel-slide class="lsvp__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                    <media-carousel-slide class="lspg__cta-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
                       {%- assign cta_link = block.settings.link | default: '#' -%}
-                      <a href="{{ cta_link }}" class="lsvp__cta-card">
+                      <a href="{{ cta_link }}" class="lspg__cta-card">
                         {{ block.settings.cta_text | escape }}
                       </a>
                     </media-carousel-slide>
@@ -291,27 +293,29 @@
 
             {%- if grid_carousel_total > 1 -%}
               <media-carousel-pagination
-                class="media-carousel__pagination swiper-pagination js-carousel-pagination lsvp__pagination"
+                class="media-carousel__pagination swiper-pagination js-carousel-pagination lspg__pagination"
                 hidden
               ></media-carousel-pagination>
             {%- endif -%}
           </media-carousel>
         {%- endif -%}
 
-        {%- if section.settings.contact_title != blank or section.settings.contact_text != blank or section.settings.contact_email != blank -%}
-          <div class="lsvp__contact">
-            {%- if section.settings.contact_title != blank -%}
-              <p class="lsvp__contact-title">{{ section.settings.contact_title | escape }}</p>
-            {%- endif -%}
-            {%- if section.settings.contact_text != blank -%}
-              <p class="lsvp__contact-text">{{ section.settings.contact_text | escape }}</p>
-            {%- endif -%}
-            {%- if section.settings.contact_email != blank -%}
-              <a href="mailto:{{ section.settings.contact_email | escape }}" class="lsvp__contact-email">
-                {{ section.settings.contact_email | escape }}
-              </a>
-            {%- endif -%}
-          </div>
+        {%- if section.settings.show_contact_footer -%}
+          {%- if section.settings.contact_title != blank or section.settings.contact_text != blank or section.settings.contact_email != blank -%}
+            <div class="lspg__contact">
+              {%- if section.settings.contact_title != blank -%}
+                <p class="lspg__contact-title">{{ section.settings.contact_title | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.contact_text != blank -%}
+                <p class="lspg__contact-text">{{ section.settings.contact_text | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.contact_email != blank -%}
+                <a href="mailto:{{ section.settings.contact_email | escape }}" class="lspg__contact-email">
+                  {{ section.settings.contact_email | escape }}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
         {%- endif -%}
       </div>
     {% endif %}
@@ -320,8 +324,8 @@
 
 {% schema %}
 {
-  "name": "LS Vinyl Playsets",
-  "class": "js-section__ls-vinyl-playsets",
+  "name": "LS Product Grid",
+  "class": "js-section__ls-product-grid",
   "settings": [
     {
       "type": "header",
@@ -403,6 +407,12 @@
     {
       "type": "header",
       "content": "Contact footer"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact_footer",
+      "label": "Show contact footer",
+      "default": true
     },
     {
       "type": "text",
@@ -808,7 +818,7 @@
   ],
   "presets": [
     {
-      "name": "LS Vinyl Playsets",
+      "name": "LS Product Grid",
       "blocks": [
         { "type": "feature", "settings": { "label": "High-Quality Swing Sets" } },
         { "type": "feature", "settings": { "label": "Delivered & Installed Across Chicagoland" } },

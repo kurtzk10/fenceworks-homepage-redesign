@@ -1,48 +1,48 @@
 /* ============================================================
-   Section: LS Vinyl Playsets
+   Section: LS Product Grid
    ============================================================ */
 
-.section--ls-vinyl-playsets {
-  background-color: var(--lsvp-section-bg);
+.section--ls-product-grid {
+  background-color: var(--lspg-section-bg);
   padding-top: var(--space-top);
   padding-bottom: var(--space-bottom);
 }
 
 /* ── Header ─────────────────────────────────────────────────── */
 
-.lsvp__header {
+.lspg__header {
   margin-bottom: 24px;
 }
 
-.lsvp__heading {
+.lspg__heading {
   font-size: clamp(24px, 4vw, 48px);
   font-weight: 800;
   line-height: 1.1;
-  color: var(--lsvp-heading-color);
+  color: var(--lspg-heading-color);
   margin: 0 0 16px;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
 
-.lsvp__heading p {
+.lspg__heading p {
   margin: 0;
 }
 
-.lsvp__desc {
+.lspg__desc {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--lsvp-desc-color);
+  color: var(--lspg-desc-color);
   margin: 0;
   max-width: 640px;
 }
 
-.lsvp__desc p {
+.lspg__desc p {
   margin: 0;
 }
 
 /* ── Features ───────────────────────────────────────────────── */
 
-.lsvp__features {
+.lspg__features {
   list-style: none;
   margin: 0 0 40px;
   padding: 0;
@@ -51,26 +51,26 @@
   gap: 16px;
 }
 
-.lsvp__features--grid {
+.lspg__features--grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px 32px;
   margin-bottom: 48px;
 }
 
-.lsvp__feature {
+.lspg__feature {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.lsvp__features--grid .lsvp__feature {
+.lspg__features--grid .lspg__feature {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
 }
 
-.lsvp__feature-icon-wrap {
+.lspg__feature-icon-wrap {
   flex-shrink: 0;
   width: 40px;
   height: 40px;
@@ -79,35 +79,35 @@
   justify-content: center;
 }
 
-.lsvp__feature-icon,
-.lsvp__feature-icon img {
+.lspg__feature-icon,
+.lspg__feature-icon img {
   width: 40px;
   height: 40px;
   object-fit: contain;
   display: block;
 }
 
-.lsvp__feature-icon-placeholder {
+.lspg__feature-icon-placeholder {
   display: block;
   width: 24px;
   height: 24px;
-  border: 2px solid var(--lsvp-feature-icon-color);
+  border: 2px solid var(--lspg-feature-icon-color);
   border-radius: 50%;
 }
 
-.lsvp__feature-label {
+.lspg__feature-label {
   font-size: 14px;
   font-weight: 600;
-  color: var(--lsvp-feature-text-color);
+  color: var(--lspg-feature-text-color);
   line-height: 1.4;
 }
 
 /* ── Subheading ─────────────────────────────────────────────── */
 
-.lsvp__subheading {
+.lspg__subheading {
   font-size: clamp(20px, 3vw, 32px);
   font-weight: 800;
-  color: var(--lsvp-subheading-color);
+  color: var(--lspg-subheading-color);
   margin: 0 0 32px;
   text-transform: uppercase;
   letter-spacing: -0.02em;
@@ -121,14 +121,14 @@
   and flips this to a flex carousel track; without :not(.swiper-wrapper)
   our grid display would beat Swiper's and break the slide layout.
 */
-media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
+media-carousel-wrapper.lspg__grid:not(.swiper-wrapper) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--lsvp-grid-gap);
+  gap: var(--lspg-grid-gap);
   /*
     stretch so every grid item fills the row's height — that's what
     pulls the CTA card up to match the product cards. Products already
-    have `.lsvp__card { height: 100% }`; the CTA card gets the same
+    have `.lspg__card { height: 100% }`; the CTA card gets the same
     treatment below.
   */
   align-items: stretch;
@@ -137,27 +137,27 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
 
 /* ── Card ───────────────────────────────────────────────────── */
 
-.lsvp__card-wrap {
+.lspg__card-wrap {
   display: flex;
   flex-direction: column;
 }
 
-.lsvp__card {
+.lspg__card {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   height: 100%;
-  background-color: var(--lsvp-card-bg, #fefffe);
-  border-radius: var(--lsvp-card-radius);
+  background-color: var(--lspg-card-bg, #fefffe);
+  border-radius: var(--lspg-card-radius);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.lsvp__card-img-wrap {
+.lspg__card-img-wrap {
   position: relative;
   width: 100%;
   /* Figma uses a 1:1 image area. Falls back to the legacy fixed height
-     for sections still relying on the --lsvp-image-height variable. */
+     for sections still relying on the --lspg-image-height variable. */
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
@@ -166,15 +166,15 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   overflow: hidden;
 }
 
-.lsvp__card-img,
-.lsvp__card-img img {
+.lspg__card-img,
+.lspg__card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.lsvp__card-img-placeholder {
+.lspg__card-img-placeholder {
   width: 100%;
   height: 100%;
   display: flex;
@@ -182,31 +182,31 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   justify-content: center;
 }
 
-.lsvp__card-img-placeholder .placeholder-svg {
+.lspg__card-img-placeholder .placeholder-svg {
   width: 60%;
   height: 60%;
   opacity: 0.3;
 }
 
-.lsvp__card-body {
+.lspg__card-body {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   padding: 20px;
   font-family: "Host Grotesk", sans-serif;
-  color: var(--lsvp-card-title-color, #1c2d38);
+  color: var(--lspg-card-title-color, #1c2d38);
 }
 
 /* ── Pill ───────────────────────────────────────────────────── */
 
-.lsvp__card-pill-row {
+.lspg__card-pill-row {
   display: flex;
   gap: 8px;
   align-items: flex-start;
   padding-bottom: 8px;
 }
 
-.lsvp__card-pill {
+.lspg__card-pill {
   display: inline-flex;
   align-items: center;
   padding: 5px 10px;
@@ -222,23 +222,23 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
 
 /* ── Name + features ──────────────────────────────────────── */
 
-.lsvp__card-name-spec {
+.lspg__card-name-spec {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.lsvp__card-title {
+.lspg__card-title {
   margin: 0;
   font-family: "Cabinet Grotesk", sans-serif;
   font-size: 22px;
   font-weight: 800;
   line-height: 1.4;
   text-transform: uppercase;
-  color: var(--lsvp-card-title-color, #1c2d38);
+  color: var(--lspg-card-title-color, #1c2d38);
 }
 
-.lsvp__card-features {
+.lspg__card-features {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -248,7 +248,7 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   align-items: center;
 }
 
-.lsvp__card-feature {
+.lspg__card-feature {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -256,11 +256,11 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.03em;
-  color: var(--lsvp-card-title-color, #1c2d38);
+  color: var(--lspg-card-title-color, #1c2d38);
 }
 
-.lsvp__card-feature-icon,
-.lsvp__card-feature-icon img {
+.lspg__card-feature-icon,
+.lspg__card-feature-icon img {
   width: 16px;
   height: 16px;
   display: block;
@@ -270,7 +270,7 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
 
 /* ── Price + rating row ───────────────────────────────────── */
 
-.lsvp__card-price-rating {
+.lspg__card-price-rating {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -280,7 +280,7 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   letter-spacing: 0.03em;
 }
 
-.lsvp__card-price {
+.lspg__card-price {
   flex: 1 1 auto;
   min-width: 0;
   margin: 0;
@@ -290,27 +290,27 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   font-size: 14px;
 }
 
-.lsvp__card-price-label {
+.lspg__card-price-label {
   font-weight: 400;
-  color: var(--lsvp-price-label-color, #526572);
+  color: var(--lspg-price-label-color, #526572);
 }
 
-.lsvp__card-price-value {
+.lspg__card-price-value {
   font-weight: 700;
   font-size: 18px;
-  color: var(--lsvp-price-color, #f5811f);
+  color: var(--lspg-price-color, #f5811f);
 }
 
 /* ── Stars ─────────────────────────────────────────────────── */
 
-.lsvp__card-rating {
+.lspg__card-rating {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   flex-shrink: 0;
 }
 
-.lsvp__card-stars {
+.lspg__card-stars {
   position: relative;
   display: inline-block;
   font-size: 14px;
@@ -320,31 +320,31 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
      filled overlay can be clipped to the rating percentage. */
 }
 
-.lsvp__card-stars-base {
+.lspg__card-stars-base {
   /* Empty/under-filled stars stay visible (muted) so the "x out of 5"
-     scale is communicated. Filled stars are overlaid in --lsvp-star-color. */
-  color: var(--lsvp-star-empty-color, #d1d5db);
+     scale is communicated. Filled stars are overlaid in --lspg-star-color. */
+  color: var(--lspg-star-empty-color, #d1d5db);
 }
 
-.lsvp__card-stars-fill {
+.lspg__card-stars-fill {
   position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--lsvp-star-color, #ffbf1a);
+  color: var(--lspg-star-color, #ffbf1a);
   width: var(--rating-percent, 0%);
 }
 
-.lsvp__card-review-count {
+.lspg__card-review-count {
   font-size: 14px;
   font-weight: 700;
-  color: var(--lsvp-price-label-color, #526572);
+  color: var(--lspg-price-label-color, #526572);
 }
 
 /* ── Button stack ──────────────────────────────────────────── */
 
-.lsvp__card-buttons {
+.lspg__card-buttons {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -352,7 +352,7 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   margin-top: auto;
 }
 
-.lsvp__card-btn {
+.lspg__card-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -369,26 +369,26 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
-.lsvp__card-btn--primary {
-  background-color: var(--lsvp-card-btn-primary-bg, #f5811f);
-  color: var(--lsvp-card-btn-primary-text, #fefffe);
-  border: 1px solid var(--lsvp-card-btn-primary-bg, #f5811f);
+.lspg__card-btn--primary {
+  background-color: var(--lspg-card-btn-primary-bg, #f5811f);
+  color: var(--lspg-card-btn-primary-text, #fefffe);
+  border: 1px solid var(--lspg-card-btn-primary-bg, #f5811f);
   font-weight: 400;
 }
 
-.lsvp__card-btn--secondary {
+.lspg__card-btn--secondary {
   background-color: transparent;
-  color: var(--lsvp-card-btn-secondary-text, #1c2d38);
-  border: 1px solid var(--lsvp-card-btn-secondary-border, #101a21);
+  color: var(--lspg-card-btn-secondary-text, #1c2d38);
+  border: 1px solid var(--lspg-card-btn-secondary-border, #101a21);
   font-weight: 700;
 }
 
-.lsvp__card-btn:hover,
-.lsvp__card-btn:focus-visible {
+.lspg__card-btn:hover,
+.lspg__card-btn:focus-visible {
   opacity: 0.9;
 }
 
-.lsvp__card-btn-icon {
+.lspg__card-btn-icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
@@ -396,12 +396,12 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
 
 /* ── CTA Card ───────────────────────────────────────────────── */
 
-.lsvp__cta-wrap {
+.lspg__cta-wrap {
   /*
-    Mirror .lsvp__card-wrap (product wrap) exactly — a flex column that
+    Mirror .lspg__card-wrap (product wrap) exactly — a flex column that
     fills its grid row via the grid's `align-items: stretch`. The CTA
     card inside then uses `height: 100%` to fill the wrap, identical to
-    how .lsvp__card fills its wrap.
+    how .lspg__card fills its wrap.
 
     `container-type: inline-size` makes this element a query container,
     so the CTA card below can use `100cqi` to reference the wrap's
@@ -414,7 +414,7 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   container-type: inline-size;
 }
 
-.lsvp__cta-card {
+.lspg__cta-card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -439,20 +439,20 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   */
   min-height: calc(100cqi + 290px);
   padding: 24px;
-  border: 2px solid var(--lsvp-cta-border);
-  border-radius: var(--lsvp-card-radius);
+  border: 2px solid var(--lspg-cta-border);
+  border-radius: var(--lspg-card-radius);
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--lsvp-cta-text-color);
+  color: var(--lspg-cta-text-color);
   text-decoration: none;
   text-align: center;
   transition: background-color 0.2s ease;
 }
 
-.lsvp__cta-card:hover {
-  background-color: color-mix(in srgb, var(--lsvp-cta-border) 8%, transparent);
+.lspg__cta-card:hover {
+  background-color: color-mix(in srgb, var(--lspg-cta-border) 8%, transparent);
 }
 
 /* ── Contact footer ─────────────────────────────────────────── */
@@ -462,7 +462,7 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   spacing from the product cards; horizontal margins inset the footer
   so the cards visibly stick out past its edges per the Figma.
 */
-.lsvp__contact {
+.lspg__contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -471,37 +471,37 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   padding: 12px 24px;
   margin: 5% 7.5% 0;
   background-color: transparent;
-  border: 2px dashed var(--lsvp-contact-border, #9ca7ae);
+  border: 2px dashed var(--lspg-contact-border, #9ca7ae);
   border-radius: 16px;
   font-family: "Host Grotesk", sans-serif;
   font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.03em;
-  color: var(--lsvp-contact-text-color, #212121);
+  color: var(--lspg-contact-text-color, #212121);
 }
 
-.lsvp__contact-title {
+.lspg__contact-title {
   margin: 0;
   font-weight: 700;
   color: inherit;
 }
 
-.lsvp__contact-text {
+.lspg__contact-text {
   margin: 0;
   font-weight: 400;
   color: inherit;
 }
 
-.lsvp__contact-email {
+.lspg__contact-email {
   display: inline-block;
   font-weight: 400;
-  color: var(--lsvp-contact-email-color, #f5811f);
+  color: var(--lspg-contact-email-color, #f5811f);
   text-decoration: none;
   transition: opacity 0.15s ease;
 }
 
-.lsvp__contact-email:hover,
-.lsvp__contact-email:focus-visible {
+.lspg__contact-email:hover,
+.lspg__contact-email:focus-visible {
   opacity: 0.8;
   text-decoration: none;
 }
@@ -510,22 +510,22 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
    Layout: Sidebar + Carousel
    ============================================================ */
 
-.section--ls-vinyl-playsets.section--layout-sidebar_carousel {
+.section--ls-product-grid.section--layout-sidebar_carousel {
   background-color: #444444;
 }
 
-.section--layout-sidebar_carousel .lsvp__outer {
+.section--layout-sidebar_carousel .lspg__outer {
   width: 100%;
 }
 
-.lsvp__sidebar-layout {
+.lspg__sidebar-layout {
   display: flex;
   flex-direction: row;
   min-height: 400px;
-  border-left: 4px solid var(--lsvp-accent-border);
+  border-left: 4px solid var(--lspg-accent-border);
 }
 
-.lsvp__sidebar {
+.lspg__sidebar {
   flex: 0 0 280px;
   max-width: 320px;
   padding: 40px 24px;
@@ -533,45 +533,45 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   border-right: 1px solid #e5e7eb;
 }
 
-.lsvp__sidebar-inner {
+.lspg__sidebar-inner {
   max-width: 100%;
 }
 
-.section--layout-sidebar_carousel .lsvp__header {
+.section--layout-sidebar_carousel .lspg__header {
   margin-bottom: 20px;
 }
 
-.section--layout-sidebar_carousel .lsvp__heading {
+.section--layout-sidebar_carousel .lspg__heading {
   font-size: clamp(18px, 2.5vw, 24px);
 }
 
-.section--layout-sidebar_carousel .lsvp__desc {
+.section--layout-sidebar_carousel .lspg__desc {
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.section--layout-sidebar_carousel .lsvp__features {
+.section--layout-sidebar_carousel .lspg__features {
   margin-bottom: 24px;
 }
 
-.section--layout-sidebar_carousel .lsvp__subheading {
+.section--layout-sidebar_carousel .lspg__subheading {
   font-size: 18px;
   margin-bottom: 24px;
-  color: var(--lsvp-cta-text-color);
+  color: var(--lspg-cta-text-color);
 }
 
-.section--layout-sidebar_carousel .lsvp__contact {
+.section--layout-sidebar_carousel .lspg__contact {
   margin-bottom: 24px;
 }
 
-.lsvp__carousel-dots {
+.lspg__carousel-dots {
   display: flex;
   gap: 8px;
   justify-content: center;
   margin-top: 16px;
 }
 
-.lsvp__carousel-dot {
+.lspg__carousel-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -579,11 +579,11 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   transition: background-color 0.2s ease;
 }
 
-.lsvp__carousel-dot--active {
-  background-color: var(--lsvp-cta-text-color);
+.lspg__carousel-dot--active {
+  background-color: var(--lspg-cta-text-color);
 }
 
-.lsvp__carousel-area {
+.lspg__carousel-area {
   flex: 1;
   min-width: 0;
   padding: 32px 24px;
@@ -591,13 +591,13 @@ media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
   flex-direction: column;
 }
 
-.lsvp__carousel-grid {
+.lspg__carousel-grid {
   display: flex;
   gap: 16px;
   align-items: stretch;
 }
 
-media-carousel-wrapper.lsvp__carousel-grid:not(.swiper-wrapper) {
+media-carousel-wrapper.lspg__carousel-grid:not(.swiper-wrapper) {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -608,14 +608,14 @@ media-carousel-wrapper.lsvp__carousel-grid:not(.swiper-wrapper) {
   multiple ~280px cards across. The grid layout's mobile carousel
   keeps Swiper's default slidesPerView:1 so cards span full width.
 */
-.section--layout-sidebar_carousel media-carousel-slide.lsvp__card-wrap,
-.section--layout-sidebar_carousel media-carousel-slide.lsvp__cta-wrap {
+.section--layout-sidebar_carousel media-carousel-slide.lspg__card-wrap,
+.section--layout-sidebar_carousel media-carousel-slide.lspg__cta-wrap {
   flex: 0 0 auto;
   width: 280px;
   min-width: 200px;
 }
 
-.section--layout-sidebar_carousel .lsvp__cta-card {
+.section--layout-sidebar_carousel .lspg__cta-card {
   background-color: #444444;
   min-height: 180px;
 }
@@ -625,17 +625,17 @@ media-carousel-wrapper.lsvp__carousel-grid:not(.swiper-wrapper) {
   inactive bullet colors come from the section CSS variables, so the
   merchant can tune them in the theme editor.
 */
-.section--ls-vinyl-playsets .media-carousel__pagination {
+.section--ls-product-grid .media-carousel__pagination {
   position: relative;
   margin-top: 0;
 }
 
-.section--ls-vinyl-playsets .media-carousel__pagination .swiper-pagination-bullet-active {
-  background: var(--lsvp-pagination-active);
+.section--ls-product-grid .media-carousel__pagination .swiper-pagination-bullet-active {
+  background: var(--lspg-pagination-active);
 }
 
-.section--ls-vinyl-playsets .media-carousel__pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-  background: var(--lsvp-pagination-inactive);
+.section--ls-product-grid .media-carousel__pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background: var(--lspg-pagination-inactive);
   opacity: 1;
 }
 
@@ -644,28 +644,28 @@ media-carousel-wrapper.lsvp__carousel-grid:not(.swiper-wrapper) {
    ============================================================ */
 
 @media screen and (max-width: 989px) {
-  media-carousel-wrapper.lsvp__grid:not(.swiper-wrapper) {
+  media-carousel-wrapper.lspg__grid:not(.swiper-wrapper) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .lsvp__features--grid {
+  .lspg__features--grid {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 36px;
   }
 
-  .lsvp__sidebar-layout {
+  .lspg__sidebar-layout {
     flex-direction: column;
     border-left: none;
   }
 
-  .lsvp__sidebar {
+  .lspg__sidebar {
     flex: none;
     max-width: 100%;
     border-right: none;
     border-bottom: 1px solid #e5e7eb;
   }
 
-  .lsvp__carousel-area {
+  .lspg__carousel-area {
     padding: 24px 16px;
   }
 }
@@ -677,49 +677,49 @@ media-carousel-wrapper.lsvp__carousel-grid:not(.swiper-wrapper) {
     here. We do still want the bottom-margin so the contact footer
     doesn't crowd the carousel/pagination.
   */
-  media-carousel-wrapper.lsvp__grid {
+  media-carousel-wrapper.lspg__grid {
     margin-bottom: 32px;
   }
 
-  .lsvp__features--grid {
+  .lspg__features--grid {
     grid-template-columns: 1fr;
     margin-bottom: 28px;
   }
 
-  .lsvp__heading {
+  .lspg__heading {
     font-size: clamp(22px, 5vw, 32px);
   }
 
-  .lsvp__subheading {
+  .lspg__subheading {
     font-size: 20px;
     margin-bottom: 24px;
   }
 
-  .lsvp__card-body {
+  .lspg__card-body {
     padding: 16px 20px 20px;
   }
 
-  .lsvp__card-title {
+  .lspg__card-title {
     font-size: 16px;
   }
 
-  .lsvp__cta-card {
+  .lspg__cta-card {
     font-size: 14px;
   }
 
-  .lsvp__contact {
+  .lspg__contact {
     padding: 12px 20px;
     margin: 3% 0 0;
     font-size: 16px;
   }
 
-  .section--layout-sidebar_carousel media-carousel-slide.lsvp__card-wrap,
-  .section--layout-sidebar_carousel media-carousel-slide.lsvp__cta-wrap {
+  .section--layout-sidebar_carousel media-carousel-slide.lspg__card-wrap,
+  .section--layout-sidebar_carousel media-carousel-slide.lspg__cta-wrap {
     width: 260px;
     min-width: 240px;
   }
 
-  .section--layout-sidebar_carousel .lsvp__cta-card {
+  .section--layout-sidebar_carousel .lspg__cta-card {
     min-height: 120px;
   }
 }
@@ -748,7 +748,7 @@ p.ls-mc__eyebrow {
 }
 
 
-h2.lsvp__heading {
+h2.lspg__heading {
     color: var(--txt-dark, #1C2D38);
 
 /* Desktop/H2 */
@@ -762,12 +762,12 @@ h2.lsvp__heading {
     max-width: 900px;
 }
 
-.lsvp__header {
+.lspg__header {
     max-width: 900px;
     margin: auto;
 }
 
-ul.lsvp__features.lsvp__features--grid {
+ul.lspg__features.lspg__features--grid {
     max-width: 850px;
     /* margin: auto; */
     gap: 24px;
@@ -779,7 +779,7 @@ ul.lsvp__features.lsvp__features--grid {
     padding: 40px 0;
 }
 
-.lsvp__desc.rte {
+.lspg__desc.rte {
     max-width: 830px;
     color: var(--txt-dark, #1C2D38);
 
@@ -792,7 +792,7 @@ ul.lsvp__features.lsvp__features--grid {
     letter-spacing: 0.54px;
 }
 
-.lsvp__features--grid .lsvp__feature {
+.lspg__features--grid .lspg__feature {
     flex-direction: row;
     align-items: center;
     min-width: 220px;
@@ -800,7 +800,7 @@ ul.lsvp__features.lsvp__features--grid {
     gap: 12px;
 }
 
-span.lsvp__feature-label {
+span.lspg__feature-label {
     max-width: 180px;
     color: #383838;
 
@@ -813,12 +813,12 @@ span.lsvp__feature-label {
     letter-spacing: 0.54px;
 }
 
-.lsvp__feature-icon-wrap {
+.lspg__feature-icon-wrap {
     width: 32px;
     height: 32px;
 }
 
-h3.lsvp__subheading {
+h3.lspg__subheading {
     color: var(--bg-accent-dark, #AC5A16);
 
 /* Desktop/H2 */
@@ -834,13 +834,13 @@ h3.lsvp__subheading {
     margin-bottom: 24px;
 }
 
-.lsvp__grid {
+.lspg__grid {
     max-width: 1100px;
     margin: auto;
     /* gap: 32px; */
 }
 
-h4.lsvp__card-title {
+h4.lspg__card-title {
     color: var(--txt-dark, #1C2D38);
 
 /* Desktop/H4 (Figma product card title) */
@@ -853,27 +853,27 @@ h4.lsvp__card-title {
     text-transform: uppercase;
 }
 
-a.lsvp__card {
+a.lspg__card {
     box-shadow: NONE;
     border-radius: 24px;
 }
 
 @media screen and (max-width: 768px) {
-h2.lsvp__heading {
+h2.lspg__heading {
     font-size: 32px;
     line-height: 1.3em;
 }
 
-.lsvp__desc.rte {
+.lspg__desc.rte {
     font-size: 16px;
 }
 
-ul.lsvp__features.lsvp__features--grid {
+ul.lspg__features.lspg__features--grid {
     justify-content: center;
     padding: 20px 0 30px;
 }
 
-h3.lsvp__subheading {
+h3.lspg__subheading {
     font-size: 32px;
     line-height: 1.2em;
 }
