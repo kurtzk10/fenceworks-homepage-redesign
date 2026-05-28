@@ -99,42 +99,9 @@
   margin-bottom: 0;
 }
 
-/* ── Header button (solid / primary style) ─────────────────── */
-
-.lsts__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  min-height: 50px;
-  padding: 8px 24px;
-  border-radius: 999px;
-  border: 0;
-  background-color: var(--lsts-btn-bg, #f5811f);
-  color: var(--lsts-btn-text, #f4f7f8);
-  font-size: clamp(13px, 3.6vw, 16px);
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
-}
-
-.lsts__btn:hover,
-.lsts__btn:focus-visible {
-  background-color: var(--lsts-btn-bg-hover, #ac5a16);
-  color: var(--lsts-btn-text, #f4f7f8);
-  opacity: 1;
-}
-
-.lsts__btn-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
+/* Header button is the shared `ls-button` snippet (primary-arrow, full
+   width). Colors come from the --ls-btn-* vars on the section root;
+   see component-ls-button.css. */
 
 /* ── Reasons list ──────────────────────────────────────────── */
 

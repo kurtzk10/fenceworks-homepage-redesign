@@ -223,31 +223,16 @@ media-carousel-wrapper.lstrs__grid:not(.swiper-wrapper) {
   margin: 0;
 }
 
-.lstrs__card-btn {
-  /* Pin the button to the bottom so cards with shorter copy still
-     line their CTAs up across the row. */
+/*
+  The card CTA is the shared `ls-button` snippet (primary, full width)
+  — see component-ls-button.css. Only card-specific layout lives here:
+  pin it to the bottom so CTAs line up across the row, and tighten the
+  horizontal padding. Scoped under .lstrs__card so it beats .ls-btn
+  regardless of stylesheet load order.
+*/
+.lstrs__card .lstrs__card-btn {
   margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
-  padding: 8px 24px;
-  border-radius: 999px;
-  border: 0;
-  background-color: var(--lstrs-btn-bg, #f5811f);
-  color: var(--lstrs-btn-text, #f4f7f8);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
-}
-
-.lstrs__card-btn:hover,
-.lstrs__card-btn:focus-visible {
-  opacity: 0.9;
+  padding: 8px 12px;
 }
 
 /* ── Carousel pagination (mobile only — Swiper active) ─────── */

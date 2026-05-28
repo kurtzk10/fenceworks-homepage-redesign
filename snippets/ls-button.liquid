@@ -1,0 +1,75 @@
+{%- comment -%}
+  LS Button — shared button/link used across LS sections.
+
+  Styled by `component-ls-button.css`; the parent section must load
+  that stylesheet. Colors are driven by `--ls-btn-*` custom properties,
+  which each adopting section sets on its own root (mapped from its
+  color settings).
+
+  Parameters
+  ----------
+  label : string (required)
+    Button text. HTML-escaped on render. Blank = nothing renders.
+  href : string (optional)
+    Link target. Defaults to '#'.
+  variant : string (optional)
+    One of: primary | primary-arrow | secondary | link.
+    Defaults to 'primary'.
+  icon : string (optional)
+    Trailing icon — swappable per button. One of:
+      arrow-up-right | arrow-right | chevron-right | none
+    If omitted, defaults to 'arrow-up-right' for the primary-arrow and
+    link variants, and 'none' for everything else.
+  full_width : boolean (optional)
+    When true, the button stretches to 100% width.
+  class : string (optional)
+    Extra class(es) appended for section-specific layout tweaks.
+  attributes : string (optional)
+    Raw extra HTML attributes (e.g. data-*, aria-*, target).
+
+  --ls-btn-* custom properties (set on an ancestor)
+    --ls-btn-bg / --ls-btn-text / --ls-btn-bg-hover     (primary)
+    --ls-btn-text-hover                                  (primary text on hover)
+    --ls-btn-arrow-shift                                 (primary-arrow: hover spread, default 4px)
+    --ls-btn-border / --ls-btn-secondary-text /
+      --ls-btn-secondary-bg-hover                        (secondary)
+    --ls-btn-link-color                                  (link)
+{%- endcomment -%}
+
+{%- liquid
+  assign _variant = variant | default: 'primary'
+  assign _href = href | default: '#'
+
+  assign _icon = icon
+  if _icon == blank
+    if _variant == 'primary-arrow' or _variant == 'link'
+      assign _icon = 'arrow-up-right'
+    else
+      assign _icon = 'none'
+    endif
+  endif
+-%}
+
+{%- if label != blank -%}
+  <a
+    href="{{ _href }}"
+    class="ls-btn ls-btn--{{ _variant }}{% if full_width %} ls-btn--full{% endif %}{% if class != blank %} {{ class }}{% endif %}"
+    {{ attributes }}
+  >
+    <span class="ls-btn__label">{{ label | escape }}</span>
+    {%- case _icon -%}
+      {%- when 'arrow-up-right' -%}
+        <svg class="ls-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      {%- when 'arrow-right' -%}
+        <svg class="ls-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      {%- when 'chevron-right' -%}
+        <svg class="ls-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    {%- endcase -%}
+  </a>
+{%- endif -%}

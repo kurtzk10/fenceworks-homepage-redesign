@@ -1,0 +1,123 @@
+/* ============================================================
+   Component: LS Button
+   Shared button/link for LS sections. Rendered by the
+   `ls-button` snippet. Colors come from --ls-btn-* custom
+   properties set by the consuming section.
+
+   Variants: primary | primary-arrow | secondary | link
+   ============================================================ */
+
+.ls-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 50px;
+  padding: 8px 24px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: "Host Grotesk", sans-serif;
+  font-size: clamp(13px, 3.6vw, 16px);
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.ls-btn--full {
+  width: 100%;
+}
+
+.ls-btn__label,
+.ls-btn__icon {
+  transition: transform 0.2s ease;
+}
+
+.ls-btn__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ── Primary (solid fill) ──────────────────────────────────── */
+.ls-btn--primary,
+.ls-btn--primary-arrow {
+  background-color: var(--ls-btn-bg, #f5811f);
+  color: var(--ls-btn-text, #f4f7f8);
+  border-color: transparent;
+}
+
+.ls-btn--primary:hover,
+.ls-btn--primary:focus-visible,
+.ls-btn--primary-arrow:hover,
+.ls-btn--primary-arrow:focus-visible {
+  background-color: var(--ls-btn-bg-hover, #ac5a16);
+  color: var(--ls-btn-text-hover, var(--ls-btn-text, #f4f7f8));
+  opacity: 1;
+}
+
+/*
+  primary-arrow only: on hover/focus, spread the label and arrow apart.
+  Distance is tunable per section via --ls-btn-arrow-shift.
+*/
+.ls-btn--primary-arrow:hover .ls-btn__label,
+.ls-btn--primary-arrow:focus-visible .ls-btn__label {
+  transform: translateX(calc(-1 * var(--ls-btn-arrow-shift, 4px)));
+}
+
+.ls-btn--primary-arrow:hover .ls-btn__icon,
+.ls-btn--primary-arrow:focus-visible .ls-btn__icon {
+  transform: translateX(var(--ls-btn-arrow-shift, 4px));
+}
+
+/* ── Secondary (outline) ───────────────────────────────────── */
+.ls-btn--secondary {
+  background-color: transparent;
+  color: var(--ls-btn-secondary-text, #1c2d38);
+  border-color: var(--ls-btn-border, #101a21);
+}
+
+.ls-btn--secondary:hover,
+.ls-btn--secondary:focus-visible {
+  background-color: var(--ls-btn-secondary-bg-hover, #fbcda5);
+  border-color: transparent;
+  opacity: 1;
+}
+
+/* ── Link (borderless text + arrow) ────────────────────────── */
+.ls-btn--link {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ls-btn-link-color, #f5811f);
+}
+
+.ls-btn--link:hover,
+.ls-btn--link:focus-visible {
+  opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ls-btn,
+  .ls-btn__label,
+  .ls-btn__icon {
+    transition: none;
+  }
+  /* Keep the color change, drop the movement. */
+  .ls-btn--primary-arrow:hover .ls-btn__label,
+  .ls-btn--primary-arrow:focus-visible .ls-btn__label,
+  .ls-btn--primary-arrow:hover .ls-btn__icon,
+  .ls-btn--primary-arrow:focus-visible .ls-btn__icon {
+    transform: none;
+  }
+}

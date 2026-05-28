@@ -26,6 +26,7 @@
   {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
 {% endif %}
 <script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 <section
   class="
@@ -52,8 +53,8 @@
     --lstrs-card-radius: {{ section.settings.card_radius }}px;
     --lstrs-card-title-color: {{ section.settings.card_title_color }};
     --lstrs-card-text-color: {{ section.settings.card_text_color }};
-    --lstrs-btn-bg: {{ section.settings.btn_bg }};
-    --lstrs-btn-text: {{ section.settings.btn_text }};
+    --ls-btn-bg: {{ section.settings.btn_bg }};
+    --ls-btn-text: {{ section.settings.btn_text }};
     --lstrs-pagination-active: {{ section.settings.pagination_active }};
     --lstrs-pagination-inactive: {{ section.settings.pagination_inactive }};
   "
@@ -131,10 +132,13 @@
                     <div class="lstrs__card-desc rte">{{ block.settings.description }}</div>
                   {%- endif -%}
 
-                  {%- if block.settings.btn_label != blank -%}
-                    {%- assign btn_href = block.settings.btn_link | default: '#' -%}
-                    <a href="{{ btn_href }}" class="lstrs__card-btn">{{ block.settings.btn_label | escape }}</a>
-                  {%- endif -%}
+                  {% render 'ls-button',
+                    label: block.settings.btn_label,
+                    href: block.settings.btn_link,
+                    variant: 'primary',
+                    full_width: true,
+                    class: 'lstrs__card-btn'
+                  %}
 
                 </div>
               </media-carousel-slide>

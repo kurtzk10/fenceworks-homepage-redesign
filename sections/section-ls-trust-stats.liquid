@@ -11,6 +11,7 @@
 {% else %}
   {{ 'section-ls-trust-stats.css' | asset_url | stylesheet_tag }}
 {% endif %}
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 <section
   class="
@@ -31,9 +32,9 @@
     --lsts-eyebrow-color: {{ section.settings.eyebrow_color }};
     --lsts-heading-color: {{ section.settings.heading_color }};
     --lsts-body-color: {{ section.settings.body_color }};
-    --lsts-btn-bg: {{ section.settings.btn_bg }};
-    --lsts-btn-text: {{ section.settings.btn_text_color }};
-    --lsts-btn-bg-hover: {{ section.settings.btn_bg_hover }};
+    --ls-btn-bg: {{ section.settings.btn_bg }};
+    --ls-btn-text: {{ section.settings.btn_text_color }};
+    --ls-btn-bg-hover: {{ section.settings.btn_bg_hover }};
     --lsts-icon-bg: {{ section.settings.icon_bg_color }};
     --lsts-icon-color: {{ section.settings.icon_color }};
     --lsts-reason-title-color: {{ section.settings.reason_title_color }};
@@ -63,15 +64,12 @@
           <div class="lsts__body">{{ section.settings.body }}</div>
         {%- endif -%}
 
-        {%- if section.settings.button_label != blank -%}
-          {%- assign btn_href = section.settings.button_link | default: '#' -%}
-          <a href="{{ btn_href }}" class="lsts__btn">
-            <span>{{ section.settings.button_label | escape }}</span>
-            <svg class="lsts__btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        {%- endif -%}
+        {% render 'ls-button',
+          label: section.settings.button_label,
+          href: section.settings.button_link,
+          variant: 'primary-arrow',
+          full_width: true
+        %}
       </aside>
 
       <ul class="lsts__list">
