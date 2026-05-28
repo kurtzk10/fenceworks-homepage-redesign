@@ -344,27 +344,15 @@ media-carousel-wrapper.lsmo__grid:not(.swiper-wrapper) {
   overflow-wrap: anywhere;
 }
 
+/* Material-guide link is the shared `ls-button` snippet (link variant);
+   see component-ls-button.css. Only the spacing above and a smaller
+   icon are section-specific. */
 .lsmo__mg-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   padding-top: 8px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  color: var(--lsmo-mg-link-color, #f5811f);
-  transition: opacity 0.15s ease;
 }
 
-.lsmo__mg-link:hover {
-  opacity: 0.75;
-}
-
-.lsmo__mg-link-icon {
+.lsmo__mg-link .ls-btn__icon {
   width: 16px;
   height: 16px;
-  flex-shrink: 0;
 }
 

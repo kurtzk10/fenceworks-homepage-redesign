@@ -2742,6 +2742,12 @@
         "id": "ls_btn_link_text",
         "label": "Text color",
         "default": "#f5811f"
+      },
+      {
+        "type": "color",
+        "id": "ls_btn_link_hover",
+        "label": "Text color (hover)",
+        "default": "#ac5a16"
       }
     ]
   }

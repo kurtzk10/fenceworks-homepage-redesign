@@ -58,7 +58,6 @@
     --lsmo-mg-card-title-color: {{ section.settings.mg_card_title_color }};
     --lsmo-mg-value-color: {{ section.settings.mg_value_color }};
     --lsmo-mg-divider-color: {{ section.settings.mg_divider_color }};
-    --lsmo-mg-link-color: {{ section.settings.mg_link_color }};
   "
 >
   <div class="lsmo__outer">
@@ -213,15 +212,13 @@
 
                   <hr class="lsmo__mg-divider">
 
-                  {%- if block.settings.link_label != blank -%}
-                    {%- assign link_href = block.settings.link_url | default: '#' -%}
-                    <a href="{{ link_href }}" class="lsmo__mg-link">
-                      <span>{{ block.settings.link_label | escape }}</span>
-                      <svg class="lsmo__mg-link-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.5 8h12M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </a>
-                  {%- endif -%}
+                  {% render 'ls-button',
+                    label: block.settings.link_label,
+                    href: block.settings.link_url,
+                    variant: 'link',
+                    icon: block.settings.arrow_direction,
+                    class: 'lsmo__mg-link'
+                  %}
                 </article>
               {%- endfor -%}
             </div>
@@ -424,12 +421,6 @@
       "default": "#c8ced2"
     },
     {
-      "type": "color",
-      "id": "mg_link_color",
-      "label": "Link color",
-      "default": "#f5811f"
-    },
-    {
       "type": "header",
       "content": "Padding and margin"
     },
@@ -573,6 +564,20 @@
           "type": "url",
           "id": "link_url",
           "label": "Link URL"
+        },
+        {
+          "type": "select",
+          "id": "arrow_direction",
+          "label": "Link arrow direction",
+          "default": "arrow-right",
+          "options": [
+            { "value": "arrow-right", "label": "Right" },
+            { "value": "arrow-up-right", "label": "Up-right" },
+            { "value": "arrow-up", "label": "Up" },
+            { "value": "arrow-down", "label": "Down" },
+            { "value": "chevron-right", "label": "Chevron" },
+            { "value": "none", "label": "No arrow" }
+          ]
         }
       ]
     }

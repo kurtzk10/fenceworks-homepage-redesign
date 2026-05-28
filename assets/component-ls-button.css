@@ -114,24 +114,53 @@
   border-radius: 0;
   background: transparent;
   color: var(--ls-btn-link-color, #f5811f);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .ls-btn--link:hover,
 .ls-btn--link:focus-visible {
-  opacity: 0.75;
+  color: var(--ls-btn-link-hover, #ac5a16);
+  opacity: 1;
+  transform: scale(var(--ls-btn-link-hover-scale, 1.05));
+}
+
+/* Animated underline that grows in from the left on hover. */
+.ls-btn--link .ls-btn__label {
+  position: relative;
+}
+
+.ls-btn--link .ls-btn__label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+}
+
+.ls-btn--link:hover .ls-btn__label::after,
+.ls-btn--link:focus-visible .ls-btn__label::after {
+  transform: scaleX(1);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .ls-btn,
   .ls-btn__label,
-  .ls-btn__icon {
+  .ls-btn__icon,
+  .ls-btn--link .ls-btn__label::after {
     transition: none;
   }
   /* Keep the color change, drop the movement. */
   .ls-btn--primary-arrow:hover .ls-btn__label,
   .ls-btn--primary-arrow:focus-visible .ls-btn__label,
   .ls-btn--primary-arrow:hover .ls-btn__icon,
-  .ls-btn--primary-arrow:focus-visible .ls-btn__icon {
+  .ls-btn--primary-arrow:focus-visible .ls-btn__icon,
+  .ls-btn--link:hover,
+  .ls-btn--link:focus-visible {
     transform: none;
   }
 }
