@@ -12,6 +12,7 @@
   {{ 'section-ls-media-cta.css' | asset_url | stylesheet_tag }}
 {% endif %}
 <script src="{{ 'section-ls-media-cta.js' | asset_url }}" type="module" defer></script>
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign eyebrow        = section.settings.eyebrow
@@ -172,12 +173,13 @@
 
         {%- if button_1_label != blank -%}
           <div class="ls-mc__btn-wrap">
-            <a
-              href="{{ button_1_link | default: '#' }}"
-              class="ls-mc__btn c-btn c-btn--primary"
-            >
-              {{ button_1_label | escape }}
-            </a>
+            {% render 'ls-button',
+              label: button_1_label,
+              href: button_1_link,
+              variant: 'primary',
+              full_width: true,
+              class: 'ls-mc__btn'
+            %}
           </div>
         {%- endif -%}
 
@@ -187,12 +189,13 @@
 
         {%- if button_2_label != blank -%}
           <div class="ls-mc__btn-wrap">
-            <a
-              href="{{ button_2_link | default: '#' }}"
-              class="ls-mc__btn c-btn c-btn--primary"
-            >
-              {{ button_2_label | escape }}
-            </a>
+            {% render 'ls-button',
+              label: button_2_label,
+              href: button_2_link,
+              variant: 'primary',
+              full_width: true,
+              class: 'ls-mc__btn'
+            %}
           </div>
         {%- endif -%}
 

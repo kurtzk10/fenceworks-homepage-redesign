@@ -26,6 +26,7 @@
   {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
 {% endif %}
 <script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 <section
   class="
@@ -47,9 +48,6 @@
     --lsmo-card-radius: {{ section.settings.card_radius }}px;
     --lsmo-section-radius-top: {{ section.settings.section_radius_top }}px;
     --lsmo-section-radius-bottom: {{ section.settings.section_radius_bottom }}px;
-    --lsmo-btn-bg-hover: {{ section.settings.button_bg_hover }};
-    --lsmo-btn-border: {{ section.settings.button_border }};
-    --lsmo-btn-text: {{ section.settings.button_text }};
     --lsmo-note-color: {{ section.settings.note_color }};
     --lsmo-pagination-active: {{ section.settings.pagination_active }};
     --lsmo-pagination-inactive: {{ section.settings.pagination_inactive }};
@@ -111,18 +109,16 @@
                       {%- endif -%}
                     </div>
 
-                    {%- if block.settings.button_label != blank or block.settings.button_label_mobile != blank -%}
-                      {%- assign btn_href = block.settings.button_link | default: '#' -%}
-                      {%- assign btn_label_desktop = block.settings.button_label -%}
-                      {%- assign btn_label_mobile = block.settings.button_label_mobile | default: btn_label_desktop -%}
-                      {%- if btn_label_desktop == blank -%}
-                        {%- assign btn_label_desktop = btn_label_mobile -%}
-                      {%- endif -%}
-                      <a href="{{ btn_href }}" class="lsmo__btn">
-                        <span class="lsmo__btn-text lsmo__btn-text--mobile">{{ btn_label_mobile | escape }}</span>
-                        <span class="lsmo__btn-text lsmo__btn-text--desktop">{{ btn_label_desktop | escape }}</span>
-                      </a>
-                    {%- endif -%}
+                    {%- assign btn_label_desktop = block.settings.button_label | default: block.settings.button_label_mobile -%}
+                    {%- assign btn_label_mobile = block.settings.button_label_mobile | default: block.settings.button_label -%}
+                    {% render 'ls-button',
+                      label: btn_label_desktop,
+                      label_mobile: btn_label_mobile,
+                      href: block.settings.button_link,
+                      variant: 'secondary',
+                      full_width: true,
+                      class: 'lsmo__btn'
+                    %}
 
                     {%- if section.settings.desktop_note != blank -%}
                       <p class="lsmo__note">{{ section.settings.desktop_note | escape }}</p>
@@ -339,24 +335,6 @@
       "type": "color",
       "id": "note_color",
       "label": "Disclaimer text",
-      "default": "#1c2d38"
-    },
-    {
-      "type": "color",
-      "id": "button_bg_hover",
-      "label": "Button background hover",
-      "default": "#fbcda5"
-    },
-    {
-      "type": "color",
-      "id": "button_border",
-      "label": "Button border",
-      "default": "#101a21"
-    },
-    {
-      "type": "color",
-      "id": "button_text",
-      "label": "Button text",
       "default": "#1c2d38"
     },
     {

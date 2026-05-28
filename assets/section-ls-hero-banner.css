@@ -170,14 +170,11 @@
   transform: translateY(-1px);
 }
 
-.ls-hero-banner__btn--primary {
-  color: #fff;
-  background: linear-gradient(180deg, #e85d2c 0%, #c94a1f 100%);
-  border: none;
-  box-shadow: 0 2px 8px rgba(200, 74, 31, 0.35);
-}
-.ls-hero-banner__btn--primary:hover {
-  background: linear-gradient(180deg, #ec6a3a 0%, #d45324 100%);
+/* Primary CTA is the shared `ls-button` snippet (primary-arrow); the
+   "Browse Fences" secondary button below stays as-is. The cap keeps the
+   ls-button at the hero's button width. See component-ls-button.css. */
+.ls-hero-banner__cta {
+  max-width: 310px;
 }
 
 .ls-hero-banner__btn--secondary {
@@ -434,26 +431,6 @@ img.ls-hero-banner__bg.home-carousel__bg {
 .ls-hero-banner__content > * {
   max-width: 640px;
   /* flex-direction: column; */
-}
-
-a.ls-hero-banner__btn.ls-hero-banner__btn--primary {
-  display: flex;
-  max-width: 310px;
-  height: 50px;
-  padding: 13px 24px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  border-radius: 99px;
-  background: var(--bg-accent-main, #F5811F);
-  color: var(--txt-light, #F4F7F8);
-  font-family: "Host Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px; /* 137.5% */
-  letter-spacing: 0.5px;
 }
 
 a.ls-hero-banner__btn.ls-hero-banner__btn--secondary {

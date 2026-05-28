@@ -86,41 +86,9 @@
   white-space: nowrap;
 }
 
-/* ── Header button (same pattern as more-options .lsmo__btn) ─ */
-
-.lsfaq__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 50px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--lsfaq-btn-border, #101a21);
-  background-color: transparent;
-  color: var(--lsfaq-btn-text, #1c2d38);
-  font-size: clamp(13px, 3.6vw, 16px);
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-@media screen and (min-width: 768px) {
-  .lsfaq__btn {
-    padding: 8px 24px;
-  }
-}
-
-.lsfaq__btn:hover,
-.lsfaq__btn:focus-visible {
-  background-color: var(--lsfaq-btn-bg-hover, #fbcda5);
-  border-color: transparent;
-  opacity: 1;
-}
+/* Header button is the shared `ls-button` snippet (secondary, full
+   width). Colors come from the global --ls-btn-* tokens; see
+   component-ls-button.css. */
 
 /* ── Accordion list ────────────────────────────────────────── */
 

@@ -2681,5 +2681,68 @@
         "default": false
       }
     ]
+  },
+  {
+    "name": "LS Buttons",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Colors for the shared LS button component used across the custom 'LS' sections. Applies site-wide."
+      },
+      {
+        "type": "header",
+        "content": "Primary (shared by normal + arrow)"
+      },
+      {
+        "type": "color",
+        "id": "ls_btn_primary_fill",
+        "label": "Button fill color",
+        "default": "#f5811f"
+      },
+      {
+        "type": "color",
+        "id": "ls_btn_primary_hover",
+        "label": "Hover color",
+        "default": "#ac5a16"
+      },
+      {
+        "type": "color",
+        "id": "ls_btn_primary_text",
+        "label": "Text color",
+        "default": "#f4f7f8"
+      },
+      {
+        "type": "header",
+        "content": "Secondary"
+      },
+      {
+        "type": "color",
+        "id": "ls_btn_secondary_border",
+        "label": "Border color",
+        "default": "#101a21"
+      },
+      {
+        "type": "color",
+        "id": "ls_btn_secondary_hover",
+        "label": "Hover color",
+        "default": "#fbcda5"
+      },
+      {
+        "type": "color",
+        "id": "ls_btn_secondary_text",
+        "label": "Text color",
+        "default": "#1c2d38"
+      },
+      {
+        "type": "header",
+        "content": "Link"
+      },
+      {
+        "type": "color",
+        "id": "ls_btn_link_text",
+        "label": "Text color",
+        "default": "#f5811f"
+      }
+    ]
   }
 ]

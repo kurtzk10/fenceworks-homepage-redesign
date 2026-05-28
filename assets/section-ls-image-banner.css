@@ -156,38 +156,8 @@
   }
 }
 
-/* CTA button */
-.ls-image-banner__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px 28px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(180deg, #e85d2c 0%, #c94a1f 100%);
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 2px 10px rgba(200, 74, 31, 0.3);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.ls-image-banner__cta:hover {
-  opacity: 0.95;
-  transform: translateY(-1px);
-  color: #fff;
-}
-.ls-image-banner__cta-icon {
-  font-size: 1.1em;
-  line-height: 1;
-}
-@media (max-width: 980px) {
-  .ls-image-banner__cta {
-    width: 100%;
-    padding: 14px 24px;
-    font-size: 0.95rem;
-  }
-}
+/* CTA is the shared `ls-button` snippet (primary-arrow, full width);
+   see component-ls-button.css. */
 
 /* Contained width: ensure banner has max width and card doesn't overflow */
 .section--contained .ls-image-banner {
@@ -260,19 +230,6 @@ h2.ls-image-banner__headline {
   letter-spacing: 0.54px;
 }
 
-a.ls-image-banner__cta {
-  border-radius: 99px;
-  background: var(--bg-accent-main, #F5811F);
-  width: 100%;
-  box-shadow: none;
-  color: var(--txt-light, #F4F7F8);
-  font-family: "Host Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px; /* 137.5% */
-  letter-spacing: 0.5px;
-}
 
 .ls-image-banner.ls-image-banner--full {
   max-height: 650px;

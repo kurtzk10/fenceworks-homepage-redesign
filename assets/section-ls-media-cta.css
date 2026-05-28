@@ -222,21 +222,8 @@
   display: block;
 }
 
-.ls-mc__btn.c-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 99px;
-  font-family: "Host Grotesk", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  padding: 15px 24px;
-  box-sizing: border-box;
-}
+/* Buttons are the shared `ls-button` snippet (primary, full width);
+   see component-ls-button.css. */
 
 /* --------------------------------------------------------------------------
    Desktop: side-by-side layout
@@ -268,10 +255,6 @@
   .ls-mc__left {
     position: sticky;
     top: 150px;
-  }
-
-  .ls-mc__btn.c-btn {
-    width: 100%;
   }
 }
 
@@ -312,12 +295,6 @@ p.ls-mc__eyebrow {
   line-height: 140%; /* 44.8px */
   letter-spacing: -0.64px;
   text-transform: uppercase;
-}
-
-a.ls-mc__btn.c-btn.c-btn--primary {
-  text-transform: initial;
-  font-weight: 400;
-  font-size: 16px;
 }
 
 .ls-mc__left {

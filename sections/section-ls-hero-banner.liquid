@@ -20,6 +20,7 @@
     {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
     {{ 'section-ls-hero-banner.css' | asset_url | stylesheet_tag }}
   {% endif %}
+  {{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
   <style>
     .ls-hero-banner.is-loading {
       display: block;
@@ -165,9 +166,14 @@
                     {% if block.settings.link_title != blank or block.settings.link_title_2 != blank %}
                       <div class="ls-hero-banner__btns">
                         {% if block.settings.link_title != blank %}
-                          <a href="{{ block.settings.link }}" class="ls-hero-banner__btn ls-hero-banner__btn--primary">{{ block.settings.link_title | escape }} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path d="M14.0391 5.08594L12.9609 6.16406L18.0469 11.25H3V12.75H18.0469L12.9609 17.8359L14.0391 18.9141L20.4141 12.5391L20.9297 12L20.4141 11.4609L14.0391 5.08594Z" fill="#F4F7F8"/>
-                        </svg></a>
+                          {% render 'ls-button',
+                            label: block.settings.link_title,
+                            href: block.settings.link,
+                            variant: 'primary-arrow',
+                            icon: block.settings.arrow_direction,
+                            full_width: true,
+                            class: 'ls-hero-banner__cta'
+                          %}
                         {% endif %}
                         {% if block.settings.link_title_2 != blank %}
                           <a href="{{ block.settings.link_2 }}" class="ls-hero-banner__btn ls-hero-banner__btn--secondary">{{ block.settings.link_title_2 | escape }}</a>
@@ -266,9 +272,14 @@
                   {% if block.settings.link_title != blank or block.settings.link_title_2 != blank %}
                     <div class="ls-hero-banner__btns">
                       {% if block.settings.link_title != blank %}
-                        <a href="{{ block.settings.link }}" class="ls-hero-banner__btn ls-hero-banner__btn--primary">{{ block.settings.link_title | escape }} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M14.0391 5.08594L12.9609 6.16406L18.0469 11.25H3V12.75H18.0469L12.9609 17.8359L14.0391 18.9141L20.4141 12.5391L20.9297 12L20.4141 11.4609L14.0391 5.08594Z" fill="#F4F7F8"/>
-                      </svg></a>
+                        {% render 'ls-button',
+                          label: block.settings.link_title,
+                          href: block.settings.link,
+                          variant: 'primary-arrow',
+                          icon: block.settings.arrow_direction,
+                          full_width: true,
+                          class: 'ls-hero-banner__cta'
+                        %}
                       {% endif %}
                       {% if block.settings.link_title_2 != blank %}
                         <a href="{{ block.settings.link_2 }}" class="ls-hero-banner__btn ls-hero-banner__btn--secondary">{{ block.settings.link_title_2 | escape }}</a>
@@ -437,6 +448,19 @@
           "type": "url",
           "id": "link",
           "label": "Link"
+        },
+        {
+          "type": "select",
+          "id": "arrow_direction",
+          "label": "Button arrow direction",
+          "default": "arrow-right",
+          "options": [
+            { "value": "arrow-right", "label": "Right" },
+            { "value": "arrow-up-right", "label": "Up-right" },
+            { "value": "arrow-up", "label": "Up" },
+            { "value": "arrow-down", "label": "Down" },
+            { "value": "chevron-right", "label": "Chevron" }
+          ]
         },
         {
           "type": "header",

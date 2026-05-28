@@ -175,25 +175,8 @@ section.section.section--padded.section--ls-image-with-text .container.container
   letter-spacing: 0.54px;
 }
 
-a.ls-iwt__button.c-btn.c-btn--hollow {
-  display: flex;
-  height: 50px;
-  padding: 8px 80px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 99px;
-  /* border: 1px solid var(--bg-dark, #101A21); */
-  width: fit-content;
-  /* color: var(--txt-dark, #1C2D38); */
-  font-family: "Host Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px; /* 137.5% */
-  letter-spacing: 0.5px;
-  text-transform: initial;
-}
+/* Button is the shared `ls-button` snippet (secondary); see
+   component-ls-button.css. Layout-only tweaks live on .ls-iwt__button. */
 
 .ls-iwt__caption.rte p {
   color: var(--txt-disclaim, #526572);
@@ -226,7 +209,7 @@ a.ls-iwt__button.c-btn.c-btn--hollow {
     font-size: 12px;
   }
   
-  a.ls-iwt__button.c-btn.c-btn--hollow {
+  .ls-iwt__button {
     width: 100%;
     margin-top: 20px;
   }

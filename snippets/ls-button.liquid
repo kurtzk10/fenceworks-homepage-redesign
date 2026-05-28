@@ -10,6 +10,10 @@
   ----------
   label : string (required)
     Button text. HTML-escaped on render. Blank = nothing renders.
+  label_mobile : string (optional)
+    Alternate label shown on small screens (<768px). When provided and
+    different from `label`, the button renders both and swaps them by
+    viewport; otherwise just `label` is shown.
   href : string (optional)
     Link target. Defaults to '#'.
   variant : string (optional)
@@ -17,7 +21,7 @@
     Defaults to 'primary'.
   icon : string (optional)
     Trailing icon — swappable per button. One of:
-      arrow-up-right | arrow-right | chevron-right | none
+      arrow-right | arrow-up-right | arrow-up | arrow-down | chevron-right | none
     If omitted, defaults to 'arrow-up-right' for the primary-arrow and
     link variants, and 'none' for everything else.
   full_width : boolean (optional)
@@ -56,7 +60,12 @@
     class="ls-btn ls-btn--{{ _variant }}{% if full_width %} ls-btn--full{% endif %}{% if class != blank %} {{ class }}{% endif %}"
     {{ attributes }}
   >
-    <span class="ls-btn__label">{{ label | escape }}</span>
+    {%- if label_mobile != blank and label_mobile != label -%}
+      <span class="ls-btn__label ls-btn__label--mobile">{{ label_mobile | escape }}</span>
+      <span class="ls-btn__label ls-btn__label--desktop">{{ label | escape }}</span>
+    {%- else -%}
+      <span class="ls-btn__label">{{ label | escape }}</span>
+    {%- endif -%}
     {%- case _icon -%}
       {%- when 'arrow-up-right' -%}
         <svg class="ls-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
@@ -65,6 +74,14 @@
       {%- when 'arrow-right' -%}
         <svg class="ls-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
           <path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      {%- when 'arrow-up' -%}
+        <svg class="ls-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M12 20V4M6 10l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      {%- when 'arrow-down' -%}
+        <svg class="ls-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       {%- when 'chevron-right' -%}
         <svg class="ls-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">

@@ -128,33 +128,35 @@
     {%- endif -%}
 
     {%- if block.settings.btn_1_label != blank or block.settings.btn_2_label != blank -%}
+      {%- if block.settings.btn_1_primary -%}
+        {%- assign btn_1_variant = 'primary-arrow' -%}
+        {%- assign btn_1_icon = block.settings.btn_1_arrow | default: 'arrow-right' -%}
+      {%- else -%}
+        {%- assign btn_1_variant = 'secondary' -%}
+        {%- assign btn_1_icon = 'none' -%}
+      {%- endif -%}
+      {%- if block.settings.btn_2_primary -%}
+        {%- assign btn_2_variant = 'primary-arrow' -%}
+        {%- assign btn_2_icon = block.settings.btn_2_arrow | default: 'arrow-right' -%}
+      {%- else -%}
+        {%- assign btn_2_variant = 'secondary' -%}
+        {%- assign btn_2_icon = 'none' -%}
+      {%- endif -%}
       <div class="lspg__card-buttons">
-        {%- if block.settings.btn_1_label != blank -%}
-          <a
-            href="{{ btn_1_href }}"
-            class="lspg__card-btn lspg__card-btn--{% if block.settings.btn_1_primary %}primary{% else %}secondary{% endif %}"
-          >
-            <span>{{ block.settings.btn_1_label | escape }}</span>
-            {%- if block.settings.btn_1_primary -%}
-              <svg class="lspg__card-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <path d="M3 12h17M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            {%- endif -%}
-          </a>
-        {%- endif -%}
-        {%- if block.settings.btn_2_label != blank -%}
-          <a
-            href="{{ btn_2_href }}"
-            class="lspg__card-btn lspg__card-btn--{% if block.settings.btn_2_primary %}primary{% else %}secondary{% endif %}"
-          >
-            <span>{{ block.settings.btn_2_label | escape }}</span>
-            {%- if block.settings.btn_2_primary -%}
-              <svg class="lspg__card-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <path d="M3 12h17M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            {%- endif -%}
-          </a>
-        {%- endif -%}
+        {% render 'ls-button',
+          label: block.settings.btn_1_label,
+          href: block.settings.btn_1_link,
+          variant: btn_1_variant,
+          icon: btn_1_icon,
+          full_width: true
+        %}
+        {% render 'ls-button',
+          label: block.settings.btn_2_label,
+          href: block.settings.btn_2_link,
+          variant: btn_2_variant,
+          icon: btn_2_icon,
+          full_width: true
+        %}
       </div>
     {%- endif -%}
   </div>

@@ -11,6 +11,7 @@
 {% else %}
   {{ 'section-ls-image-banner.css' | asset_url | stylesheet_tag }}
 {% endif %}
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 <section
   class="
@@ -93,14 +94,14 @@
         <div class="ls-image-banner__body rte">{{ section.settings.body }}</div>
       {% endunless %}
 
-      {% if section.settings.cta_label != blank %}
-        <a href="{{ section.settings.cta_link | default: '#' }}" class="ls-image-banner__cta">
-          {{ section.settings.cta_label | escape }}
-          <span class="ls-image-banner__cta-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
-          <path d="M6.16406 0V15.0469L1.07812 9.96094L0 11.0391L6.375 17.4141L6.91406 17.9297L7.45312 17.4141L13.8281 11.0391L12.75 9.96094L7.66406 15.0469V0H6.16406Z" fill="#F4F7F8"/>
-        </svg></span>
-        </a>
-      {% endif %}
+      {% render 'ls-button',
+        label: section.settings.cta_label,
+        href: section.settings.cta_link,
+        variant: 'primary-arrow',
+        icon: section.settings.arrow_direction,
+        full_width: true,
+        class: 'ls-image-banner__cta'
+      %}
     </div>
   </div>
 
@@ -164,6 +165,19 @@
       "type": "url",
       "id": "cta_link",
       "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "arrow_direction",
+      "label": "Button arrow direction",
+      "default": "arrow-right",
+      "options": [
+        { "value": "arrow-right", "label": "Right" },
+        { "value": "arrow-up-right", "label": "Up-right" },
+        { "value": "arrow-up", "label": "Up" },
+        { "value": "arrow-down", "label": "Down" },
+        { "value": "chevron-right", "label": "Chevron" }
+      ]
     },
     {
       "type": "header",

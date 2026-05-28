@@ -11,6 +11,7 @@
 {% else %}
   {{ 'section-ls-image-with-text.css' | asset_url | stylesheet_tag }}
 {% endif %}
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign heading = section.settings.heading
@@ -58,12 +59,12 @@
         {%- endunless -%}
         {%- if button_label != blank and button_link != blank -%}
           <div class="ls-iwt__button-wrap ls-iwt__button-wrap--mobile">
-            <a
-              href="{{ button_link }}"
-              class="ls-iwt__button c-btn c-btn--{{ button_style }}"
-            >
-              {{ button_label | escape }}
-            </a>
+            {% render 'ls-button',
+              label: button_label,
+              href: button_link,
+              variant: 'secondary',
+              class: 'ls-iwt__button'
+            %}
           </div>
         {%- endif -%}
       </div>
@@ -78,12 +79,12 @@
         {%- endunless -%}
         {%- if button_label != blank and button_link != blank -%}
           <div class="ls-iwt__button-wrap ls-iwt__button-wrap--desktop">
-            <a
-              href="{{ button_link }}"
-              class="ls-iwt__button c-btn c-btn--{{ button_style }}"
-            >
-              {{ button_label | escape }}
-            </a>
+            {% render 'ls-button',
+              label: button_label,
+              href: button_link,
+              variant: 'secondary',
+              class: 'ls-iwt__button'
+            %}
           </div>
         {%- endif -%}
       </div>
@@ -142,17 +143,6 @@
       "type": "url",
       "id": "button_link",
       "label": "Button link"
-    },
-    {
-      "type": "select",
-      "id": "button_style",
-      "label": "Button style",
-      "default": "hollow",
-      "options": [
-        { "value": "hollow", "label": "Outline" },
-        { "value": "primary", "label": "Primary" },
-        { "value": "mono", "label": "Mono" }
-      ]
     },
     {
       "type": "header",

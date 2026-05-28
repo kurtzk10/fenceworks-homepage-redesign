@@ -237,24 +237,10 @@ media-carousel-wrapper.lsptc__grid:not(.swiper-wrapper) {
 
 /* ── CTA button ─────────────────────────────────────────────── */
 
+/* Card CTA is the shared `ls-button` snippet (primary, full width);
+   see component-ls-button.css. Only the bottom-pin is card-specific. */
 .lsptc__card-btn {
-  display: block;
-  width: 100%;
-  background-color: var(--lsptc-btn-bg);
-  color: var(--lsptc-btn-text);
-  text-align: center;
-  padding: 14px 20px;
-  border-radius: 100px;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
   margin-top: auto;
-}
-
-.lsptc__card-btn:hover {
-  opacity: 0.85;
 }
 
 /* ============================================================
@@ -390,16 +376,6 @@ p.lsptc__spec-label {
 
 .lsptc__spec-item {
   align-items: center;
-}
-
-a.lsptc__card-btn {
-  color: var(--txt-light, #F4F7F8);
-  font-family: "Host Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px; /* 137.5% */
-  letter-spacing: 0.5px;
 }
 
 .lsptc__specs {

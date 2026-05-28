@@ -26,6 +26,7 @@
   {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
 {% endif %}
 <script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 <section
   class="
@@ -52,8 +53,6 @@
     --lsptc-spec-icon-bg: {{ section.settings.spec_icon_bg }};
     --lsptc-spec-label-color: {{ section.settings.spec_label_color }};
     --lsptc-spec-value-color: {{ section.settings.spec_value_color }};
-    --lsptc-btn-bg: {{ section.settings.btn_bg }};
-    --lsptc-btn-text: {{ section.settings.btn_text_color }};
     --lsptc-image-height: {{ section.settings.image_height }}px;
   "
 >
@@ -166,12 +165,13 @@
                         </div>
                       {%- endif -%}
 
-                      {%- unless block.settings.btn_label == blank -%}
-                        {%- assign _btn_link = block.settings.btn_link | default: '#' -%}
-                        <a href="{{ _btn_link }}" class="lsptc__card-btn">
-                          {{- block.settings.btn_label | escape -}}
-                        </a>
-                      {%- endunless -%}
+                      {% render 'ls-button',
+                        label: block.settings.btn_label,
+                        href: block.settings.btn_link,
+                        variant: 'primary',
+                        full_width: true,
+                        class: 'lsptc__card-btn'
+                      %}
 
                     </div>
                   </div>
@@ -333,18 +333,6 @@
       "id": "spec_value_color",
       "label": "Spec value text",
       "default": "#3D4752"
-    },
-    {
-      "type": "color",
-      "id": "btn_bg",
-      "label": "Button background",
-      "default": "#F5811F"
-    },
-    {
-      "type": "color",
-      "id": "btn_text_color",
-      "label": "Button text",
-      "default": "#ffffff"
     },
     {
       "type": "header",

@@ -12,6 +12,7 @@
   {{ 'section-ls-faq.css' | asset_url | stylesheet_tag }}
 {% endif %}
 <script src="{{ 'section-ls-faq.js' | asset_url }}" type="module"></script>
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 <section
   class="
@@ -33,9 +34,6 @@
     --lsfaq-question-color: {{ section.settings.question_color }};
     --lsfaq-answer-color: {{ section.settings.answer_color }};
     --lsfaq-divider-color: {{ section.settings.divider_color }};
-    --lsfaq-btn-border: {{ section.settings.button_border }};
-    --lsfaq-btn-text: {{ section.settings.button_text }};
-    --lsfaq-btn-bg-hover: {{ section.settings.button_bg_hover }};
   "
 >
   <div class="lsfaq__outer">
@@ -58,10 +56,12 @@
             </h2>
           {%- endif -%}
 
-          {%- if section.settings.button_label != blank -%}
-            {%- assign btn_href = section.settings.button_link | default: '#' -%}
-            <a href="{{ btn_href }}" class="lsfaq__btn">{{ section.settings.button_label | escape }}</a>
-          {%- endif -%}
+          {% render 'ls-button',
+            label: section.settings.button_label,
+            href: section.settings.button_link,
+            variant: 'secondary',
+            full_width: true
+          %}
         </aside>
 
         <div class="lsfaq__list">
@@ -186,24 +186,6 @@
       "id": "divider_color",
       "label": "Divider color",
       "default": "#e9eced"
-    },
-    {
-      "type": "color",
-      "id": "button_border",
-      "label": "Button border",
-      "default": "#101a21"
-    },
-    {
-      "type": "color",
-      "id": "button_text",
-      "label": "Button text",
-      "default": "#1c2d38"
-    },
-    {
-      "type": "color",
-      "id": "button_bg_hover",
-      "label": "Button background hover",
-      "default": "#fbcda5"
     },
     {
       "type": "header",

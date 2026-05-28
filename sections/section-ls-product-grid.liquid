@@ -26,6 +26,7 @@
   {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
 {% endif %}
 <script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+{{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
 <section
   class="
@@ -54,10 +55,6 @@
     --lspg-price-label-color: {{ section.settings.price_label_color }};
     --lspg-star-color: {{ section.settings.star_color }};
     --lspg-star-empty-color: {{ section.settings.star_empty_color }};
-    --lspg-card-btn-primary-bg: {{ section.settings.card_btn_primary_bg }};
-    --lspg-card-btn-primary-text: {{ section.settings.card_btn_primary_text }};
-    --lspg-card-btn-secondary-border: {{ section.settings.card_btn_secondary_border }};
-    --lspg-card-btn-secondary-text: {{ section.settings.card_btn_secondary_text }};
     --lspg-cta-border: {{ section.settings.cta_border_color }};
     --lspg-cta-text-color: {{ section.settings.cta_text_color }};
     --lspg-contact-border: {{ section.settings.contact_border_color }};
@@ -574,30 +571,6 @@
     },
     {
       "type": "color",
-      "id": "card_btn_primary_bg",
-      "label": "Card button — primary fill",
-      "default": "#F5811F"
-    },
-    {
-      "type": "color",
-      "id": "card_btn_primary_text",
-      "label": "Card button — primary text",
-      "default": "#FEFFFE"
-    },
-    {
-      "type": "color",
-      "id": "card_btn_secondary_border",
-      "label": "Card button — secondary border",
-      "default": "#101A21"
-    },
-    {
-      "type": "color",
-      "id": "card_btn_secondary_text",
-      "label": "Card button — secondary text",
-      "default": "#1C2D38"
-    },
-    {
-      "type": "color",
       "id": "pagination_active",
       "label": "Carousel dot (active)",
       "default": "#F5811F"
@@ -796,6 +769,20 @@
           "default": true
         },
         {
+          "type": "select",
+          "id": "btn_1_arrow",
+          "label": "Button arrow direction",
+          "info": "Only shown on the primary style.",
+          "default": "arrow-right",
+          "options": [
+            { "value": "arrow-right", "label": "Right" },
+            { "value": "arrow-up-right", "label": "Up-right" },
+            { "value": "arrow-up", "label": "Up" },
+            { "value": "arrow-down", "label": "Down" },
+            { "value": "chevron-right", "label": "Chevron" }
+          ]
+        },
+        {
           "type": "header",
           "content": "Button 2"
         },
@@ -816,6 +803,20 @@
           "label": "Primary style (orange fill)",
           "info": "When off, button uses transparent fill with dark border + dark text.",
           "default": false
+        },
+        {
+          "type": "select",
+          "id": "btn_2_arrow",
+          "label": "Button arrow direction",
+          "info": "Only shown on the primary style.",
+          "default": "arrow-right",
+          "options": [
+            { "value": "arrow-right", "label": "Right" },
+            { "value": "arrow-up-right", "label": "Up-right" },
+            { "value": "arrow-up", "label": "Up" },
+            { "value": "arrow-down", "label": "Down" },
+            { "value": "chevron-right", "label": "Chevron" }
+          ]
         }
       ]
     },

@@ -276,7 +276,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Header hook for plugins ================================================== -->
     {{ content_for_header }}
-  
+
+    {%- comment -%} LS Buttons — global tokens for the shared `ls-button` component {%- endcomment -%}
+    <style>
+      :root {
+        --ls-btn-bg: {{ settings.ls_btn_primary_fill }};
+        --ls-btn-bg-hover: {{ settings.ls_btn_primary_hover }};
+        --ls-btn-text: {{ settings.ls_btn_primary_text }};
+        --ls-btn-border: {{ settings.ls_btn_secondary_border }};
+        --ls-btn-secondary-bg-hover: {{ settings.ls_btn_secondary_hover }};
+        --ls-btn-secondary-text: {{ settings.ls_btn_secondary_text }};
+        --ls-btn-link-color: {{ settings.ls_btn_link_text }};
+      }
+    </style>
+
   </head>
   
   <body

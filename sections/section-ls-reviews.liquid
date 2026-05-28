@@ -27,6 +27,7 @@
     {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
   {% endif %}
   <script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+  {{ 'component-ls-button.css' | asset_url | stylesheet_tag }}
 
   <section
     class="
@@ -152,11 +153,15 @@
           {%- endif -%}
         </media-carousel>
 
-        {% render 'section-link',
-          title: section.settings.section_link_title,
-          link: section.settings.section_link_link,
-          style: section.settings.section_link_style
-        %}
+        {%- if section.settings.section_link_title != blank -%}
+          <div class="section__link section__link--center">
+            {% render 'ls-button',
+              label: section.settings.section_link_title,
+              href: section.settings.section_link_link,
+              variant: 'secondary'
+            %}
+          </div>
+        {%- endif -%}
 
       </div>
     </div>
@@ -266,34 +271,6 @@
       "type": "url",
       "id": "section_link_link",
       "label": "Link"
-    },
-    {
-      "type": "select",
-      "id": "section_link_style",
-      "label": "Style",
-      "default": "c-btn c-btn--hollow",
-      "options": [
-        {
-          "value": "c-btn c-btn--primary",
-          "label": "Brand button"
-        },
-        {
-          "value": "c-btn c-btn--mono",
-          "label": "Mono button"
-        },
-        {
-          "value": "c-btn c-btn--hollow",
-          "label": "Outline button"
-        },
-        {
-          "value": "link link--arrow",
-          "label": "Chevron"
-        },
-        {
-          "value": "link--underline",
-          "label": "Body text"
-        }
-      ]
     },
     {
       "type": "header",

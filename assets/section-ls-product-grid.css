@@ -363,47 +363,9 @@ media-carousel-wrapper.lspg__grid:not(.swiper-wrapper) {
   margin-top: auto;
 }
 
-.lspg__card-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  height: 50px;
-  padding: 13px 24px;
-  border-radius: 999px;
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
-}
-
-.lspg__card-btn--primary {
-  background-color: var(--lspg-card-btn-primary-bg, #f5811f);
-  color: var(--lspg-card-btn-primary-text, #fefffe);
-  border: 1px solid var(--lspg-card-btn-primary-bg, #f5811f);
-  font-weight: 400;
-}
-
-.lspg__card-btn--secondary {
-  background-color: transparent;
-  color: var(--lspg-card-btn-secondary-text, #1c2d38);
-  border: 1px solid var(--lspg-card-btn-secondary-border, #101a21);
-  font-weight: 700;
-}
-
-.lspg__card-btn:hover,
-.lspg__card-btn:focus-visible {
-  opacity: 0.9;
-}
-
-.lspg__card-btn-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
+/* Card CTAs are the shared `ls-button` snippet (primary-arrow /
+   secondary, full width), stacked by .lspg__card-buttons above; see
+   component-ls-button.css. */
 
 /* ── CTA Card ───────────────────────────────────────────────── */
 

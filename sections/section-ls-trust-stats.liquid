@@ -32,9 +32,6 @@
     --lsts-eyebrow-color: {{ section.settings.eyebrow_color }};
     --lsts-heading-color: {{ section.settings.heading_color }};
     --lsts-body-color: {{ section.settings.body_color }};
-    --ls-btn-bg: {{ section.settings.btn_bg }};
-    --ls-btn-text: {{ section.settings.btn_text_color }};
-    --ls-btn-bg-hover: {{ section.settings.btn_bg_hover }};
     --lsts-icon-bg: {{ section.settings.icon_bg_color }};
     --lsts-icon-color: {{ section.settings.icon_color }};
     --lsts-reason-title-color: {{ section.settings.reason_title_color }};
@@ -68,6 +65,7 @@
           label: section.settings.button_label,
           href: section.settings.button_link,
           variant: 'primary-arrow',
+          icon: section.settings.arrow_direction,
           full_width: true
         %}
       </aside>
@@ -139,6 +137,19 @@
       "label": "Button link"
     },
     {
+      "type": "select",
+      "id": "arrow_direction",
+      "label": "Button arrow direction",
+      "default": "arrow-right",
+      "options": [
+        { "value": "arrow-right", "label": "Right" },
+        { "value": "arrow-up-right", "label": "Up-right" },
+        { "value": "arrow-up", "label": "Up" },
+        { "value": "arrow-down", "label": "Down" },
+        { "value": "chevron-right", "label": "Chevron" }
+      ]
+    },
+    {
       "type": "header",
       "content": "Layout"
     },
@@ -200,24 +211,6 @@
       "id": "body_color",
       "label": "Body text color",
       "default": "#526572"
-    },
-    {
-      "type": "color",
-      "id": "btn_bg",
-      "label": "Button background",
-      "default": "#f5811f"
-    },
-    {
-      "type": "color",
-      "id": "btn_text_color",
-      "label": "Button text",
-      "default": "#f4f7f8"
-    },
-    {
-      "type": "color",
-      "id": "btn_bg_hover",
-      "label": "Button background (hover)",
-      "default": "#ac5a16"
     },
     {
       "type": "color",
