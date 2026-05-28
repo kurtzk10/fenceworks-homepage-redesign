@@ -653,7 +653,7 @@
       "name": "LS Product Type Cards",
       "settings": {
         "eyebrow": "One Stop, Everything for your Backyard",
-        "heading": "<p>BASKETBALL HOOPS<br>FOR HOMES</p>",
+        "heading": "<p>BASKETBALL HOOPS<br/>FOR HOMES</p>",
         "description": "<p>Professional-grade basketball hoops designed for safety, performance, and everyday play. Choose the perfect setup for your space.</p>",
         "section_width": "large",
         "grid_gap": 24,
@@ -1503,6 +1503,193 @@
         "section_bottom_margin": false
       }
     },
+    "section_ls_video_banner_Tn7Wq2": {
+      "type": "section-ls-video-banner",
+      "name": "LS Video Banner",
+      "settings": {
+        "heading": "<p>Trampolines</p><p>Installed<br/>With Safety</p><p>In Mind</p>",
+        "video_upload": "shopify://files/videos/Trampoline.mp4",
+        "section_width": "small",
+        "text_position": "left",
+        "heading_size": 48,
+        "height_desktop": 360,
+        "height_mobile": 280,
+        "section_radius_top": 32,
+        "section_radius_bottom": 0,
+        "text_color": "#fbcda5",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_trampoline_services_Wq8Hd4": {
+      "type": "section-ls-trampoline-services",
+      "blocks": {
+        "shape_round_a1": {
+          "type": "shape",
+          "settings": {
+            "icon": "shopify://shop_images/circle-icon.png",
+            "title": "Round",
+            "subtitle": "Classic design, consistent bounce"
+          }
+        },
+        "shape_rect_b2": {
+          "type": "shape",
+          "settings": {
+            "icon": "shopify://shop_images/square-icon.png",
+            "title": "Rectangle",
+            "subtitle": "Competitive bounce, more jump space"
+          }
+        },
+        "shape_oval_c3": {
+          "type": "shape",
+          "settings": {
+            "icon": "shopify://shop_images/oval-icon.png",
+            "title": "Oval",
+            "subtitle": "Bigger jump area, smoother center pull"
+          }
+        },
+        "card_above_d4": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/above-ground-trampoline.png",
+            "title": "Above-Ground Trampolines",
+            "description": "<p>Traditional setup with maximum bounce. Includes safety enclosure netting and professional assembly. Great for all ages and athletic training.</p>",
+            "btn_label": "Shop Above-Ground Trampolines",
+            "btn_link": ""
+          }
+        },
+        "card_inground_e5": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/in-ground-trampoline.png",
+            "title": "In-Ground Trampolines",
+            "description": "<p>The safest option for families. Installed flush with your lawn for a sleek look and reduced fall risk. Perfect for younger children and peace of mind.</p>",
+            "btn_label": "Shop In-Ground Trampolines",
+            "btn_link": ""
+          }
+        },
+        "card_acc_f6": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/trampoline-accessory.png",
+            "title": "Accessories for Trampolines",
+            "description": "<p>Essential upgrades for safer, more fun jumping. Designed accessories that boost play, protection, and everyday trampoline enjoyment.</p>",
+            "btn_label": "Shop Accessories",
+            "btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "shape_round_a1",
+        "shape_rect_b2",
+        "shape_oval_c3",
+        "card_above_d4",
+        "card_inground_e5",
+        "card_acc_f6"
+      ],
+      "name": "LS Trampoline Services",
+      "settings": {
+        "description": "<p>Safe, durable, and virtually maintenance-free. Our trampolines are designed with everything parents care about most.</p>",
+        "shapes_heading": "Available Shapes",
+        "section_width": "large",
+        "card_radius": 24,
+        "section_radius_top": 0,
+        "section_radius_bottom": 0,
+        "section_bg": "#ffffff",
+        "intro_text_color": "#1c2d38",
+        "shapes_heading_color": "#101a21",
+        "shape_icon_bg": "#fef2e9",
+        "shape_title_color": "#1c2d38",
+        "shape_body_color": "#1c2d38",
+        "card_bg": "#fef2e9",
+        "card_title_color": "#1c2d38",
+        "card_text_color": "#1c2d38",
+        "btn_bg": "#f5811f",
+        "btn_text": "#f4f7f8",
+        "padding_top": 48,
+        "padding_bottom": 80,
+        "section_bottom_margin": false
+      }
+    },
+    "section_ls_trust_stats_RxK4Mc": {
+      "type": "section-ls-trust-stats",
+      "blocks": {
+        "reason_pj3W8a": {
+          "type": "reason",
+          "settings": {
+            "icon": "shopify://shop_images/user-friends-solid.png",
+            "title": "Real People. Always",
+            "body": "<p>No call centers. No AI Chatbots. No automated systems. When you contact Fenceworks, you speak directly with a knowledgeable member of our family-run team who understands your project from start to finish.</p>"
+          }
+        },
+        "reason_DqYW4t": {
+          "type": "reason",
+          "settings": {
+            "icon": "shopify://shop_images/magic-solid.png",
+            "title": "Custom-Built. Never Cookie-Cutter.",
+            "body": "<p>We don't believe in one-size-fits-all solutions. Every project is tailored to your space, your goals, and how your family uses your backyard.</p>"
+          }
+        },
+        "reason_Ka9HmL": {
+          "type": "reason",
+          "settings": {
+            "icon": "shopify://shop_images/credit-card-solid.png",
+            "title": "No Credit Card Fees. Ever.",
+            "body": "<p>Pay how you prefer and keep the rewards.<br/>We never add surprise surcharges.</p>"
+          }
+        },
+        "reason_T6yfQz": {
+          "type": "reason",
+          "settings": {
+            "icon": "shopify://shop_images/clock-solid.png",
+            "title": "Exact Appointment Times",
+            "body": "<p>For your consultation, we provide a specific arrival time — not a vague window. We respect your schedule and show up when we say we will.</p>"
+          }
+        },
+        "reason_Vz2NbR": {
+          "type": "reason",
+          "settings": {
+            "icon": "shopify://shop_images/map-marked-alt-solid.png",
+            "title": "On-Site Consultations — No Guesswork",
+            "body": "<p>We don't rely on satellite images or rough estimates.<br/>Every proposal is created in person to ensure accuracy, safety, and the right solution for your property.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "reason_pj3W8a",
+        "reason_DqYW4t",
+        "reason_Ka9HmL",
+        "reason_T6yfQz",
+        "reason_Vz2NbR"
+      ],
+      "name": "LS Trust Stats",
+      "settings": {
+        "eyebrow": "Built on Trust",
+        "heading_line_1": "Why Homeowners",
+        "heading_line_2": "Choose Fenceworks",
+        "body": "<p>When you work with a family business rooted in this community, you get more than a product — you gain a long-term backyard partner.</p>",
+        "button_label": "Get a Free Quote",
+        "button_link": "",
+        "section_width": "large",
+        "section_radius_top": 0,
+        "section_radius_bottom": 0,
+        "section_bg": "#f7f9fa",
+        "eyebrow_color": "#f5811f",
+        "heading_color": "#1c2d38",
+        "body_color": "#526572",
+        "btn_bg": "#f5811f",
+        "btn_text_color": "#f4f7f8",
+        "btn_bg_hover": "#ac5a16",
+        "icon_bg_color": "#fef2e9",
+        "icon_color": "#f5811f",
+        "reason_title_color": "#ac5a16",
+        "reason_body_color": "#526572",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "section_bottom_margin": false
+      }
+    },
     "section_ls_faq_HYJmhW": {
       "type": "section-ls-faq",
       "blocks": {
@@ -1595,79 +1782,6 @@
         "padding_bottom": 56,
         "section_bottom_margin": false
       }
-    },
-    "section_ls_trust_stats_RxK4Mc": {
-      "type": "section-ls-trust-stats",
-      "blocks": {
-        "reason_pj3W8a": {
-          "type": "reason",
-          "settings": {
-            "title": "Real People. Always",
-            "body": "<p>No call centers. No AI Chatbots. No automated systems. When you contact Fenceworks, you speak directly with a knowledgeable member of our family-run team who understands your project from start to finish.</p>"
-          }
-        },
-        "reason_DqYW4t": {
-          "type": "reason",
-          "settings": {
-            "title": "Custom-Built. Never Cookie-Cutter.",
-            "body": "<p>We don't believe in one-size-fits-all solutions. Every project is tailored to your space, your goals, and how your family uses your backyard.</p>"
-          }
-        },
-        "reason_Ka9HmL": {
-          "type": "reason",
-          "settings": {
-            "title": "No Credit Card Fees. Ever.",
-            "body": "<p>Pay how you prefer and keep the rewards.<br>We never add surprise surcharges.</p>"
-          }
-        },
-        "reason_T6yfQz": {
-          "type": "reason",
-          "settings": {
-            "title": "Exact Appointment Times",
-            "body": "<p>For your consultation, we provide a specific arrival time — not a vague window. We respect your schedule and show up when we say we will.</p>"
-          }
-        },
-        "reason_Vz2NbR": {
-          "type": "reason",
-          "settings": {
-            "title": "On-Site Consultations — No Guesswork",
-            "body": "<p>We don't rely on satellite images or rough estimates.<br>Every proposal is created in person to ensure accuracy, safety, and the right solution for your property.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "reason_pj3W8a",
-        "reason_DqYW4t",
-        "reason_Ka9HmL",
-        "reason_T6yfQz",
-        "reason_Vz2NbR"
-      ],
-      "name": "LS Trust Stats",
-      "settings": {
-        "eyebrow": "Built on Trust",
-        "heading_line_1": "Why Homeowners",
-        "heading_line_2": "Choose Fenceworks",
-        "body": "<p>When you work with a family business rooted in this community, you get more than a product — you gain a long-term backyard partner.</p>",
-        "button_label": "Get a Free Quote",
-        "button_link": "",
-        "section_width": "large",
-        "section_radius_top": 0,
-        "section_radius_bottom": 0,
-        "section_bg": "#f7f9fa",
-        "eyebrow_color": "#f5811f",
-        "heading_color": "#1c2d38",
-        "body_color": "#526572",
-        "btn_bg": "#f5811f",
-        "btn_text_color": "#f4f7f8",
-        "btn_bg_hover": "#ac5a16",
-        "icon_bg_color": "#fef2e9",
-        "icon_color": "#f5811f",
-        "reason_title_color": "#ac5a16",
-        "reason_body_color": "#526572",
-        "padding_top": 56,
-        "padding_bottom": 56,
-        "section_bottom_margin": false
-      }
     }
   },
   "order": [
@@ -1688,6 +1802,8 @@
     "section_ls_product_grid_Ddggr7",
     "section_ls_more_options_h72pLx",
     "section_ls_product_grid_gyW483",
+    "section_ls_video_banner_Tn7Wq2",
+    "section_ls_trampoline_services_Wq8Hd4",
     "section_ls_trust_stats_RxK4Mc",
     "section_ls_faq_HYJmhW"
   ]

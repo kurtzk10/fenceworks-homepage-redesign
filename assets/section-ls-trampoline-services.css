@@ -1,0 +1,266 @@
+/* ============================================================
+   Section: LS Trampoline Services
+   Intro + "Available Shapes" row, then product cards whose
+   images float above the card top.
+   ============================================================ */
+
+.section--ls-trampoline-services {
+  background-color: var(--lstrs-section-bg, #ffffff);
+  padding-top: var(--space-top);
+  padding-bottom: var(--space-bottom);
+  border-radius:
+    var(--lstrs-section-radius-top, 0) var(--lstrs-section-radius-top, 0)
+    var(--lstrs-section-radius-bottom, 0) var(--lstrs-section-radius-bottom, 0);
+  overflow: clip;
+}
+
+/* ── Intro (description + shapes) ──────────────────────────── */
+
+.lstrs__intro {
+  max-width: 906px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lstrs__intro-text {
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lstrs-intro-text-color, #1c2d38);
+}
+
+.lstrs__intro-text p {
+  margin: 0;
+}
+
+.lstrs__shapes-heading {
+  margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: clamp(24px, calc(18.5px + 1.46vw), 32px);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--lstrs-shapes-heading-color, #101a21);
+}
+
+/* ── Shapes row (uses the icon-header-subtitle snippet) ────── */
+
+.lstrs__shapes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 48px;
+}
+
+/*
+  Scoped overrides for the shared `icon-header-subtitle` snippet so
+  this section is self-contained (doesn't depend on another section's
+  stylesheet being present) and so the shapes sit in a row with the
+  icon vertically centered against the text.
+*/
+.lstrs__shapes .icon-header-subtitle {
+  flex: 1 1 0;
+  align-items: center;
+  gap: 16px;
+}
+
+.lstrs__shapes .icon-header-subtitle__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background-color: var(--lstrs-shape-icon-bg, #fef2e9);
+}
+
+.lstrs__shapes .icon-header-subtitle__icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.lstrs__shapes .icon-header-subtitle__title {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--lstrs-shape-title-color, #1c2d38);
+}
+
+.lstrs__shapes .icon-header-subtitle__body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lstrs-shape-body-color, #1c2d38);
+}
+
+@media screen and (max-width: 767px) {
+  .lstrs__shapes {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* ── Product card grid / carousel ──────────────────────────── */
+/*
+  Desktop grid layout — only applies when Swiper has NOT taken over
+  the wrapper. Below the `tab` breakpoint (<768px) the media-carousel
+  turns this into a swiped carousel, so :not(.swiper-wrapper) lets the
+  grid step aside for Swiper's flex track.
+
+  Big top padding leaves room for the product images, which are
+  absolutely positioned and float above each card's top edge.
+*/
+media-carousel-wrapper.lstrs__grid:not(.swiper-wrapper) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 342px));
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  padding-top: 160px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 989px) {
+  media-carousel-wrapper.lstrs__grid:not(.swiper-wrapper) {
+    grid-template-columns: repeat(2, minmax(0, 342px));
+    row-gap: 150px;
+  }
+}
+
+/* Slide / grid-cell wrapper */
+.lstrs__card-wrap {
+  display: flex;
+}
+
+/*
+  Mobile carousel: Swiper sets `overflow: hidden` on its track, which
+  would clip the product images that float above each card. Allow
+  vertical overflow (so images show) while still clipping horizontally
+  (so neighbouring slides stay hidden). The top padding gives the
+  floating images room below the shapes row above.
+*/
+@media screen and (max-width: 767px) {
+  .section--ls-trampoline-services .lstrs__carousel {
+    padding-top: 140px;
+  }
+
+  .section--ls-trampoline-services .swiper {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  .section--ls-trampoline-services .swiper-slide {
+    height: auto;
+  }
+}
+
+.lstrs__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 200px 24px 24px;
+  border-radius: var(--lstrs-card-radius, 24px);
+  background-color: var(--lstrs-card-bg, #fef2e9);
+  box-shadow:
+    0 4px 3px rgba(0, 0, 0, 0.1),
+    0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating product image */
+.lstrs__card-img-wrap {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 307px;
+  pointer-events: none;
+}
+
+.lstrs__card-img-wrap picture,
+.lstrs__card-img-wrap .lstrs__card-img,
+.lstrs__card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lstrs__card-img--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+}
+
+.lstrs__card-title {
+  margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: clamp(24px, calc(18.5px + 1.46vw), 32px);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--lstrs-card-title-color, #1c2d38);
+}
+
+.lstrs__card-desc {
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--lstrs-card-text-color, #1c2d38);
+}
+
+.lstrs__card-desc p {
+  margin: 0;
+}
+
+.lstrs__card-btn {
+  /* Pin the button to the bottom so cards with shorter copy still
+     line their CTAs up across the row. */
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 8px 24px;
+  border-radius: 999px;
+  border: 0;
+  background-color: var(--lstrs-btn-bg, #f5811f);
+  color: var(--lstrs-btn-text, #f4f7f8);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.lstrs__card-btn:hover,
+.lstrs__card-btn:focus-visible {
+  opacity: 0.9;
+}
+
+/* ── Carousel pagination (mobile only — Swiper active) ─────── */
+.section--ls-trampoline-services .media-carousel__pagination {
+  position: relative;
+  margin-top: 24px;
+}
+
+.section--ls-trampoline-services .media-carousel__pagination .swiper-pagination-bullet-active {
+  background: var(--lstrs-pagination-active, #f5811f);
+}
+
+.section--ls-trampoline-services .media-carousel__pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background: var(--lstrs-pagination-inactive, #d1d5db);
+  opacity: 1;
+}

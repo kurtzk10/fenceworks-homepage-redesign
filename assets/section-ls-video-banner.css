@@ -1,0 +1,147 @@
+/* ============================================================
+   Section: LS Video Banner
+   Full-bleed looping background video with an overlaid heading.
+   ============================================================ */
+
+.section--ls-video-banner {
+  /* Full-bleed: the video reaches the viewport edges. */
+  width: 100%;
+}
+
+.lsvb {
+  position: relative;
+  display: flex;
+  min-height: var(--lsvb-height-mobile, 280px);
+  border-radius:
+    var(--lsvb-radius-top, 0) var(--lsvb-radius-top, 0)
+    var(--lsvb-radius-bottom, 0) var(--lsvb-radius-bottom, 0);
+  overflow: clip;
+}
+
+@media screen and (min-width: 768px) {
+  .lsvb {
+    min-height: var(--lsvb-height-desktop, 360px);
+  }
+}
+
+/* ── Background media ──────────────────────────────────────── */
+
+.lsvb__video,
+.lsvb__video img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lsvb__video {
+  z-index: 0;
+}
+
+.lsvb__video--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2d38;
+}
+
+.lsvb__video--placeholder .placeholder-svg {
+  width: 80px;
+  height: 80px;
+  opacity: 0.4;
+}
+
+/* ── Legibility overlay ────────────────────────────────────── */
+
+.lsvb__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--lsvb-overlay-color, #000000);
+  opacity: var(--lsvb-overlay-opacity, 0);
+  pointer-events: none;
+}
+
+/* ── Content ───────────────────────────────────────────────── */
+
+.lsvb__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-block: 32px;
+}
+
+/* Mobile: anchor the heading to the bottom of the banner. */
+@media screen and (max-width: 767px) {
+  .lsvb__content {
+    align-items: flex-end;
+  }
+}
+
+.lsvb__container {
+  display: flex;
+  width: 100%;
+}
+
+/* Horizontal alignment of the heading block (text position). */
+.lsvb[data-text-position="left"] .lsvb__container {
+  justify-content: flex-start;
+}
+
+.lsvb[data-text-position="center"] .lsvb__container {
+  justify-content: center;
+}
+
+.lsvb[data-text-position="right"] .lsvb__container {
+  justify-content: flex-end;
+}
+
+/* ── Heading ───────────────────────────────────────────────── */
+
+.lsvb__heading {
+  max-width: 36ch;
+  margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: clamp(28px, calc(20px + 3.5vw), var(--lsvb-heading-size, 48px));
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--lsvb-text-color, #fbcda5);
+  text-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .lsvb__heading {
+    line-height: 1;
+  }
+}
+
+.lsvb__heading p {
+  margin: 0;
+}
+
+/* Match text alignment to the chosen position. */
+.lsvb[data-text-position="left"] .lsvb__heading {
+  text-align: left;
+}
+
+.lsvb[data-text-position="center"] .lsvb__heading {
+  text-align: center;
+}
+
+.lsvb[data-text-position="right"] .lsvb__heading {
+  text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Pause is best-effort; browsers vary. Honor intent where possible. */
+  .lsvb__video {
+    animation-play-state: paused;
+  }
+}

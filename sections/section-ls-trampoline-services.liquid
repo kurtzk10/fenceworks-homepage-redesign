@@ -1,0 +1,415 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-trampoline-services.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-trampoline-services.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-trampoline-services.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{% if section.index > 2 %}
+  <link
+    rel="stylesheet"
+    href="{{ 'component-media-carousel.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'component-media-carousel.css' | asset_url | stylesheet_tag }}
+{% endif %}
+<script src="{{ 'media-carousel.js' | asset_url }}" type="module"></script>
+
+<section
+  class="
+    section
+    section--padded
+    section--ls-trampoline-services
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-trampoline-services"
+  style="
+    --space-top: {{ section.settings.padding_top }}px;
+    --space-bottom: {{ section.settings.padding_bottom }}px;
+    --lstrs-section-bg: {{ section.settings.section_bg }};
+    --lstrs-section-radius-top: {{ section.settings.section_radius_top }}px;
+    --lstrs-section-radius-bottom: {{ section.settings.section_radius_bottom }}px;
+    --lstrs-intro-text-color: {{ section.settings.intro_text_color }};
+    --lstrs-shapes-heading-color: {{ section.settings.shapes_heading_color }};
+    --lstrs-shape-icon-bg: {{ section.settings.shape_icon_bg }};
+    --lstrs-shape-title-color: {{ section.settings.shape_title_color }};
+    --lstrs-shape-body-color: {{ section.settings.shape_body_color }};
+    --lstrs-card-bg: {{ section.settings.card_bg }};
+    --lstrs-card-radius: {{ section.settings.card_radius }}px;
+    --lstrs-card-title-color: {{ section.settings.card_title_color }};
+    --lstrs-card-text-color: {{ section.settings.card_text_color }};
+    --lstrs-btn-bg: {{ section.settings.btn_bg }};
+    --lstrs-btn-text: {{ section.settings.btn_text }};
+    --lstrs-pagination-active: {{ section.settings.pagination_active }};
+    --lstrs-pagination-inactive: {{ section.settings.pagination_inactive }};
+  "
+>
+  <div class="container container--{{ section.settings.section_width }}">
+
+    {%- assign shape_blocks = section.blocks | where: 'type', 'shape' -%}
+    {%- assign card_blocks = section.blocks | where: 'type', 'product_card' -%}
+
+    {%- if section.settings.description != blank or section.settings.shapes_heading != blank or shape_blocks.size > 0 -%}
+      <div class="lstrs__intro">
+        {%- if section.settings.description != blank -%}
+          <div class="lstrs__intro-text rte">{{ section.settings.description }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.shapes_heading != blank -%}
+          <h2 class="lstrs__shapes-heading">{{ section.settings.shapes_heading | escape }}</h2>
+        {%- endif -%}
+
+        {%- if shape_blocks.size > 0 -%}
+          <ul class="lstrs__shapes">
+            {%- for block in shape_blocks -%}
+              {% render 'icon-header-subtitle',
+                icon: block.settings.icon,
+                title: block.settings.title,
+                body: block.settings.subtitle,
+                block_id: block.id,
+                shopify_attributes: block.shopify_attributes
+              %}
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if card_blocks.size > 0 -%}
+      <media-carousel
+        class="lstrs__carousel"
+        data-speed="500"
+        data-loop="false"
+        data-pagination="true"
+        data-space-between="16"
+        data-navigation="false"
+        data-breakpoint-max="tab"
+      >
+        <media-carousel-slider>
+          <media-carousel-wrapper class="lstrs__grid">
+            {%- for block in card_blocks -%}
+              <media-carousel-slide class="lstrs__card-wrap block--{{ block.id }}" {{ block.shopify_attributes }}>
+                <div class="lstrs__card">
+
+                  <div class="lstrs__card-img-wrap">
+                    {%- if block.settings.image != blank -%}
+                      {% render 'image',
+                        image: block.settings.image,
+                        additional_classes: 'lstrs__card-img',
+                        image_ratio: 'natural',
+                        image_srcset_widths: '300, 480, 600, 800',
+                        image_sizes: '(min-width: 990px) 342px, 80vw',
+                        loading: 'lazy',
+                        alt_string: block.settings.title | escape
+                      %}
+                    {%- else -%}
+                      <div class="lstrs__card-img lstrs__card-img--placeholder">
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    {%- endif -%}
+                  </div>
+
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="lstrs__card-title">{{ block.settings.title | escape }}</h3>
+                  {%- endif -%}
+
+                  {%- if block.settings.description != blank -%}
+                    <div class="lstrs__card-desc rte">{{ block.settings.description }}</div>
+                  {%- endif -%}
+
+                  {%- if block.settings.btn_label != blank -%}
+                    {%- assign btn_href = block.settings.btn_link | default: '#' -%}
+                    <a href="{{ btn_href }}" class="lstrs__card-btn">{{ block.settings.btn_label | escape }}</a>
+                  {%- endif -%}
+
+                </div>
+              </media-carousel-slide>
+            {%- endfor -%}
+          </media-carousel-wrapper>
+        </media-carousel-slider>
+
+        {%- if card_blocks.size > 1 -%}
+          <media-carousel-pagination
+            class="media-carousel__pagination swiper-pagination js-carousel-pagination lstrs__pagination"
+            hidden
+          ></media-carousel-pagination>
+        {%- endif -%}
+      </media-carousel>
+    {%- endif -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS Trampoline Services",
+  "class": "js-section__ls-trampoline-services",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Intro"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Safe, durable, and virtually maintenance-free. Our trampolines are designed with everything parents care about most.</p>"
+    },
+    {
+      "type": "text",
+      "id": "shapes_heading",
+      "label": "Shapes heading",
+      "default": "Available Shapes"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card corner radius",
+      "unit": "px",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "section_radius_top",
+      "label": "Section top radius",
+      "unit": "px",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_radius_bottom",
+      "label": "Section bottom radius",
+      "unit": "px",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "intro_text_color",
+      "label": "Description text",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "shapes_heading_color",
+      "label": "Shapes heading",
+      "default": "#101a21"
+    },
+    {
+      "type": "color",
+      "id": "shape_icon_bg",
+      "label": "Shape icon background",
+      "default": "#fef2e9"
+    },
+    {
+      "type": "color",
+      "id": "shape_title_color",
+      "label": "Shape title",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "shape_body_color",
+      "label": "Shape subtitle",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#fef2e9"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card description",
+      "default": "#1c2d38"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Button background",
+      "default": "#f5811f"
+    },
+    {
+      "type": "color",
+      "id": "btn_text",
+      "label": "Button text",
+      "default": "#f4f7f8"
+    },
+    {
+      "type": "color",
+      "id": "pagination_active",
+      "label": "Carousel dot (active)",
+      "default": "#f5811f"
+    },
+    {
+      "type": "color",
+      "id": "pagination_inactive",
+      "label": "Carousel dot (inactive)",
+      "default": "#d1d5db"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 80
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "shape",
+      "name": "Shape",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Round"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Classic design, consistent bounce"
+        }
+      ]
+    },
+    {
+      "type": "product_card",
+      "name": "Product card",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product image",
+          "info": "Floats above the top of the card."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Above-Ground Trampolines"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Traditional setup with maximum bounce. Includes safety enclosure netting and professional assembly. Great for all ages and athletic training.</p>"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button label",
+          "default": "Shop Above-Ground Trampolines"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Trampoline Services",
+      "blocks": [
+        { "type": "shape", "settings": { "title": "Round",     "subtitle": "Classic design, consistent bounce" } },
+        { "type": "shape", "settings": { "title": "Rectangle", "subtitle": "Competitive bounce, more jump space" } },
+        { "type": "shape", "settings": { "title": "Oval",      "subtitle": "Bigger jump area, smoother center pull" } },
+        { "type": "product_card", "settings": { "title": "Above-Ground Trampolines", "description": "<p>Traditional setup with maximum bounce. Includes safety enclosure netting and professional assembly. Great for all ages and athletic training.</p>", "btn_label": "Shop Above-Ground Trampolines" } },
+        { "type": "product_card", "settings": { "title": "In-Ground Trampolines",    "description": "<p>The safest option for families. Installed flush with your lawn for a sleek look and reduced fall risk. Perfect for younger children and peace of mind.</p>", "btn_label": "Shop In-Ground Trampolines" } },
+        { "type": "product_card", "settings": { "title": "Accessories for Trampolines", "description": "<p>Essential upgrades for safer, more fun jumping. Designed accessories that boost play, protection, and everyday trampoline enjoyment.</p>", "btn_label": "Shop Accessories" } }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

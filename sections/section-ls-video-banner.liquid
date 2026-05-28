@@ -1,0 +1,249 @@
+{% if section.index > 2 or section.location == 'footer' %}
+  <link
+    rel="stylesheet"
+    href="{{ 'section-ls-video-banner.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    {{ 'section-ls-video-banner.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{% else %}
+  {{ 'section-ls-video-banner.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{%- liquid
+  assign video_upload = section.settings.video_upload
+  assign poster_image = section.settings.poster_image
+
+  if poster_image != blank
+    assign poster_src = poster_image
+  elsif video_upload != blank
+    assign poster_src = video_upload.preview_image
+  endif
+-%}
+
+<section
+  class="
+    section
+    section--ls-video-banner
+    section--{{ section.id }}
+    {% if section.settings.section_bottom_margin %}section--mb-0{% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="ls-video-banner"
+  style="
+    --lsvb-height-desktop: {{ section.settings.height_desktop }}px;
+    --lsvb-height-mobile: {{ section.settings.height_mobile }}px;
+    --lsvb-radius-top: {{ section.settings.section_radius_top }}px;
+    --lsvb-radius-bottom: {{ section.settings.section_radius_bottom }}px;
+    --lsvb-heading-size: {{ section.settings.heading_size }}px;
+    --lsvb-text-color: {{ section.settings.text_color }};
+    --lsvb-overlay-color: {{ section.settings.overlay_color }};
+    --lsvb-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+  "
+>
+  <div class="lsvb" data-text-position="{{ section.settings.text_position }}">
+
+    {%- if video_upload != blank -%}
+      <video
+        class="lsvb__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        tabindex="-1"
+        aria-hidden="true"
+        disablepictureinpicture
+        {% if poster_src != blank %}poster="{{ poster_src | image_url: width: 1600 }}"{% endif %}
+      >
+        {%- for source in video_upload.sources -%}
+          <source src="{{ source.url }}" type="{{ source.mime_type }}">
+        {%- endfor -%}
+      </video>
+    {%- elsif poster_src != blank -%}
+      {% render 'image',
+        image: poster_src,
+        additional_classes: 'lsvb__video',
+        image_sizes: '100vw',
+        image_default_width: 1600
+      %}
+    {%- else -%}
+      <div class="lsvb__video lsvb__video--placeholder">
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.overlay_opacity > 0 -%}
+      <div class="lsvb__overlay" aria-hidden="true"></div>
+    {%- endif -%}
+
+    <div class="lsvb__content">
+      <div class="container container--{{ section.settings.section_width }} lsvb__container">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="lsvb__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LS Video Banner",
+  "class": "js-section__ls-video-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Add <br> tags to control where lines break.",
+      "default": "<p>Trampolines Installed With Safety In Mind</p>"
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "video",
+      "id": "video_upload",
+      "label": "Background video",
+      "info": "Plays muted on loop. Recommended: a short, optimized clip."
+    },
+    {
+      "type": "image_picker",
+      "id": "poster_image",
+      "label": "Poster / fallback image",
+      "info": "Shown while the video loads and if it can't play. Falls back to the video's own preview if left blank."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Content width",
+      "default": "large",
+      "options": [
+        { "label": "Default", "value": "large" },
+        { "label": "Narrow", "value": "small" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "default": "right",
+      "options": [
+        { "label": "Left", "value": "left" },
+        { "label": "Center", "value": "center" },
+        { "label": "Right", "value": "right" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading font size (max)",
+      "info": "Maximum size on large screens; scales down responsively on smaller viewports.",
+      "unit": "px",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "height_desktop",
+      "label": "Banner height (desktop)",
+      "unit": "px",
+      "min": 200,
+      "max": 720,
+      "step": 10,
+      "default": 360
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "label": "Banner height (mobile)",
+      "unit": "px",
+      "min": 160,
+      "max": 560,
+      "step": 10,
+      "default": 280
+    },
+    {
+      "type": "range",
+      "id": "section_radius_top",
+      "label": "Section top radius",
+      "unit": "px",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "section_radius_bottom",
+      "label": "Section bottom radius",
+      "unit": "px",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Heading text color",
+      "default": "#fbcda5"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "info": "Darkens the video for better text legibility. 0 = off.",
+      "unit": "%",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Margin"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_bottom_margin",
+      "label": "Reduce bottom margin",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "LS Video Banner"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}
